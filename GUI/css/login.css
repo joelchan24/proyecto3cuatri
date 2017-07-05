@@ -1,0 +1,21 @@
+/* Credit to bootsnipp.com for the css for the color graph */
+.colorgraph {
+  background-position: 0% 0%;
+    height: 5px;
+    border-radius: 5px;
+  background-image: linear-gradient(to right, #c4e17f, #c4e17f 12.5%, #f7fdca 12.5%, #f7fdca 25%, #fecf71 25%, #fecf71 37.5%, #f0776c 37.5%, #f0776c 50%, #db9dbe 50%, #db9dbe 62.5%, #c49cde 62.5%, #c49cde 75%, #669ae1 75%, #669ae1 87.5%, #62c2e4 87.5%, #62c2e4);
+    width: 866px;
+    border-top-style: none;
+    border-top-color: inherit;
+    border-top-width: 0;
+    background-color: #c4e17f;
+    background-repeat: repeat;
+    background-attachment: scroll;
+}
+.margen-container
+{
+    margin-top:50px;
+}
+.login{
+    width:100%;
+}
