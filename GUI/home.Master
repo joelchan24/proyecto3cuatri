@@ -151,7 +151,7 @@
                          <asp:Button ID="Button1" runat="server" Text="Button" type="submit" class="btn btn-default"  style="background-color:#fff;"/><span class="glyphicon glyphicon-search"></span>
                       <!--
                               <button type="submit" class="btn btn-default" style="background-color:#fff;"><span class="glyphicon glyphicon-search"></span></button>-->
-                    </form>
+                 
                 	</div><!-- /.nav-collapse -->
 			</div>
                     
@@ -203,12 +203,16 @@
 		</aside>
     
     <div>
-        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+       
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1"  runat="server">
+           
         </asp:ContentPlaceHolder>
+           
     </div>
+           </form>
         <br />
         <br />
-    </form>
+    
         <br />
          
 		
