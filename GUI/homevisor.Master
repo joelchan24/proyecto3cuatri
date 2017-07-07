@@ -1,4 +1,4 @@
-﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="home.master.cs" Inherits="GUI.home" %>
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="homevisor.Master.cs" Inherits="GUI.home" %>
 
 <!DOCTYPE html>
 
