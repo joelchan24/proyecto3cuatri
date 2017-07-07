@@ -1,7 +1,7 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/home.Master" AutoEventWireup="true" CodeBehind="WebForm1.aspx.cs" Inherits="GUI.WebForm1" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
-<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server" >
     
         <div class="masthead">
             <div class="carousel fade-carousel slide" data-ride="carousel" data-interval="4000" id="bs-carousel">
@@ -94,26 +94,29 @@
                 <div class="col-md-4 hidden-xs hidden-sm">
     				
 					<div class="panel panel-default">
-						<div class="bs-callout bs-right-panel">
-							<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-							<!-- bs-right-panel -->
-							<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-1487659930909767" data-ad-slot="6784370337" data-ad-format="auto">
-							</ins>
-							<script>
-								(adsbygoogle = window.adsbygoogle || []).push({});
-							</script>
+						
+					</div>
+					<div class=" col-lg-4">
+						<div class="container ">
+							<div class="row hidden-xs hidden-sm" >
+                            
+	<asp:Calendar ID="Calendar1" runat="server" BackColor="White" BorderColor="White" BorderWidth="1px" Font-Names="Verdana" Font-Size="9pt" ForeColor="Black" Height="190px" NextPrevFormat="FullMonth" Width="350px">
+        <DayHeaderStyle Font-Bold="True" Font-Size="8pt" CssClass="col-lg-4" />
+        <NextPrevStyle Font-Bold="True" Font-Size="8pt" ForeColor="#333333" VerticalAlign="Bottom" />
+        <OtherMonthDayStyle ForeColor="#999999" />
+        <SelectedDayStyle BackColor="#333399" ForeColor="White" />
+        <TitleStyle BackColor="White" BorderColor="Black" BorderWidth="4px" Font-Bold="True" Font-Size="12pt" ForeColor="#333399" />
+        <TodayDayStyle BackColor="#CCCCCC" />
+                                </asp:Calendar>
+          
+							
+							</div>
+							   <div class="container  ">
+							<p>kjhjkjkh</p>	
+							</div>
 						</div>
 					</div>
-					<div class="panel panel-default">
-						<div class="bs-callout bs-right-panel">
-							<div class="row">
-								
-							</div>
-							<div class="row">
-								
-							</div>
-						</div>
-					</div>
+                 
 				</div>
 
             </div>

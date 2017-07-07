@@ -90,7 +90,7 @@
     <Content Include="js\jquery.slimscroll.min.js" />
     <Content Include="js\pagina.js" />
     <Content Include="packages.config" />
-    <Content Include="home.Master" />
+    <Content Include="homevisor.Master" />
     <Content Include="pueblos.aspx" />
     <Content Include="registroevento.aspx" />
     <Content Include="WebForm1.aspx" />
@@ -118,12 +118,12 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="home.Master.cs">
-      <DependentUpon>home.Master</DependentUpon>
+    <Compile Include="homevisor.Master.cs">
+      <DependentUpon>homevisor.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="home.Master.designer.cs">
-      <DependentUpon>home.Master</DependentUpon>
+    <Compile Include="homevisor.Master.designer.cs">
+      <DependentUpon>homevisor.Master</DependentUpon>
     </Compile>
     <Compile Include="login.aspx.cs">
       <DependentUpon>login.aspx</DependentUpon>
