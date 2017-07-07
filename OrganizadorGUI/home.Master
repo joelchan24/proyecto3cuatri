@@ -34,10 +34,9 @@
 </head>
 
   
- 
+
 
     <body id="page-top" name="page-top" class="active">
-        
 		<div class="container">
 			<div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModal" aria-hidden="true">
 				<div class="modal-dialog modal-default">
@@ -49,7 +48,7 @@
 						<div class="modal-body">
 							<article class="container-form center-block">
 								<!-- Form Content HERE! -->
-								</div>
+								<form method="post" accept-charset="utf-8" autocomplete="off" role="form" class="form-horizontal" action="https://secure.yourwebhosting.com/secureLogin" enctype="application/x-www-form-urlencoded">
 									<fieldset>
 										<input type="hidden" name="__token_timestamp__" value="1426572610"/>
 										<input type="hidden" name="__token_val__" value="4d96cad055fac46518825357fcb49390"/>
@@ -65,7 +64,6 @@
 										<div class="form-group">
 											<label class="sr-only" for="credential_1">Password: </label>
 											<div class="col-xs-12">
-                                                
 												<input id="email" type="password" name="credential_1" value="" placeholder="Your Password" class="form-control"/>
 											</div>
 										</div>
@@ -76,12 +74,12 @@
 											</div>
 										</div>
 									</fieldset>
-								
-         </form>
+								</form>
 							</article>
 						</div>
 						<div class="modal-footer">
-							Login Problems?<button type="submit" class="btn btn-dark" data-dismiss="modal" data-href="#collapseTwo" data-toggle="collapse" data-target="#collapseTwo" style="cursor:pointer;">Contact Me</button>
+							Login Problems?
+							<button type="submit" class="btn btn-dark" data-dismiss="modal" data-href="#collapseTwo" data-toggle="collapse" data-target="#collapseTwo" style="cursor:pointer;">Contact Me</button>
 						</div>
 					</div>
 				</div>
@@ -119,18 +117,6 @@
                     			<a href="#" class="dropdown-toggle" data-toggle="dropdown">Acerca De</a>				
                 			</li>
                             <li class="dropdown mega-dropdown"><a href="pueblos.aspx" data-toggle="dropdown">Municipios</a></li>
-                             <li class="dropdown mega-dropdown"><a href="pueblos.aspx" data-toggle="dropdown">Municipios</a></li>
-                            
-                             
-                          <li class="dropdown">
-                          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" style="margin-right:80px;"><span class="glyphicon glyphicon-star"></span>Categorias <span class="caret"></span></a>
-                          <ul class="dropdown-menu" role="menu" style="display: none;">
-                            <li><a href="#">Danza</a></li>
-                            <li><a href="#">Teatro</a></li>
-                              <li><a href="#">Musica</a></li>
-                          </ul>
-                        </li>
-
                 		</ul>
                         <ul class="nav navbar-nav navbar-right">
                         <li class="dropdown">
@@ -142,19 +128,14 @@
                         </li>
                        
                       </ul>
-                     <form id="form1" runat="server"
-                   class="navbar-form navbar-left" role="search">
+                    <form class="navbar-form navbar-left" role="search">
                     <div class="form-group">
-                        <asp:TextBox ID="TextBox1" runat="server" type="text" class="form-control" placeholder="search"></asp:TextBox>
-                        
+                        <input type="text" class="form-control" placeholder="search" />
                     </div>
-                         <asp:Button ID="Button1" runat="server" Text="Button" type="submit" class="btn btn-default"  style="background-color:#fff;"/><span class="glyphicon glyphicon-search"></span>
-                      <!--
-                              <button type="submit" class="btn btn-default" style="background-color:#fff;"><span class="glyphicon glyphicon-search"></span></button>-->
+                        <button type="submit" class="btn btn-default" style="background-color:#fff;"><span class="glyphicon glyphicon-search"></span></button>
                     </form>
                 	</div><!-- /.nav-collapse -->
 			</div>
-                    
            <br/>
              <br/>
         			<!-- /.container-fluid -->
@@ -201,7 +182,7 @@
 				</ul>
 			</div>
 		</aside>
-    
+     <form id="form1" runat="server">
     <div>
         <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
         </asp:ContentPlaceHolder>
@@ -224,14 +205,6 @@
 				$("[rel='tooltip']").tooltip();
 			});
 		</script>
-
-   
-
-
-
-
-
-        
 
    
 
