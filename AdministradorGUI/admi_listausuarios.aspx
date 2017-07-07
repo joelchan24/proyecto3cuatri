@@ -12,7 +12,7 @@
             <br />
             <br />
             <asp:Button ID="Button5" runat="server" Text="Button" type="submit" value="agregar" class="btt" />
-            <asp:Button ID="Button6" runat="server" Text="Button" />
+            <asp:Button ID="Button6" runat="server" Text="Button"  type="subimt" value="agregar" Class="btt" />
             <asp:Button ID="Button7" runat="server" Text="Button" />
             <asp:Button ID="Button8" runat="server" Text="Button" />
             <br />
