@@ -70,6 +70,7 @@
     <Content Include="css\bootstrap-theme.min.css" />
     <Content Include="css\estilo-usuario.css" />
     <Content Include="css\footer.css" />
+    <Content Include="css\loginverdadero.css" />
     <Content Include="css\_all-skins.min.css" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="img\avatar.png" />
@@ -93,6 +94,7 @@
     <Content Include="packages.config" />
     <Content Include="homevisor.Master" />
     <Content Include="pueblos.aspx" />
+    <Content Include="registrarme.aspx" />
     <Content Include="registroevento.aspx" />
     <Content Include="WebForm1.aspx" />
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
@@ -115,7 +117,6 @@
     <Content Include="js\bootstrap.min.js" />
     <Content Include="js\jquery-3.2.1.min.js" />
     <Content Include="js\npm.js" />
-    <Content Include="login.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -125,13 +126,6 @@
     </Compile>
     <Compile Include="homevisor.Master.designer.cs">
       <DependentUpon>homevisor.Master</DependentUpon>
-    </Compile>
-    <Compile Include="login.aspx.cs">
-      <DependentUpon>login.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="login.aspx.designer.cs">
-      <DependentUpon>login.aspx</DependentUpon>
     </Compile>
     <Compile Include="loginn.aspx.cs">
       <DependentUpon>loginn.aspx</DependentUpon>
@@ -147,6 +141,13 @@
     </Compile>
     <Compile Include="pueblos.aspx.designer.cs">
       <DependentUpon>pueblos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="registrarme.aspx.cs">
+      <DependentUpon>registrarme.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="registrarme.aspx.designer.cs">
+      <DependentUpon>registrarme.aspx</DependentUpon>
     </Compile>
     <Compile Include="registroevento.aspx.cs">
       <DependentUpon>registroevento.aspx</DependentUpon>
