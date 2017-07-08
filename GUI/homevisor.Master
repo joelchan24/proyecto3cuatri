@@ -142,7 +142,7 @@
                         </li>
                        
                       </ul>
-                     <form id="form1" runat="server"
+                     <form id="form2" runat="server"
                    class="navbar-form navbar-left" role="search">
                     <div class="form-group">
                         <asp:TextBox ID="TextBox1" runat="server" type="text" class="form-control" placeholder="search"></asp:TextBox>
