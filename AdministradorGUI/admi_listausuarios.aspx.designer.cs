@@ -22,48 +22,48 @@ namespace GUI {
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
         
         /// <summary>
-        /// Control Button5.
+        /// Control btn_eliminar.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button5;
+        protected global::System.Web.UI.WebControls.Button btn_eliminar;
         
         /// <summary>
-        /// Control Button6.
+        /// Control btn_modificar.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button6;
+        protected global::System.Web.UI.WebControls.Button btn_modificar;
         
         /// <summary>
-        /// Control Button7.
+        /// Control btn_agregar.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button7;
+        protected global::System.Web.UI.WebControls.Button btn_agregar;
         
         /// <summary>
-        /// Control Button8.
+        /// Control btn_nuevo.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button8;
+        protected global::System.Web.UI.WebControls.Button btn_nuevo;
         
         /// <summary>
-        /// Control GridView1.
+        /// Control dgv_usuarios.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView GridView1;
+        protected global::System.Web.UI.WebControls.GridView dgv_usuarios;
     }
 }

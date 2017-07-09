@@ -154,6 +154,20 @@
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BO\BO.csproj">
+      <Project>{e1394d95-a1ac-438d-b5b5-3a495c4498e8}</Project>
+      <Name>BO</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DAO\DAO.csproj">
+      <Project>{0f94dab4-b27c-4f9f-ad8d-df1951ac2fba}</Project>
+      <Name>DAO</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Services\Services.csproj">
+      <Project>{dc236ff7-cb2f-4910-8c84-ced9125bfd61}</Project>
+      <Name>Services</Name>
+    </ProjectReference>
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

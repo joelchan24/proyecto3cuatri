@@ -179,6 +179,28 @@
       <DependentUpon>registrar_usuario.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BO\BO.csproj">
+      <Project>{e1394d95-a1ac-438d-b5b5-3a495c4498e8}</Project>
+      <Name>BO</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DAO\DAO.csproj">
+      <Project>{0f94dab4-b27c-4f9f-ad8d-df1951ac2fba}</Project>
+      <Name>DAO</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GUI\VisorGUI.csproj">
+      <Project>{9269640e-85c4-4d20-80ae-be956573a4c8}</Project>
+      <Name>VisorGUI</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Services\Services.csproj">
+      <Project>{dc236ff7-cb2f-4910-8c84-ced9125bfd61}</Project>
+      <Name>Services</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\UsuarioGUI\UsuarioGUI.csproj">
+      <Project>{4efdb527-e2e0-4e14-bc52-bbbfcca88442}</Project>
+      <Name>UsuarioGUI</Name>
+    </ProjectReference>
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
