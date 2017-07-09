@@ -9,12 +9,12 @@
     <link href="css/bootstrap.css" rel="stylesheet" type="text/css" />
     <link href="css/Site.css" rel="stylesheet" type="text/css" />
     <link href="css/pagina.css" rel="stylesheet" type="text/css"/>
-    <link href="css/bootstrap.min.css" rel="stylesheet " type="text/css"/>
+    <!--<link href="css/bootstrap.min.css" rel="stylesheet " type="text/css"/>-->
     <link href="css/bootstrap-theme.css" rel="stylesheet" type="text/css" />
     <link href="css/Site.css" rel="stylesheet"  type="text/css"      />
     <link href="css/bootstrap-theme.min.css" rel="stylesheet" type="text/css"/>
     <link href="css/login.css" rel="stylesheet" />
-     
+    <link href="css/footer.css" rel="stylesheet" type="text/css" />
 
     <link href="https://fortawesome.github.io/Font-Awesome/assets/font-awesome/css/font-awesome.css" rel="stylesheet" type="text/css"/>
    <script src="js/bootstrap.js"></script>
@@ -142,13 +142,16 @@
                         </li>
                        
                       </ul>
-                     <form id="form2" runat="server"
-                   class="navbar-form  input-group" role="search" >
+                    <ul>
+                   <li><form id="form2" runat="server"
+                   class="navbar-form " role="search" >
 
 
 <asp:TextBox ID="TextBox1" runat="server" CssClass="form-control" Width="250px" placeholder="Nombre a buscar"></asp:TextBox>&nbsp;
 <asp:LinkButton ID="LinkButton1" runat="server" CssClass="btn btn-info" Text="Buscar"><span class="glyphicon glyphicon-search"></span>&nbsp;Buscar</asp:LinkButton>
+                      </li>  
 
+                    </ul>
   <!--
                               <button type="submit" class="btn btn-default" style="background-color:#fff;"><span class="glyphicon glyphicon-search"></span></button>-->
                  
@@ -206,16 +209,48 @@
        
         <asp:ContentPlaceHolder ID="ContentPlaceHolder1"  runat="server">
            
+
+
+
         </asp:ContentPlaceHolder>
+        
+      
+
            
     </div>
+          <div class="footer11">
+            <div  class="row">
+                <div class="col-md-4">
+                   <p>&copy; 2016 Company, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
+
+                </div>
+                  <div class="col-md-4">
+<h1>Contactanos</h1>
+                      <p>Correo Electronico:eventosculturales@gmail.com</p>
+                      <p>Numero Tel:9889765898</p>
+                  
+                </div>
+                  <div class="col-md-4">
+                      <h1 class="">Nosotros</h1>
+                      <h1>Dar a conocer los eventos culturales del Estado de Yucatán</h1>
+                </div>
+                    
+
+
+
+            </div>
+         
+        </div>
+
            </form>
         <br />
         <br />
     
         <br />
          
-		
+        <div class="clearfix"></div>
+        
+    
        
        
       
@@ -232,16 +267,10 @@
    
 
 
-
-
-
         
-
-   
-
-
 
 
 
 </body>
+     
 </html>
