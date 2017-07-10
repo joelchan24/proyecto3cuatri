@@ -42,6 +42,7 @@
   <ItemGroup>
     <Compile Include="ComentarioBO.cs" />
     <Compile Include="Direccion.cs" />
+    <Compile Include="error.cs" />
     <Compile Include="EventoBO.cs" />
     <Compile Include="GaleriaBO.cs" />
     <Compile Include="HorarioBO.cs" />
