@@ -94,7 +94,7 @@
     <Content Include="packages.config" />
     <Content Include="homevisor.Master" />
     <Content Include="pueblos.aspx" />
-    <Content Include="registrarme.aspx" />
+    <Content Include="registrode_usuariosGUI.aspx" />
     <Content Include="registroevento.aspx" />
     <Content Include="WebForm1.aspx" />
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
@@ -142,12 +142,12 @@
     <Compile Include="pueblos.aspx.designer.cs">
       <DependentUpon>pueblos.aspx</DependentUpon>
     </Compile>
-    <Compile Include="registrarme.aspx.cs">
-      <DependentUpon>registrarme.aspx</DependentUpon>
+    <Compile Include="registrode_usuariosGUI.aspx.cs">
+      <DependentUpon>registrode_usuariosGUI.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="registrarme.aspx.designer.cs">
-      <DependentUpon>registrarme.aspx</DependentUpon>
+    <Compile Include="registrode_usuariosGUI.aspx.designer.cs">
+      <DependentUpon>registrode_usuariosGUI.aspx</DependentUpon>
     </Compile>
     <Compile Include="registroevento.aspx.cs">
       <DependentUpon>registroevento.aspx</DependentUpon>
