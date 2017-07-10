@@ -94,6 +94,7 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="admi_de eventosGUI.aspx" />
     <Content Include="img\avatar.png" />
     <Content Include="img\ccaae9ad-e297-462c-84ad-414e7f30ab51image16.jpeg" />
     <Content Include="img\obra-cholo.jpg" />
@@ -162,6 +163,13 @@
     </Compile>
     <Compile Include="admin_mensajes.aspx.designer.cs">
       <DependentUpon>admin_mensajes.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admi_de eventosGUI.aspx.cs">
+      <DependentUpon>admi_de eventosGUI.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admi_de eventosGUI.aspx.designer.cs">
+      <DependentUpon>admi_de eventosGUI.aspx</DependentUpon>
     </Compile>
     <Compile Include="admi_listausuarios.aspx.cs">
       <DependentUpon>admi_listausuarios.aspx</DependentUpon>
