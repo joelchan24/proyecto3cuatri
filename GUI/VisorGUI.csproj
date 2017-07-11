@@ -90,6 +90,7 @@
     <Content Include="js\carousel.js" />
     <Content Include="js\ie-emulation-modes-warning.js" />
     <Content Include="js\ie10-viewport-bug-workaround.js" />
+    <Content Include="js\Jquery 2.1.0.js" />
     <Content Include="js\jquery-2.2.3.min.js" />
     <Content Include="js\jquery.slimscroll.min.js" />
     <Content Include="js\pagina.js" />

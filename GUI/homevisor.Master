@@ -15,7 +15,8 @@
     <link href="css/bootstrap-theme.min.css" rel="stylesheet" type="text/css"/>
     <link href="css/login.css" rel="stylesheet" />
     <link href="css/footer.css" rel="stylesheet" type="text/css" />
-
+    <script src="js/Jquery%202.1.0.js"></script>
+  
     <link href="https://fortawesome.github.io/Font-Awesome/assets/font-awesome/css/font-awesome.css" rel="stylesheet" type="text/css"/>
    <script src="js/bootstrap.js"></script>
    <script src="js/bootstrap.min.js"></script>
