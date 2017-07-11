@@ -68,6 +68,7 @@
   <ItemGroup>
     <Content Include="css\AdminLTE.min.css" />
     <Content Include="css\bootstrap-theme.min.css" />
+    <Content Include="css\calendar.css" />
     <Content Include="css\estilo-usuario.css" />
     <Content Include="css\footer.css" />
     <Content Include="css\loginverdadero.css" />
@@ -79,6 +80,8 @@
     <Content Include="img\Progreso-malecon.jpg" />
     <Content Include="img\vaqueria-yucateca-2.jpg" />
     <Content Include="js\app.min.js" />
+    <Content Include="js\calendar.js" />
+    <Content Include="js\calendar2.js" />
     <Content Include="js\demo.js" />
     <Content Include="js\fastclick.js" />
     <Content Include="js\holder.min.js" />

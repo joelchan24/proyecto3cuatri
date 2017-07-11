@@ -144,7 +144,7 @@
                       </ul>
                     <ul>
                    <li><form id="form2" runat="server"
-                   class="navbar-form left" role="search" >
+                   class="navbar-form left navbar-left " role="search" >
 
 
 <asp:TextBox ID="TextBox1" runat="server" CssClass="form-control" Width="250px" placeholder="Nombre a buscar"></asp:TextBox>&nbsp;
