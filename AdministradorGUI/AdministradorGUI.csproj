@@ -147,6 +147,7 @@
     <Content Include="js\npm.js" />
     <Content Include="js\pagina.js" />
     <Content Include="registrar_usuario.aspx" />
+    <Content Include="Usuario.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -185,6 +186,13 @@
     </Compile>
     <Compile Include="registrar_usuario.aspx.designer.cs">
       <DependentUpon>registrar_usuario.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Usuario.aspx.cs">
+      <DependentUpon>Usuario.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Usuario.aspx.designer.cs">
+      <DependentUpon>Usuario.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
