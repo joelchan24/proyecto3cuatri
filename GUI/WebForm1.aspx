@@ -97,48 +97,40 @@
 						
 					</div>
 					<div class=" col-lg-4">
-						<div class="container ">
-							<div class="row hidden-xs hidden-sm" >
-                            
-	
-                                -->
- <div style="overflow:hidden;">
-    <div class="form-group">
-        <div class="row">
-            <div class="col-md-2">
-                <asp:Calendar ID="Calendar1" runat="server" BackColor="White" BorderColor="White" BorderWidth="1px" Font-Names="Verdana" Font-Size="9pt" ForeColor="Black" Height="190px" NextPrevFormat="FullMonth" Width="350px">
-      <DayHeaderStyle Font-Bold="True" Font-Size="8pt" CssClass="col-lg-4" />
-        <NextPrevStyle Font-Bold="True" Font-Size="8pt" ForeColor="#333333" VerticalAlign="Bottom" />
-        <OtherMonthDayStyle ForeColor="#999999" />
-        <SelectedDayStyle BackColor="#333399" ForeColor="White" />
-        <TitleStyle BackColor="White" BorderColor="Black" BorderWidth="4px" Font-Bold="True" Font-Size="12pt" ForeColor="#333399" />
-        <TodayDayStyle BackColor="#CCCCCC" />
-                                </asp:Calendar>
-            </div>
+					
+<!-- padding for jsfiddle -->
+<div class="row">
+    <div class="col-md-12">
+         <h6>calendrio</h6>
+
+        <div class="form-group">
+      
+           
+                <div id="datetimepicker12"></div>
+           
+      
+    
         </div>
-    </div>
-    <script type="text/javascript">
-        $(function () {
-            $('#Calendar1').fullCalendar({
-                inline: true,
-                sideBySide: true
-            });
-        });
-    </script>
-</div>-->
-          
-							
-							</div>
+       
+     </div>
+
+       
+</div>
+                        <script>
+
+
+
+
+                        </script>
+</div>
+                    </div>
+                
 							   <div class="container  ">
 							<p>kjhjkjkh</p>	
 							</div>
 						</div>
 					</div>
                  
-				</div>
-
-            </div>
-
-            </div>
+			
     
 </asp:Content>
