@@ -93,6 +93,7 @@
     <Content Include="loginn.aspx" />
     <Content Include="packages.config" />
     <Content Include="homevisor.Master" />
+    <Content Include="prueva.aspx" />
     <Content Include="pueblos.aspx" />
     <Content Include="registrode_usuariosGUI.aspx" />
     <Content Include="registroevento.aspx" />
@@ -135,6 +136,13 @@
       <DependentUpon>loginn.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="prueva.aspx.cs">
+      <DependentUpon>prueva.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="prueva.aspx.designer.cs">
+      <DependentUpon>prueva.aspx</DependentUpon>
+    </Compile>
     <Compile Include="pueblos.aspx.cs">
       <DependentUpon>pueblos.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

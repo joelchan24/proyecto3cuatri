@@ -55,13 +55,13 @@
                                 
                             <div style="margin-bottom: 25px " class="input-group col-lg-offset-2 ">
                                         <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-                                        <input id="login-username" type="text" class="form-control " name="username" value="" placeholder="username or email">                                        
-                                    </div>
+        <asp:TextBox ID="txt_usuario" runat="server" type="text" class="form-control " name="username" value="" placeholder="username or email"></asp:TextBox>
+                                        </div>
                                 
                             <div style="margin-bottom: 25px" class="input-group col-lg-offset-2 ">
                                         <span class="input-group-addon "><i class="glyphicon glyphicon-lock " ></i></span>
-                                        <input id="login-password" type="password" class="form-control " name="password" placeholder="password" >
-                                    </div>
+        <asp:TextBox ID="txt_contraseña" runat="server" type="password" class="form-control " name="password" placeholder="password"></asp:TextBox>
+                                              </div>
                                     
 
                                 
@@ -78,7 +78,8 @@
                                     <!-- Button -->
 
                                     <div class="col-sm-12 controls">
-                                      <a id="btn-login" href="#" class="btn  btn-primary ">Ingresar </a>
+        <asp:Button ID="btn_ingresar" runat="server" Text="Ingresar"  href="#" class="btn  btn-primary " OnClick="Button1_Click" />
+                                      
                                       <a id="btn-fblogin" href="#" onclick="$('#loginbox').hide(); $('#signupbox').show()" class="btn btn-success">registrarse</a>
 
                                     </div>

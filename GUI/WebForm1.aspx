@@ -100,7 +100,13 @@
 						<div class="container ">
 							<div class="row hidden-xs hidden-sm" >
                             
-	<asp:Calendar ID="Calendar1" runat="server" BackColor="White" BorderColor="White" BorderWidth="1px" Font-Names="Verdana" Font-Size="9pt" ForeColor="Black" Height="190px" NextPrevFormat="FullMonth" Width="350px">
+	
+                                -->
+ <div style="overflow:hidden;">
+    <div class="form-group">
+        <div class="row">
+            <div class="col-md-2">
+                <asp:Calendar ID="Calendar1" runat="server" BackColor="White" BorderColor="White" BorderWidth="1px" Font-Names="Verdana" Font-Size="9pt" ForeColor="Black" Height="190px" NextPrevFormat="FullMonth" Width="350px">
       <DayHeaderStyle Font-Bold="True" Font-Size="8pt" CssClass="col-lg-4" />
         <NextPrevStyle Font-Bold="True" Font-Size="8pt" ForeColor="#333333" VerticalAlign="Bottom" />
         <OtherMonthDayStyle ForeColor="#999999" />
@@ -108,18 +114,12 @@
         <TitleStyle BackColor="White" BorderColor="Black" BorderWidth="4px" Font-Bold="True" Font-Size="12pt" ForeColor="#333399" />
         <TodayDayStyle BackColor="#CCCCCC" />
                                 </asp:Calendar>
-                                -->
- <!--  <div style="overflow:hidden;">
-    <div class="form-group">
-        <div class="row">
-            <div class="col-md-8">
-                <div id="datetimepicker12"></div>
             </div>
         </div>
     </div>
     <script type="text/javascript">
         $(function () {
-            $('#datetimepicker12').datetimepicker({
+            $('#Calendar1').fullCalendar({
                 inline: true,
                 sideBySide: true
             });
