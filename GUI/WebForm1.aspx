@@ -2,8 +2,9 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server" >
-    
-
+    <link href="css/calendar.css" rel="stylesheet" />
+    <script src="js/calendar.js"></script>
+    <script src="js/calendar2.js"></script>
         <div class="masthead">
             <div class="carousel fade-carousel slide" data-ride="carousel" data-interval="4000" id="bs-carousel">
 
@@ -101,7 +102,7 @@
 					
 <!-- padding for jsfiddle -->
 <div class="row">
-    <div class="col-md-12">
+    <div class="col-md-4">
          <h6>calendrio</h6>
 
         <div class="form-group">
@@ -119,7 +120,13 @@
 </div>
                         <script>
 
+                            jQuery(function () {
+                                jQuery('#datetimepicker12').datetimepicker({
+                                    inline: true,
 
+
+                                });
+                            });
 
 
                         </script>
