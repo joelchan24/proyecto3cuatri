@@ -16,12 +16,13 @@
 
         
             
-        <asp:Button ID="btn_eliminar" runat="server" Text="Eliminar" CssClass="btn-primary col-md-2 col-lg-offset-1" />
+        
+           <asp:Button ID="btn_eliminar" runat="server" Text="Eliminar" CssClass="btn-primary col-sm-push-4  " />
          
-        <asp:Button ID="btn_modificar" runat="server" Text="Modificar" CssClass="btn-primary col-md-2 col-lg-offset-1" />
-             <asp:Button ID="btn_agregar" runat="server" Text="Eliminar" CssClass="btn-primary col-md-2 col-lg-offset-1" />
+        <asp:Button ID="btn_modificar" runat="server" Text="Modificar" CssClass="btn-primary col-sm-push-4 " />
+             <asp:Button ID="btn_agregar" runat="server" Text="agregar" CssClass="btn-primary col-sm-push-4  " />
          
-        <asp:Button ID="btn_nuevo" runat="server" Text="Modificar" CssClass="btn-primary col-md-2 col-lg-offset-1" />
+        <asp:Button ID="btn_nuevo" runat="server" Text="nuevo" CssClass="btn-primary    col-sm-push-4 " />
               
             </div>
         <asp:GridView ID="dgv_usuarios" runat="server" CellPadding="4" ForeColor="#333333" GridLines="None">

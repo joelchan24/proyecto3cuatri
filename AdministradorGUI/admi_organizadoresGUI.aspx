@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/administrador.Master" AutoEventWireup="true" CodeBehind="admi_listausuarios.aspx.cs" Inherits="GUI.admi_listausuarios" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/administrador.Master" AutoEventWireup="true" CodeBehind="admi_organizadoresGUI.aspx.cs" Inherits="GUI.admi_listausuarios" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <style type="text/css">
         #form1 {
@@ -13,22 +13,38 @@
     <form  id="form1" runat="server">
       
 
-    <h1>Control de los Usuarios</h1>
-   <div class="row">
+    <h1>Control de los Organizadores</h1>
+   <div class="container">
 
 
-       <div class="col-md-12">
+       <div class="row">
+           <div class="col-md-12">
 
-        
-            
-        <asp:Button ID="btn_eliminar" runat="server" Text="Eliminar" CssClass="btn-primary col-md-2 col-lg-offset-1" />
-         
-        <asp:Button ID="btn_modificar" runat="server" Text="Modificar" CssClass="btn-primary col-md-2 col-lg-offset-1" />
-             <asp:Button ID="btn_agregar" runat="server" Text="Eliminar" CssClass="btn-primary col-md-2 col-lg-offset-1" />
-         
-        <asp:Button ID="btn_nuevo" runat="server" Text="Modificar" CssClass="btn-primary col-md-2 col-lg-offset-1" />
+          <div class="form-group">
+             
+                 
+                <label for="txt_nombre" class="">nombre:</label>
+                  <div class="col-md-6">
+                    <asp:TextBox ID="txt_nombre" runat="server" Text="" CssClass="form-control "></asp:TextBox>
+                      </div>
+                     <label for="txt_apellidos" class="">apellidos:</label>
+                  <div class="col-md-6">
+                    <asp:TextBox ID="txt_apellios" runat="server" Text="" CssClass="form-control "></asp:TextBox>
+              </div>
               
-            </div>
+                
+             
+          </div>
+             
+           
+           <asp:Button ID="btn_eliminar" runat="server" Text="Eliminar" CssClass="btn-primary col-sm-push-4  " />
+         
+        <asp:Button ID="btn_modificar" runat="server" Text="Modificar" CssClass="btn-primary col-sm-push-4 " />
+             <asp:Button ID="btn_agregar" runat="server" Text="agregar" CssClass="btn-primary col-sm-push-4  " />
+         
+        <asp:Button ID="btn_nuevo" runat="server" Text="nuevo" CssClass="btn-primary    col-sm-push-4 " />
+              
+         
         <asp:GridView ID="dgv_usuarios" runat="server" CellPadding="4" ForeColor="#333333" GridLines="None">
             <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
             <Columns>
@@ -47,11 +63,11 @@
         </asp:GridView>
       
           
-             </div>
+            
           
-   
+  
     </div>
-
+      </div>      
 
 </form>
 
