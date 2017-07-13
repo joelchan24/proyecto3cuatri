@@ -13,6 +13,7 @@ namespace BO
         public string Apellidos { get; set; }
         public string Telefono { get; set; }
         public DateTime FechaNacimineto { get; set; }
+        public int municipio { get; set; }
         public string Correo { get; set; }
         public string Usuario { get; set; }
         public string Contraseña { get; set; }
