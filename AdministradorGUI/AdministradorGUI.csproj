@@ -95,6 +95,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="admi_de eventosGUI.aspx" />
+    <Content Include="css\ionicons.min.css" />
     <Content Include="img\avatar.png" />
     <Content Include="img\ccaae9ad-e297-462c-84ad-414e7f30ab51image16.jpeg" />
     <Content Include="img\obra-cholo.jpg" />
