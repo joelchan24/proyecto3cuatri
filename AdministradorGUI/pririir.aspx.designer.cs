@@ -10,7 +10,7 @@
 namespace AdministradorGUI {
     
     
-    public partial class admi_de_eventosGUI {
+    public partial class pririir {
         
         /// <summary>
         /// Control form1.
@@ -92,14 +92,5 @@ namespace AdministradorGUI {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox TextBox8;
-        
-        /// <summary>
-        /// Control dgv_usuarios.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView dgv_usuarios;
     }
 }

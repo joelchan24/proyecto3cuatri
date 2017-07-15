@@ -101,6 +101,7 @@
     <Content Include="img\obra-cholo.jpg" />
     <Content Include="img\Progreso-malecon.jpg" />
     <Content Include="img\vaqueria-yucateca-2.jpg" />
+    <Content Include="js\bootstrap.min-fds90[2].js" />
     <Content Include="packages.config" />
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
@@ -147,6 +148,7 @@
     <Content Include="js\jquery.slimscroll.min.js" />
     <Content Include="js\npm.js" />
     <Content Include="js\pagina.js" />
+    <Content Include="pririir.aspx" />
     <Content Include="registrar_usuario.aspx" />
     <Content Include="admin_UsuarioGUI.aspx" />
     <Content Include="Web.config" />
@@ -179,6 +181,13 @@
     </Compile>
     <Compile Include="admi_organizadoresGUI.aspx.designer.cs">
       <DependentUpon>admi_organizadoresGUI.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pririir.aspx.cs">
+      <DependentUpon>pririir.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pririir.aspx.designer.cs">
+      <DependentUpon>pririir.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="registrar_usuario.aspx.cs">
@@ -218,6 +227,7 @@
       <Name>UsuarioGUI</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
