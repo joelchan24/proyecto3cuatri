@@ -9,13 +9,15 @@
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <!-- Bootstrap 3.3.6 -->
-  <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+ 
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" />
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
-  <!-- Ionicons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+  <!-- Ionicons 
+  
   <!-- Theme style -->
   <link rel="stylesheet" href="css/AdminLTE.min.css" type="text/css">
+    <link href="css/ionicons.min.css" rel="stylesheet"  type="text/css"/>
   <!-- AdminLTE Skins. Choose a skin from the css/skins
        folder instead of downloading all of them to reduce the load. -->
   <link rel="stylesheet" href="css/_all-skins.min.css " type="text/css">
@@ -101,8 +103,9 @@
             </span>
           </a>
           <ul class="treeview-menu menu-open" style="display: block;">
-            <li><a href="#"><i class="fa fa-circle-o"></i> Control de usuarios</a></li>
-            <li><a href="#"><i class="fa fa-circle-o"></i> Control de eventos</a></li>
+            <li><a href="admin_UsuarioGUI.aspx"><i class="fa fa-circle-o"></i> Control de usuarios</a></li>
+            <li><a href="admi_de eventosGUI.aspx"><i class="fa fa-circle-o"></i> Control de eventos</a></li>
+               <li><a href="admi_organizadoresGUI.aspx"><i class="fa fa-circle-o"></i> control de Organizadores</a></li>
           </ul>
         </li>
           <li class="active">
@@ -168,9 +171,7 @@
   <div class="content-wrapper">
     <!-- Content Header (Page header) -->
     <section class="content-header">
-    <p>practicas
-
-    </p>
+    
     </section>
 
     <!-- Main content -->

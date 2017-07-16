@@ -68,8 +68,10 @@
   <ItemGroup>
     <Content Include="css\AdminLTE.min.css" />
     <Content Include="css\bootstrap-theme.min.css" />
+    <Content Include="css\calendar.css" />
     <Content Include="css\estilo-usuario.css" />
     <Content Include="css\footer.css" />
+    <Content Include="css\loginverdadero.css" />
     <Content Include="css\_all-skins.min.css" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="img\avatar.png" />
@@ -78,6 +80,8 @@
     <Content Include="img\Progreso-malecon.jpg" />
     <Content Include="img\vaqueria-yucateca-2.jpg" />
     <Content Include="js\app.min.js" />
+    <Content Include="js\calendar.js" />
+    <Content Include="js\calendar2.js" />
     <Content Include="js\demo.js" />
     <Content Include="js\fastclick.js" />
     <Content Include="js\holder.min.js" />
@@ -86,12 +90,16 @@
     <Content Include="js\carousel.js" />
     <Content Include="js\ie-emulation-modes-warning.js" />
     <Content Include="js\ie10-viewport-bug-workaround.js" />
+    <Content Include="js\Jquery 2.1.0.js" />
     <Content Include="js\jquery-2.2.3.min.js" />
     <Content Include="js\jquery.slimscroll.min.js" />
     <Content Include="js\pagina.js" />
+    <Content Include="loginn.aspx" />
     <Content Include="packages.config" />
-    <Content Include="home.Master" />
+    <Content Include="homevisor.Master" />
+    <Content Include="prueva.aspx" />
     <Content Include="pueblos.aspx" />
+    <Content Include="registrode_usuariosGUI.aspx" />
     <Content Include="registroevento.aspx" />
     <Content Include="WebForm1.aspx" />
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
@@ -114,31 +122,44 @@
     <Content Include="js\bootstrap.min.js" />
     <Content Include="js\jquery-3.2.1.min.js" />
     <Content Include="js\npm.js" />
-    <Content Include="login.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="home.Master.cs">
-      <DependentUpon>home.Master</DependentUpon>
+    <Compile Include="homevisor.Master.cs">
+      <DependentUpon>homevisor.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="home.Master.designer.cs">
-      <DependentUpon>home.Master</DependentUpon>
+    <Compile Include="homevisor.Master.designer.cs">
+      <DependentUpon>homevisor.Master</DependentUpon>
     </Compile>
-    <Compile Include="login.aspx.cs">
-      <DependentUpon>login.aspx</DependentUpon>
+    <Compile Include="loginn.aspx.cs">
+      <DependentUpon>loginn.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="login.aspx.designer.cs">
-      <DependentUpon>login.aspx</DependentUpon>
+    <Compile Include="loginn.aspx.designer.cs">
+      <DependentUpon>loginn.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="prueva.aspx.cs">
+      <DependentUpon>prueva.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="prueva.aspx.designer.cs">
+      <DependentUpon>prueva.aspx</DependentUpon>
+    </Compile>
     <Compile Include="pueblos.aspx.cs">
       <DependentUpon>pueblos.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="pueblos.aspx.designer.cs">
       <DependentUpon>pueblos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="registrode_usuariosGUI.aspx.cs">
+      <DependentUpon>registrode_usuariosGUI.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="registrode_usuariosGUI.aspx.designer.cs">
+      <DependentUpon>registrode_usuariosGUI.aspx</DependentUpon>
     </Compile>
     <Compile Include="registroevento.aspx.cs">
       <DependentUpon>registroevento.aspx</DependentUpon>
@@ -164,6 +185,10 @@
     <ProjectReference Include="..\DAO\DAO.csproj">
       <Project>{0f94dab4-b27c-4f9f-ad8d-df1951ac2fba}</Project>
       <Name>DAO</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Services\Services.csproj">
+      <Project>{dc236ff7-cb2f-4910-8c84-ced9125bfd61}</Project>
+      <Name>Services</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>

@@ -1,8 +1,11 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/home.Master" AutoEventWireup="true" CodeBehind="WebForm1.aspx.cs" Inherits="GUI.WebForm1" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/homevisor.Master" AutoEventWireup="true" CodeBehind="WebForm1.aspx.cs" Inherits="GUI.WebForm1" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
-<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server" >
+    <link href="css/calendar.css" rel="stylesheet" />
+    <script src="js/calendar.js"></script>
+    <script src="js/calendar2.js"></script>
+    <script src="js/Jquery%202.1.0.js"></script>
         <div class="masthead">
             <div class="carousel fade-carousel slide" data-ride="carousel" data-interval="4000" id="bs-carousel">
 
@@ -94,30 +97,50 @@
                 <div class="col-md-4 hidden-xs hidden-sm">
     				
 					<div class="panel panel-default">
-						<div class="bs-callout bs-right-panel">
-							<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-							<!-- bs-right-panel -->
-							<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-1487659930909767" data-ad-slot="6784370337" data-ad-format="auto">
-							</ins>
-							<script>
-								(adsbygoogle = window.adsbygoogle || []).push({});
-							</script>
+						
+					</div>
+					<div class=" col-lg-4">
+					
+<!-- padding for jsfiddle -->
+<div class="row">
+    <div class="col-md-4">
+         <h6>calendrio</h6>
+
+        <div class="form-group">
+      
+           
+                <div id="datetimepicker12"></div>
+           
+      
+    
+        </div>
+       
+     </div>
+
+       
+</div>
+                        <script>
+
+                            jQuery(function () {
+                                jQuery('#datetimepicker12').datetimepicker({
+                                    inline: true,
+
+
+                                });
+                            });
+
+
+                        </script>
+</div>
+
+                </div>
+                
+						<div class="container  ">
+							<p>kjhjkjkh</p>	
 						</div>
 					</div>
-					<div class="panel panel-default">
-						<div class="bs-callout bs-right-panel">
-							<div class="row">
-								
-							</div>
-							<div class="row">
-								
-							</div>
-						</div>
-					</div>
-				</div>
-
-            </div>
-
-            </div>
+			</div>
+                 
+			
     
 </asp:Content>
