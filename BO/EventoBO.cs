@@ -15,6 +15,8 @@ namespace BO
         public DateTime FechaCierre { get; set; }
         public string FotoPromocion { get; set; }
         public string UbicacionGeografica { get; set; }
+        public string latitud { get; set; }
+        public string longitud { get; set; }
         public int CodigoDireccion { get; set; }
         public int CodigoCategoria { get; set; }
         public int CodigoUsuario { get; set; }
