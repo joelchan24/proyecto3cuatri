@@ -41,8 +41,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="conexionDAO.cs" />
+    <Compile Include="EstadoDAO.cs" />
     <Compile Include="interface_metodos_guardar_eliminar_actualizar_buscar.cs" />
     <Compile Include="loginDAO.cs" />
+    <Compile Include="MunicipioDAO.cs" />
+    <Compile Include="PaisDAO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="usuarioDAO.cs" />
   </ItemGroup>

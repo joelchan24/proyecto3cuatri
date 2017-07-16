@@ -42,10 +42,13 @@
   <ItemGroup>
     <Compile Include="ComentarioBO.cs" />
     <Compile Include="Direccion.cs" />
+    <Compile Include="EstadoBO.cs" />
     <Compile Include="EventoBO.cs" />
     <Compile Include="GaleriaBO.cs" />
     <Compile Include="HorarioBO.cs" />
     <Compile Include="MensajeBO.cs" />
+    <Compile Include="MunicipioBO.cs" />
+    <Compile Include="PaisBO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UsuarioBO.cs" />
   </ItemGroup>
