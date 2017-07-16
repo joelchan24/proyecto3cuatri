@@ -97,6 +97,7 @@
     <Content Include="admi_de eventosGUI.aspx" />
     <Content Include="adm_Usuario.aspx" />
     <Content Include="css\ionicons.min.css" />
+    <Content Include="Formulario.aspx" />
     <Content Include="img\avatar.png" />
     <Content Include="img\ccaae9ad-e297-462c-84ad-414e7f30ab51image16.jpeg" />
     <Content Include="img\obra-cholo.jpg" />
@@ -189,6 +190,13 @@
     </Compile>
     <Compile Include="adm_Usuario.aspx.designer.cs">
       <DependentUpon>adm_Usuario.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Formulario.aspx.cs">
+      <DependentUpon>Formulario.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Formulario.aspx.designer.cs">
+      <DependentUpon>Formulario.aspx</DependentUpon>
     </Compile>
     <Compile Include="pririir.aspx.cs">
       <DependentUpon>pririir.aspx</DependentUpon>
