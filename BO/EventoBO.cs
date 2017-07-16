@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BO
 {
-    class EventoBO
+  public  class EventoBO
     {
         public int Codigo { get; set; }
         public string Descripcion { get; set; }

@@ -182,17 +182,25 @@
                     <div class="form-group">
                        <label for="exampleinput">Usuariol</label>
                       <asp:TextBox ID="txt_usuario" runat="server" CssClass="form-control"></asp:TextBox>
-                       
+                         
               </div>
                
                   
         </div>
 
+               
+       <div class="form-group ">
+                <asp:Button ID="btn_eliminar" runat="server" Text="Eliminar" CssClass="btn-primary   " />
          
+        <asp:Button ID="btn_modificar" runat="server" Text="Modificar" CssClass="btn-primary  " />
+             <asp:Button ID="btn_agregar" runat="server" Text="agregar" CssClass="btn-primary   " />
+         
+        <asp:Button ID="btn_nuevo" runat="server" Text="nuevo" CssClass="btn-primary     " />
+         </div>
 
 </div>
-    
- 
+          
+
         <asp:GridView ID="dgv_usuarios" runat="server" CellPadding="4" ForeColor="#333333" GridLines="None">
             <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
             <Columns>
@@ -210,8 +218,7 @@
             <SortedDescendingHeaderStyle BackColor="#6F8DAE" />
         </asp:GridView>
       
-         
-
+        
 
  <script>
         $('#ModalMapPreview').locationpicker({

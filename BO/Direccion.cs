@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BO
 {
-    class Direccion
+  public  class Direccion
     {
         public int Codigo { get; set; }
         public string Colonia { get; set; }
