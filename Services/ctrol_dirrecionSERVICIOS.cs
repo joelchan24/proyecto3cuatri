@@ -7,7 +7,7 @@ using BO;
 using DAO;
 namespace Services
 {
-    class ctrol_dirrecionSERVICIOS
+   public class ctrol_dirrecionSERVICIOS
     {
         direccionDAO objdai;
         public ctrol_dirrecionSERVICIOS()

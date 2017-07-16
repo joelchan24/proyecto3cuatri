@@ -2,15 +2,11 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <style type="text/css">
         #form1 {
-            height: 275px;
+            height: 2500px;
             width:100%
        
 }
-        .style {
-            margin: 0px;
-            width: 349px;
-            height: 404px;
-        }
+        
 
     
     
@@ -54,9 +50,13 @@
               <div class="row" >
               
               <div class="col-xs-4" >
-                  <div class="form-group">
-                      <label for="exampleinput">Precio</label>
+                  <br />
+                  <div class="form-group input-group">
+                      <label for="exampleinput" >Precio</label>
+                     
+                       <span class="input-group-addon "><i   >$</i></span>
                       <asp:TextBox ID="txt_precio" runat="server" CssClass="form-control"></asp:TextBox>
+                       
                      
                   </div>
 
@@ -167,7 +167,7 @@
                     <div class="form-group">
                        <label for="exampleinput" >aprovacion</label><br />
                       <label class="radio-inline" >
-                          <asp:RadioButton ID="rbt_aprovado" runat="server" type="radio" name="optradio"  />  Aprovado
+                          <asp:RadioButton ID="rbt_aprovado" runat="server" type="radio" name="aprovado"  />  Aprovado
       
     </label>
                         
@@ -189,37 +189,63 @@
         </div>
 
                
-       <div class="form-group ">
-                <asp:Button ID="btn_eliminar" runat="server" Text="Eliminar" CssClass="btn-primary   " />
-         
-        <asp:Button ID="btn_modificar" runat="server" Text="Modificar" CssClass="btn-primary  " />
-             <asp:Button ID="btn_agregar" runat="server" Text="agregar" CssClass="btn-primary   " />
-         
-        <asp:Button ID="btn_nuevo" runat="server" Text="nuevo" CssClass="btn-primary     " />
-         </div>
-
+    
 </div>
-          
 
-        <asp:GridView ID="dgv_usuarios" runat="server" CellPadding="4" ForeColor="#333333" GridLines="None">
-            <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
-            <Columns>
-                <asp:ButtonField CommandName="dvg_btnSelecinar" Text="Selecionar" />
-            </Columns>
-            <EditRowStyle BackColor="#999999" />
-            <FooterStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />
-            <HeaderStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />
-            <PagerStyle BackColor="#284775" ForeColor="White" HorizontalAlign="Center" />
-            <RowStyle BackColor="#F7F6F3" ForeColor="#333333" />
-            <SelectedRowStyle BackColor="#E2DED6" Font-Bold="True" ForeColor="#333333" />
-            <SortedAscendingCellStyle BackColor="#E9E7E2" />
-            <SortedAscendingHeaderStyle BackColor="#506C8C" />
-            <SortedDescendingCellStyle BackColor="#FFFDF8" />
-            <SortedDescendingHeaderStyle BackColor="#6F8DAE" />
-        </asp:GridView>
-      
+       <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+           <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
         
-
+        <div class="row"  >
+           
+               
+                <asp:Button ID="btn_eliminar" runat="server" Text="Eliminar" CssClass="btn btn-danger  col-sm-1 " />
+         
+        <asp:Button ID="btn_modificar" runat="server" Text="Modificar" CssClass="btn btn-success col-sm-1 "   />
+ 
+         <asp:Button ID="btn_agregar" runat="server" Text="agregar" CssClass=" btn btn-primary  col-sm-1 " OnClick="accion" />
+        
+        <asp:Button ID="btn_nuevo" runat="server" Text="nuevo" CssClass="btn btn-warning  col-sm-1 " />
+          </div>
+            <div class="row">
+  <div class="col-md-12">
+      <asp:GridView ID="dgb_eventos" runat="server" CssClass=" table-resposive table table-bordered" OnSelectedIndexChanged="dgb_eventos_SelectedIndexChanged" OnRowCommand="mandaraltexvo" OnRowCreated="dgb_eventos_RowCreated">
+          <Columns>
+              <asp:ButtonField CommandName="btn_seleccionar" Text="Seleccionar">
+              <ControlStyle CssClass="btn btn-primary" />
+              </asp:ButtonField>
+          </Columns>
+      </asp:GridView>
+                </div>
+                  </div>
+        
+           
+        
  <script>
         $('#ModalMapPreview').locationpicker({
             radius: 0,

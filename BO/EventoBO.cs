@@ -18,6 +18,7 @@ namespace BO
         public string UbicacionGeografica { get; set; }
         public string latitud { get; set; }
         public string longitud { get; set; }
+        public string aprovacion { get; set; }
         public int CodigoDireccion { get; set; }
         public int CodigoCategoria { get; set; }
         public int CodigoUsuario { get; set; }

@@ -14,8 +14,9 @@ namespace DAO
         conexionDAO conectar = new conexionDAO();
         public int agregar(object agregar)
         {
+            //INSERT INTO EVENTO(DESCRIPCION,NOMBRE,COSTO,FECHAAPERTURA,FECHACIERRE,FOTOPROMOCION,UBICACIONGEOGRAFICA,LATITUD,LONGITUD,APROVACION,DIRECCION,CATEGORIA,USUARIO)VALUES APROVACION=@aprova
             EventoBO obejto = (EventoBO)agregar;
-              SqlCommand cmd = new SqlCommand("INSERT INTO EVENTO(DESCRIPCION ,NOMBRE,COSTO ,FECHAAPERTURA ,FECHACIERRE,FOTOPROMOCION,UBICACIONGEOGRAFICA,LATITUD,LONGITUD,DIRECCION,CATEGORIA,USUARIO) VALUES(@des,@nom,@cos,@feaper,@fecier,@foto,@ubicacion,@lat,@long,@dirr,@cat,@codus)");
+              SqlCommand cmd = new SqlCommand("INSERT INTO EVENTO(DESCRIPCION ,NOMBRE,COSTO ,FECHAAPERTURA ,FECHACIERRE,FOTOPROMOCION,UBICACIONGEOGRAFICA,LATITUD,APROVACION,LONGITUD,DIRECCION,CATEGORIA,USUARIO) VALUES(@des,@nom,@cos,@feaper,@fecier,@foto,@ubicacion,@lat,@long,@aprova,@dirr,@cat,@codus)");
                cmd.Parameters.Add("@des", SqlDbType.VarChar).Value = obejto.Descripcion;
               cmd.Parameters.Add("@nom", SqlDbType.VarChar).Value = obejto.Nombre;
               cmd.Parameters.Add("@cos", SqlDbType.Money).Value = obejto.costo;
@@ -25,7 +26,7 @@ namespace DAO
             cmd.Parameters.Add("@ubicacion", SqlDbType.VarChar).Value = obejto.UbicacionGeografica;
             cmd.Parameters.Add("@lat", SqlDbType.Date).Value = obejto.latitud;
             cmd.Parameters.Add("@long", SqlDbType.VarChar).Value = obejto.longitud;
-        
+            cmd.Parameters.Add("@aprova", SqlDbType.VarChar).Value = obejto.aprovacion;
             cmd.Parameters.Add("@dirr", SqlDbType.Int).Value = obejto.CodigoDireccion;
             cmd.Parameters.Add("@cat", SqlDbType.Int).Value = obejto.CodigoCategoria;
             cmd.Parameters.Add("@codus", SqlDbType.Int).Value = obejto.CodigoUsuario;
@@ -36,7 +37,7 @@ namespace DAO
 
         public DataSet buscar()
         {
-            SqlCommand cmd = new SqlCommand("select * from evento inner join DIRECCION on EVENTO.DIRECCION=DIRECCION.CODIGO");
+            SqlCommand cmd = new SqlCommand(" select * from EVENTO e inner join DIRECCION d on e.DIRECCION=d.CODIGO  ");
            
 
             cmd.CommandType = CommandType.Text;
@@ -61,7 +62,7 @@ namespace DAO
         public int modificar(object modificar)
         {
             EventoBO obejto = (EventoBO)modificar;
-            SqlCommand cmd = new SqlCommand("update  EVENTO set DESCRIPCION=@des ,NOMBRE=@nom,COSTO=@cos ,FECHAAPERTURA=@feaper ,FECHACIERRE=@fecier,FOTOPROMOCION=@foto,UBICACIONGEOGRAFICA=@ubicacion,LATITUD=@lat,LONGITUD=@long,DIRECCION=@dirr,CATEGORIA=@cat,USUARIO=@codus where CODIGO=@cod");
+            SqlCommand cmd = new SqlCommand("update  EVENTO set DESCRIPCION=@des ,NOMBRE=@nom,COSTO=@cos ,FECHAAPERTURA=@feaper ,FECHACIERRE=@fecier,FOTOPROMOCION=@foto,UBICACIONGEOGRAFICA=@ubicacion,LATITUD=@lat,LONGITUD=@long,APROVACION=@aprova,DIRECCION=@dirr,CATEGORIA=@cat,USUARIO=@codus where CODIGO=@cod");
             cmd.Parameters.Add("@cod", SqlDbType.Int).Value = obejto.Codigo;
             cmd.Parameters.Add("@des", SqlDbType.VarChar).Value = obejto.Descripcion;
             cmd.Parameters.Add("@nom", SqlDbType.VarChar).Value = obejto.Nombre;
@@ -72,13 +73,33 @@ namespace DAO
             cmd.Parameters.Add("@ubicacion", SqlDbType.VarChar).Value = obejto.UbicacionGeografica;
             cmd.Parameters.Add("@lat", SqlDbType.Date).Value = obejto.latitud;
             cmd.Parameters.Add("@long", SqlDbType.VarChar).Value = obejto.longitud;
-
+            cmd.Parameters.Add("@aprova", SqlDbType.VarChar).Value = obejto.aprovacion;
             cmd.Parameters.Add("@dirr", SqlDbType.Int).Value = obejto.CodigoDireccion;
             cmd.Parameters.Add("@cat", SqlDbType.Int).Value = obejto.CodigoCategoria;
             cmd.Parameters.Add("@codus", SqlDbType.Int).Value = obejto.CodigoUsuario;
             cmd.CommandType = CommandType.Text;
 
             return conectar.EjecutarComando(cmd);
+        }
+        public DataSet buscar_categoria()
+        {
+            SqlCommand cmd = new SqlCommand("select * from CATEGORIA ");
+
+
+            cmd.CommandType = CommandType.Text;
+
+
+            return conectar.EjecutarSentencia(cmd);
+        }
+        public DataSet buscar_municipio()
+        {
+            SqlCommand cmd = new SqlCommand("select * from MUNICIPIO ");
+
+
+            cmd.CommandType = CommandType.Text;
+
+
+            return conectar.EjecutarSentencia(cmd);
         }
     }
 }

@@ -7,7 +7,7 @@ using BO;
 using DAO;
 namespace Services
 {
-    class ctrol_eventosSERVICIO
+ public   class ctrol_eventosSERVICIO
     {
 
         eventoDAO objdai;
@@ -20,10 +20,10 @@ namespace Services
         {
             switch (str_accion)
             {
-                case "bnt_agregar":
+                case "btn_agregar":
                     objdai.agregar(evento);
                     break;
-                case "bnt_eliminar":
+                case "btn_eliminar":
                     objdai.eliminar(evento);
                     break;
                 case "btn_modificar":
