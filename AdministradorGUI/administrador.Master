@@ -8,6 +8,11 @@
   <title>AdminLTE 2 | Blank Page</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <link href="css/bootstrap-theme.css" rel="stylesheet" />
+    <link href="css/bootstrap-theme.min.css" rel="stylesheet" />
+    <link href="css/bootstrap.css" rel="stylesheet" />
+    <link href="css/estilo-usuario.css" rel="stylesheet" />
+    <link href="css/footer.css" rel="stylesheet" />
   <!-- Bootstrap 3.3.6 -->
  
     <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" />
