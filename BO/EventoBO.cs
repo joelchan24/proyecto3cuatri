@@ -13,6 +13,7 @@ namespace BO
         public string Nombre { get; set; }
         public DateTime FechaApertura { get; set; }
         public DateTime FechaCierre { get; set; }
+        public int costo { get; set; }
         public string FotoPromocion { get; set; }
         public string UbicacionGeografica { get; set; }
         public string latitud { get; set; }

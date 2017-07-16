@@ -9,19 +9,26 @@ using BO;
 
 namespace DAO
 {
-    class eventoDAO : interface_metodos_guardar_eliminar_actualizar_buscar
+  public  class eventoDAO : interface_metodos_guardar_eliminar_actualizar_buscar
     {
         conexionDAO conectar = new conexionDAO();
         public int agregar(object agregar)
         {
             EventoBO obejto = (EventoBO)agregar;
-              SqlCommand cmd = new SqlCommand("INSERT INTO DIRECCION(COLONIA,CODIGOPOSTAL,CRUZAMIENTO,NUMEROINTERIOR,NUMEROEXTERIOR ,MUNICIPIO) values(@col,@pos,@cru,@numin,@numex,@muni)");
-            /*   cmd.Parameters.Add("@col", SqlDbType.VarChar).Value = obejto.Colonia;
-              cmd.Parameters.Add("@pos", SqlDbType.Char).Value = obejto.CodigoPostal;
-              cmd.Parameters.Add("@cru", SqlDbType.VarChar).Value = obejto.Cruzamiento;
-              cmd.Parameters.Add("@numin", SqlDbType.VarChar).Value = obejto.NumeroInterior;
-              cmd.Parameters.Add("@numex", SqlDbType.VarChar).Value = obejto.NumeroExterior;
-              cmd.Parameters.Add("@muni", SqlDbType.Int).Value = obejto.CodigoMunicipio;*/
+              SqlCommand cmd = new SqlCommand("INSERT INTO EVENTO(DESCRIPCION ,NOMBRE,COSTO ,FECHAAPERTURA ,FECHACIERRE,FOTOPROMOCION,UBICACIONGEOGRAFICA,LATITUD,LONGITUD,DIRECCION,CATEGORIA,USUARIO) VALUES(@des,@nom,@cos,@feaper,@fecier,@foto,@ubicacion,@lat,@long,@dirr,@cat,@codus)");
+               cmd.Parameters.Add("@des", SqlDbType.VarChar).Value = obejto.Descripcion;
+              cmd.Parameters.Add("@nom", SqlDbType.VarChar).Value = obejto.Nombre;
+              cmd.Parameters.Add("@cos", SqlDbType.Money).Value = obejto.costo;
+              cmd.Parameters.Add("@feaper", SqlDbType.Date).Value = obejto.FechaApertura;
+              cmd.Parameters.Add("@fecier", SqlDbType.Date).Value = obejto.FechaCierre;
+              cmd.Parameters.Add("@foto", SqlDbType.VarChar).Value = obejto.FotoPromocion;
+            cmd.Parameters.Add("@ubicacion", SqlDbType.VarChar).Value = obejto.UbicacionGeografica;
+            cmd.Parameters.Add("@lat", SqlDbType.Date).Value = obejto.latitud;
+            cmd.Parameters.Add("@long", SqlDbType.VarChar).Value = obejto.longitud;
+        
+            cmd.Parameters.Add("@dirr", SqlDbType.Int).Value = obejto.CodigoDireccion;
+            cmd.Parameters.Add("@cat", SqlDbType.Int).Value = obejto.CodigoCategoria;
+            cmd.Parameters.Add("@codus", SqlDbType.Int).Value = obejto.CodigoUsuario;
             cmd.CommandType = CommandType.Text;
 
               return conectar.EjecutarComando(cmd);
@@ -29,7 +36,13 @@ namespace DAO
 
         public DataSet buscar()
         {
-            throw new NotImplementedException();
+            SqlCommand cmd = new SqlCommand("select * from evento inner join DIRECCION on EVENTO.DIRECCION=DIRECCION.CODIGO");
+           
+
+            cmd.CommandType = CommandType.Text;
+
+
+            return conectar.EjecutarSentencia(cmd);
         }
 
         public int eliminar(object eliminar)
@@ -48,15 +61,22 @@ namespace DAO
         public int modificar(object modificar)
         {
             EventoBO obejto = (EventoBO)modificar;
-            SqlCommand cmd = new SqlCommand("update  DIRECCION set COLONIA=@col,CODIGOPOSTAL=@pos,CRUZAMIENTO=@cru,NUMEROINTERIOR=@numin,NUMEROEXTERIOR=@numex ,MUNICIPIO=@muni where CODIGO=@cod");
-        /*      cmd.Parameters.Add("@cod", SqlDbType.Int).Value = obejto.Codigo;
-            cmd.Parameters.Add("@col", SqlDbType.VarChar).Value = obejto.Colonia;
-            cmd.Parameters.Add("@pos", SqlDbType.Char).Value = obejto.CodigoPostal;
-            cmd.Parameters.Add("@cru", SqlDbType.VarChar).Value = obejto.Cruzamiento;
-            cmd.Parameters.Add("@numin", SqlDbType.VarChar).Value = obejto.NumeroInterior;
-            cmd.Parameters.Add("@numex", SqlDbType.VarChar).Value = obejto.NumeroExterior;
-            cmd.Parameters.Add("@muni", SqlDbType.Int).Value = obejto.CodigoMunicipio;
-            cmd.CommandType = CommandType.Text;*/
+            SqlCommand cmd = new SqlCommand("update  EVENTO set DESCRIPCION=@des ,NOMBRE=@nom,COSTO=@cos ,FECHAAPERTURA=@feaper ,FECHACIERRE=@fecier,FOTOPROMOCION=@foto,UBICACIONGEOGRAFICA=@ubicacion,LATITUD=@lat,LONGITUD=@long,DIRECCION=@dirr,CATEGORIA=@cat,USUARIO=@codus where CODIGO=@cod");
+            cmd.Parameters.Add("@cod", SqlDbType.Int).Value = obejto.Codigo;
+            cmd.Parameters.Add("@des", SqlDbType.VarChar).Value = obejto.Descripcion;
+            cmd.Parameters.Add("@nom", SqlDbType.VarChar).Value = obejto.Nombre;
+            cmd.Parameters.Add("@cos", SqlDbType.Money).Value = obejto.costo;
+            cmd.Parameters.Add("@feaper", SqlDbType.Date).Value = obejto.FechaApertura;
+            cmd.Parameters.Add("@fecier", SqlDbType.Date).Value = obejto.FechaCierre;
+            cmd.Parameters.Add("@foto", SqlDbType.VarChar).Value = obejto.FotoPromocion;
+            cmd.Parameters.Add("@ubicacion", SqlDbType.VarChar).Value = obejto.UbicacionGeografica;
+            cmd.Parameters.Add("@lat", SqlDbType.Date).Value = obejto.latitud;
+            cmd.Parameters.Add("@long", SqlDbType.VarChar).Value = obejto.longitud;
+
+            cmd.Parameters.Add("@dirr", SqlDbType.Int).Value = obejto.CodigoDireccion;
+            cmd.Parameters.Add("@cat", SqlDbType.Int).Value = obejto.CodigoCategoria;
+            cmd.Parameters.Add("@codus", SqlDbType.Int).Value = obejto.CodigoUsuario;
+            cmd.CommandType = CommandType.Text;
 
             return conectar.EjecutarComando(cmd);
         }

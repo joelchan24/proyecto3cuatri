@@ -25,7 +25,7 @@
           <div class="row">
               <h1 > control</h1>
                <asp:HiddenField  ID="txtid" runat="server" />
-              <asp:HiddenField ID="txt_codir" runat="server" />
+              <asp:HiddenField ID="txt_codir" runat="server" OnValueChanged="txt_codir_ValueChanged" />
               <div class="col-xs-4" >
                   <div class="form-group">
                       <label for="exampleinput">nombre</label>
@@ -64,13 +64,13 @@
                 <div class="col-xs-4">
                     <div class="form-group">
                        <label for="exampleinput">Categoria</label>
-                      <asp:DropDownList ID="DropDownList1" runat="server" Width="100%"></asp:DropDownList>
+                      <asp:DropDownList ID="ddl_categoria" runat="server" Width="100%"></asp:DropDownList>
                         </div>
               </div>
                <div class="col-xs-4">
                     <div class="form-group">
                          <label for="exampleinput">Municipio</label>
-                       <asp:DropDownList ID="DropDownList2" runat="server" Width="100%"></asp:DropDownList>  
+                       <asp:DropDownList ID="ddl_municipio" runat="server" Width="100%"></asp:DropDownList>  
 
                     </div>
                    
@@ -141,7 +141,7 @@
                       <label for="exampleinput">c.postal</label>
                      
                         <asp:Image ID="Image1" runat="server" />
-                    <asp:FileUpload ID="FileUpload1" runat="server" />
+                    <asp:FileUpload ID="file_foto" runat="server" />
                      
                   </div>
                
@@ -152,7 +152,7 @@
                 
                   <div class="form-group">
                       <label for="exampleinput">Descripcion</label>
-                     <asp:TextBox id="TextArea1" TextMode="multiline" Columns="50" Rows="5" runat="server" CssClass="form-control " width="349px" height=350px                  />
+                     <asp:TextBox id="txt_descrip" TextMode="multiline" Columns="50" Rows="5" runat="server" CssClass="form-control " width="349px" height=350px                  />
                      
                   </div>
 

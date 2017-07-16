@@ -10,7 +10,7 @@ using System.Data.SqlClient;
 
 namespace DAO
 {
-    class direccionDAO : interface_metodos_guardar_eliminar_actualizar_buscar
+  public  class direccionDAO : interface_metodos_guardar_eliminar_actualizar_buscar
     {
         conexionDAO conectar = new conexionDAO();
         public int agregar(object agregar)

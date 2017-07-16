@@ -76,22 +76,22 @@ namespace AdministradorGUI {
         protected global::System.Web.UI.WebControls.TextBox txt_precio;
         
         /// <summary>
-        /// Control DropDownList1.
+        /// Control ddl_categoria.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList DropDownList1;
+        protected global::System.Web.UI.WebControls.DropDownList ddl_categoria;
         
         /// <summary>
-        /// Control DropDownList2.
+        /// Control ddl_municipio.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList DropDownList2;
+        protected global::System.Web.UI.WebControls.DropDownList ddl_municipio;
         
         /// <summary>
         /// Control txt_ubicar.
@@ -175,22 +175,22 @@ namespace AdministradorGUI {
         protected global::System.Web.UI.WebControls.Image Image1;
         
         /// <summary>
-        /// Control FileUpload1.
+        /// Control file_foto.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.FileUpload FileUpload1;
+        protected global::System.Web.UI.WebControls.FileUpload file_foto;
         
         /// <summary>
-        /// Control TextArea1.
+        /// Control txt_descrip.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextArea1;
+        protected global::System.Web.UI.WebControls.TextBox txt_descrip;
         
         /// <summary>
         /// Control rbt_aprovado.

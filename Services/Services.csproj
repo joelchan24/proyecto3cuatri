@@ -40,6 +40,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ctrol_dirrecionSERVICIOS.cs" />
+    <Compile Include="ctrol_eventosSERVICIO.cs" />
     <Compile Include="ctrol_usuarioSERVICIOS.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
