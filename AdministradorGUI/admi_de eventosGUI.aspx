@@ -6,7 +6,11 @@
             width:100%
        
 }
-       
+        .style {
+            margin: 0px;
+            width: 349px;
+            height: 404px;
+        }
 
     
     
@@ -87,6 +91,7 @@
                     <div id="ModalMapPreview" style="width:100%; height:300px;"></div>
                 </div>
                 <!--altitud y lon-->
+               
                 <div class="form-group">
                     <label for="exampleinput">lat:</label>
                     <asp:TextBox ID="txtlat" runat="server" Text="20.938297181414647" CssClass="form-control"></asp:TextBox>
@@ -101,85 +106,86 @@
 
                 
                   <div class="form-group">
-                      <label for="exampleinput">c.postal</label>
-                      <asp:TextBox ID="TextBox1" runat="server" CssClass="form-control"></asp:TextBox>
+                      <label for="exampleinput">C.P</label>
+                      <asp:TextBox ID="txt_postal" runat="server" CssClass="form-control"></asp:TextBox>
                      
                   </div>
 
               
             
                     <div class="form-group">
-                       <label for="exampleinput">colonia</label>
-                      <asp:TextBox ID="TextBox2" runat="server" CssClass="form-control"></asp:TextBox>
+                       <label for="exampleinput">Colonia</label>
+                      <asp:TextBox ID="txt_colonia" runat="server" CssClass="form-control"></asp:TextBox>
                        
               </div>
                
                     <div class="form-group">
-                         <label for="exampleinput">numero interio</label>
-                        <asp:TextBox ID="TextBox3" runat="server" CssClass="form-control"></asp:TextBox>
+                         <label for="exampleinput">Número Interior</label>
+                        <asp:TextBox ID="txt_numint" runat="server" CssClass="form-control"></asp:TextBox>
                     </div>
                  <div class="form-group">
-                      <label for="exampleinput">c.postal</label>
-                      <asp:TextBox ID="TextBox8" runat="server" CssClass="form-control"></asp:TextBox>
+                      <label for="exampleinput">Número Exterior</label>
+                      <asp:TextBox ID="txt_numexter" runat="server" CssClass="form-control"></asp:TextBox>
                      
                   </div>
 
               
             
                     <div class="form-group">
-                       <label for="exampleinput">colonia</label>
-                      <asp:TextBox ID="TextBox9" runat="server" CssClass="form-control"></asp:TextBox>
+                       <label for="exampleinput">Cruzamientos</label>
+                      <asp:TextBox ID="txt_crizamiento" runat="server" CssClass="form-control"></asp:TextBox>
                        
               </div>
+                <br />
+                <div class="form-group">
+                      <label for="exampleinput">c.postal</label>
+                     
+                        <asp:Image ID="Image1" runat="server" />
+                    <asp:FileUpload ID="FileUpload1" runat="server" />
+                     
+                  </div>
                
-                    <div class="form-group">
-                         <label for="exampleinput">numero interio</label>
-                        <asp:TextBox ID="TextBox10" runat="server" CssClass="form-control"></asp:TextBox>
-                    </div>
-                   
               
         </div>
               <div class="col-md-4">
 
                 
                   <div class="form-group">
-                      <label for="exampleinput">c.postal</label>
-                      <asp:TextBox ID="TextBox4" runat="server" CssClass="form-control"></asp:TextBox>
+                      <label for="exampleinput">Descripcion</label>
+                     <asp:TextBox id="TextArea1" TextMode="multiline" Columns="50" Rows="5" runat="server" CssClass="form-control " width="349px" height=350px                  />
                      
                   </div>
 
               
             
-                    <div class="form-group">
-                       <label for="exampleinput">colonia</label>
-                      <asp:TextBox ID="TextBox5" runat="server" CssClass="form-control"></asp:TextBox>
-                       
-              </div>
-               
-                    <div class="form-group">
-                         <label for="exampleinput">numero interio</label>
-                        <asp:TextBox ID="TextBox6" runat="server" CssClass="form-control"></asp:TextBox>
-                    </div>
-                    <div class="form-group">
-                      <label for="exampleinput">c.postal</label>
-                     
-                        <asp:Image ID="Image1" runat="server" />
-                     
-                  </div>
+                   
+                   
+                   
 
               
             
                     <div class="form-group">
-                       <label for="exampleinput">colonia</label>
-                      <asp:TextBox ID="TextBox12" runat="server" CssClass="form-control"></asp:TextBox>
+                       <label for="exampleinput" >aprovacion</label><br />
+                      <label class="radio-inline" >
+                          <asp:RadioButton ID="rbt_aprovado" runat="server" type="radio" name="optradio"  />  Aprovado
+      
+    </label>
+                        
+    <label class="radio-inline">
+      <input type="radio" name="optradio">
+
+        <asp:RadioButton ID="rbt_noapro" runat="server" type="radio" name="optradio" />  No aprovado
+    </label>
+                       
+              </div>
+                  
+                    <div class="form-group">
+                       <label for="exampleinput">Usuariol</label>
+                      <asp:TextBox ID="txt_usuario" runat="server" CssClass="form-control"></asp:TextBox>
                        
               </div>
                
-                    <div class="form-group">
-                         <label for="exampleinput">numero interio</label>
-                        <asp:TextBox ID="TextBox13" runat="server" CssClass="form-control"></asp:TextBox>
-                    </div>
-              
+                  
         </div>
 
          
