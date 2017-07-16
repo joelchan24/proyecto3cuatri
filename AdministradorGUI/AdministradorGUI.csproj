@@ -102,6 +102,7 @@
     <Content Include="img\Progreso-malecon.jpg" />
     <Content Include="img\vaqueria-yucateca-2.jpg" />
     <Content Include="js\bootstrap.min-fds90[2].js" />
+    <Content Include="js\locationpicker.jquery.js" />
     <Content Include="packages.config" />
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
