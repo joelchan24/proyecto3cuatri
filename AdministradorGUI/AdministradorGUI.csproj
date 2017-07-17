@@ -217,10 +217,6 @@
       <Project>{dc236ff7-cb2f-4910-8c84-ced9125bfd61}</Project>
       <Name>Services</Name>
     </ProjectReference>
-    <ProjectReference Include="..\UsuarioGUI\UsuarioGUI.csproj">
-      <Project>{4efdb527-e2e0-4e14-bc52-bbbfcca88442}</Project>
-      <Name>UsuarioGUI</Name>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup />
   <PropertyGroup>
