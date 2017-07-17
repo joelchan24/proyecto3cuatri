@@ -38,7 +38,7 @@ namespace DAO
         public DataSet buscar()
         {
             // select * from EVENTO e inner join DIRECCION d on e.DIRECCION=d.CODIGO  
-            SqlCommand cmd = new SqlCommand(" select * from  EVENTO  ");
+            SqlCommand cmd = new SqlCommand(" select * from  DIRECCION  ");
            
 
             cmd.CommandType = CommandType.Text;
