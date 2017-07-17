@@ -14,6 +14,7 @@ namespace AdministradorGUI
 {
     public partial class admi_de_eventosGUI : System.Web.UI.Page
     {
+        ctrol_dirrecionSERVICIOS ser_direccion = new ctrol_dirrecionSERVICIOS();
         ctrol_eventosSERVICIO control = new ctrol_eventosSERVICIO();
         eventoDAO eventado = new eventoDAO();
         protected void Page_Load(object sender, EventArgs e)
@@ -53,12 +54,13 @@ namespace AdministradorGUI
             obj.Descripcion =txt_descrip.Text;
             obj.Nombre = txt_nombre.Text;
             obj.costo = Convert.ToInt32(txt_precio.Text);
-            obj.FechaApertura =Convert.ToDateTime(txt_aperura.Text);
+            //obj.FechaApertura =txt_aperura.val;
             obj.FechaCierre = Convert.ToDateTime(txt_fecha_cierre.Text);
             obj.FotoPromocion = file_foto.ToString();
             obj.UbicacionGeografica = txt_ubicar.Text;
             obj.longitud = txt_lo.Text;
             obj.latitud = txtlat.Text;
+            obj.aprovacion=(rbt_aprovado.Checked)? "aprovado" : "no aprovado";
             obj.CodigoDireccion = Convert.ToInt32(iddir.ToString());
             obj.CodigoCategoria = Convert.ToInt32(ddl_categoria.SelectedValue);
             obj.CodigoUsuario =Convert.ToInt32( txt_usuario.Text);
@@ -122,6 +124,7 @@ namespace AdministradorGUI
             txt_postal.Text= dgb_eventos.Rows[fila].Cells[15].Text;
             txt_precio.Text= dgb_eventos.Rows[fila].Cells[4].Text;
             rbt_aprovado.Checked = (Convert.ToString(dgb_eventos.Rows[fila].Cells[11].Text) == "aprovado") ? true : false;
+            rbt_noapro.Checked = (Convert.ToString(dgb_eventos.Rows[fila].Cells[11].Text) == "no aprovado") ? true : false;
             txt_usuario.Text= dgb_eventos.Rows[fila].Cells[3].Text;
             ddl_categoria.SelectedValue= dgb_eventos.Rows[fila].Cells[12].Text;
             ddl_municipio.SelectedValue= dgb_eventos.Rows[fila].Cells[19].Text;
@@ -138,9 +141,15 @@ namespace AdministradorGUI
         {
             Button btnsellcionado = (Button)sender;
 
-            control.accion(devolver(), btnsellcionado.ID);
+           control.accion(devolver(), btnsellcionado.ID);
+           // ser_direccion.accion(mandar(), btnsellcionado.ID);
             refrescar();
 
+
+        }
+
+        protected void btn_eliminar_Click1(object sender, EventArgs e)
+        {
 
         }
     }

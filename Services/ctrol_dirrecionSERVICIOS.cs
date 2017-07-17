@@ -19,10 +19,10 @@ namespace Services
         {
             switch (str_accion)
             {
-                case "bnt_agregar":
+                case "btn_agregar":
                     objdai.agregar(dire);
                     break;
-                case "bnt_eliminar":
+                case "btn_eliminar":
                     objdai.eliminar(dire);
                     break;
                 case "btn_modificar":
