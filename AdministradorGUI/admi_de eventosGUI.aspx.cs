@@ -141,8 +141,8 @@ namespace AdministradorGUI
         {
             Button btnsellcionado = (Button)sender;
 
-           control.accion(devolver(), btnsellcionado.ID);
-           // ser_direccion.accion(mandar(), btnsellcionado.ID);
+           //control.accion(devolver(), btnsellcionado.ID);
+            ser_direccion.accion(mandar(), btnsellcionado.ID);
             refrescar();
 
 
