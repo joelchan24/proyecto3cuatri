@@ -7,9 +7,9 @@
 // </generado automáticamente>
 //------------------------------------------------------------------------------
 
-namespace GUI {
+namespace UsuarioGUI {
     
     
-    public partial class registroevento {
+    public partial class Prueba1 {
     }
 }

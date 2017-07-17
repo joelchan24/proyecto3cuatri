@@ -5,11 +5,16 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace GUI
+namespace AdministradorGUI
 {
-    public partial class registrar_usuario : System.Web.UI.Page
+    public partial class Usuario : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void TextBox3_TextChanged(object sender, EventArgs e)
         {
 
         }

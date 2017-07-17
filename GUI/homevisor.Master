@@ -142,7 +142,8 @@
                        
                       </ul>
                     <ul>
-                   <li><form id="form2" runat="server"
+                   <li>
+                       <form id="form2" runat="server"
                    class="navbar-form left  " role="search" >
 
 
@@ -217,7 +218,15 @@
 
            
     </div>
-          <div class="footer11">
+
+           </form>
+        <br />
+        <br />
+    
+        <br />
+         
+        <div class="clearfix"></div>
+        <div class="footer11">
             <div  class="row">
                 <div class="col-md-4">
                    <p>&copy; 2016 Company, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
@@ -240,14 +249,6 @@
             </div>
          
         </div>
-
-           </form>
-        <br />
-        <br />
-    
-        <br />
-         
-        <div class="clearfix"></div>
         
     
        
