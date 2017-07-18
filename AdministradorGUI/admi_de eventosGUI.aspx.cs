@@ -72,7 +72,7 @@ namespace AdministradorGUI
             obj.Descripcion =txt_descrip.Text;
             obj.Nombre = txt_nombre.Text;
             obj.costo = Convert.ToInt32(txt_precio.Text);
-           // obj.FechaApertura = txt_aperura.Text;
+           obj.FechaApertura = Convert.ToDateTime(txt_aperura.Text);
             obj.FechaCierre = Convert.ToDateTime(txt_fecha_cierre.Text);
             obj.FotoPromocion = file_foto.ToString();
             obj.UbicacionGeografica = txt_ubicar.Text;
@@ -143,21 +143,22 @@ namespace AdministradorGUI
             txt_lo.Text = dgb_eventos.Rows[fila].Cells[10].Text;
             txtlat.Text = dgb_eventos.Rows[fila].Cells[9].Text;
           txt_aperura.Text= dgb_eventos.Rows[fila].Cells[5].Text;
-            txt_codir.Value= dgb_eventos.Rows[fila].Cells[13].Text;
-            txt_colonia.Text= dgb_eventos.Rows[fila].Cells[14].Text;
-            txt_crizamiento.Text= dgb_eventos.Rows[fila].Cells[16].Text;
+            txt_codir.Value= dgb_eventos.Rows[fila].Cells[12].Text;
+            txt_colonia.Text= dgb_eventos.Rows[fila].Cells[16].Text;
+            txt_crizamiento.Text= dgb_eventos.Rows[fila].Cells[18].Text;
             txt_descrip.Text= dgb_eventos.Rows[fila].Cells[2].Text;
             txt_fecha_cierre.Text= dgb_eventos.Rows[fila].Cells[6].Text;
             txt_nombre.Text= dgb_eventos.Rows[fila].Cells[3].Text;
-            txt_numexter.Text= dgb_eventos.Rows[fila].Cells[18].Text;
-            txt_numint.Text= dgb_eventos.Rows[fila].Cells[17].Text;
-            txt_postal.Text= dgb_eventos.Rows[fila].Cells[15].Text;
+            txt_numexter.Text= dgb_eventos.Rows[fila].Cells[20].Text;
+            txt_numint.Text= dgb_eventos.Rows[fila].Cells[19].Text;
+            txt_postal.Text= dgb_eventos.Rows[fila].Cells[17].Text;
             txt_precio.Text= dgb_eventos.Rows[fila].Cells[4].Text;
+            txt_codir.Value= dgb_eventos.Rows[fila].Cells[15].Text;
             rbt_aprovado.Checked = (Convert.ToString(dgb_eventos.Rows[fila].Cells[11].Text) == "aprovado") ? true : false;
             rbt_noapro.Checked = (Convert.ToString(dgb_eventos.Rows[fila].Cells[11].Text) == "no aprovado") ? true : false;
-            txt_usuario.Text= dgb_eventos.Rows[fila].Cells[3].Text;
-            ddl_categoria.SelectedValue= dgb_eventos.Rows[fila].Cells[12].Text;
-            ddl_municipio.SelectedValue= dgb_eventos.Rows[fila].Cells[19].Text;
+            txt_usuario.Text= dgb_eventos.Rows[fila].Cells[14].Text;
+            ddl_categoria.SelectedValue= dgb_eventos.Rows[fila].Cells[13].Text;
+            ddl_municipio.SelectedValue= dgb_eventos.Rows[fila].Cells[21].Text;
 
             // }
         }

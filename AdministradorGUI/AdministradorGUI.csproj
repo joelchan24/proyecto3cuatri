@@ -94,7 +94,6 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="admin_UsuarioGUI.aspx" />
     <Content Include="admi_de eventosGUI.aspx" />
     <Content Include="Categoria.aspx" />
     <Content Include="Estado.aspx" />
@@ -120,7 +119,6 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="admin_mensajes.aspx" />
     <Content Include="css\AdminLTE.min.css" />
     <Content Include="css\bootstrap-theme.css" />
     <Content Include="css\bootstrap-theme.min.css" />
@@ -159,31 +157,6 @@
     </Compile>
     <Compile Include="administrador.Master.designer.cs">
       <DependentUpon>administrador.Master</DependentUpon>
-    </Compile>
-    <Compile Include="admin_Comentario.aspx.cs">
-      <DependentUpon>admin_Comentario.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="admin_Comentario.aspx.designer.cs">
-      <DependentUpon>admin_Comentario.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="admin_Mensaje.aspx.cs">
-      <DependentUpon>admin_Mensaje.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="admin_Mensaje.aspx.designer.cs">
-      <DependentUpon>admin_Mensaje.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="admin_mensajes.aspx.cs">
-      <DependentUpon>admin_mensajes.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="admin_mensajes.aspx.designer.cs">
-      <DependentUpon>admin_mensajes.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="admin_usuario.aspx.cs">
-      <DependentUpon>admin_usuario.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="admi_de eventosGUI.aspx.cs">
       <DependentUpon>admi_de eventosGUI.aspx</DependentUpon>

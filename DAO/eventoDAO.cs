@@ -32,7 +32,7 @@ namespace DAO
             int id = conectar.EjecutarComando(dir);
 
 
-            SqlCommand cmd = new SqlCommand("INSERT INTO EVENTO(DESCRIPCION ,NOMBRE,COSTO ,FECHAAPERTURA ,FECHACIERRE,FOTOPROMOCION,UBICACIONGEOGRAFICA,LATITUD,APROVACION,LONGITUD,DIRECCION,CATEGORIA,USUARIO)  VALUES(@des,@nom,@cos,@feaper,@fecier,@foto,@ubicacion,@lat,@long,@aprova,'" + id + "',@cat,@codus)");
+            SqlCommand cmd = new SqlCommand("INSERT INTO EVENTO(DESCRIPCION ,NOMBRE,COSTO ,FECHAAPERTURA ,FECHACIERRE,FOTOPROMOCION,UBICACIONGEOGRAFICA,LATITUD,LONGITUD,APROVACION,DIRECCION,CATEGORIA,USUARIO)  VALUES(@des,@nom,@cos,@feaper,@fecier,@foto,@ubicacion,@lat,@long,@aprova,'" + id + "',@cat,@codus)");
 
           
 
@@ -46,11 +46,11 @@ namespace DAO
             cmd.Parameters.Add("@des", SqlDbType.VarChar).Value = obejto.Descripcion;
               cmd.Parameters.Add("@nom", SqlDbType.VarChar).Value = obejto.Nombre;
               cmd.Parameters.Add("@cos", SqlDbType.Money).Value = obejto.costo;
-              cmd.Parameters.Add("@feaper", SqlDbType.Date).Value = obejto.FechaApertura.ToString("yyyy/MM/dd"); ;
-              cmd.Parameters.Add("@fecier", SqlDbType.Date).Value = obejto.FechaCierre.ToString("yyyy/MM/dd"); ;
+              cmd.Parameters.Add("@feaper", SqlDbType.Date).Value = obejto.FechaApertura.ToString("yyyy/MM/dd"); 
+              cmd.Parameters.Add("@fecier", SqlDbType.Date).Value = obejto.FechaCierre.ToString("yyyy/MM/dd"); 
               cmd.Parameters.Add("@foto", SqlDbType.VarChar).Value = obejto.FotoPromocion;
             cmd.Parameters.Add("@ubicacion", SqlDbType.VarChar).Value = obejto.UbicacionGeografica;
-            cmd.Parameters.Add("@lat", SqlDbType.Date).Value = obejto.latitud;
+            cmd.Parameters.Add("@lat", SqlDbType.VarChar).Value = obejto.latitud;
             cmd.Parameters.Add("@long", SqlDbType.VarChar).Value = obejto.longitud;
             cmd.Parameters.Add("@aprova", SqlDbType.VarChar).Value = obejto.aprovacion;
             cmd.Parameters.Add("@dirr", SqlDbType.Int).Value = obejto.CodigoDireccion;
@@ -96,7 +96,7 @@ namespace DAO
         public DataSet buscar()
         {
             // select * from EVENTO e inner join DIRECCION d on e.DIRECCION=d.CODIGO  
-            SqlCommand cmd = new SqlCommand(" select * from  DIRECCION  ");
+            SqlCommand cmd = new SqlCommand(" select * from EVENTO e inner join DIRECCION d on e.DIRECCION=d.CODIGO  ");
            
 
             cmd.CommandType = CommandType.Text;
@@ -130,7 +130,7 @@ namespace DAO
             cmd.Parameters.Add("@fecier", SqlDbType.Date).Value = obejto.FechaCierre;
             cmd.Parameters.Add("@foto", SqlDbType.VarChar).Value = obejto.FotoPromocion;
             cmd.Parameters.Add("@ubicacion", SqlDbType.VarChar).Value = obejto.UbicacionGeografica;
-            cmd.Parameters.Add("@lat", SqlDbType.Date).Value = obejto.latitud;
+            cmd.Parameters.Add("@lat", SqlDbType.VarChar).Value = obejto.latitud;
             cmd.Parameters.Add("@long", SqlDbType.VarChar).Value = obejto.longitud;
             cmd.Parameters.Add("@aprova", SqlDbType.VarChar).Value = obejto.aprovacion;
             cmd.Parameters.Add("@dirr", SqlDbType.Int).Value = obejto.CodigoDireccion;
