@@ -1,6 +1,6 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/administrador.Master" AutoEventWireup="true" CodeBehind="admin_UsuarioGUI.aspx.cs" Inherits="AdministradorGUI.Usuario" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/administrador.Master" AutoEventWireup="true" CodeBehind="Usuario.aspx.cs" Inherits="AdministradorGUI.Usuario1" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-    <style type="text/css">
+      <style type="text/css">
         #form1 {
             height: 1235px;
             width: 1080px;
@@ -74,7 +74,7 @@
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder2" runat="server">
-  <link href="css/estilo-usuario.css" rel="stylesheet" />
+    <link href="css/estilo-usuario.css" rel="stylesheet" />
     <form id="form1" runat="server" class="auto-style12">
         <div class="row auto-style9" style="height: 262px">
                 <div class="auto-style4">
@@ -159,7 +159,7 @@
         <div class="row">
             <div class="col-lg-12">
                 <div class="form-group">
-                 <asp:Button ID="btnAgregar" runat="server" Text="Agregar" CssClass="btn btn-dropbox" Width="100px" Height="50px" OnClick="Seleccionar" /> <asp:Button ID="btnModificar" Text="Modificar" runat="server" CssClass="btn btn-dropbox" Width="100px" Height="50px" OnClick="Seleccionar" /> <asp:Button ID="btnEliminar" Text="Eliminar" runat="server" CssClass="btn btn-dropbox" Width="100px" Height="50px" /> <asp:Button ID="btnNuevo" Text="Nuevo" runat="server" CssClass="btn btn-dropbox" Width="100px" Height="50px" /> <asp:Button ID="btnBuscar" Text="Buscar" runat="server" CssClass="btn btn-dropbox" Width="100px" Height="50px" />
+                 <asp:Button ID="btnAgregar" runat="server" Text="Agregar" CssClass="btn btn-dropbox" Width="100px" Height="50px"  /> <asp:Button ID="btnModificar" Text="Modificar" runat="server" CssClass="btn btn-dropbox" Width="100px" Height="50px" /> <asp:Button ID="btnEliminar" Text="Eliminar" runat="server" CssClass="btn btn-dropbox" Width="100px" Height="50px" /> <asp:Button ID="btnNuevo" Text="Nuevo" runat="server" CssClass="btn btn-dropbox" Width="100px" Height="50px" /> <asp:Button ID="btnBuscar" Text="Buscar" runat="server" CssClass="btn btn-dropbox" Width="100px" Height="50px" />
                 </div>
 
             </div>
