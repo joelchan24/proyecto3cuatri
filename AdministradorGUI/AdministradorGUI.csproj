@@ -94,12 +94,18 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="admin_comen.aspx" />
     <Content Include="admin_Comentario.aspx" />
     <Content Include="admin_Mensaje.aspx" />
-    <Content Include="admin_UsuarioGUI.aspx" />
+    <Content Include="admin_usuario.aspx" />
     <Content Include="admi_de eventosGUI.aspx" />
     <Content Include="Categoria.aspx" />
     <Content Include="Estado.aspx" />
+    <Content Include="img\avatar.png" />
+    <Content Include="img\ccaae9ad-e297-462c-84ad-414e7f30ab51image16.jpeg" />
+    <Content Include="img\obra-cholo.jpg" />
+    <Content Include="img\Progreso-malecon.jpg" />
+    <Content Include="img\vaqueria-yucateca-2.jpg" />
     <Content Include="js\img\avatar.png" />
     <Content Include="js\img\ccaae9ad-e297-462c-84ad-414e7f30ab51image16.jpeg" />
     <Content Include="js\img\obra-cholo.jpg" />
@@ -162,6 +168,13 @@
     <Compile Include="administrador.Master.designer.cs">
       <DependentUpon>administrador.Master</DependentUpon>
     </Compile>
+    <Compile Include="admin_comen.aspx.cs">
+      <DependentUpon>admin_comen.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin_comen.aspx.designer.cs">
+      <DependentUpon>admin_comen.aspx</DependentUpon>
+    </Compile>
     <Compile Include="admin_Comentario.aspx.cs">
       <DependentUpon>admin_Comentario.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -183,9 +196,8 @@
     <Compile Include="admin_mensajes.aspx.designer.cs">
       <DependentUpon>admin_mensajes.aspx</DependentUpon>
     </Compile>
-    <Compile Include="admin_UsuarioGUI.aspx.cs">
-      <DependentUpon>admin_UsuarioGUI.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
+    <Compile Include="admin_usuario.aspx.cs">
+      <DependentUpon>admin_usuario.aspx</DependentUpon>
     </Compile>
     <Compile Include="admi_de eventosGUI.aspx.cs">
       <DependentUpon>admi_de eventosGUI.aspx</DependentUpon>
