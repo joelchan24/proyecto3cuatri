@@ -22,13 +22,13 @@ namespace Services
         {
             switch (strAccion)
             {
-                case "btn_Nuevo":
+                case "btnAgregar":
                     oCategoriaDAO.agregar(oCategoriaBO);
                     break;
-                case "btn_Eliminar":
+                case "btnEliminar":
                     oCategoriaDAO.eliminar(oCategoriaBO);
                     break;
-                case "btn_Modificar":
+                case "btnModificar":
                     oCategoriaDAO.modificar(oCategoriaBO);
                     break;
                 case "btn_Buscar":
