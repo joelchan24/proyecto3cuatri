@@ -94,7 +94,7 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="admin_UsuarioGUI.aspx" />
+    <Content Include="admin_usuario.aspx" />
     <Content Include="admi_de eventosGUI.aspx" />
     <Content Include="Categoria.aspx" />
     <Content Include="Estado.aspx" />
@@ -167,8 +167,8 @@
     <Compile Include="admin_mensajes.aspx.designer.cs">
       <DependentUpon>admin_mensajes.aspx</DependentUpon>
     </Compile>
-    <Compile Include="admin_UsuarioGUI.aspx.cs">
-      <DependentUpon>admin_UsuarioGUI.aspx</DependentUpon>
+    <Compile Include="admin_usuario.aspx.cs">
+      <DependentUpon>admin_usuario.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="admi_de eventosGUI.aspx.cs">
