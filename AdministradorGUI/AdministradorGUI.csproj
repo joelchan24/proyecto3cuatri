@@ -96,6 +96,7 @@
   <ItemGroup>
     <Content Include="admin_UsuarioGUI.aspx" />
     <Content Include="admi_de eventosGUI.aspx" />
+    <Content Include="Categoria.aspx" />
     <Content Include="Estado.aspx" />
     <Content Include="js\img\avatar.png" />
     <Content Include="js\img\ccaae9ad-e297-462c-84ad-414e7f30ab51image16.jpeg" />
@@ -176,6 +177,13 @@
     </Compile>
     <Compile Include="admi_de eventosGUI.aspx.designer.cs">
       <DependentUpon>admi_de eventosGUI.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Categoria.aspx.cs">
+      <DependentUpon>Categoria.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Categoria.aspx.designer.cs">
+      <DependentUpon>Categoria.aspx</DependentUpon>
     </Compile>
     <Compile Include="Estado.aspx.cs">
       <DependentUpon>Estado.aspx</DependentUpon>
