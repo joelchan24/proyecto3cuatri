@@ -27,7 +27,7 @@ namespace DAO
 
         public SqlConnection establecerConexion()
         {
-            string cs = "Data Source=CARLOS-LAP; Initial catalog=CULTURA; Password=12345; integrated security=true";
+            string cs = "Data Source=YEKO-PC\\SQLEXPRESS; Initial catalog=CULTURA; integrated security=true";
             coneccion = new SqlConnection(cs);
             return coneccion;
         }

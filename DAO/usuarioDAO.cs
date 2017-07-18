@@ -75,7 +75,13 @@ namespace DAO
         }
         public DataSet listarusuario()
         {
-            SqlCommand cmd = new SqlCommand("select * from TIPOCUENTA");
+            SqlCommand cmd = new SqlCommand("select * from TIPOCUENTA WHERE CODIGO!='"+3+"'");
+            cmd.CommandType = CommandType.Text;
+            return obj.EjecutarSentencia(cmd);
+        }
+        public DataSet listarMunicipio()
+        {
+            SqlCommand cmd = new SqlCommand("select CODIGO,NOMBRE from MUNICIPIO");
             cmd.CommandType = CommandType.Text;
             return obj.EjecutarSentencia(cmd);
         }
