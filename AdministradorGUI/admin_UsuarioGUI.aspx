@@ -11,66 +11,134 @@
   <link href="css/estilo-usuario.css" rel="stylesheet" />
     <form id="form1" runat="server">
         <div class="row">
-		<div class="col-md-12">
+		<div class="col-md-6">
+			<img alt="Bootstrap Image Preview" src="http://lorempixel.com/140/140/" />
 		</div>
-	</div>
-	<div class="row">
-		<div class="col-md-12">
-			<img alt="Bootstrap Image Preview" src="http://lorempixel.com/140/140/" class="img-circle">
-		</div>
-	</div>
-	<div class="row">
-		<div class="col-md-4">
-			<form role="form">
+		<div class="col-md-6">
+			<div class="form-horizontal" role="form">
 				<div class="form-group">
 					 
-					<label for="exampleInputEmail1">
-						Email address
+					<label for="inputEmail3" class="col-sm-2 control-label">
+						Email
 					</label>
-					<input type="email" class="form-control" id="exampleInputEmail1">
+					<div class="col-sm-10">
+						<input type="email" class="form-control" id="inputEmail3" />
+					</div>
 				</div>
+                <br />
+                <br />
 				<div class="form-group">
 					 
-					<label for="exampleInputPassword1">
+					<label for="inputPassword3" class="col-sm-2 control-label">
 						Password
 					</label>
-					<input type="password" class="form-control" id="exampleInputPassword1">
+					<div class="col-sm-10">
+						<input type="password" class="form-control" id="inputPassword3" />
+					</div>
+				</div>
+                <br />
+                <br />
+				<div class="form-group">
+					<div class="col-sm-offset-2 col-sm-10">
+						<div class="checkbox">
+							 
+							<label>
+								<input type="checkbox" /> Remember me
+							</label>
+						</div>
+					</div>
 				</div>
 				<div class="form-group">
-					 
-					<label for="exampleInputFile">
-						File input
-					</label>
-					<input type="file" id="exampleInputFile">
-					<p class="help-block">
-						Example block-level help text here.
-					</p>
+					<div class="col-sm-offset-2 col-sm-10">
+						 
+						<button type="submit" class="btn btn-default">
+							Sign in
+						</button>
+					</div>
 				</div>
-				<div class="checkbox">
-					 
-					<label>
-						<input type="checkbox"> Check me out
-					</label>
-				</div> 
-				<button type="submit" class="btn btn-default">
-					Submit
-				</button>
-			</form>
-		</div>
-		<div class="col-md-4">
-			 
-			<button type="button" class="btn btn-lg btn-block btn-info">
-				Default
-			</button> 
-			<button type="button" class="btn btn-block btn-lg active btn-success">
-				Default
-			</button>
-		</div>
-		<div class="col-md-4">
+			</div>
 		</div>
 	</div>
 	<div class="row">
-		<div class="col-md-12">
+		<div class="col-md-6">
+			<div class="form-horizontal" role="form">
+				<div class="form-group">
+					 
+					<label for="inputEmail3" class="col-sm-2 control-label">
+						Email
+					</label>
+					<div class="col-sm-10">
+						<input type="email" class="form-control" id="inputEmail3" />
+					</div>
+				</div>
+				<div class="form-group">
+					 
+					<label for="inputPassword3" class="col-sm-2 control-label">
+						Password
+					</label>
+					<div class="col-sm-10">
+						<input type="password" class="form-control" id="inputPassword3" />
+					</div>
+				</div>
+				<div class="form-group">
+					<div class="col-sm-offset-2 col-sm-10">
+						<div class="checkbox">
+							 
+							<label>
+								<input type="checkbox" /> Remember me
+							</label>
+						</div>
+					</div>
+				</div>
+				<div class="form-group">
+					<div class="col-sm-offset-2 col-sm-10">
+						 
+						<button type="submit" class="btn btn-default">
+							Sign in
+						</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-6">
+			<div class="form-horizontal" role="form">
+				<div class="form-group">
+					 
+					<label for="inputEmail3" class="col-sm-2 control-label">
+						Email
+					</label>
+					<div class="col-sm-10">
+						<input type="email" class="form-control" id="inputEmail3" />
+					</div>
+				</div>
+				<div class="form-group">
+					 
+					<label for="inputPassword3" class="col-sm-2 control-label">
+						Password
+					</label>
+					<div class="col-sm-10">
+						<input type="password" class="form-control" id="inputPassword3" />
+					</div>
+				</div>
+				<div class="form-group">
+					<div class="col-sm-offset-2 col-sm-10">
+						<div class="checkbox">
+							 
+							<label>
+								<input type="checkbox" /> Remember me
+							</label>
+						</div>
+					</div>
+				</div>
+				<div class="form-group">
+					<div class="col-sm-offset-2 col-sm-10">
+						 
+						<button type="submit" class="btn btn-default">
+							Sign in
+						</button>
+					</div>
+				</div>
+			</div>
 		</div>
 	</div>
     </form>
