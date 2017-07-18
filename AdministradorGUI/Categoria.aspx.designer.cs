@@ -64,7 +64,7 @@ namespace AdministradorGUI {
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button txtAgregar;
+        protected global::System.Web.UI.WebControls.Button btnAgregar;
         
         /// <summary>
         /// Control txtModificar.
@@ -73,7 +73,7 @@ namespace AdministradorGUI {
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button txtModificar;
+        protected global::System.Web.UI.WebControls.Button btnModificar;
         
         /// <summary>
         /// Control txtEliminar.
@@ -82,7 +82,7 @@ namespace AdministradorGUI {
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button txtEliminar;
+        protected global::System.Web.UI.WebControls.Button btnEliminar;
         
         /// <summary>
         /// Control txtNuevo.
@@ -91,7 +91,7 @@ namespace AdministradorGUI {
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button txtNuevo;
+        protected global::System.Web.UI.WebControls.Button btnNuevo;
         
         /// <summary>
         /// Control txtBuscar.
@@ -100,7 +100,7 @@ namespace AdministradorGUI {
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button txtBuscar;
+        protected global::System.Web.UI.WebControls.Button btnBuscar;
         
         /// <summary>
         /// Control dtgCategoria.
