@@ -9,7 +9,7 @@ using BO;
 
 namespace DAO
 {
-    public class CategoriaDAO : interface_metodos_guardar_eliminar_actualizar_buscar
+    public class CategoriaDAO 
     {
         conexionDAO obj = new conexionDAO();
         public int agregar(object agregar)
@@ -21,9 +21,13 @@ namespace DAO
             return obj.EjecutarComando(cmd);
         }
 
-        public DataSet buscar()
+        public DataSet buscar(object buscar)
         {
-            throw new NotImplementedException();
+            CategoriaBO obj1 = (CategoriaBO)buscar;
+            SqlCommand cmd = new SqlCommand("select * from CATEGORIA WHERE NOMBRE=@NOM");
+            cmd.Parameters.Add("@NOM", SqlDbType.VarChar).Value = obj1.nombre_categoria;
+            cmd.CommandType = CommandType.Text;
+            return obj.EjecutarSentencia(cmd);
         }
 
         public int eliminar(object eliminar)

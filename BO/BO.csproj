@@ -47,6 +47,7 @@
     <Compile Include="EventoBO.cs" />
     <Compile Include="GaleriaBO.cs" />
     <Compile Include="HorarioBO.cs" />
+    <Compile Include="JOELBO.cs" />
     <Compile Include="MensajeBO.cs" />
     <Compile Include="MunicipioBO.cs" />
     <Compile Include="PaisBO.cs" />
