@@ -64,23 +64,33 @@ namespace AdministradorGUI
         public EventoBO devolver()
         {
             EventoBO obj = new EventoBO();
-
+           
             int id = 0; int.TryParse(txtid.Value, out id);
-            int iddir = 0;int.TryParse(txt_codir.Value, out iddir);
+            
             obj.Codigo = id;
             obj.Descripcion =txt_descrip.Text;
             obj.Nombre = txt_nombre.Text;
             obj.costo = Convert.ToInt32(txt_precio.Text);
-            //obj.FechaApertura =txt_aperura.val;
+           // obj.FechaApertura = txt_aperura.Text;
             obj.FechaCierre = Convert.ToDateTime(txt_fecha_cierre.Text);
             obj.FotoPromocion = file_foto.ToString();
             obj.UbicacionGeografica = txt_ubicar.Text;
             obj.longitud = txt_lo.Text;
             obj.latitud = txtlat.Text;
             obj.aprovacion=(rbt_aprovado.Checked)? "aprovado" : "no aprovado";
-            obj.CodigoDireccion = Convert.ToInt32(iddir.ToString());
+            //obj.CodigoDireccion = Convert.ToInt32(iddir.ToString());
             obj.CodigoCategoria = Convert.ToInt32(ddl_categoria.SelectedValue);
             obj.CodigoUsuario =Convert.ToInt32( txt_usuario.Text);
+            //
+            int iddir = 0; int.TryParse(txt_codir.Value, out iddir);
+            obj.Codigo_dir = iddir;
+            obj.Colonia = txt_colonia.Text;
+            obj.CodigoPostal = txt_postal.Text;
+            obj.Cruzamiento = txt_crizamiento.Text;
+            obj.NumeroExterior = txt_numexter.Text;
+            obj.NumeroInterior = txt_numint.Text;
+            obj.CodigoMunicipio = Convert.ToInt32(ddl_municipio.SelectedValue);
+            //
 
             return obj;
 
@@ -160,8 +170,8 @@ namespace AdministradorGUI
         {
             Button btnsellcionado = (Button)sender;
 
-           //control.accion(devolver(), btnsellcionado.ID);
-            ser_direccion.accion(mandar(), btnsellcionado.ID);
+           control.accion(devolver(), btnsellcionado.ID);
+           // ser_direccion.accion(mandar(), btnsellcionado.ID);
             refrescar();
 
 

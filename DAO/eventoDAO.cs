@@ -14,13 +14,35 @@ namespace DAO
         conexionDAO conectar = new conexionDAO();
         public int agregar(object agregar)
         {
-            //INSERT INTO EVENTO(DESCRIPCION,NOMBRE,COSTO,FECHAAPERTURA,FECHACIERRE,FOTOPROMOCION,UBICACIONGEOGRAFICA,LATITUD,LONGITUD,APROVACION,DIRECCION,CATEGORIA,USUARIO)VALUES APROVACION=@aprova
-            Direccion = new Direccion();
-            EventoBO obejto = (EventoBO)agregar;
-              SqlCommand cmd = new SqlCommand("INSERT INTO EVENTO(DESCRIPCION ,NOMBRE,COSTO ,FECHAAPERTURA ,FECHACIERRE,FOTOPROMOCION,UBICACIONGEOGRAFICA,LATITUD,APROVACION,LONGITUD,DIRECCION,CATEGORIA,USUARIO) output"+" inserted.CODIGO VALUES(@des,@nom,@cos,@feaper,@fecier,@foto,@ubicacion,@lat,@long,@aprova,@dirr,@cat,@codus)");
-            int id = Convert.ToInt32(cmd);
-            SqlCommand dir = new SqlCommand();
-               cmd.Parameters.Add("@des", SqlDbType.VarChar).Value = obejto.Descripcion;
+           //INSERT INTO EVENTO(DESCRIPCION,NOMBRE,COSTO,FECHAAPERTURA,FECHACIERRE,FOTOPROMOCION,UBICACIONGEOGRAFICA,LATITUD,LONGITUD,APROVACION,DIRECCION,CATEGORIA,USUARIO)VALUES APROVACION=@aprova
+           
+           EventoBO obejto = (EventoBO)agregar;
+               SqlCommand dir = new SqlCommand("INSERT INTO DIRECCION(COLONIA,CODIGOPOSTAL,CRUZAMIENTO,NUMEROINTERIOR,NUMEROEXTERIOR ,MUNICIPIO) output" + " inserted.CODIGO values(@col,@pos,@cru,@numin,@numex,@muni)");
+            // dir.Parameters.AddWithValue
+            // int id =dir.ExecuteNonQuery();
+            //   conectar.EjecutarComando(dir);
+            dir.Parameters.Add("@col", SqlDbType.VarChar).Value = obejto.Colonia;//----
+            dir.Parameters.Add("@pos", SqlDbType.Char).Value = obejto.CodigoPostal;
+            dir.Parameters.Add("@cru", SqlDbType.VarChar).Value = obejto.Cruzamiento;
+            dir.Parameters.Add("@numin", SqlDbType.VarChar).Value = obejto.NumeroInterior;
+            dir.Parameters.Add("@numex", SqlDbType.VarChar).Value = obejto.NumeroExterior;
+            dir.Parameters.Add("@muni", SqlDbType.Int).Value = obejto.CodigoMunicipio;//--
+
+            int id = conectar.EjecutarComando(dir);
+
+
+            SqlCommand cmd = new SqlCommand("INSERT INTO EVENTO(DESCRIPCION ,NOMBRE,COSTO ,FECHAAPERTURA ,FECHACIERRE,FOTOPROMOCION,UBICACIONGEOGRAFICA,LATITUD,APROVACION,LONGITUD,DIRECCION,CATEGORIA,USUARIO)  VALUES(@des,@nom,@cos,@feaper,@fecier,@foto,@ubicacion,@lat,@long,@aprova,'" + id + "',@cat,@codus)");
+
+          
+
+            
+          /*  cmd.Parameters.Add("@col", SqlDbType.VarChar).Value = obejto.Colonia;//----
+            cmd.Parameters.Add("@pos", SqlDbType.Char).Value = obejto.CodigoPostal;
+            cmd.Parameters.Add("@cru", SqlDbType.VarChar).Value = obejto.Cruzamiento;
+            cmd.Parameters.Add("@numin", SqlDbType.VarChar).Value = obejto.NumeroInterior;
+            cmd.Parameters.Add("@numex", SqlDbType.VarChar).Value = obejto.NumeroExterior;
+            cmd.Parameters.Add("@muni", SqlDbType.Int).Value = obejto.CodigoMunicipio;//--*/
+            cmd.Parameters.Add("@des", SqlDbType.VarChar).Value = obejto.Descripcion;
               cmd.Parameters.Add("@nom", SqlDbType.VarChar).Value = obejto.Nombre;
               cmd.Parameters.Add("@cos", SqlDbType.Money).Value = obejto.costo;
               cmd.Parameters.Add("@feaper", SqlDbType.Date).Value = obejto.FechaApertura.ToString("yyyy/MM/dd"); ;
@@ -34,9 +56,41 @@ namespace DAO
             cmd.Parameters.Add("@cat", SqlDbType.Int).Value = obejto.CodigoCategoria;
             cmd.Parameters.Add("@codus", SqlDbType.Int).Value = obejto.CodigoUsuario;
             cmd.CommandType = CommandType.Text;
-
+           
               return conectar.EjecutarComando(cmd);
         }
+
+        /*  public agregar_clasesstring(EventoBO obejto)
+          {
+
+              int id = conectar.ejecutarComandostring("INSERT INTO DIRECCION(COLONIA,CODIGOPOSTAL,CRUZAMIENTO,NUMEROINTERIOR,NUMEROEXTERIOR ,MUNICIPIO) output" + " inserted.CODIGO values('"+obejto.Colonia+"','"+obejto.CodigoPostal+"','"+obejto.Cruzamiento+"','"+obejto.NumeroInterior+"','"+obejto.NumeroExterior+"','"+obejto.CodigoMunicipio+"')");
+
+
+              int respuesta = conectar.ejecutarComandostring("INSERT INTO EVENTO(DESCRIPCION ,NOMBRE,COSTO ,FECHAAPERTURA ,FECHACIERRE,FOTOPROMOCION,UBICACIONGEOGRAFICA,LATITUD,APROVACION,LONGITUD,DIRECCION,CATEGORIA,USUARIO)  VALUES('"+obejto.Descripcion+"','"+obejto.Nombre+"','"+obejto.costo+"','"+obejto.FechaApertura.ToString("yyyy/MM/dd")+"','"+obejto.FechaCierre.ToString("yyyy/MM/dd")+"','"+obejto.FotoPromocion+"','"+obejto.UbicacionGeografica+"','"+obejto.latitud+"','"+obejto.longitud+"','"+obejto.aprovacion+"','" + id + "','" + obejto.CodigoCategoria + "','" + obejto.CodigoUsuario + "')");
+
+             cmd.Parameters.Add("@col", SqlDbType.VarChar).Value = obejto.Colonia;//----
+             cmd.Parameters.Add("@pos", SqlDbType.Char).Value = obejto.CodigoPostal;
+             cmd.Parameters.Add("@cru", SqlDbType.VarChar).Value = obejto.Cruzamiento;
+             cmd.Parameters.Add("@numin", SqlDbType.VarChar).Value = obejto.NumeroInterior;
+             cmd.Parameters.Add("@numex", SqlDbType.VarChar).Value = obejto.NumeroExterior;
+             cmd.Parameters.Add("@muni", SqlDbType.Int).Value = obejto.CodigoMunicipio;//--
+             cmd.Parameters.Add("@des", SqlDbType.VarChar).Value = obejto.Descripcion;
+               cmd.Parameters.Add("@nom", SqlDbType.VarChar).Value = obejto.Nombre;
+               cmd.Parameters.Add("@cos", SqlDbType.Money).Value = obejto.costo;
+               cmd.Parameters.Add("@feaper", SqlDbType.Date).Value = obejto.FechaApertura.ToString("yyyy/MM/dd"); ;
+               cmd.Parameters.Add("@fecier", SqlDbType.Date).Value = obejto.FechaCierre.ToString("yyyy/MM/dd"); ;
+               cmd.Parameters.Add("@foto", SqlDbType.VarChar).Value = obejto.FotoPromocion;
+             cmd.Parameters.Add("@ubicacion", SqlDbType.VarChar).Value = obejto.UbicacionGeografica;
+             cmd.Parameters.Add("@lat", SqlDbType.Date).Value = obejto.latitud;
+             cmd.Parameters.Add("@long", SqlDbType.VarChar).Value = obejto.longitud;
+             cmd.Parameters.Add("@aprova", SqlDbType.VarChar).Value = obejto.aprovacion;
+             cmd.Parameters.Add("@dirr", SqlDbType.Int).Value = obejto.CodigoDireccion;
+             cmd.Parameters.Add("@cat", SqlDbType.Int).Value = obejto.CodigoCategoria;
+             cmd.Parameters.Add("@codus", SqlDbType.Int).Value = obejto.CodigoUsuario;
+             cmd.CommandType = CommandType.Text;
+             conectar.EjecutarComando(dir);
+               return conectar.EjecutarComando(cmd);
+          }*/
 
         public DataSet buscar()
         {

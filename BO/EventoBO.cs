@@ -23,5 +23,12 @@ namespace BO
         public int CodigoCategoria { get; set; }
         public int CodigoUsuario { get; set; }
         public int CodigoHorario { get; set; }
+        public int Codigo_dir { get; set; }
+        public string Colonia { get; set; }
+        public string CodigoPostal { get; set; }
+        public string Cruzamiento { get; set; }
+        public string NumeroInterior { get; set; }
+        public string NumeroExterior { get; set; }
+        public int CodigoMunicipio { get; set; }
     }
 }
