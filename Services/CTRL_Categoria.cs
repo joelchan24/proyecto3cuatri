@@ -32,7 +32,7 @@ namespace Services
                     oCategoriaDAO.modificar(oCategoriaBO);
                     break;
                 case "btnBuscar":
-                    
+
                     break;
             }
             return true;
