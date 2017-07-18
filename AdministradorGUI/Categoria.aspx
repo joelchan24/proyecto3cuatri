@@ -42,7 +42,7 @@
 			<div role="form" class="form-inline" >
 				<div class="form-group">
 					<asp:Label ID="Label1" runat="server" Text="ID" CssClass="text-primary"  ></asp:Label><br />
-                    <asp:TextBox ID="txtID" runat="server" Width="505px" Height="30px"></asp:TextBox>
+                    <asp:TextBox ID="txtID" runat="server" Width="505px" Height="30px" Enabled="False"></asp:TextBox>
 				</div><br />
 				<div class="form-group">
 					 <asp:Label ID="Label2" runat="server" Text="Nombre de la Categoria" CssClass="text-primary"></asp:Label><br />

@@ -24,8 +24,8 @@ namespace DAO
             id.Parameters.Add("@EXTE", SqlDbType.VarChar).Value = objdire.NumeroExterior;
             id.Parameters.Add("@MUNI", SqlDbType.Int).Value = objdire.CodigoMunicipio;
             int ID = obj.EjecutarComando(id);
-            SqlCommand cmd = new SqlCommand("insert into USUARIOS(NOMBRE,APELLIDOS,TELEFONO,FECHANACIMIENTO,CORRERO,USUARIO,CONTRASEÑA,IDDIRECCION)OUTPUT INSERTED.CODIGO VALUES"
-                +"(@NOM,@APE,@TELE,@FECHA,@CORREO,@USU,@CONTRA,'"+ID+"')");
+            SqlCommand cmd = new SqlCommand("insert into USUARIOS(NOMBRE,APELLIDOS,TELEFONO,FECHANACIMIENTO,CORREO,USUARIO,CONTRASEÑA,FOTOGRAFIA,IDDIRECCION)OUTPUT INSERTED.CODIGO VALUES"
+                +"(@NOM,@APE,@TELE,@FECHA,@CORREO,@USU,@CONTRA,@FOTO,'"+ID+"')");
             cmd.Parameters.Add("@NOM", SqlDbType.VarChar).Value = objdire.Nombre;
             cmd.Parameters.Add("@APE", SqlDbType.VarChar).Value = objdire.Apellidos;
             cmd.Parameters.Add("@TELE", SqlDbType.Char).Value = objdire.Telefono;
@@ -33,7 +33,7 @@ namespace DAO
             cmd.Parameters.Add("@CORREO", SqlDbType.VarChar).Value = objdire.Correo;
             cmd.Parameters.Add("@USU", SqlDbType.VarChar).Value = objdire.Usuario;
             cmd.Parameters.Add("@CONTRA", SqlDbType.VarChar).Value = objdire.Contraseña;
-           /* cmd.Parameters.Add("@FOTO", SqlDbType.VarChar).Value = objdire.Fotografia;*/
+            cmd.Parameters.Add("@FOTO", SqlDbType.VarChar).Value = objdire.Fotografia;
             int Cuenta = obj.EjecutarComando(cmd);
             SqlCommand CUENTA = new SqlCommand("INSERT INTO TIPOCUENTA_USUARIO(IDTIPO,IDUSUARIO)VALUES(@TIPO,'"+Cuenta+"')");
             CUENTA.Parameters.Add("@TIPO", SqlDbType.Int).Value = objdire.IDCUENTA;
