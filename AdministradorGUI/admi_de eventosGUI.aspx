@@ -33,13 +33,13 @@
                 <div class="col-xs-4">
                     <div class="form-group">
                        <label for="exampleinput">Fecha Apertura</label>
-                      <asp:TextBox ID="txt_aperura" runat="server" CssClass="form-control" type="date"></asp:TextBox>
+                      <asp:TextBox ID="txt_aperura" runat="server" CssClass="form-control" type="date" OnTextChanged="txt_aperura_TextChanged"></asp:TextBox>
                         </div>
               </div>
                <div class="col-xs-4">
                     <div class="form-group">
                          <label for="exampleinput" >Fecha De Cierre</label>
-                        <asp:TextBox ID="txt_fecha_cierre" runat="server" CssClass="form-control " type="date"></asp:TextBox><asp:ImageButton ID="ImageButton1" runat="server"  />
+                        <asp:TextBox ID="txt_fecha_cierre" runat="server" CssClass="form-control " type="date"></asp:TextBox><asp:ImageButton ID="ImageButton1" runat="server" />
                     </div>
                    
                </div>
@@ -177,7 +177,7 @@
         <asp:RadioButton ID="rbt_noapro" runat="server" type="radio" name="optradio" />  No aprovado
     </label>
                        
-              </div>
+              &nbsp;</div>
                   
                     <div class="form-group">
                        <label for="exampleinput">Usuariol</label>

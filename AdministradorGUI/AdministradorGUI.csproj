@@ -98,6 +98,7 @@
     <Content Include="admin_Mensaje.aspx" />
     <Content Include="admin_UsuarioGUI.aspx" />
     <Content Include="admi_de eventosGUI.aspx" />
+    <Content Include="Categoria.aspx" />
     <Content Include="Estado.aspx" />
     <Content Include="js\img\avatar.png" />
     <Content Include="js\img\ccaae9ad-e297-462c-84ad-414e7f30ab51image16.jpeg" />
@@ -193,6 +194,13 @@
     <Compile Include="admi_de eventosGUI.aspx.designer.cs">
       <DependentUpon>admi_de eventosGUI.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Categoria.aspx.cs">
+      <DependentUpon>Categoria.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Categoria.aspx.designer.cs">
+      <DependentUpon>Categoria.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Estado.aspx.cs">
       <DependentUpon>Estado.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -232,10 +240,6 @@
     <ProjectReference Include="..\Services\Services.csproj">
       <Project>{dc236ff7-cb2f-4910-8c84-ced9125bfd61}</Project>
       <Name>Services</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\UsuarioGUI\UsuarioGUI.csproj">
-      <Project>{4efdb527-e2e0-4e14-bc52-bbbfcca88442}</Project>
-      <Name>UsuarioGUI</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup />

@@ -17,10 +17,12 @@ namespace AdministradorGUI
         ctrol_dirrecionSERVICIOS ser_direccion = new ctrol_dirrecionSERVICIOS();
         ctrol_eventosSERVICIO control = new ctrol_eventosSERVICIO();
         eventoDAO eventado = new eventoDAO();
+        direccionDAO obj = new direccionDAO();
+        int fila;
         protected void Page_Load(object sender, EventArgs e)
         {
 
-        if(!IsPostBack)
+            if (!IsPostBack)
             {
                 ddl_categoria.DataSource = eventado.buscar_categoria().Tables[0];
                 ddl_categoria.DataTextField = "NOMBRE";
@@ -31,8 +33,23 @@ namespace AdministradorGUI
                 ddl_municipio.DataValueField = "CODIGO";
                 ddl_municipio.DataBind();
                 refrescar();
+                usuario(fila);
             }
     }
+        public void usuario(int fila)
+        {
+            try
+            {
+                DataRow row = obj.buscar().Tables[0].Rows[fila];
+                txt_usuario.Text = Convert.ToString(row[0]);
+                txt_usuario.DataBind();
+            }
+            catch
+            {
+
+            }
+                
+        }
 
         protected void btn_eliminar_Click(object sender, EventArgs e)
         {
@@ -47,23 +64,34 @@ namespace AdministradorGUI
         public EventoBO devolver()
         {
             EventoBO obj = new EventoBO();
-
+           
             int id = 0; int.TryParse(txtid.Value, out id);
-            int iddir = 0;int.TryParse(txt_codir.Value, out iddir);
+            
             obj.Codigo = id;
             obj.Descripcion =txt_descrip.Text;
             obj.Nombre = txt_nombre.Text;
             obj.costo = Convert.ToInt32(txt_precio.Text);
-            //obj.FechaApertura =txt_aperura.val;
+           // obj.FechaApertura = txt_aperura.Text;
             obj.FechaCierre = Convert.ToDateTime(txt_fecha_cierre.Text);
             obj.FotoPromocion = file_foto.ToString();
             obj.UbicacionGeografica = txt_ubicar.Text;
             obj.longitud = txt_lo.Text;
             obj.latitud = txtlat.Text;
             obj.aprovacion=(rbt_aprovado.Checked)? "aprovado" : "no aprovado";
-            obj.CodigoDireccion = Convert.ToInt32(iddir.ToString());
+            //obj.CodigoDireccion = Convert.ToInt32(iddir.ToString());
             obj.CodigoCategoria = Convert.ToInt32(ddl_categoria.SelectedValue);
             obj.CodigoUsuario =Convert.ToInt32( txt_usuario.Text);
+            //
+            int iddir = 0; int.TryParse(txt_codir.Value, out iddir);
+            obj.Codigo_dir = iddir;
+            obj.Colonia = txt_colonia.Text;
+            obj.CodigoPostal = txt_postal.Text;
+            obj.Cruzamiento = txt_crizamiento.Text;
+            obj.NumeroExterior = txt_numexter.Text;
+            obj.NumeroInterior = txt_numint.Text;
+            obj.CodigoMunicipio = Convert.ToInt32(ddl_municipio.SelectedValue);
+            //
+
             return obj;
 
 
@@ -82,6 +110,7 @@ namespace AdministradorGUI
             dir.NumeroExterior = txt_numexter.Text;
             dir.NumeroInterior = txt_numint.Text;
             dir.CodigoMunicipio = Convert.ToInt32(ddl_municipio.SelectedValue);
+
            
          
             return dir;
@@ -141,14 +170,19 @@ namespace AdministradorGUI
         {
             Button btnsellcionado = (Button)sender;
 
-           //control.accion(devolver(), btnsellcionado.ID);
-            ser_direccion.accion(mandar(), btnsellcionado.ID);
+           control.accion(devolver(), btnsellcionado.ID);
+           // ser_direccion.accion(mandar(), btnsellcionado.ID);
             refrescar();
 
 
         }
 
         protected void btn_eliminar_Click1(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void txt_aperura_TextChanged(object sender, EventArgs e)
         {
 
         }
