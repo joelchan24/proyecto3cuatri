@@ -34,9 +34,13 @@ namespace AdministradorGUI
             ddlMunicipio.DataBind();
         }
 
-       /* public UsuarioBO recolectar()
+        public UsuarioBO recolectar()
         {
-
-        }*/
+            UsuarioBO obj = new UsuarioBO();
+            int id = 0; int.TryParse(txtID.Text, out id);
+            obj.Nombre = txtNombre.Text;
+            obj.Apellidos = txtApellido.Text;
+            return obj;
+        }
     }
 }
