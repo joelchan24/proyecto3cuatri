@@ -53,18 +53,18 @@
 		</div>
 	<div class="row">
 		<div class="auto-style3">
-			<asp:Button ID="txtAgregar" Text="Agregar" runat="server" CssClass="btn btn-dropbox" Width="100px" OnClick="txtAgregar_Click"/> 
-            <asp:Button ID="txtModificar" Text="Modificar" runat="server" CssClass="btn btn-dropbox" Width="100px" />
-            <asp:Button ID="txtEliminar" Text="Eliminar" runat="server" CssClass="btn btn-dropbox" Width="100px" />
-            <asp:Button ID="txtNuevo" Text="Nuevo" runat="server" CssClass="btn btn-dropbox" Width="100px" />
-            <asp:Button ID="txtBuscar" Text="Buscar" runat="server" CssClass="btn btn-dropbox" Width="100px" />
+			<asp:Button ID="txtAgregar" Text="Agregar" runat="server" CssClass="btn btn-dropbox" Width="100px" OnClick="Accion"/> 
+            <asp:Button ID="txtModificar" Text="Modificar" runat="server" CssClass="btn btn-dropbox" Width="100px" OnClick="Accion" />
+            <asp:Button ID="txtEliminar" Text="Eliminar" runat="server" CssClass="btn btn-dropbox" Width="100px" OnClick="Accion" />
+            <asp:Button ID="txtNuevo" Text="Nuevo" runat="server" CssClass="btn btn-dropbox" Width="100px" OnClick="Accion" />
+            <asp:Button ID="txtBuscar" Text="Buscar" runat="server" CssClass="btn btn-dropbox" Width="100px" OnClick="Accion" />
 
 		</div>
 	</div><br />
            <div class="row">
            <div class="auto-style5">
                <div class="form-group">
-                   <asp:GridView ID="dtgCategoria" runat="server" CssClass="auto-style4" Width="590px">
+                   <asp:GridView ID="dtgCategoria" runat="server" CssClass="auto-style4" Width="590px" OnRowCommand="Seleccionar">
                        <Columns>
                            <asp:ButtonField CommandName="dgvbtnSeleccionar" Text="Seleccionar" />
                        </Columns>
