@@ -94,10 +94,15 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="admin_UsuarioGUI.aspx" />
+    <Content Include="admin_usuario.aspx" />
     <Content Include="admi_de eventosGUI.aspx" />
     <Content Include="Categoria.aspx" />
     <Content Include="Estado.aspx" />
+    <Content Include="img\avatar.png" />
+    <Content Include="img\ccaae9ad-e297-462c-84ad-414e7f30ab51image16.jpeg" />
+    <Content Include="img\obra-cholo.jpg" />
+    <Content Include="img\Progreso-malecon.jpg" />
+    <Content Include="img\vaqueria-yucateca-2.jpg" />
     <Content Include="js\img\avatar.png" />
     <Content Include="js\img\ccaae9ad-e297-462c-84ad-414e7f30ab51image16.jpeg" />
     <Content Include="js\img\obra-cholo.jpg" />

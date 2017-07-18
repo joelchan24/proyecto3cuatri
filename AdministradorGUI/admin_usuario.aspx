@@ -79,10 +79,27 @@
         <div class="row auto-style9" style="height: 262px">
                 <div class="auto-style4">
                 <div class="auto-style3">
-                    <asp:Image ID="imgFoto" runat="server" CssClass="fa-arrow-circle-o-up" Height="163px" Width="230px" /><br />
+                    <asp:Image ID="imgFoto" runat="server" CssClass="fa-arrow-circle-o-up" Height="163px" Width="230px" ImageUrl="~/img/avatar.png" /><br />
                     <asp:FileUpload ID="file_foto" runat="server" Width="230px" />
                 </div>
             </div>
+            <script>
+                            function readURL(input) {
+                                if (input.files && input.files[0]) {
+                                    var reader = new FileReader();
+
+                                    reader.onload = function (e) {
+                                        $('#<%=this.imgFoto.ClientID%>').attr('src', e.target.result);
+                                    }
+
+                                    reader.readAsDataURL(input.files[0]);
+                                }
+                            }
+
+                            $('#<%=this.file_foto.ClientID%>').change(function () {
+                                readURL(this);
+                            });
+                        </script>
             <div class="auto-style6">
                 <div class="auto-style5">
                     <asp:Label ID="label1" Text="ID:" runat="server" CssClass="text-blue"></asp:Label>
@@ -142,7 +159,7 @@
         <div class="row">
             <div class="col-lg-12">
                 <div class="form-group">
-                    <asp:Button ID="btnAgregar" Text="Agregar" runat="server" CssClass="btn btn-dropbox" Width="100px" Height="50px" OnClick="btnAgregar_Click" /> <asp:Button ID="btnModificar" Text="Modificar" runat="server" CssClass="btn btn-dropbox" Width="100px" Height="50px" /> <asp:Button ID="btnEliminar" Text="Eliminar" runat="server" CssClass="btn btn-dropbox" Width="100px" Height="50px" /> <asp:Button ID="btnNuevo" Text="Nuevo" runat="server" CssClass="btn btn-dropbox" Width="100px" Height="50px" /> <asp:Button ID="btnBuscar" Text="Buscar" runat="server" CssClass="btn btn-dropbox" Width="100px" Height="50px" />
+                 <asp:Button ID="btnAgregar" runat="server" Text="Agregar" CssClass="btn btn-dropbox" Width="100px" Height="50px" OnClick="Seleccionar" /> <asp:Button ID="btnModificar" Text="Modificar" runat="server" CssClass="btn btn-dropbox" Width="100px" Height="50px" OnClick="Seleccionar" /> <asp:Button ID="btnEliminar" Text="Eliminar" runat="server" CssClass="btn btn-dropbox" Width="100px" Height="50px" /> <asp:Button ID="btnNuevo" Text="Nuevo" runat="server" CssClass="btn btn-dropbox" Width="100px" Height="50px" /> <asp:Button ID="btnBuscar" Text="Buscar" runat="server" CssClass="btn btn-dropbox" Width="100px" Height="50px" />
                 </div>
 
             </div>

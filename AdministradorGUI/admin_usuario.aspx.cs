@@ -24,6 +24,7 @@ namespace AdministradorGUI
         {
             if (!IsPostBack)
             { 
+               
             } 
 
         }
