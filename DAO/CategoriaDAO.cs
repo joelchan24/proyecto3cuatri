@@ -24,8 +24,8 @@ namespace DAO
         public DataSet buscar(object buscar)
         {
             CategoriaBO obj1 = (CategoriaBO)buscar;
-            SqlCommand cmd = new SqlCommand("select * from CATEGORIA WHERE CODIGO=@COD");
-            cmd.Parameters.Add("@COD", SqlDbType.VarChar).Value = obj1.nombre_categoria;
+            SqlCommand cmd = new SqlCommand("select * from CATEGORIA WHERE NOMBRE=@NOM");
+            cmd.Parameters.Add("@NOM", SqlDbType.VarChar).Value = obj1.nombre_categoria;
             cmd.CommandType = CommandType.Text;
             return obj.EjecutarSentencia(cmd);
         }
