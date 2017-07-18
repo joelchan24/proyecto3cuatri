@@ -39,7 +39,7 @@
                <div class="col-xs-4">
                     <div class="form-group">
                          <label for="exampleinput" >Fecha De Cierre</label>
-                        <asp:TextBox ID="txt_fecha_cierre" runat="server" CssClass="form-control " type="date"></asp:TextBox><asp:ImageButton ID="ImageButton1" runat="server" />
+                        <asp:TextBox ID="txt_fecha_cierre" runat="server" CssClass="form-control " type="date" OnTextChanged="txt_fecha_cierre_TextChanged"></asp:TextBox>
                     </div>
                    
                </div>
@@ -224,9 +224,9 @@
         <div class="row"  >
            
                
-                <asp:Button ID="btn_eliminar" runat="server" Text="Eliminar" CssClass="btn btn-danger  col-sm-1 " />
+                <asp:Button ID="btn_eliminar" runat="server" Text="Eliminar" CssClass="btn btn-danger  col-sm-1 " OnClick="accion" />
          
-        <asp:Button ID="btn_modificar" runat="server" Text="Modificar" CssClass="btn btn-success col-sm-1 "   />
+        <asp:Button ID="btn_modificar" runat="server" Text="Modificar" CssClass="btn btn-success col-sm-1 " OnClick="accion"   />
  
          <asp:Button ID="btn_agregar" runat="server" Text="agregar" CssClass=" btn btn-primary  col-sm-1 " OnClick="accion" />
         

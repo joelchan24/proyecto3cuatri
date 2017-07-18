@@ -35,6 +35,9 @@ namespace AdministradorGUI
                 ddl_municipio.DataBind();
                 refrescar();
                 usuario(fila);
+                
+
+
             }
     }
         public void usuario(int fila)
@@ -71,7 +74,7 @@ namespace AdministradorGUI
             obj.Codigo = id;
             obj.Descripcion =txt_descrip.Text;
             obj.Nombre = txt_nombre.Text;
-            obj.costo = Convert.ToInt32(txt_precio.Text);
+            obj.costo = Convert.ToDouble(txt_precio.Text);
            obj.FechaApertura = Convert.ToDateTime(txt_aperura.Text);
             obj.FechaCierre = Convert.ToDateTime(txt_fecha_cierre.Text);
             obj.FotoPromocion = file_foto.ToString();
@@ -142,12 +145,12 @@ namespace AdministradorGUI
             txt_ubicar.Text = dgb_eventos.Rows[fila].Cells[8].Text;
             txt_lo.Text = dgb_eventos.Rows[fila].Cells[10].Text;
             txtlat.Text = dgb_eventos.Rows[fila].Cells[9].Text;
-          txt_aperura.Text= dgb_eventos.Rows[fila].Cells[5].Text;
+          txt_aperura.Text =dgb_eventos.Rows[fila].Cells[5].Text;
             txt_codir.Value= dgb_eventos.Rows[fila].Cells[12].Text;
             txt_colonia.Text= dgb_eventos.Rows[fila].Cells[16].Text;
             txt_crizamiento.Text= dgb_eventos.Rows[fila].Cells[18].Text;
-            txt_descrip.Text= dgb_eventos.Rows[fila].Cells[2].Text;
-            txt_fecha_cierre.Text= dgb_eventos.Rows[fila].Cells[6].Text;
+            txt_descrip.Text=dgb_eventos.Rows[fila].Cells[2].Text; 
+            txt_fecha_cierre.Text = dgb_eventos.Rows[fila].Cells[6].Text;
             txt_nombre.Text= dgb_eventos.Rows[fila].Cells[3].Text;
             txt_numexter.Text= dgb_eventos.Rows[fila].Cells[20].Text;
             txt_numint.Text= dgb_eventos.Rows[fila].Cells[19].Text;
@@ -159,6 +162,7 @@ namespace AdministradorGUI
             txt_usuario.Text= dgb_eventos.Rows[fila].Cells[14].Text;
             ddl_categoria.SelectedValue= dgb_eventos.Rows[fila].Cells[13].Text;
             ddl_municipio.SelectedValue= dgb_eventos.Rows[fila].Cells[21].Text;
+          
 
             // }
         }
@@ -185,6 +189,11 @@ namespace AdministradorGUI
         }
 
         protected void txt_aperura_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void txt_fecha_cierre_TextChanged(object sender, EventArgs e)
         {
 
         }

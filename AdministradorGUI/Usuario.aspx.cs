@@ -34,9 +34,9 @@ namespace AdministradorGUI
             ddlMunicipio.DataBind();
         }
 
-        public UsuarioBO recolectar()
+       /* public UsuarioBO recolectar()
         {
 
-        }
+        }*/
     }
 }
