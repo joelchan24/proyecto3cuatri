@@ -7,7 +7,7 @@ using BO;
 using DAO;
 namespace Services
 {
-    class ctrol_usuarioSERVICIOS
+  public  class ctrol_usuarioSERVICIOS
     {
         usuarioDAO objetodao;
         public ctrol_usuarioSERVICIOS()
@@ -20,8 +20,8 @@ namespace Services
         {
             switch (str_accion)
             {
-                case "bnt_agregar":
-                   
+                case "btnAgregar":
+                    objetodao.agregar(usuarioBO);
                     break;
                 case "bnt_eliminar":
                     
