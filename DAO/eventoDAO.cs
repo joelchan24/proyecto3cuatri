@@ -15,8 +15,11 @@ namespace DAO
         public int agregar(object agregar)
         {
             //INSERT INTO EVENTO(DESCRIPCION,NOMBRE,COSTO,FECHAAPERTURA,FECHACIERRE,FOTOPROMOCION,UBICACIONGEOGRAFICA,LATITUD,LONGITUD,APROVACION,DIRECCION,CATEGORIA,USUARIO)VALUES APROVACION=@aprova
+            Direccion = new Direccion();
             EventoBO obejto = (EventoBO)agregar;
-              SqlCommand cmd = new SqlCommand("INSERT INTO EVENTO(DESCRIPCION ,NOMBRE,COSTO ,FECHAAPERTURA ,FECHACIERRE,FOTOPROMOCION,UBICACIONGEOGRAFICA,LATITUD,APROVACION,LONGITUD,DIRECCION,CATEGORIA,USUARIO) VALUES(@des,@nom,@cos,@feaper,@fecier,@foto,@ubicacion,@lat,@long,@aprova,@dirr,@cat,@codus)");
+              SqlCommand cmd = new SqlCommand("INSERT INTO EVENTO(DESCRIPCION ,NOMBRE,COSTO ,FECHAAPERTURA ,FECHACIERRE,FOTOPROMOCION,UBICACIONGEOGRAFICA,LATITUD,APROVACION,LONGITUD,DIRECCION,CATEGORIA,USUARIO) output"+" inserted.CODIGO VALUES(@des,@nom,@cos,@feaper,@fecier,@foto,@ubicacion,@lat,@long,@aprova,@dirr,@cat,@codus)");
+            int id = Convert.ToInt32(cmd);
+            SqlCommand dir = new SqlCommand();
                cmd.Parameters.Add("@des", SqlDbType.VarChar).Value = obejto.Descripcion;
               cmd.Parameters.Add("@nom", SqlDbType.VarChar).Value = obejto.Nombre;
               cmd.Parameters.Add("@cos", SqlDbType.Money).Value = obejto.costo;

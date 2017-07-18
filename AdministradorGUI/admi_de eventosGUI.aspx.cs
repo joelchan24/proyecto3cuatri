@@ -17,10 +17,12 @@ namespace AdministradorGUI
         ctrol_dirrecionSERVICIOS ser_direccion = new ctrol_dirrecionSERVICIOS();
         ctrol_eventosSERVICIO control = new ctrol_eventosSERVICIO();
         eventoDAO eventado = new eventoDAO();
+        direccionDAO obj = new direccionDAO();
+        int fila;
         protected void Page_Load(object sender, EventArgs e)
         {
 
-        if(!IsPostBack)
+            if (!IsPostBack)
             {
                 ddl_categoria.DataSource = eventado.buscar_categoria().Tables[0];
                 ddl_categoria.DataTextField = "NOMBRE";
@@ -31,8 +33,23 @@ namespace AdministradorGUI
                 ddl_municipio.DataValueField = "CODIGO";
                 ddl_municipio.DataBind();
                 refrescar();
+                usuario(fila);
             }
     }
+        public void usuario(int fila)
+        {
+            try
+            {
+                DataRow row = obj.buscar().Tables[0].Rows[fila];
+                txt_usuario.Text = Convert.ToString(row[0]);
+                txt_usuario.DataBind();
+            }
+            catch
+            {
+
+            }
+                
+        }
 
         protected void btn_eliminar_Click(object sender, EventArgs e)
         {
@@ -64,6 +81,7 @@ namespace AdministradorGUI
             obj.CodigoDireccion = Convert.ToInt32(iddir.ToString());
             obj.CodigoCategoria = Convert.ToInt32(ddl_categoria.SelectedValue);
             obj.CodigoUsuario =Convert.ToInt32( txt_usuario.Text);
+
             return obj;
 
 
@@ -82,6 +100,7 @@ namespace AdministradorGUI
             dir.NumeroExterior = txt_numexter.Text;
             dir.NumeroInterior = txt_numint.Text;
             dir.CodigoMunicipio = Convert.ToInt32(ddl_municipio.SelectedValue);
+
            
          
             return dir;
@@ -149,6 +168,11 @@ namespace AdministradorGUI
         }
 
         protected void btn_eliminar_Click1(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void txt_aperura_TextChanged(object sender, EventArgs e)
         {
 
         }
