@@ -11,6 +11,7 @@ namespace DAO
 {
   public  class eventoDAO : interface_metodos_guardar_eliminar_actualizar_buscar
     {
+        Direccion Direccion;
         conexionDAO conectar = new conexionDAO();
         public int agregar(object agregar)
         {

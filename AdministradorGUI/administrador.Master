@@ -111,6 +111,7 @@
             <li><a href="admin_UsuarioGUI.aspx"><i class="fa fa-circle-o"></i> Control de usuarios</a></li>
             <li><a href="admi_de eventosGUI.aspx"><i class="fa fa-circle-o"></i> Control de eventos</a></li>
                <li><a href="admi_organizadoresGUI.aspx"><i class="fa fa-circle-o"></i> control de Organizadores</a></li>
+              <li><a href="Categoria.aspx"><i class="fa fa-circle-o"></i>Control de Categoria</a></li>
           </ul>
         </li>
           <li class="active">
