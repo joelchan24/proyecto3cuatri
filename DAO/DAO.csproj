@@ -40,12 +40,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ComentarioDAO.cs" />
     <Compile Include="conexionDAO.cs" />
     <Compile Include="direccionDAO.cs" />
     <Compile Include="EstadoDAO.cs" />
     <Compile Include="eventoDAO.cs" />
     <Compile Include="interface_metodos_guardar_eliminar_actualizar_buscar.cs" />
     <Compile Include="loginDAO.cs" />
+    <Compile Include="MensajesDAO.cs" />
     <Compile Include="MunicipioDAO.cs" />
     <Compile Include="PaisDAO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
