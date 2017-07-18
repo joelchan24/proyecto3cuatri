@@ -31,8 +31,8 @@ namespace Services
                 case "btnModificar":
                     oCategoriaDAO.modificar(oCategoriaBO);
                     break;
-                case "btn_Buscar":
-
+                case "btnBuscar":
+                    
                     break;
             }
             return true;
