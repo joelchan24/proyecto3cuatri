@@ -24,6 +24,7 @@ namespace AdministradorGUI
 
             if (!IsPostBack)
             {
+                
                 ddl_categoria.DataSource = eventado.buscar_categoria().Tables[0];
                 ddl_categoria.DataTextField = "NOMBRE";
                 ddl_categoria.DataValueField = "CODIGO";
