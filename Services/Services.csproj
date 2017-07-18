@@ -40,7 +40,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CTRL_comentario.cs" />
     <Compile Include="CTRL_Estados.cs" />
+    <Compile Include="CTRL_Mensajes.cs" />
     <Compile Include="CTRL_Municipio.cs" />
     <Compile Include="CTRL_Pais.cs" />
     <Compile Include="ctrol_dirrecionSERVICIOS.cs" />

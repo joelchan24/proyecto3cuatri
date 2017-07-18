@@ -10,7 +10,7 @@
 namespace AdministradorGUI {
     
     
-    public partial class Municipios {
+    public partial class admin_Comentario {
         
         /// <summary>
         /// form1 control.
@@ -22,31 +22,40 @@ namespace AdministradorGUI {
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
         
         /// <summary>
-        /// txt_IdMunicipio control.
+        /// txt_ID control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txt_IdMunicipio;
+        protected global::System.Web.UI.WebControls.TextBox txt_ID;
         
         /// <summary>
-        /// txt_NombreMunicipio control.
+        /// txt_Usuario control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txt_NombreMunicipio;
+        protected global::System.Web.UI.WebControls.TextBox txt_Usuario;
         
         /// <summary>
-        /// txt_Estado control.
+        /// txt_Evento control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txt_Estado;
+        protected global::System.Web.UI.WebControls.TextBox txt_Evento;
+        
+        /// <summary>
+        /// txt_Comentario control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txt_Comentario;
         
         /// <summary>
         /// btn_Nuevo control.
@@ -58,15 +67,6 @@ namespace AdministradorGUI {
         protected global::System.Web.UI.WebControls.Button btn_Nuevo;
         
         /// <summary>
-        /// btn_Modificar control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btn_Modificar;
-        
-        /// <summary>
         /// btn_Eliminar control.
         /// </summary>
         /// <remarks>
@@ -76,21 +76,12 @@ namespace AdministradorGUI {
         protected global::System.Web.UI.WebControls.Button btn_Eliminar;
         
         /// <summary>
-        /// btn_Buscar control.
+        /// dvg_mensaje control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btn_Buscar;
-        
-        /// <summary>
-        /// dgv_Estados control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView dgv_Estados;
+        protected global::System.Web.UI.WebControls.GridView dvg_mensaje;
     }
 }

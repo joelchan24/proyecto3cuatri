@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace BO
 {
-    class MensajeBO
+    public class MensajeBO
     {
         public int Codigo { get; set; }
-        public int Status { get; set; }
+        public bool Status { get; set; }
         public string Destinatario { get; set; }
         public string Remitente { get; set; }
         public string Cuerpo { get; set; }
