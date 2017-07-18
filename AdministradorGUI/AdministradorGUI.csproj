@@ -97,6 +97,11 @@
     <Content Include="admi_de eventosGUI.aspx" />
     <Content Include="Categoria.aspx" />
     <Content Include="Estado.aspx" />
+    <Content Include="img\avatar.png" />
+    <Content Include="img\ccaae9ad-e297-462c-84ad-414e7f30ab51image16.jpeg" />
+    <Content Include="img\obra-cholo.jpg" />
+    <Content Include="img\Progreso-malecon.jpg" />
+    <Content Include="img\vaqueria-yucateca-2.jpg" />
     <Content Include="js\img\avatar.png" />
     <Content Include="js\img\ccaae9ad-e297-462c-84ad-414e7f30ab51image16.jpeg" />
     <Content Include="js\img\obra-cholo.jpg" />
@@ -119,6 +124,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="admin_mensajes.aspx" />
     <Content Include="css\AdminLTE.min.css" />
     <Content Include="css\bootstrap-theme.css" />
     <Content Include="css\bootstrap-theme.min.css" />
@@ -148,6 +154,7 @@
     <Content Include="js\npm.js" />
     <Content Include="js\pagina.js" />
     <Content Include="Pais.aspx" />
+    <Content Include="Usuario.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -157,6 +164,27 @@
     </Compile>
     <Compile Include="administrador.Master.designer.cs">
       <DependentUpon>administrador.Master</DependentUpon>
+    </Compile>
+    <Compile Include="admin_Comentario.aspx.cs">
+      <DependentUpon>admin_Comentario.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin_Comentario.aspx.designer.cs">
+      <DependentUpon>admin_Comentario.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin_Mensaje.aspx.cs">
+      <DependentUpon>admin_Mensaje.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin_Mensaje.aspx.designer.cs">
+      <DependentUpon>admin_Mensaje.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin_mensajes.aspx.cs">
+      <DependentUpon>admin_mensajes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin_mensajes.aspx.designer.cs">
+      <DependentUpon>admin_mensajes.aspx</DependentUpon>
     </Compile>
     <Compile Include="admi_de eventosGUI.aspx.cs">
       <DependentUpon>admi_de eventosGUI.aspx</DependentUpon>
@@ -194,6 +222,13 @@
       <DependentUpon>Pais.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Usuario.aspx.cs">
+      <DependentUpon>Usuario.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Usuario.aspx.designer.cs">
+      <DependentUpon>Usuario.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\BO\BO.csproj">
