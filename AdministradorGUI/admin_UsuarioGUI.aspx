@@ -31,9 +31,17 @@
             <div class="col-lg-4">
                 <div class="form-group">
                     <asp:Label ID="label1" Text="ID:" runat="server" CssClass="text-blue"></asp:Label><br />
-                    <asp:TextBox ID="txtID" runat="server" CssClass="text-black" Width="300px" Height="10px"></asp:TextBox><br />
+                    <asp:TextBox ID="txtID" runat="server"  Width="300px" Height="10px"></asp:TextBox><br />
                     <asp:Label ID="Label2" runat="server" Text="Nombre:" CssClass="text-blue"></asp:Label><br />
-                    <asp:TextBox ID="txtNombre" runat="server" Width="300px" Height="10px"></asp:TextBox>
+                    <asp:TextBox ID="txtNombre" runat="server" Width="300px" Height="10px"></asp:TextBox><br />
+                    <asp:Label ID="Label3" runat="server" Text="Apellido(s):" CssClass="text-blue"></asp:Label><br />
+                    <asp:TextBox ID="txtApellido" runat="server" Width="300px" Height="10px"></asp:TextBox>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="form-group">
+                    <asp:Label ID="lblFecha" runat="server" CssClass="text-blue" Text="Fecha de Nacimiento"></asp:Label><br />
+                    <asp:TextBox ID="txtfecha" runat="server" CssClass="form-control" type="date" Width="300px" Height="32px"></asp:TextBox>
                 </div>
             </div>
 
