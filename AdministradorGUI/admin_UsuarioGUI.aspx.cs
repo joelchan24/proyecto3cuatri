@@ -16,7 +16,7 @@ namespace AdministradorGUI
 
         protected void TextBox3_TextChanged(object sender, EventArgs e)
         {
-
+            
         }
     }
 }
