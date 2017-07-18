@@ -30,7 +30,10 @@ namespace DAO
 
         public DataSet buscar()
         {
-            throw new NotImplementedException();
+            SqlCommand obj = new SqlCommand("select max(CODIGO) from USUARIOS");
+            obj.CommandType = CommandType.Text;
+
+            return conectar.EjecutarSentencia(obj);
         }
 
         public int eliminar(object eliminar)
