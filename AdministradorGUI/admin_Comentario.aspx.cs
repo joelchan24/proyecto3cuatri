@@ -14,6 +14,8 @@ namespace AdministradorGUI
     {
         CTRL_comentario oCTRLComentario = new CTRL_comentario();
 
+        
+
         protected void Page_Load(object sender, EventArgs e)
         {
             actualizar();
