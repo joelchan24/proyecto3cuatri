@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/administrador.Master" AutoEventWireup="true" CodeBehind="Categoria.aspx.cs" Inherits="AdministradorGUI.Categoria" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/administrador.Master" AutoEventWireup="true" CodeBehind="Categoria.aspx" Inherits="AdministradorGUI.Categoria" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <style type="text/css">
         .auto-style1 {
@@ -53,18 +53,22 @@
 		</div>
 	<div class="row">
 		<div class="auto-style3">
-			<asp:Button ID="txtAgregar" Text="Agregar" runat="server" CssClass="btn btn-dropbox" Width="100px"/> 
-            <asp:Button ID="txtModificar" Text="Modificar" runat="server" CssClass="btn btn-dropbox" Width="100px" />
-            <asp:Button ID="txtEliminar" Text="Eliminar" runat="server" CssClass="btn btn-dropbox" Width="100px" />
-            <asp:Button ID="txtNuevo" Text="Nuevo" runat="server" CssClass="btn btn-dropbox" Width="100px" />
-            <asp:Button ID="txtBuscar" Text="Buscar" runat="server" CssClass="btn btn-dropbox" Width="100px" />
+			<asp:Button ID="btnAgregar" Text="Agregar" runat="server" CssClass="btn btn-dropbox" Width="100px" OnClick="Accion"/> 
+            <asp:Button ID="btnModificar" Text="Modificar" runat="server" CssClass="btn btn-dropbox" Width="100px" OnClick="Accion" />
+            <asp:Button ID="btnEliminar" Text="Eliminar" runat="server" CssClass="btn btn-dropbox" Width="100px" OnClick="Accion" />
+            <asp:Button ID="btnNuevo" Text="Nuevo" runat="server" CssClass="btn btn-dropbox" Width="100px" OnClick="Accion" />
+            <asp:Button ID="btnBuscar" Text="Buscar" runat="server" CssClass="btn btn-dropbox" Width="100px" OnClick="Accion" />
 
 		</div>
 	</div><br />
            <div class="row">
            <div class="auto-style5">
                <div class="form-group">
-                   <asp:GridView ID="dtgCategoria" runat="server" CssClass="auto-style4" Width="590px"></asp:GridView>
+                   <asp:GridView ID="dtgCategoria" runat="server" CssClass="auto-style4" Width="590px" OnRowCommand="Seleccionar">
+                       <Columns>
+                           <asp:ButtonField CommandName="dgvbtnSeleccionar" Text="Seleccionar" />
+                       </Columns>
+                   </asp:GridView>
                </div>
            </div>
                </div>
