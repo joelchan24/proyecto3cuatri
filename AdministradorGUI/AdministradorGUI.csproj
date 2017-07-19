@@ -94,9 +94,8 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="admin_comen.aspx" />
-    <Content Include="admin_Comentario.aspx" />
-    <Content Include="admin_Mensaje.aspx" />
+    <Content Include="admin_eventosaprovados.aspx" />
+    <Content Include="admin_eventosporaprovar.aspx" />
     <Content Include="admi_de eventosGUI.aspx" />
     <Content Include="Categoria.aspx" />
     <Content Include="Estado.aspx" />
@@ -174,12 +173,12 @@
     <Compile Include="admin_eventosaprovados.aspx.designer.cs">
       <DependentUpon>admin_eventosaprovados.aspx</DependentUpon>
     </Compile>
-    <Compile Include="admin_Comentario.aspx.cs">
-      <DependentUpon>admin_Comentario.aspx</DependentUpon>
+    <Compile Include="admin_eventosporaprovar.aspx.cs">
+      <DependentUpon>admin_eventosporaprovar.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="admin_Mensaje.aspx.cs">
-      <DependentUpon>admin_Mensaje.aspx</DependentUpon>
+    <Compile Include="admin_eventosporaprovar.aspx.designer.cs">
+      <DependentUpon>admin_eventosporaprovar.aspx</DependentUpon>
     </Compile>
     <Compile Include="admi_de eventosGUI.aspx.cs">
       <DependentUpon>admi_de eventosGUI.aspx</DependentUpon>
