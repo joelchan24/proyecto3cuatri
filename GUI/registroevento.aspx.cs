@@ -16,7 +16,8 @@ namespace GUI
         ctrol_eventosSERVICIO control = new ctrol_eventosSERVICIO();
         eventoDAO eventado = new eventoDAO();
         direccionDAO obj = new direccionDAO();
-     public   string valor = "0";//cero no aprovado ,1 si aprovado
+        loginDAO login = new loginDAO(); 
+        public   string valor = "0";//cero no aprovado ,1 si aprovado
         int fila;
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -32,7 +33,8 @@ namespace GUI
                 ddl_municipio.DataValueField = "CODIGO";
                 ddl_municipio.DataBind();
                 refrescar();
-                usuario(fila);
+              
+              usuario(fila);
 
                 
 
@@ -145,6 +147,13 @@ namespace GUI
             // ser_direccion.accion(mandar(), btnsellcionado.ID);
             refrescar();
 
+        }
+        public void usuario1()
+        {
+            UsuarioBO obj = new UsuarioBO();
+            obj.Usuario.ToString();
+            obj.Contraseña.ToString();
+            txt_usuario.Text = login.verificar(obj).ToString();
         }
     }
 }

@@ -9,11 +9,13 @@ using System.Data;
 using BO;
 using DAO;
 using Services;
+using AdministradorGUI;
 
 namespace AdministradorGUI
 {
     public partial class admi_de_eventosGUI : System.Web.UI.Page
     {
+        
         ctrol_dirrecionSERVICIOS ser_direccion = new ctrol_dirrecionSERVICIOS();
         ctrol_eventosSERVICIO control = new ctrol_eventosSERVICIO();
         eventoDAO eventado = new eventoDAO();
@@ -35,16 +37,18 @@ namespace AdministradorGUI
                 ddl_municipio.DataValueField = "CODIGO";
                 ddl_municipio.DataBind();
                 refrescar();
-                usuario(fila);
+                usuario();
                 
 
 
             }
     }
-        public void usuario(int fila)
+        public void usuario()
         {
             try
             {
+                
+              
                 DataRow row = obj.buscar().Tables[0].Rows[fila];
                 txt_usuario.Text = Convert.ToString(row[0]);
                 txt_usuario.DataBind();

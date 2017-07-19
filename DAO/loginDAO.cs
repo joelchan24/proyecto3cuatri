@@ -26,5 +26,20 @@ namespace DAO
 
 
         }
+        public int verificar1(object agregar)
+        {
+            UsuarioBO usuario = (UsuarioBO)agregar;
+            conexionDAO conectar = new conexionDAO();
+            SqlCommand cmd = new SqlCommand("select  CODIGO from usuarios where usuario=@usuario and contraseña=@contra");
+            cmd.Parameters.Add("@usuario", SqlDbType.VarChar).Value = usuario.Usuario;
+            cmd.Parameters.Add("@contra", SqlDbType.VarChar).Value = usuario.Contraseña;
+            cmd.CommandType = CommandType.Text;
+            int resultado = conectar.EjecutarComando(cmd);
+
+            return resultado;
+
+
+
+        }
     }
 }

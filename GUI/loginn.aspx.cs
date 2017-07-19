@@ -14,6 +14,7 @@ namespace GUI
 {
     public partial class loginn : System.Web.UI.Page
     {
+     
         protected void Page_Load(object sender, EventArgs e)
         {
 
@@ -24,12 +25,14 @@ namespace GUI
             UsuarioBO obj = new UsuarioBO();
             obj.Usuario = txt_usuario.Text;
             obj.Contraseña = txt_contraseña.Text;
-
+          
             usuarioDAO usuario = new usuarioDAO();
+            loginDAO login = new loginDAO();
 
-            if (usuario.verificar(obj))
+            if (login.verificar(obj))
             {
                 Session["usuario"] = txt_usuario.Text;
+                Session["id"] = login.verificar1(obj);
              
                 Response.Write("<script>alert('usuario correcto')</script>");
                 Response.Redirect("prueva.aspx", true);
