@@ -12,6 +12,7 @@
           <div class="row">
               <h1 > control</h1>
                <asp:HiddenField  ID="txtid" runat="server" />
+              <asp:HiddenField ID="txtx_usuariop" runat="server" />
               <asp:HiddenField ID="txt_codir" runat="server"  />
               <div class="col-xs-4" >
                   <div class="form-group">

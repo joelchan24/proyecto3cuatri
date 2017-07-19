@@ -16,6 +16,7 @@ namespace GUI
         ctrol_eventosSERVICIO control = new ctrol_eventosSERVICIO();
         eventoDAO eventado = new eventoDAO();
         direccionDAO obj = new direccionDAO();
+     public   string valor = "0";//cero no aprovado ,1 si aprovado
         int fila;
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -33,7 +34,7 @@ namespace GUI
                 refrescar();
                 usuario(fila);
 
-                txt_aperura.Text = DateTime.Now.ToString("yyyy-MM-dd");
+                
 
             }
         }
@@ -67,7 +68,8 @@ namespace GUI
             obj.UbicacionGeografica = txt_ubicar.Text;
             obj.longitud = txt_lo.Text;
             obj.latitud = txtlat.Text;
-            obj.aprovacion = (rbt_aprovado.Checked) ? "aprovado" : "no aprovado";
+            
+            obj.aprovacion = valor;//valor desaprovado 
             //obj.CodigoDireccion = Convert.ToInt32(iddir.ToString());
             obj.CodigoCategoria = Convert.ToInt32(ddl_categoria.SelectedValue);
             obj.CodigoUsuario = Convert.ToInt32(txt_usuario.Text);
@@ -124,9 +126,10 @@ namespace GUI
             txt_postal.Text = dgb_eventos.Rows[fila].Cells[17].Text;
             txt_precio.Text = dgb_eventos.Rows[fila].Cells[4].Text;
             txt_codir.Value = dgb_eventos.Rows[fila].Cells[15].Text;
-            rbt_aprovado.Checked = (Convert.ToString(dgb_eventos.Rows[fila].Cells[11].Text) == "aprovado") ? true : false;
-            rbt_noapro.Checked = (Convert.ToString(dgb_eventos.Rows[fila].Cells[11].Text) == "no aprovado") ? true : false;
-            txt_usuario.Text = dgb_eventos.Rows[fila].Cells[14].Text;
+            valor = dgb_eventos.Rows[fila].Cells[11].Text;
+          /*  rbt_aprovado.Checked = (Convert.ToString(dgb_eventos.Rows[fila].Cells[11].Text) == "aprovado") ? true : false;
+            rbt_noapro.Checked = (Convert.ToString(dgb_eventos.Rows[fila].Cells[11].Text) == "no aprovado") ? true : false;*/
+            txt_usuario.Text = dgb_eventos.Rows[fila].Cells[22].Text;
             ddl_categoria.SelectedValue = dgb_eventos.Rows[fila].Cells[13].Text;
             ddl_municipio.SelectedValue = dgb_eventos.Rows[fila].Cells[21].Text;
 

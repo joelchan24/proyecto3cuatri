@@ -137,20 +137,23 @@ namespace AdministradorGUI
 
         protected void mandaraltexvo(object sender, GridViewCommandEventArgs e)
         {
-           // if (e.CommandName == "btn_selecionar")
-                //  {
+          /* if (e.CommandName == "btn_selecionar")
+                 {
                 //foto promocion 7
-                int fila = Convert.ToInt32(e.CommandArgument.ToString());
+                // int fila = Convert.ToInt32(e.CommandArgument.ToString());
+                int fila = Convert.ToInt32(e.CommandArgument);
             txtid.Value = dgb_eventos.Rows[fila].Cells[1].Text;
             txt_ubicar.Text = dgb_eventos.Rows[fila].Cells[8].Text;
             txt_lo.Text = dgb_eventos.Rows[fila].Cells[10].Text;
             txtlat.Text = dgb_eventos.Rows[fila].Cells[9].Text;
-          txt_aperura.Text =dgb_eventos.Rows[fila].Cells[5].Text;
+            DateTime fechaapertura = Convert.ToDateTime(dgb_eventos.Rows[fila].Cells[5].Text);
+            txt_aperura.Text = fechaapertura.ToString("yyyy-MM-dd");
             txt_codir.Value= dgb_eventos.Rows[fila].Cells[12].Text;
             txt_colonia.Text= dgb_eventos.Rows[fila].Cells[16].Text;
             txt_crizamiento.Text= dgb_eventos.Rows[fila].Cells[18].Text;
-            txt_descrip.Text=dgb_eventos.Rows[fila].Cells[2].Text; 
-            txt_fecha_cierre.Text = dgb_eventos.Rows[fila].Cells[6].Text;
+            txt_descrip.Text=dgb_eventos.Rows[fila].Cells[2].Text;
+            DateTime ida = Convert.ToDateTime(dgb_eventos.Rows[fila].Cells[6].Text);
+            txt_fecha_cierre.Text = ida.ToString("yyyy-MM-dd");
             txt_nombre.Text= dgb_eventos.Rows[fila].Cells[3].Text;
             txt_numexter.Text= dgb_eventos.Rows[fila].Cells[20].Text;
             txt_numint.Text= dgb_eventos.Rows[fila].Cells[19].Text;
@@ -159,12 +162,24 @@ namespace AdministradorGUI
             txt_codir.Value= dgb_eventos.Rows[fila].Cells[15].Text;
             rbt_aprovado.Checked = (Convert.ToString(dgb_eventos.Rows[fila].Cells[11].Text) == "aprovado") ? true : false;
             rbt_noapro.Checked = (Convert.ToString(dgb_eventos.Rows[fila].Cells[11].Text) == "no aprovado") ? true : false;
-            txt_usuario.Text= dgb_eventos.Rows[fila].Cells[14].Text;
+            txt_usuario.Text= dgb_eventos.Rows[fila].Cells[22].Text;
             ddl_categoria.SelectedValue= dgb_eventos.Rows[fila].Cells[13].Text;
             ddl_municipio.SelectedValue= dgb_eventos.Rows[fila].Cells[21].Text;
+
           
 
-            // }
+            }*/
+            if (e.CommandName == "btn_aprovar")
+            {
+                int fila = Convert.ToInt32(e.CommandArgument.ToString());
+               // int indice = Convert.ToInt32(e.CommandArgument);
+                int id =int.Parse( dgb_eventos.Rows[fila].Cells[2].Text);
+             
+                EventoBO obj= new EventoBO();
+                obj.Codigo = id;
+                eventado.modificaraprovacion(obj,Convert.ToString(1));
+                refrescar();
+            }
         }
 
         protected void dgb_eventos_RowCreated(object sender, GridViewRowEventArgs e)
@@ -194,6 +209,11 @@ namespace AdministradorGUI
         }
 
         protected void txt_fecha_cierre_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void HiddenField1_ValueChanged(object sender, EventArgs e)
         {
 
         }

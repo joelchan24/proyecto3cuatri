@@ -66,7 +66,7 @@ namespace DAO
         public DataSet buscar()
         {
             // select * from EVENTO e inner join DIRECCION d on e.DIRECCION=d.CODIGO  
-            SqlCommand cmd = new SqlCommand(" select * from EVENTO e inner join DIRECCION d on e.DIRECCION=d.CODIGO  ");
+            SqlCommand cmd = new SqlCommand(" select * from EVENTO e  inner join DIRECCION d on e.DIRECCION=d.CODIGO inner join USUARIOS u on  u.CODIGO=e.USUARIO;  ");
            
 
             cmd.CommandType = CommandType.Text;
@@ -159,5 +159,61 @@ namespace DAO
 
             return conectar.EjecutarSentencia(cmd);
         }
+
+        /* public bool ModificarEstatus(LibrosBO oLibrosBO, int estatus)
+        {
+            SqlCommand cmdComando = new SqlCommand();
+            cmdComando.CommandText = "UPDATE tblLibros set estatus=@estatus WHERE id=@ID";
+            cmdComando.Parameters.Add("@ID", SqlDbType.Int).Value=oLibrosBO.ID;
+            cmdComando.Parameters.Add("@estatus", SqlDbType.Int).Value = estatus;
+
+            return oConexion.EjecutarComandoSQL(cmdComando); 
+        }*/
+
+        public int modificaraprovacion(EventoBO oevento, string aprovacion)
+        {
+            SqlCommand comando = new SqlCommand("UPDATE EVENTO set APROVACION=@apro WHERE CODIGO=@ID");
+            comando.Parameters.Add("@apro", SqlDbType.VarChar).Value = aprovacion;
+            comando.Parameters.Add("id", SqlDbType.Int).Value = oevento.Codigo;
+
+            return conectar.EjecutarComando(comando);
+        }
+
+        public DataSet buscar_noaprovados()
+        {
+            // select * from EVENTO e inner join DIRECCION d on e.DIRECCION=d.CODIGO  
+            SqlCommand cmd = new SqlCommand(" select * from EVENTO e  inner join DIRECCION d on e.DIRECCION=d.CODIGO inner join USUARIOS u on  u.CODIGO=e.USUARIO where e.APROVACION='0' ;  ");
+
+
+            cmd.CommandType = CommandType.Text;
+
+
+            return conectar.EjecutarSentencia(cmd);
+        }
+
+
+        public DataSet buscar_aprovados()
+        {
+            // select * from EVENTO e inner join DIRECCION d on e.DIRECCION=d.CODIGO  
+            SqlCommand cmd = new SqlCommand("select * from EVENTO e  inner join DIRECCION d on e.DIRECCION=d.CODIGO inner join USUARIOS u on  u.CODIGO=e.USUARIO where e.APROVACION='1'  ");
+
+
+            cmd.CommandType = CommandType.Text;
+
+
+            return conectar.EjecutarSentencia(cmd);
+        }
     }
+
+
+
+
+
+
+
+
+
+
+
+
 }

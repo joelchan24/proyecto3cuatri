@@ -22,6 +22,7 @@
               <h1 > control</h1>
                <asp:HiddenField  ID="txtid" runat="server" />
               <asp:HiddenField ID="txt_codir" runat="server" OnValueChanged="txt_codir_ValueChanged" />
+              <asp:HiddenField ID="txt_usuariop" runat="server" OnValueChanged="HiddenField1_ValueChanged" />
               <div class="col-xs-4" >
                   <div class="form-group">
                       <label for="exampleinput">nombre</label>
@@ -236,6 +237,9 @@
   <div class="col-md-12">
       <asp:GridView ID="dgb_eventos" runat="server" CssClass=" table-resposive table table-bordered" OnSelectedIndexChanged="dgb_eventos_SelectedIndexChanged" OnRowCommand="mandaraltexvo" OnRowCreated="dgb_eventos_RowCreated">
           <Columns>
+              <asp:ButtonField CommandName="btn_aprovar" Text="Aprovar">
+              <ControlStyle CssClass="btn btn-success" />
+              </asp:ButtonField>
               <asp:ButtonField CommandName="btn_seleccionar" Text="Seleccionar">
               <ControlStyle CssClass="btn btn-primary" />
               </asp:ButtonField>
