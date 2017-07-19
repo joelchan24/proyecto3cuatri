@@ -119,7 +119,7 @@
                             <li class="dropdown mega-dropdown">
                     			<a href="#" class="dropdown-toggle" data-toggle="dropdown">Acerca De</a>				
                 			</li>
-                            <li class="dropdown mega-dropdown"><a href="pueblos.aspx" data-toggle="dropdown">Municipios</a></li>
+                            <li class="dropdown mega-dropdown"><a href="registroevento.aspx" data-toggle="dropdown">Municipios</a></li>
                              
                           <li class="dropdown">
                           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" style="margin-right:80px;"><span class="glyphicon glyphicon-star"></span>Categorias <span class="caret"></span></a>

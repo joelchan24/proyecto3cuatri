@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Web;
 using DAO;
 using BO;
 using System.Data;
@@ -33,6 +34,8 @@ namespace Services
                     break;
                 case "btnBuscar":
                     oCategoriaDAO.buscar(oCategoriaBO);
+                    
+                    
                     break;
             }
             return true;

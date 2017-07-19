@@ -93,6 +93,7 @@
     <Content Include="js\Jquery 2.1.0.js" />
     <Content Include="js\jquery-2.2.3.min.js" />
     <Content Include="js\jquery.slimscroll.min.js" />
+    <Content Include="js\locationpicker.jquery.js" />
     <Content Include="js\pagina.js" />
     <Content Include="loginn.aspx" />
     <Content Include="packages.config" />

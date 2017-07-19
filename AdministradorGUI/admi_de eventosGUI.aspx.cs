@@ -9,16 +9,23 @@ using System.Data;
 using BO;
 using DAO;
 using Services;
+using AdministradorGUI;
+using System.Security.Cryptography;
+using System.Text;
+using System.IO;
 
 namespace AdministradorGUI
 {
     public partial class admi_de_eventosGUI : System.Web.UI.Page
     {
+        
         ctrol_dirrecionSERVICIOS ser_direccion = new ctrol_dirrecionSERVICIOS();
         ctrol_eventosSERVICIO control = new ctrol_eventosSERVICIO();
         eventoDAO eventado = new eventoDAO();
         direccionDAO obj = new direccionDAO();
+        loginDAO login = new loginDAO();
         int fila;
+        string strNuevoNombre = "";
         protected void Page_Load(object sender, EventArgs e)
         {
 
@@ -34,16 +41,18 @@ namespace AdministradorGUI
                 ddl_municipio.DataValueField = "CODIGO";
                 ddl_municipio.DataBind();
                 refrescar();
-                usuario(fila);
+                usuario();
                 
 
 
             }
     }
-        public void usuario(int fila)
+        public void usuario()
         {
             try
             {
+                
+              
                 DataRow row = obj.buscar().Tables[0].Rows[fila];
                 txt_usuario.Text = Convert.ToString(row[0]);
                 txt_usuario.DataBind();
@@ -77,7 +86,7 @@ namespace AdministradorGUI
             obj.costo = Convert.ToDouble(txt_precio.Text);
            obj.FechaApertura = Convert.ToDateTime(txt_aperura.Text);
             obj.FechaCierre = Convert.ToDateTime(txt_fecha_cierre.Text);
-            obj.FotoPromocion = file_foto.ToString();
+            obj.FotoPromocion = strNuevoNombre;
             obj.UbicacionGeografica = txt_ubicar.Text;
             obj.longitud = txt_lo.Text;
             obj.latitud = txtlat.Text;
@@ -137,43 +146,101 @@ namespace AdministradorGUI
 
         protected void mandaraltexvo(object sender, GridViewCommandEventArgs e)
         {
-           // if (e.CommandName == "btn_selecionar")
-                //  {
+            if (e.CommandName == "btn_selecionar")
+            {
                 //foto promocion 7
-                int fila = Convert.ToInt32(e.CommandArgument.ToString());
-            txtid.Value = dgb_eventos.Rows[fila].Cells[1].Text;
-            txt_ubicar.Text = dgb_eventos.Rows[fila].Cells[8].Text;
-            txt_lo.Text = dgb_eventos.Rows[fila].Cells[10].Text;
-            txtlat.Text = dgb_eventos.Rows[fila].Cells[9].Text;
-          txt_aperura.Text =dgb_eventos.Rows[fila].Cells[5].Text;
-            txt_codir.Value= dgb_eventos.Rows[fila].Cells[12].Text;
-            txt_colonia.Text= dgb_eventos.Rows[fila].Cells[16].Text;
-            txt_crizamiento.Text= dgb_eventos.Rows[fila].Cells[18].Text;
-            txt_descrip.Text=dgb_eventos.Rows[fila].Cells[2].Text; 
-            txt_fecha_cierre.Text = dgb_eventos.Rows[fila].Cells[6].Text;
-            txt_nombre.Text= dgb_eventos.Rows[fila].Cells[3].Text;
-            txt_numexter.Text= dgb_eventos.Rows[fila].Cells[20].Text;
-            txt_numint.Text= dgb_eventos.Rows[fila].Cells[19].Text;
-            txt_postal.Text= dgb_eventos.Rows[fila].Cells[17].Text;
-            txt_precio.Text= dgb_eventos.Rows[fila].Cells[4].Text;
-            txt_codir.Value= dgb_eventos.Rows[fila].Cells[15].Text;
-            rbt_aprovado.Checked = (Convert.ToString(dgb_eventos.Rows[fila].Cells[11].Text) == "aprovado") ? true : false;
-            rbt_noapro.Checked = (Convert.ToString(dgb_eventos.Rows[fila].Cells[11].Text) == "no aprovado") ? true : false;
-            txt_usuario.Text= dgb_eventos.Rows[fila].Cells[14].Text;
-            ddl_categoria.SelectedValue= dgb_eventos.Rows[fila].Cells[13].Text;
-            ddl_municipio.SelectedValue= dgb_eventos.Rows[fila].Cells[21].Text;
-          
+                // int fila = Convert.ToInt32(e.CommandArgument.ToString());
+                int fila = Convert.ToInt32(e.CommandArgument);
+                txtid.Value = dgb_eventos.Rows[fila].Cells[1].Text;
+                txt_ubicar.Text = dgb_eventos.Rows[fila].Cells[8].Text;
+                txt_lo.Text = dgb_eventos.Rows[fila].Cells[10].Text;
+                txtlat.Text = dgb_eventos.Rows[fila].Cells[9].Text;
+                DateTime fechaapertura = Convert.ToDateTime(dgb_eventos.Rows[fila].Cells[5].Text);
+                txt_aperura.Text = fechaapertura.ToString("yyyy-MM-dd");
+                txt_codir.Value = dgb_eventos.Rows[fila].Cells[12].Text;
+                txt_colonia.Text = dgb_eventos.Rows[fila].Cells[16].Text;
+                txt_crizamiento.Text = dgb_eventos.Rows[fila].Cells[18].Text;
+                txt_descrip.Text = dgb_eventos.Rows[fila].Cells[2].Text;
+                DateTime ida = Convert.ToDateTime(dgb_eventos.Rows[fila].Cells[6].Text);
+                txt_fecha_cierre.Text = ida.ToString("yyyy-MM-dd");
+                txt_nombre.Text = dgb_eventos.Rows[fila].Cells[3].Text;
+                txt_numexter.Text = dgb_eventos.Rows[fila].Cells[20].Text;
+                txt_numint.Text = dgb_eventos.Rows[fila].Cells[19].Text;
+                txt_postal.Text = dgb_eventos.Rows[fila].Cells[17].Text;
+                txt_precio.Text = dgb_eventos.Rows[fila].Cells[4].Text;
+                txt_codir.Value = dgb_eventos.Rows[fila].Cells[15].Text;
+               
+                Image1.ImageUrl = "img/" + dgb_eventos.Rows[fila].Cells[7].Text.ToString() + ".jpg";
+                rbt_aprovado.Checked = (Convert.ToString(dgb_eventos.Rows[fila].Cells[11].Text) == "aprovado") ? true : false;
+                rbt_noapro.Checked = (Convert.ToString(dgb_eventos.Rows[fila].Cells[11].Text) == "no aprovado") ? true : false;
+                txt_usuario.Text = dgb_eventos.Rows[fila].Cells[22].Text;
+                ddl_categoria.SelectedValue = dgb_eventos.Rows[fila].Cells[13].Text;
+                ddl_municipio.SelectedValue = dgb_eventos.Rows[fila].Cells[21].Text;
 
-            // }
+            }
+
+           /*
+            if (e.CommandName == "btn_aprovar")
+            {
+                int fila = Convert.ToInt32(e.CommandArgument.ToString());
+               // int indice = Convert.ToInt32(e.CommandArgument);
+                int id =int.Parse( dgb_eventos.Rows[fila].Cells[2].Text);
+             
+                EventoBO obj= new EventoBO();
+                obj.Codigo = id;
+                eventado.modificaraprovacion(obj,Convert.ToString(1));
+                refrescar();
+            }*/
         }
 
         protected void dgb_eventos_RowCreated(object sender, GridViewRowEventArgs e)
         {
-            e.Row.Cells[1].Visible = false;
+           // e.Row.Cells[1].Visible = false;
+        }
+        public string NombreImagen()
+        {
+            DateTime tiempo = DateTime.Now;
+            MD5 md5 = MD5CryptoServiceProvider.Create();
+            ASCIIEncoding encoding = new ASCIIEncoding();
+            byte[] stream = null;
+            StringBuilder sb = new StringBuilder();
+            stream = md5.ComputeHash(encoding.GetBytes(tiempo.ToString(System.Globalization.CultureInfo.InvariantCulture)));
+            for (int i = 0; i < stream.Length; i++) sb.AppendFormat("{0:x2}", stream[i]);
+            return sb.ToString();
         }
 
         protected void accion(object sender, EventArgs e)
         {
+            var btnSeleccionado = (Button)sender;
+            // cargar la foto
+            if (btnSeleccionado.ID == "btn_agregar")
+            {
+                if (file_foto.HasFile)
+                {
+                    strNuevoNombre = NombreImagen();
+                    file_foto.SaveAs(Server.MapPath("~/img/") + strNuevoNombre + ".jpg");
+                }
+                //FileUploadFoto.Save("miimagen.jpg",ImageFormat.Jpeg);
+            }
+            if (btnSeleccionado.ID == "btn_modificar")
+            {
+                if (file_foto.HasFile)
+                {
+                    File.Delete(MapPath(Image1.ImageUrl));
+                    strNuevoNombre = NombreImagen();
+                    file_foto.SaveAs(Server.MapPath("~/img/") + strNuevoNombre + ".jpg");
+                }
+                //FileUploadFoto.Save("miimagen.jpg",ImageFormat.Jpeg);
+            }
+            if (btnSeleccionado.ID == "btn_eliminar")
+            {
+                if (file_foto.HasFile)
+                {
+                    File.Delete("~/img/" + Image1.ImageUrl);
+                }
+                //FileUploadFoto.Save("miimagen.jpg",ImageFormat.Jpeg);
+            }
+
             Button btnsellcionado = (Button)sender;
 
            control.accion(devolver(), btnsellcionado.ID);
@@ -194,6 +261,11 @@ namespace AdministradorGUI
         }
 
         protected void txt_fecha_cierre_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void HiddenField1_ValueChanged(object sender, EventArgs e)
         {
 
         }

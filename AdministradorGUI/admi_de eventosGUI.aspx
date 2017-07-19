@@ -22,6 +22,7 @@
               <h1 > control</h1>
                <asp:HiddenField  ID="txtid" runat="server" />
               <asp:HiddenField ID="txt_codir" runat="server" OnValueChanged="txt_codir_ValueChanged" />
+              <asp:HiddenField ID="txt_usuariop" runat="server" OnValueChanged="HiddenField1_ValueChanged" />
               <div class="col-xs-4" >
                   <div class="form-group">
                       <label for="exampleinput">nombre</label>
@@ -140,10 +141,28 @@
                 <div class="form-group">
                       <label for="exampleinput">c.postal</label>
                      
-                        <asp:Image ID="Image1" runat="server" />
-                    <asp:FileUpload ID="file_foto" runat="server" />
+                        <asp:Image ID="Image1" runat="server" witdh="100px"  Height="100"/>
+                    <asp:FileUpload ID="file_foto" runat="server"  witdh="100px" />
+
                      
                   </div>
+                 <script>
+                            function readURL(input) {
+                                if (input.files && input.files[0]) {
+                                    var reader = new FileReader();
+
+                                    reader.onload = function (e) {
+                                        $('#<%=this.Image1.ClientID%>').attr('src', e.target.result);
+                                    }
+
+                                    reader.readAsDataURL(input.files[0]);
+                                }
+                            }
+
+                            $('#<%=this.file_foto.ClientID%>').change(function () {
+                                readURL(this);
+                            });
+                        </script>
                
               
         </div>

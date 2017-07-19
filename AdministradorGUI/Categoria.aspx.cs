@@ -16,6 +16,7 @@ namespace AdministradorGUI
         protected void Page_Load(object sender, EventArgs e)
         {
             actualizar();
+            
         }
 
         protected void Accion(object sender, EventArgs e)

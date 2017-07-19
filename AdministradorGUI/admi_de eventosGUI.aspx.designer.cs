@@ -40,6 +40,15 @@ namespace AdministradorGUI {
         protected global::System.Web.UI.WebControls.HiddenField txt_codir;
         
         /// <summary>
+        /// Control txt_usuariop.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HiddenField txt_usuariop;
+        
+        /// <summary>
         /// Control txt_nombre.
         /// </summary>
         /// <remarks>
