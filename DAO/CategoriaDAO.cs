@@ -28,6 +28,7 @@ namespace DAO
             cmd.Parameters.Add("@NOM", SqlDbType.VarChar).Value = obj1.nombre_categoria;
             cmd.CommandType = CommandType.Text;
             return obj.EjecutarSentencia(cmd);
+
         }
 
         public int eliminar(object eliminar)
