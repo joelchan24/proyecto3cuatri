@@ -12,6 +12,7 @@
     <link href="css/bootstrap-theme.min.css" rel="stylesheet" />
     <link href="css/bootstrap.css" rel="stylesheet" />
     <link href="css/estilo-usuario.css" rel="stylesheet" />
+    <script src="js/jquery-2.2.3.min.js"></script>
     <link href="css/footer.css" rel="stylesheet" />
   <!-- Bootstrap 3.3.6 -->
  
@@ -414,7 +415,6 @@
 <!-- ./wrapper -->
 
 <!-- jQuery 2.2.3 -->
-<script src="js/jquery-2.2.3.min.js"></script>
 <!-- Bootstrap 3.3.6 -->
 <script src="js/bootstrap.min.js"></script>
 <!-- SlimScroll -->
