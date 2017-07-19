@@ -24,7 +24,7 @@ namespace DAO
             id.Parameters.Add("@EXTE", SqlDbType.VarChar).Value = objdire.NumeroExterior;
             id.Parameters.Add("@MUNI", SqlDbType.Int).Value = objdire.CodigoMunicipio;
             int ID = obj.EjecutarComando(id);
-            SqlCommand cmd = new SqlCommand("insert into USUARIOS(NOMBRE,APELLIDOS,TELEFONO,FECHANACIMIENTO,CORREO,USUARIO,CONTRASEÑA,FOTOGRAFIA,IDDIRECCION)OUTPUT INSERTED.CODIGO VALUES"
+            SqlCommand cmd = new SqlCommand("insert into USUARIOS(NOMBRE,APELLIDOS,TELEFONO,FECHANACIMIENTO,CORRERO,USUARIO,CONTRASEÑA,FOTOGRAFIA,IDDIRECCION)OUTPUT INSERTED.CODIGO VALUES"
                 +"(@NOM,@APE,@TELE,@FECHA,@CORREO,@USU,@CONTRA,@FOTO,'"+ID+"')");
             cmd.Parameters.Add("@NOM", SqlDbType.VarChar).Value = objdire.Nombre;
             cmd.Parameters.Add("@APE", SqlDbType.VarChar).Value = objdire.Apellidos;
@@ -51,7 +51,26 @@ namespace DAO
 
         public int eliminar(object eliminar)
         {
-            throw new NotImplementedException();
+            UsuarioBO obj3 = (UsuarioBO)eliminar;
+            SqlCommand cmd = new SqlCommand("delete from TIPOCUENTA_USUARIO WHERE IDUSUARIO=@ID");
+            cmd.Parameters.Add("@ID", SqlDbType.Int).Value = obj3.Codigo;
+            cmd.CommandType = CommandType.Text;
+            int usu = obj.EjecutarComando(cmd);
+
+
+            SqlCommand direccion = new SqlCommand("delete from USUARIOS WHERE CODIGO=@COD");
+            direccion.Parameters.Add("@COD", SqlDbType.Int).Value = obj3.Codigo;
+            direccion.CommandType = CommandType.Text;
+            int USUARIO = obj.EjecutarComando(direccion);
+
+            SqlCommand dir = new SqlCommand("DELETE FROM DIRECCION WHERE CODIGO=@NOMAS");
+            dir.CommandType = CommandType.Text;
+
+            int borrar = obj.EjecutarComando(dir);
+
+            int repuesta = ((usu != 0) && (USUARIO != 0) && (borrar!=0)) ? 1 : 0;
+            return repuesta;
+
         }
 
         public int modificar(object modificar)
@@ -82,6 +101,12 @@ namespace DAO
             SqlCommand cmd = new SqlCommand("select CODIGO,NOMBRE from MUNICIPIO");
             cmd.CommandType = CommandType.Text;
             return obj.EjecutarSentencia(cmd);
+        }
+        public DataSet LISTARDATOS()
+        {
+            SqlCommand CMD = new SqlCommand("select h.*,d.* from USUARIOS H, DIRECCION D WHERE H.IDDIRECCION=D.CODIGO");
+            CMD.CommandType = CommandType.Text;
+            return obj.EjecutarSentencia(CMD);
         }
     }
 }

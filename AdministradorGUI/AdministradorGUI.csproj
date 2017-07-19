@@ -95,8 +95,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="admin_comen.aspx" />
-    <Content Include="admin_Comentario.aspx" />
-    <Content Include="admin_Mensaje.aspx" />
     <Content Include="admi_de eventosGUI.aspx" />
     <Content Include="Categoria.aspx" />
     <Content Include="Estado.aspx" />
@@ -173,13 +171,6 @@
     </Compile>
     <Compile Include="admin_comen.aspx.designer.cs">
       <DependentUpon>admin_comen.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="admin_Comentario.aspx.cs">
-      <DependentUpon>admin_Comentario.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="admin_Mensaje.aspx.cs">
-      <DependentUpon>admin_Mensaje.aspx</DependentUpon>
     </Compile>
     <Compile Include="admi_de eventosGUI.aspx.cs">
       <DependentUpon>admi_de eventosGUI.aspx</DependentUpon>
