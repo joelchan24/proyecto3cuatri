@@ -237,11 +237,11 @@
   <div class="col-md-12">
       <asp:GridView ID="dgb_eventos" runat="server" CssClass=" table-resposive table table-bordered" OnSelectedIndexChanged="dgb_eventos_SelectedIndexChanged" OnRowCommand="mandaraltexvo" OnRowCreated="dgb_eventos_RowCreated">
           <Columns>
-              <asp:ButtonField CommandName="btn_aprovar" Text="Aprovar">
-              <ControlStyle CssClass="btn btn-success" />
-              </asp:ButtonField>
               <asp:ButtonField CommandName="btn_seleccionar" Text="Seleccionar">
               <ControlStyle CssClass="btn btn-primary" />
+              </asp:ButtonField>
+              <asp:ButtonField CommandName="btn_aprovar" Text="Aprovar">
+              <ControlStyle CssClass="btn btn-success" />
               </asp:ButtonField>
           </Columns>
       </asp:GridView>

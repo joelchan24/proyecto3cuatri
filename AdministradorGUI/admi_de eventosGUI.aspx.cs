@@ -18,6 +18,7 @@ namespace AdministradorGUI
         ctrol_eventosSERVICIO control = new ctrol_eventosSERVICIO();
         eventoDAO eventado = new eventoDAO();
         direccionDAO obj = new direccionDAO();
+        loginDAO login = new loginDAO();
         int fila;
         protected void Page_Load(object sender, EventArgs e)
         {

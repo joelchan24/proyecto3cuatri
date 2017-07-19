@@ -160,15 +160,7 @@ namespace DAO
             return conectar.EjecutarSentencia(cmd);
         }
 
-        /* public bool ModificarEstatus(LibrosBO oLibrosBO, int estatus)
-        {
-            SqlCommand cmdComando = new SqlCommand();
-            cmdComando.CommandText = "UPDATE tblLibros set estatus=@estatus WHERE id=@ID";
-            cmdComando.Parameters.Add("@ID", SqlDbType.Int).Value=oLibrosBO.ID;
-            cmdComando.Parameters.Add("@estatus", SqlDbType.Int).Value = estatus;
-
-            return oConexion.EjecutarComandoSQL(cmdComando); 
-        }*/
+       
 
         public int modificaraprovacion(EventoBO oevento, string aprovacion)
         {
