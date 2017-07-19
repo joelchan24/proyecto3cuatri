@@ -137,6 +137,23 @@
                     <asp:FileUpload ID="file_foto" runat="server" />
                      
                   </div>
+                <script>
+                            function readURL(input) {
+                                if (input.files && input.files[0]) {
+                                    var reader = new FileReader();
+
+                                    reader.onload = function (e) {
+                                        $('#<%=this.Image1.ClientID%>').attr('src', e.target.result);
+                                    }
+
+                                    reader.readAsDataURL(input.files[0]);
+                                }
+                            }
+
+                            $('#<%=this.file_foto.ClientID%>').change(function () {
+                                readURL(this);
+                            });
+                        </script>
                
               
         </div>
@@ -175,6 +192,11 @@
                     <div class="form-group">
                        <label for="exampleinput">Usuariol</label>
                       <asp:TextBox ID="txt_usuario" runat="server" CssClass="form-control"></asp:TextBox>
+                         
+              </div>
+                    <div class="form-group">
+                       <label for="exampleinput">VISITAS</label>
+                      <asp:Label ID="txt_visitas" runat="server" Text="Label"></asp:Label>
                          
               </div>
                

@@ -32,7 +32,7 @@ namespace DAO
             int id = conectar.EjecutarComando(dir);
 
 
-            SqlCommand cmd = new SqlCommand("INSERT INTO EVENTO(DESCRIPCION ,NOMBRE,COSTO ,FECHAAPERTURA ,FECHACIERRE,FOTOPROMOCION,UBICACIONGEOGRAFICA,LATITUD,LONGITUD,APROVACION,DIRECCION,CATEGORIA,USUARIO)  VALUES(@des,@nom,@cos,@feaper,@fecier,@foto,@ubicacion,@lat,@long,@aprova,'" + id + "',@cat,@codus)");
+            SqlCommand cmd = new SqlCommand("INSERT INTO EVENTO(DESCRIPCION ,NOMBRE,COSTO ,FECHAAPERTURA ,FECHACIERRE,FOTOPROMOCION,UBICACIONGEOGRAFICA,LATITUD,LONGITUD,APROVACION,DIRECCION,CATEGORIA,USUARIO,VISITAS)  VALUES(@des,@nom,@cos,@feaper,@fecier,@foto,@ubicacion,@lat,@long,@aprova,'" + id + "',@cat,@codus,@visi)");
 
           
 
@@ -56,6 +56,7 @@ namespace DAO
             cmd.Parameters.Add("@dirr", SqlDbType.Int).Value = obejto.CodigoDireccion;
             cmd.Parameters.Add("@cat", SqlDbType.Int).Value = obejto.CodigoCategoria;
             cmd.Parameters.Add("@codus", SqlDbType.Int).Value = obejto.CodigoUsuario;
+            cmd.Parameters.Add("@visi", SqlDbType.Int).Value = obejto.visitas;
             cmd.CommandType = CommandType.Text;
            
               return conectar.EjecutarComando(cmd);
@@ -102,7 +103,7 @@ namespace DAO
         public int modificar(object modificar)
         {
             EventoBO obejto = (EventoBO)modificar;
-            SqlCommand cmd = new SqlCommand("update  EVENTO set DESCRIPCION=@des ,NOMBRE=@nom,COSTO=@cos ,FECHAAPERTURA=@feaper ,FECHACIERRE=@fecier,FOTOPROMOCION=@foto,UBICACIONGEOGRAFICA=@ubicacion,LATITUD=@lat,LONGITUD=@long,APROVACION=@aprova,DIRECCION=@dirr,CATEGORIA=@cat,USUARIO=@codus where CODIGO=@codigo");
+            SqlCommand cmd = new SqlCommand("update  EVENTO set DESCRIPCION=@des ,NOMBRE=@nom,COSTO=@cos ,FECHAAPERTURA=@feaper ,FECHACIERRE=@fecier,FOTOPROMOCION=@foto,UBICACIONGEOGRAFICA=@ubicacion,LATITUD=@lat,LONGITUD=@long,APROVACION=@aprova,DIRECCION=@dirr,CATEGORIA=@cat,USUARIO=@codus, VISITAS=@visi where CODIGO=@codigo");
             cmd.Parameters.Add("@codigo", SqlDbType.Int).Value = obejto.Codigo;
             cmd.Parameters.Add("@des", SqlDbType.VarChar).Value = obejto.Descripcion;
             cmd.Parameters.Add("@nom", SqlDbType.VarChar).Value = obejto.Nombre;
@@ -117,6 +118,7 @@ namespace DAO
             cmd.Parameters.Add("@dirr", SqlDbType.Int).Value = obejto.Codigo_dir;
             cmd.Parameters.Add("@cat", SqlDbType.Int).Value = obejto.CodigoCategoria;
             cmd.Parameters.Add("@codus", SqlDbType.Int).Value = obejto.CodigoUsuario;
+            cmd.Parameters.Add("@visi", SqlDbType.Int).Value = obejto.visitas;
             cmd.CommandType = CommandType.Text;
 
             int actualizar_evento = conectar.EjecutarComando(cmd);
@@ -194,6 +196,14 @@ namespace DAO
 
 
             return conectar.EjecutarSentencia(cmd);
+        }
+        public int modificarVisistas(EventoBO oevento, int suma)
+        {
+            SqlCommand comando = new SqlCommand("UPDATE EVENTO set VISITAS=@vis WHERE CODIGO=@ID");
+            comando.Parameters.Add("@visi", SqlDbType.Int).Value = suma;
+            comando.Parameters.Add("id", SqlDbType.Int).Value = oevento.Codigo;
+
+            return conectar.EjecutarComando(comando);
         }
     }
 
