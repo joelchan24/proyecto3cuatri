@@ -3,6 +3,7 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="container">
+       
         
     <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
     <script type="text/javascript" src='https://maps.google.com/maps/api/js?sensor=false&libraries=places&key=AIzaSyCuiUJxL3eVPwCyGdf1P6g9TUQ4KW95YtA'></script>
@@ -47,7 +48,7 @@
                       <label for="exampleinput" >Precio</label>
                      
                        <span class="input-group-addon "><i   >$</i></span>
-                      <asp:TextBox ID="txt_precio" runat="server" CssClass="form-control"></asp:TextBox>
+                      <asp:TextBox ID="txt_precio" runat="server" CssClass="form-control " style="width:70%"></asp:TextBox>
                        
                      
                   </div>
@@ -130,7 +131,7 @@
               </div>
                 <br />
                 <div class="form-group">
-                      <label for="exampleinput">c.postal</label>
+                      <label for="exampleinput">Subir Imagen</label>
                      
                         <asp:Image ID="Image1" runat="server" />
                     <asp:FileUpload ID="file_foto" runat="server" />

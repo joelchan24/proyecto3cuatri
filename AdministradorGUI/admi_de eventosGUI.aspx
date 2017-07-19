@@ -141,10 +141,28 @@
                 <div class="form-group">
                       <label for="exampleinput">c.postal</label>
                      
-                        <asp:Image ID="Image1" runat="server" />
-                    <asp:FileUpload ID="file_foto" runat="server" />
+                        <asp:Image ID="Image1" runat="server" witdh="100px"  Height="100"/>
+                    <asp:FileUpload ID="file_foto" runat="server"  witdh="100px" />
+
                      
                   </div>
+                 <script>
+                            function readURL(input) {
+                                if (input.files && input.files[0]) {
+                                    var reader = new FileReader();
+
+                                    reader.onload = function (e) {
+                                        $('#<%=this.Image1.ClientID%>').attr('src', e.target.result);
+                                    }
+
+                                    reader.readAsDataURL(input.files[0]);
+                                }
+                            }
+
+                            $('#<%=this.file_foto.ClientID%>').change(function () {
+                                readURL(this);
+                            });
+                        </script>
                
               
         </div>
@@ -239,9 +257,6 @@
           <Columns>
               <asp:ButtonField CommandName="btn_seleccionar" Text="Seleccionar">
               <ControlStyle CssClass="btn btn-primary" />
-              </asp:ButtonField>
-              <asp:ButtonField CommandName="btn_aprovar" Text="Aprovar">
-              <ControlStyle CssClass="btn btn-success" />
               </asp:ButtonField>
           </Columns>
       </asp:GridView>

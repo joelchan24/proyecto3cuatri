@@ -28,14 +28,15 @@ namespace GUI
           
             usuarioDAO usuario = new usuarioDAO();
             loginDAO login = new loginDAO();
+            
 
             if (login.verificar(obj))
             {
                 Session["usuario"] = txt_usuario.Text;
-                Session["id"] = login.verificar1(obj);
+                Session["id"] = login.buscarelid(obj);
              
                 Response.Write("<script>alert('usuario correcto')</script>");
-                Response.Redirect("prueva.aspx", true);
+                Response.Redirect("WebForm1.aspx", true);
             }
             else
             {

@@ -21,6 +21,10 @@ namespace GUI
         int fila;
         protected void Page_Load(object sender, EventArgs e)
         {
+            
+               
+                txt_usuario.Text =  Session["id"].ToString();//jale el id usuario
+            
             if (!IsPostBack)
             {
 
@@ -34,7 +38,7 @@ namespace GUI
                 ddl_municipio.DataBind();
                 refrescar();
               
-              usuario(fila);
+           
 
                 
 

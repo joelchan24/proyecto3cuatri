@@ -6,7 +6,7 @@
     <div class="row">
 		<div class="col-md-12">
 			<div class="alert alert-warning align=text-center" role="alert">
-  <a href="#" class="alert-link">USTED TIENE EVENTOD POR APROVAR</a>
+  <a href="#" class="alert-link">USTED TIENE EVENTOS POR APROBAR</a>
 </div>
 		</div>
 	</div>
@@ -15,7 +15,7 @@
 		<div class="col-md-12">
             <asp:GridView ID="dgb_porconfirmar" runat="server" CssClass="table-resposive table table-bordered" OnRowCommand="eventosporaprovar">
                 <Columns>
-                    <asp:ButtonField CommandName="btn_aprovar" Text="Aprovar">
+                    <asp:ButtonField CommandName="btn_aprovar" Text="Aprobar">
                     <ControlStyle CssClass="btn btn-success" />
                     </asp:ButtonField>
                 </Columns>

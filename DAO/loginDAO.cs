@@ -26,7 +26,7 @@ namespace DAO
 
 
         }
-        public int verificar1(object agregar)
+        public int buscarelid(object agregar)
         {
             UsuarioBO usuario = (UsuarioBO)agregar;
             conexionDAO conectar = new conexionDAO();
