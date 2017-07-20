@@ -60,7 +60,9 @@ namespace AdministradorGUI
             obj.NumeroInterior = txtNumeroInterior.Text;
             obj.NumeroExterior = txtNumeroExteriror.Text;
             obj.Fotografia = strNuevoNombre;
-            objbo.Codigo_Direccion =0;
+
+            int direc = 0; int.TryParse(txtDir.Value, out direc);
+            objbo.Codigo_Direccion =direc;
             return obj;
         }
 
@@ -73,6 +75,14 @@ namespace AdministradorGUI
                 {
                     strNuevoNombre = NombreImagen();
                     file_foto.SaveAs(Server.MapPath("~/img/") + strNuevoNombre + ".jpg");
+                }
+                //FileUploadFoto.Save("miimagen.jpg",ImageFormat.Jpeg);
+            }
+            if (obj.ID == "btnEliminar")
+            {
+                if (file_foto.HasFile)
+                {
+                    File.Delete("~/img/" + imgFoto.ImageUrl);
                 }
                 //FileUploadFoto.Save("miimagen.jpg",ImageFormat.Jpeg);
             }
@@ -104,7 +114,7 @@ namespace AdministradorGUI
                 int indice = Convert.ToInt32(e.CommandArgument);
                 txtID.Text = dtgDatos.Rows[indice].Cells[1].Text.ToString();
                 imgFoto.ImageUrl = "img/" + dtgDatos.Rows[indice].Cells[9].Text.ToString() + ".jpg";
-                txtDir.Value= dtgDatos.Rows[indice].Cells[1].Text.ToString();
+                txtDir.Value= dtgDatos.Rows[indice].Cells[11].Text;
             }
         }
 

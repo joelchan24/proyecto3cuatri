@@ -112,7 +112,7 @@
             <div class="auto-style7">
                 <div class="form-group">
                     <asp:Label ID="lblFecha" runat="server" CssClass="text-blue" Text="Fecha de Nacimiento"></asp:Label>
-                    <asp:TextBox ID="txtfecha" runat="server" CssClass="form-control" type="date"  Width="300px" Height="32px" AutoPostBack="True"></asp:TextBox>
+                    <asp:TextBox ID="txtfecha" runat="server" CssClass="form-control" type="date"  Width="300px" Height="32px"></asp:TextBox>
                     <asp:Label ID="lblTelefono" runat="server" CssClass="text-blue" Text="Telefono"></asp:Label>
                     <asp:TextBox ID="txtTelefono" runat="server" CssClass="form-control" Width="300px" Height="32px"></asp:TextBox>
                     <asp:Label ID="lblCorreo" runat="server" CssClass="text-blue" Text="Correo"></asp:Label>
