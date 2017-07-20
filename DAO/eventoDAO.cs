@@ -122,7 +122,7 @@ namespace DAO
             cmd.Parameters.Add("@cos", SqlDbType.Money).Value = obejto.costo;
             cmd.Parameters.Add("@feaper", SqlDbType.Date).Value = obejto.FechaApertura.ToString("yyyy-MM-dd");
             cmd.Parameters.Add("@fecier", SqlDbType.Date).Value = obejto.FechaCierre.ToString("yyyy-MM-dd");
-            cmd.Parameters.Add("@foto", SqlDbType.VarChar).Value = obejto.FotoPromocion;
+            cmd.Parameters.Add("@foto", SqlDbType.VarChar).Value = obejto.FotoPromocion+".jgp";
             cmd.Parameters.Add("@ubicacion", SqlDbType.VarChar).Value = obejto.UbicacionGeografica;
             cmd.Parameters.Add("@lat", SqlDbType.VarChar).Value = obejto.latitud;
             cmd.Parameters.Add("@long", SqlDbType.VarChar).Value = obejto.longitud;
@@ -221,7 +221,7 @@ namespace DAO
         {
             // select * from EVENTO e inner join DIRECCION d on e.DIRECCION=d.CODIGO  
             // select * from EVENTO e inner join DIRECCION d on e.DIRECCION=d.CODIGO  
-            SqlCommand cmd = new SqlCommand(" select MAX(CODIGO) from EVENTO where CODIGO=((select max (CODIGO) from EVENTO)-2) and  EVENTO.APROVACION='1';");
+            SqlCommand cmd = new SqlCommand(" select MAX(CODIGO) from EVENTO where CODIGO=((select max (CODIGO) from EVENTO where EVENTO.APROVACION='1')-2);");
 
 
             DataRow row = conectar.EjecutarSentencia(cmd).Tables[0].Rows[fila];
@@ -239,7 +239,7 @@ namespace DAO
         public DataSet busca2()
         {
             // select * from EVENTO e inner join DIRECCION d on e.DIRECCION=d.CODIGO  
-            SqlCommand cmd = new SqlCommand(" select MAX(CODIGO) from EVENTO where CODIGO=((select max (CODIGO) from EVENTO)-1) and  EVENTO.APROVACION='1';");
+            SqlCommand cmd = new SqlCommand(" select MAX(CODIGO) from EVENTO where CODIGO=((select max (CODIGO) from EVENTO where EVENTO.APROVACION='1')-1)");
 
 
             DataRow row = conectar.EjecutarSentencia(cmd).Tables[0].Rows[fila];
@@ -258,7 +258,7 @@ namespace DAO
         public DataSet busca1()
         {
             // select * from EVENTO e inner join DIRECCION d on e.DIRECCION=d.CODIGO  
-            SqlCommand cmd = new SqlCommand(" select MAX(CODIGO) from EVENTO where CODIGO=((select max (CODIGO) from EVENTO)) and  EVENTO.APROVACION='1';");
+            SqlCommand cmd = new SqlCommand(" select MAX(CODIGO) from EVENTO where CODIGO=((select max (CODIGO) from EVENTO where EVENTO.APROVACION='1')) ;");
            
             
             DataRow row = conectar.EjecutarSentencia(cmd).Tables[0].Rows[fila];
