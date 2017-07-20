@@ -13,7 +13,7 @@
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder2" runat="server">
-  <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
     <script type="text/javascript" src='https://maps.google.com/maps/api/js?sensor=false&libraries=places&key=AIzaSyCuiUJxL3eVPwCyGdf1P6g9TUQ4KW95YtA'></script>
     <script src="js/locationpicker.jquery.js"></script>
     <form  id="form1" runat="server" >
@@ -201,6 +201,11 @@
                     <div class="form-group">
                        <label for="exampleinput">Usuariol</label>
                       <asp:TextBox ID="txt_usuario" runat="server" CssClass="form-control"></asp:TextBox>
+                         
+              </div>
+                   <div class="form-group">
+                       <label for="exampleinput">VISITAS</label>
+                      <asp:TextBox ID="txt_visitas" runat="server" CssClass="form-control"></asp:TextBox>
                          
               </div>
                

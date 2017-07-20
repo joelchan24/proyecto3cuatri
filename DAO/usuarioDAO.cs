@@ -63,7 +63,8 @@ namespace DAO
             direccion.CommandType = CommandType.Text;
             int USUARIO = obj.EjecutarComando(direccion);
 
-            SqlCommand dir = new SqlCommand("DELETE FROM DIRECCION WHERE CODIGO=@NOMAS");
+            SqlCommand dir = new SqlCommand("DELETE FROM DIRECCION WHERE CODIGO=@cod");
+            dir.Parameters.Add("@cod", SqlDbType.Int).Value = obj3.Codigo_Direccion;
             dir.CommandType = CommandType.Text;
 
             int borrar = obj.EjecutarComando(dir);
