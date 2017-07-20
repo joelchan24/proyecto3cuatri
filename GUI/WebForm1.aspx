@@ -67,107 +67,117 @@
 	
 	<div class="row">
 		<div class="col-md-12">
-			<h3 class="text-center">
-				h3. Lorem ipsum dolor sit amet.
+			<h3 class="text-center" style="color:#b69da8">
+				TOP TRES EVENTOS
 			</h3>
 			<div class="row">
-				<div class="col-md-4">
-					<div class="thumbnail">
-						<img alt="Bootstrap Thumbnail First" src="http://lorempixel.com/output/people-q-c-600-200-1.jpg" />
-						<div class="caption">
-							<h3>
-								Thumbnail label
-							</h3>
-							<p>
-								Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.
-							</p>
-							<p>
-								<a class="btn btn-primary" href="#">Action</a> <a class="btn" href="#">Action</a>
-							</p>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-4">
-					<div class="thumbnail">
-						<img alt="Bootstrap Thumbnail Second" src="http://lorempixel.com/output/city-q-c-600-200-1.jpg" />
-						<div class="caption">
-							<h3>
-								Thumbnail label
-							</h3>
-							<p>
-								Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.
-							</p>
-							<p>
-								<a class="btn btn-primary" href="#">Action</a> <a class="btn" href="#">Action</a>
-							</p>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-4">
-					<div class="thumbnail">
-						<img alt="Bootstrap Thumbnail Third" src="http://lorempixel.com/output/sports-q-c-600-200-1.jpg" />
-						<div class="caption">
-							<h3>
-								Thumbnail label
-							</h3>
-							<p>
-								Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.
-							</p>
-							<p>
-								<a class="btn btn-primary" href="#">Action</a> <a class="btn" href="#">Action</a>
-							</p>
-						</div>
-					</div>
-				</div>
-			</div>
-			<h3 class="text-center">
-				h3. Lorem ipsum dolor sit amet.
-			</h3>
-			<div class="row">
-                
-			<!--	<div class="col-md-4">-->
-                   <asp:Repeater ID="Repeater1" runat="server" RepeatDirection="Horizontal"
-            RepeatColumns="3" >
+				 <asp:Repeater ID="rpt_uno" runat="server" >
+            
                        <ItemTemplate>
-                           <div class="list">
-                           <table >
-					<div class="thumbnail">
-					<tr><td>	<img alt="Bootstrap Thumbnail First" src="~/img/<%# DataBinder.Eval(Container.DataItem,"FOTOPROMOCION")%>" /></td></tr>
-						<div class="caption">
-						<tr><td>	<h3>
-								<%# DataBinder.Eval(Container.DataItem,"NOMBRE")%>	
-							</h3></td></tr>
-					<tr><td>		<p>
-								<%# DataBinder.Eval(Container.DataItem,"DESCRIPCION")%>	</p>
-							
-								<a class="btn btn-primary" href="#">Action</a> <a class="btn" href="#">Action</a>
-							</p></td></tr>
-						</div>
-					</div>
-                               </table>
-                               </div>
-                           </ItemTemplate>
-                      </asp:Repeater>
-				</div>
                 
-                  
-			<!--	<div class="col-md-4">
+          	<div class="col-md-4">
 					<div class="thumbnail">
-						<img alt="Bootstrap Thumbnail Second" src="http://lorempixel.com/output/city-q-c-600-200-1.jpg" />
+						<img alt="Bootstrap Thumbnail First" src="../img/<%# DataBinder.Eval(Container.DataItem,"FOTOPROMOCION")%>" />
 						<div class="caption">
 							<h3>
-								Thumbnail label
+                              <%# DataBinder.Eval(Container.DataItem,"NOMBRE")%>	
 							</h3>
 							<p>
-								Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.
-							</p>
+								<%# DataBinder.Eval(Container.DataItem,"DESCRIPCION")%>	
 							<p>
-								<a class="btn btn-primary" href="#">Action</a> <a class="btn" href="#">Action</a>
+							<asp:Button ID="btn_vermas" runat="server" Text="Ver Detalles Evento" class="btn btn-primary" href="#" />
 							</p>
 						</div>
 					</div>
 				</div>
+                                           </ItemTemplate>
+      </asp:Repeater>
+                 <asp:Repeater ID="rtp_dos" runat="server" >
+            
+                       <ItemTemplate>
+                
+          	<div class="col-md-4">
+					<div class="thumbnail">
+						<img alt="Bootstrap Thumbnail First" src="~/img/<%# DataBinder.Eval(Container.DataItem,"FOTOPROMOCION")%>" />
+						<div class="caption">
+							<h3>
+                              <%# DataBinder.Eval(Container.DataItem,"NOMBRE")%>	
+							</h3>
+							<p>
+								<%# DataBinder.Eval(Container.DataItem,"DESCRIPCION")%>	
+							<p>
+							<asp:Button ID="btn_vermas" runat="server" Text="Ver Detalles Evento" class="btn btn-primary" href="#" />
+							</p>
+						</div>
+					</div>
+				</div>
+                                           </ItemTemplate>
+      </asp:Repeater>
+                 <asp:Repeater ID="rtb_3" runat="server" >
+            
+                       <ItemTemplate>
+                
+          	<div class="col-md-4">
+					<div class="thumbnail">
+						<img alt="Bootstrap Thumbnail First" src="~/img/<%# DataBinder.Eval(Container.DataItem,"FOTOPROMOCION")%>" />
+						<div class="caption">
+							<h3>
+                              <%# DataBinder.Eval(Container.DataItem,"NOMBRE")%>	
+							</h3>
+							<p>
+								<%# DataBinder.Eval(Container.DataItem,"DESCRIPCION")%>	
+							<p>
+							<asp:Button ID="btn_vermas" runat="server" Text="Ver Detalles Evento" class="btn btn-primary" href="#" />
+							</p>
+						</div>
+					</div>
+				</div>
+                                           </ItemTemplate>
+      </asp:Repeater>
+               
+				</div>
+				<!--<div class="col-md-4">
+					
+				</div>
 				<div class="col-md-4">
+					
+				</div>
+			</div>-->
+			<h3 class="text-center" style="color:#b69da8">
+			MÁS VISITADOS
+			</h3>
+			<div class="row">
+
+              
+				
+              
+				 <asp:Repeater ID="Repeater1" runat="server" 
+            >
+                       <ItemTemplate>
+                
+          	<div class="col-md-4">
+					<div class="thumbnail">
+						<img alt="Bootstrap Thumbnail First" src="~/img/<%# DataBinder.Eval(Container.DataItem,"FOTOPROMOCION")%>" />
+						<div class="caption">
+							<h3>
+                              <%# DataBinder.Eval(Container.DataItem,"NOMBRE")%>	
+							</h3>
+							<p>
+								<%# DataBinder.Eval(Container.DataItem,"DESCRIPCION")%>	
+							<p>
+							<asp:Button ID="btn_vermas1" runat="server" Text="Ver Más" class="btn btn-primary" href="#" />
+							</p>
+						</div>
+					</div>
+				</div>
+                                           </ItemTemplate>
+      </asp:Repeater>
+
+                
+
+
+
+			<!--	<div class="col-md-4">
 					<div class="thumbnail">
 						<img alt="Bootstrap Thumbnail Third" src="http://lorempixel.com/output/sports-q-c-600-200-1.jpg" />
 						<div class="caption">

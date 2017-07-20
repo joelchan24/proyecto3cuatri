@@ -217,6 +217,65 @@ namespace DAO
 
             return conectar.EjecutarComando(comando);
         }
+        public DataSet busca3()
+        {
+            // select * from EVENTO e inner join DIRECCION d on e.DIRECCION=d.CODIGO  
+            // select * from EVENTO e inner join DIRECCION d on e.DIRECCION=d.CODIGO  
+            SqlCommand cmd = new SqlCommand(" select MAX(CODIGO) from EVENTO where CODIGO=((select max (CODIGO) from EVENTO)-2) and  EVENTO.APROVACION='1';");
+
+
+            DataRow row = conectar.EjecutarSentencia(cmd).Tables[0].Rows[fila];
+            int val = Convert.ToInt32(row[0]);
+
+
+            cmd.CommandType = CommandType.Text;
+
+            SqlCommand coma = new SqlCommand("select * from EVENTO e  inner join DIRECCION d on e.DIRECCION=d.CODIGO inner join USUARIOS u on  u.CODIGO=e.USUARIO where e.APROVACION='1' and e.CODIGO=@codi ");
+            coma.Parameters.Add("@codi", SqlDbType.Int).Value = val;
+
+
+            return conectar.EjecutarSentencia(coma);
+        }
+        public DataSet busca2()
+        {
+            // select * from EVENTO e inner join DIRECCION d on e.DIRECCION=d.CODIGO  
+            SqlCommand cmd = new SqlCommand(" select MAX(CODIGO) from EVENTO where CODIGO=((select max (CODIGO) from EVENTO)-1) and  EVENTO.APROVACION='1';");
+
+
+            DataRow row = conectar.EjecutarSentencia(cmd).Tables[0].Rows[fila];
+            int val = Convert.ToInt32(row[0]);
+
+
+            cmd.CommandType = CommandType.Text;
+
+            SqlCommand coma = new SqlCommand("select * from EVENTO e  inner join DIRECCION d on e.DIRECCION=d.CODIGO inner join USUARIOS u on  u.CODIGO=e.USUARIO where e.APROVACION='1' and e.CODIGO=@codi ");
+            coma.Parameters.Add("@codi", SqlDbType.Int).Value = val;
+
+
+            return conectar.EjecutarSentencia(coma);
+        }
+        int fila;
+        public DataSet busca1()
+        {
+            // select * from EVENTO e inner join DIRECCION d on e.DIRECCION=d.CODIGO  
+            SqlCommand cmd = new SqlCommand(" select MAX(CODIGO) from EVENTO where CODIGO=((select max (CODIGO) from EVENTO)) and  EVENTO.APROVACION='1';");
+           
+            
+            DataRow row = conectar.EjecutarSentencia(cmd).Tables[0].Rows[fila];
+            int val = Convert.ToInt32(row[0]);
+            
+
+            cmd.CommandType = CommandType.Text;
+
+            SqlCommand coma = new SqlCommand("select * from EVENTO e  inner join DIRECCION d on e.DIRECCION=d.CODIGO inner join USUARIOS u on  u.CODIGO=e.USUARIO where e.APROVACION='1' and e.CODIGO=@codi ");
+            coma.Parameters.Add("@codi", SqlDbType.Int).Value = val;
+
+
+            return conectar.EjecutarSentencia(coma);
+        }
+
+
+
     }
 
 
