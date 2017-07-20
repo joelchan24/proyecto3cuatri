@@ -7,6 +7,7 @@ using System.Web;
 using DAO;
 using BO;
 using System.Data;
+using System.Data.SqlClient;
 
 namespace Services
 {
@@ -34,9 +35,14 @@ namespace Services
                     break;
                 case "btnBuscar":
                     oCategoriaDAO.buscar(oCategoriaBO);
-                    
+                                     
+                    break;
+
+                case "btnLimpiar":
                     
                     break;
+            
+                    
             }
             return true;
         }
@@ -45,5 +51,7 @@ namespace Services
         {
             return oCategoriaDAO.listar();
         }
+
+       
     }
 }

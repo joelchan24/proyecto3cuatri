@@ -55,7 +55,7 @@ namespace AdministradorGUI
 
         protected void txtAgregar_Click(object sender, EventArgs e)
         {
-
+            
         }
     }
 }

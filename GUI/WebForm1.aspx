@@ -61,86 +61,130 @@
         </div>
 
     <!---->
-        <div class="container-fluid">
-            <div class="row">
-            	<div class="col-xs-12 col-sm-12 col-md-offset-1 col-md-7">
-        			<div class="panel panel-default">
-                        <div class="bs-callout bs-callout-danger">
-        					<h4>eventos mas recientes</h4>
-        					<p>
-        					   aqui los eventos
-                            </p>
-                         
-                                
-            
-                        </div>
-                    </div>
-                    <div class="panel panel-default">
-                        <div class="bs-callout bs-callout-danger">
-                            <h4>otros eventos</h4>
-                            
-                            <p>
-                           
-                              </p><pre class="prettyprint linenums:1">        <a id="menu-toggle" href="#" class="btn btn-dark btn-lg toggle"><i class="fa fa-bars"></i></a>
-        <a id="to-top" class="btn btn-lg btn-dark" href="#top">
-            <span class="sr-only">Toggle to Top Navigation</span>
-            <i class="fa fa-chevron-up"></i>
-        </a></pre>
-           
-       
-            
-                            <p></p>
-                          
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 hidden-xs hidden-sm">
-    				
-					<div class="panel panel-default">
-						
-					</div>
-					<div class=" col-lg-4">
-					
-<!-- padding for jsfiddle -->
-<div class="row">
-    <div class="col-md-4">
-         <h6>calendrio</h6>
 
-        <div class="form-group">
-      
-           
-                <div id="datetimepicker12"></div>
-           
-      
-    
-        </div>
-       
-     </div>
-
-       
-</div>
-                        <script>
-
-                            jQuery(function () {
-                                jQuery('#datetimepicker12').datetimepicker({
-                                    inline: true,
-
-
-                                });
-                            });
-
-
-                        </script>
-</div>
-
-                </div>
-                
-						<div class="container  ">
-							<p>kjhjkjkh</p>	
+			
+    <div class="container">
+	
+	<div class="row">
+		<div class="col-md-12">
+			<h3 class="text-center">
+				h3. Lorem ipsum dolor sit amet.
+			</h3>
+			<div class="row">
+				<div class="col-md-4">
+					<div class="thumbnail">
+						<img alt="Bootstrap Thumbnail First" src="http://lorempixel.com/output/people-q-c-600-200-1.jpg" />
+						<div class="caption">
+							<h3>
+								Thumbnail label
+							</h3>
+							<p>
+								Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.
+							</p>
+							<p>
+								<a class="btn btn-primary" href="#">Action</a> <a class="btn" href="#">Action</a>
+							</p>
 						</div>
 					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="thumbnail">
+						<img alt="Bootstrap Thumbnail Second" src="http://lorempixel.com/output/city-q-c-600-200-1.jpg" />
+						<div class="caption">
+							<h3>
+								Thumbnail label
+							</h3>
+							<p>
+								Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.
+							</p>
+							<p>
+								<a class="btn btn-primary" href="#">Action</a> <a class="btn" href="#">Action</a>
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="thumbnail">
+						<img alt="Bootstrap Thumbnail Third" src="http://lorempixel.com/output/sports-q-c-600-200-1.jpg" />
+						<div class="caption">
+							<h3>
+								Thumbnail label
+							</h3>
+							<p>
+								Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.
+							</p>
+							<p>
+								<a class="btn btn-primary" href="#">Action</a> <a class="btn" href="#">Action</a>
+							</p>
+						</div>
+					</div>
+				</div>
 			</div>
-                 
-			
-    
+			<h3 class="text-center">
+				h3. Lorem ipsum dolor sit amet.
+			</h3>
+			<div class="row">
+                
+			<!--	<div class="col-md-4">-->
+                   <asp:Repeater ID="Repeater1" runat="server" RepeatDirection="Horizontal"
+            RepeatColumns="3" >
+                       <ItemTemplate>
+                           <div class="list">
+                           <table >
+					<div class="thumbnail">
+					<tr><td>	<img alt="Bootstrap Thumbnail First" src="~/img/<%# DataBinder.Eval(Container.DataItem,"FOTOPROMOCION")%>" /></td></tr>
+						<div class="caption">
+						<tr><td>	<h3>
+								<%# DataBinder.Eval(Container.DataItem,"NOMBRE")%>	
+							</h3></td></tr>
+					<tr><td>		<p>
+								<%# DataBinder.Eval(Container.DataItem,"DESCRIPCION")%>	</p>
+							
+								<a class="btn btn-primary" href="#">Action</a> <a class="btn" href="#">Action</a>
+							</p></td></tr>
+						</div>
+					</div>
+                               </table>
+                               </div>
+                           </ItemTemplate>
+                      </asp:Repeater>
+				</div>
+                
+                  
+			<!--	<div class="col-md-4">
+					<div class="thumbnail">
+						<img alt="Bootstrap Thumbnail Second" src="http://lorempixel.com/output/city-q-c-600-200-1.jpg" />
+						<div class="caption">
+							<h3>
+								Thumbnail label
+							</h3>
+							<p>
+								Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.
+							</p>
+							<p>
+								<a class="btn btn-primary" href="#">Action</a> <a class="btn" href="#">Action</a>
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="thumbnail">
+						<img alt="Bootstrap Thumbnail Third" src="http://lorempixel.com/output/sports-q-c-600-200-1.jpg" />
+						<div class="caption">
+							<h3>
+								Thumbnail label
+							</h3>
+							<p>
+								Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.
+							</p>
+							<p>
+								<a class="btn btn-primary" href="#">Action</a> <a class="btn" href="#">Action</a>
+							</p>
+						</div>
+					</div>
+				</div>-->
+			</div>
+		</div>
+	</div>
+</div>
 </asp:Content>
