@@ -46,6 +46,7 @@
     <Compile Include="CTRL_Mensajes.cs" />
     <Compile Include="CTRL_Municipio.cs" />
     <Compile Include="CTRL_Pais.cs" />
+    <Compile Include="CTRL_QuienesSomos.cs" />
     <Compile Include="ctrol_dirrecionSERVICIOS.cs" />
     <Compile Include="ctrol_eventosSERVICIO.cs" />
     <Compile Include="ctrol_usuarioSERVICIOS.cs" />
