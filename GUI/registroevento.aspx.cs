@@ -23,11 +23,14 @@ namespace GUI
         string strNuevoNombre = "";
         public   string valor = "0";//cero no aprovado ,1 si aprovado
         int fila;
+        int id;
+
         protected void Page_Load(object sender, EventArgs e)
         {
             
                
                 txt_usuario.Text =  Session["id"].ToString();//jale el id usuario
+             id = int.Parse(txt_usuario.Text);
             
             if (!IsPostBack)
             {
@@ -103,7 +106,7 @@ namespace GUI
         public void refrescar()
         {
 
-            dgb_eventos.DataSource = eventado.buscar();
+            dgb_eventos.DataSource = eventado.buscar_usuriounico(id);
             dgb_eventos.DataBind();
 
         }
