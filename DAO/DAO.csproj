@@ -52,6 +52,7 @@
     <Compile Include="MunicipioDAO.cs" />
     <Compile Include="PaisDAO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QuienesSomosDAO.cs" />
     <Compile Include="usuarioDAO.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -57,19 +57,28 @@ namespace DAO
             cmd.CommandType = CommandType.Text;
             int usu = obj.EjecutarComando(cmd);
 
+            SqlCommand galeria = new SqlCommand("delete from GALERIA WHERE IDEVENTO=(SELECT CODIGO FROM EVENTO WHERE USUARIO=@USU)");
+            galeria.Parameters.Add("@USU", SqlDbType.Int).Value = obj3.Codigo;
+            galeria.CommandType = CommandType.Text;
+            int gal = obj.EjecutarComando(galeria);
+
+            SqlCommand hora = new SqlCommand("delete from HORARIOS where EVENTO=(SELECT CODIGO FROM EVENTO WHERE USUARIO=@HO)");
+            hora.Parameters.Add("@HO", SqlDbType.Int).Value = obj3.Codigo;
+            hora.CommandType = CommandType.Text;
+            int hori = obj.EjecutarComando(hora);
+
+            SqlCommand evento = new SqlCommand("delete from EVENTO WHERE USUARIO=@EVE");
+            evento.Parameters.Add("@EVE", SqlDbType.Int).Value = obj3.Codigo;
+            evento.CommandType = CommandType.Text;
+            int elini = obj.EjecutarComando(evento);
 
             SqlCommand direccion = new SqlCommand("delete from USUARIOS WHERE CODIGO=@COD");
             direccion.Parameters.Add("@COD", SqlDbType.Int).Value = obj3.Codigo;
             direccion.CommandType = CommandType.Text;
             int USUARIO = obj.EjecutarComando(direccion);
 
-            SqlCommand dir = new SqlCommand("DELETE FROM DIRECCION WHERE CODIGO=@cod");
-            dir.Parameters.Add("@cod", SqlDbType.Int).Value = obj3.Codigo_Direccion;
-            dir.CommandType = CommandType.Text;
 
-            int borrar = obj.EjecutarComando(dir);
-
-            int repuesta = ((usu != 0) && (USUARIO != 0) && (borrar!=0)) ? 1 : 0;
+            int repuesta = ((usu != 0) && (gal != 0) && (hori!=0) && (elini!=0) && (USUARIO!=0)) ? 1 : 0;
             return repuesta;
 
         }
