@@ -67,15 +67,14 @@
             padding-left: 15px;
             padding-right: 15px;
         }
-        .auto-style12 {
-            width: 1924px;
-            height: 1573px;
-        }
+          .auto-style13 {
+              width: 1182px;
+          }
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder2" runat="server">
     <link href="css/estilo-usuario.css" rel="stylesheet" />
-    <form id="form1" runat="server" class="auto-style12">
+    <form id="form1" runat="server" class="auto-style13">
         <div class="row auto-style9" style="height: 262px">
                 <div class="auto-style4">
                 <div class="auto-style3">
@@ -168,14 +167,14 @@
         <div class="row">
             <div class="col-lg-12">
                 <div class="form-group">
-                    <asp:GridView ID="dtgDatos" runat="server" CssClass="fc-grid" OnRowCommand="accion">
+                    <asp:GridView ID="dtgDatos" runat="server" CssClass="fc-grid" OnRowCommand="accion" OnRowCreated="ocultar">
                         <Columns>
                             <asp:ButtonField CommandName="btnSeleccionar" Text="Seleccionar" />
                         </Columns>
                     </asp:GridView>
+                    <asp:HiddenField  ID="txtDir" runat="server" />
                 </div>
-                
-            </div>
+                </div>
         </div>
     </form>
 </asp:Content>

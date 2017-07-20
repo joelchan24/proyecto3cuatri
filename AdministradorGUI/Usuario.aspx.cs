@@ -18,7 +18,7 @@ namespace AdministradorGUI
         usuarioDAO objusuario = new usuarioDAO();
         UsuarioBO objbo = new UsuarioBO();
         ctrol_usuarioSERVICIOS ctrl = new ctrol_usuarioSERVICIOS();
-        string strNuevoNombre="";
+        string strNuevoNombre = "";
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
@@ -47,7 +47,7 @@ namespace AdministradorGUI
             obj.Codigo = id;
             obj.Nombre = txtNombre.Text;
             obj.Apellidos = txtApellido.Text;
-            obj.FechaNacimineto =Convert.ToDateTime( txtfecha.Text);
+            obj.FechaNacimineto = Convert.ToDateTime(txtfecha.Text);
             obj.Telefono = txtTelefono.Text;
             obj.Correo = txtCorreo.Text;
             obj.IDCUENTA = Convert.ToInt32(ddlTipousuario.SelectedValue);
@@ -60,6 +60,7 @@ namespace AdministradorGUI
             obj.NumeroInterior = txtNumeroInterior.Text;
             obj.NumeroExterior = txtNumeroExteriror.Text;
             obj.Fotografia = strNuevoNombre;
+            objbo.Codigo_Direccion =0;
             return obj;
         }
 
@@ -101,9 +102,15 @@ namespace AdministradorGUI
             if (e.CommandName == "btnSeleccionar")
             {
                 int indice = Convert.ToInt32(e.CommandArgument);
-                txtID.Text= dtgDatos.Rows[indice].Cells[1].Text.ToString();
+                txtID.Text = dtgDatos.Rows[indice].Cells[1].Text.ToString();
                 imgFoto.ImageUrl = "img/" + dtgDatos.Rows[indice].Cells[9].Text.ToString() + ".jpg";
+                txtDir.Value= dtgDatos.Rows[indice].Cells[1].Text.ToString();
             }
+        }
+
+        protected void ocultar(object sender, GridViewRowEventArgs e)
+        {
+            e.Row.Cells[1].Visible = false;
         }
     }
 }
