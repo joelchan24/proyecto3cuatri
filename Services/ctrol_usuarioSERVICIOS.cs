@@ -26,8 +26,8 @@ namespace Services
                 case "btnEliminar":
                     objetodao.eliminar(usuarioBO);
                     break;
-                case "btn_modificar":
-                  
+                case "btnModificar":
+                    objetodao.modificar(usuarioBO);
                     break;
                 case "btn_limpiar":
 

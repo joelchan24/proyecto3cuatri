@@ -1,6 +1,6 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/administrador.Master" AutoEventWireup="true" CodeBehind="Categoria.aspx" Inherits="AdministradorGUI.Categoria" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/administrador.Master" AutoEventWireup="true" CodeBehind="QuienesSomos.aspx.cs" Inherits="AdministradorGUI.QuienesSomos" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-    <style type="text/css">
+     <style type="text/css">
         .auto-style1 {
             height: 483px;
             width: 667px;
@@ -45,26 +45,26 @@
                     <asp:TextBox ID="txtID" runat="server" Width="505px" Height="30px" Enabled="False"></asp:TextBox>
 				</div><br />
 				<div class="form-group">
-					 <asp:Label ID="Label2" runat="server" Text="Nombre de la Categoria" CssClass="text-primary"></asp:Label><br />
-                    <asp:TextBox ID="txtNombre" runat="server" Width="505px" Height="30px"></asp:TextBox>
+					 <asp:Label ID="Label2" runat="server" Text="Descripción" CssClass="text-primary"></asp:Label><br />
+                    <asp:TextBox ID="txtDescripcion" runat="server" Width="505px" Height="30px"></asp:TextBox>
 
 				</div>
 			</div>
 		</div>
 	<div class="row">
 		<div class="auto-style3">
-			<asp:Button ID="btnAgregar" Text="Agregar" runat="server" CssClass="btn btn-dropbox" Width="100px" OnClick="Accion"/> 
-            <asp:Button ID="btnModificar" Text="Modificar" runat="server" CssClass="btn btn-dropbox" Width="100px" OnClick="Accion" />
+			<asp:Button ID="btnAgregar" Text="Agregar" runat="server" CssClass="btn btn-dropbox" Width="100px" OnClick="Accion" /> 
+            <asp:Button ID="btnModificar" Text="Modificar" runat="server" CssClass="btn btn-dropbox" Width="100px" OnClick="Accion"  />
             <asp:Button ID="btnEliminar" Text="Eliminar" runat="server" CssClass="btn btn-dropbox" Width="100px" OnClick="Accion" />
-            <asp:Button ID="btnNuevo" Text="Nuevo" runat="server" CssClass="btn btn-dropbox" Width="100px" OnClick="Accion" />
-            <asp:Button ID="btnBuscar" Text="Buscar" runat="server" CssClass="btn btn-dropbox" Width="100px" />
+            <asp:Button ID="btnNuevo" Text="Nuevo" runat="server" CssClass="btn btn-dropbox" Width="100px" OnClick="btnNuevo_Click"/>
+            <asp:Button ID="btnBuscar" Text="Buscar" runat="server" CssClass="btn btn-dropbox" Width="100px" OnClick="btnBuscar_Click" />
 
 		</div>
 	</div><br />
            <div class="row">
            <div class="auto-style5">
                <div class="form-group">
-                   <asp:GridView ID="dtgCategoria" runat="server" CssClass="auto-style4" Width="590px" OnRowCommand="Seleccionar">
+                   <asp:GridView ID="dtgQuienes" runat="server" CssClass="auto-style4" Width="590px" OnRowCommand="Seleccionar">
                        <Columns>
                            <asp:ButtonField CommandName="dgvbtnSeleccionar" Text="Seleccionar" />
                        </Columns>

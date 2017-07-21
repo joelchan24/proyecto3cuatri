@@ -43,6 +43,7 @@
     <Compile Include="CategoriaBO.cs" />
     <Compile Include="Class2.cs" />
     <Compile Include="ComentarioBO.cs" />
+    <Compile Include="ContactosBO.cs" />
     <Compile Include="Direccion.cs" />
     <Compile Include="EstadoBO.cs" />
     <Compile Include="EventoBO.cs" />

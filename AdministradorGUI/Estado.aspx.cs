@@ -4,6 +4,8 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.Data;
+using System.Data.SqlClient;
 using BO;
 using DAO;
 using Services;
@@ -57,6 +59,16 @@ namespace AdministradorGUI
         protected void dgv_Estados_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        protected void btn_Buscar_Click(object sender, EventArgs e)
+        {
+           SqlConnection con = new SqlConnection("Data Source=RODRIGO\\SQLEXPRESS;Initial Catalog= CULTURA;Integrated Security=True");
+            SqlDataAdapter adaptar = new SqlDataAdapter("select * from ESTADO where nombre like '%" +txt_Nombre.Text + "%'", con);
+            DataTable dt = new DataTable();
+            adaptar.Fill(dt);
+            this.dgv_Estados.DataSource = dt;
+            dgv_Estados.DataBind();
         }
     }
 }
