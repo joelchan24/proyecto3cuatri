@@ -10,6 +10,6 @@
 namespace GUI {
     
     
-    public partial class pueblos {
+    public partial class frm_eventos {
     }
 }

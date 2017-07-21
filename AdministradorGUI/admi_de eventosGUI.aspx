@@ -82,7 +82,7 @@
          <div class="row">
             <div class="col-md-4">
                 <div class="form-group">
-                    <label for="exampleinput">Ubicacion</label>
+                    <label for="exampleinput" >Ubicacion</label>
                    
                     <asp:TextBox ID="txt_ubicar" runat="server" CssClass="form-control"></asp:TextBox>
 
