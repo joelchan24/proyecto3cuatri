@@ -10,15 +10,15 @@
 namespace GUI {
     
     
-    public partial class frm_teatroo {
+    public partial class eventos_engeneral {
         
         /// <summary>
-        /// Control rpt_teatro.
+        /// Control rpt_todos.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Repeater rpt_teatro;
+        protected global::System.Web.UI.WebControls.Repeater rpt_todos;
     }
 }

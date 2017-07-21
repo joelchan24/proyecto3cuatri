@@ -13,53 +13,33 @@
 	<div class="row">
 		<div class="col-md-12">
 			<div class="row">
-				<div class="col-md-4">
+				
+				 <asp:Repeater ID="rpt_teatro" runat="server" >
+            
+                       <ItemTemplate>
+                
+          	<div class="col-md-4">
 					<div class="thumbnail">
-						<img alt="Bootstrap Thumbnail First" src="http://lorempixel.com/output/people-q-c-600-200-1.jpg" />
+						<img alt="Bootstrap Thumbnail First" src="~/img/<%# DataBinder.Eval(Container.DataItem,"FOTOPROMOCION")%>" />
 						<div class="caption">
 							<h3>
-								Thumbnail label
+                              <%# DataBinder.Eval(Container.DataItem,"NOMBRE")%>	
 							</h3>
 							<p>
-								Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.
-							</p>
+								<%# DataBinder.Eval(Container.DataItem,"DESCRIPCION")%>	
 							<p>
-								<a class="btn btn-primary" href="#">Action</a> <a class="btn" href="#">Action</a>
+							<asp:Button ID="btn_vermas1" runat="server" Text="Ver Más" class="btn btn-primary" href="#" />
 							</p>
 						</div>
 					</div>
 				</div>
+                                           </ItemTemplate>
+      </asp:Repeater>
 				<div class="col-md-4">
-					<div class="thumbnail">
-						<img alt="Bootstrap Thumbnail Second" src="http://lorempixel.com/output/city-q-c-600-200-1.jpg" />
-						<div class="caption">
-							<h3>
-								Thumbnail label
-							</h3>
-							<p>
-								Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.
-							</p>
-							<p>
-								<a class="btn btn-primary" href="#">Action</a> <a class="btn" href="#">Action</a>
-							</p>
-						</div>
-					</div>
+					
 				</div>
 				<div class="col-md-4">
-					<div class="thumbnail">
-						<img alt="Bootstrap Thumbnail Third" src="http://lorempixel.com/output/sports-q-c-600-200-1.jpg" />
-						<div class="caption">
-							<h3>
-								Thumbnail label
-							</h3>
-							<p>
-								Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.
-							</p>
-							<p>
-								<a class="btn btn-primary" href="#">Action</a> <a class="btn" href="#">Action</a>
-							</p>
-						</div>
-					</div>
+					
 				</div>
 			</div>
 		</div>

@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/homevisor.Master" AutoEventWireup="true" CodeBehind="frm_danza.aspx.cs" Inherits="GUI.frm_danza" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/homevisor.Master" AutoEventWireup="true" CodeBehind="eventos_engeneral.aspx.cs" Inherits="GUI.eventos_engeneral" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
@@ -6,15 +6,14 @@
 	<div class="row">
 		<div class="col-md-12">
 			<h3>
-				EVENTOS DE DANZA
+				h3. Lorem ipsum dolor sit amet.
 			</h3>
 		</div>
 	</div>
 	<div class="row">
 		<div class="col-md-12">
 			<div class="row">
-				
-				 <asp:Repeater ID="rpt_danza" runat="server" >
+				 <asp:Repeater ID="rpt_todos" runat="server" >
             
                        <ItemTemplate>
                 
@@ -36,7 +35,7 @@
                                            </ItemTemplate>
       </asp:Repeater>
 				<div class="col-md-4">
-				
+					
 				</div>
 				<div class="col-md-4">
 					
