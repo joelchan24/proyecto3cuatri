@@ -43,6 +43,7 @@
     <Compile Include="CategoriaDAO.cs" />
     <Compile Include="ComentarioDAO.cs" />
     <Compile Include="conexionDAO.cs" />
+    <Compile Include="ContactosDAO.cs" />
     <Compile Include="direccionDAO.cs" />
     <Compile Include="EstadoDAO.cs" />
     <Compile Include="eventoDAO.cs" />

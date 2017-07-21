@@ -91,6 +91,21 @@ namespace DAO
         public int eliminar(object eliminar)
         {
              EventoBO obejto = (EventoBO)eliminar;
+            //eliminar galeria 
+            SqlCommand galeria = new SqlCommand("delete  from GALERIA where GALERIA.IDEVENTO=@cod");
+            galeria.Parameters.Add("@cod", SqlDbType.Int).Value = obejto.Codigo;
+            galeria.CommandType = CommandType.Text;
+            conectar.EjecutarComando(galeria);
+
+            //eliminar horario
+
+            SqlCommand horario = new SqlCommand("delete  from HORARIOS where  HORARIOS.EVENTO=@cod");
+            horario.Parameters.Add("@cod", SqlDbType.Int).Value = obejto.Codigo;
+            horario.CommandType = CommandType.Text;
+            conectar.EjecutarComando(horario);
+
+
+            //eliminar evento
             SqlCommand cmd = new SqlCommand("delete  from EVENTO where CODIGO=@cod");
             cmd.Parameters.Add("@cod", SqlDbType.Int).Value = obejto.Codigo;
             cmd.CommandType = CommandType.Text;
@@ -122,7 +137,7 @@ namespace DAO
             cmd.Parameters.Add("@cos", SqlDbType.Money).Value = obejto.costo;
             cmd.Parameters.Add("@feaper", SqlDbType.Date).Value = obejto.FechaApertura.ToString("yyyy-MM-dd");
             cmd.Parameters.Add("@fecier", SqlDbType.Date).Value = obejto.FechaCierre.ToString("yyyy-MM-dd");
-            cmd.Parameters.Add("@foto", SqlDbType.VarChar).Value = obejto.FotoPromocion;
+            cmd.Parameters.Add("@foto", SqlDbType.VarChar).Value = obejto.FotoPromocion+".jgp";
             cmd.Parameters.Add("@ubicacion", SqlDbType.VarChar).Value = obejto.UbicacionGeografica;
             cmd.Parameters.Add("@lat", SqlDbType.VarChar).Value = obejto.latitud;
             cmd.Parameters.Add("@long", SqlDbType.VarChar).Value = obejto.longitud;
@@ -201,7 +216,7 @@ namespace DAO
         public DataSet buscar_aprovados()
         {
             // select * from EVENTO e inner join DIRECCION d on e.DIRECCION=d.CODIGO  
-            SqlCommand cmd = new SqlCommand("select * from EVENTO e  inner join DIRECCION d on e.DIRECCION=d.CODIGO inner join USUARIOS u on  u.CODIGO=e.USUARIO where e.APROVACION='1'  ");
+            SqlCommand cmd = new SqlCommand("select * from EVENTO e  inner join DIRECCION d on e.DIRECCION=d.CODIGO inner join USUARIOS u on  u.CODIGO=e.USUARIO where e.APROVACION='1'order by e.CODIGO DESC  ");
 
 
             cmd.CommandType = CommandType.Text;
@@ -212,7 +227,7 @@ namespace DAO
         public int modificarVisistas(EventoBO oevento, int suma)
         {
             SqlCommand comando = new SqlCommand("UPDATE EVENTO set VISITAS=@vis WHERE CODIGO=@ID");
-            comando.Parameters.Add("@visi", SqlDbType.Int).Value = suma;
+            comando.Parameters.Add("@visi", SqlDbType.Int).Value = suma + 1;
             comando.Parameters.Add("id", SqlDbType.Int).Value = oevento.Codigo;
 
             return conectar.EjecutarComando(comando);
@@ -221,11 +236,11 @@ namespace DAO
         {
             // select * from EVENTO e inner join DIRECCION d on e.DIRECCION=d.CODIGO  
             // select * from EVENTO e inner join DIRECCION d on e.DIRECCION=d.CODIGO  
-            SqlCommand cmd = new SqlCommand(" select MAX(CODIGO) from EVENTO where CODIGO=((select max (CODIGO) from EVENTO)-2) and  EVENTO.APROVACION='1';");
+            SqlCommand cmd = new SqlCommand("select MAX(CODIGO) from EVENTO;");
 
 
             DataRow row = conectar.EjecutarSentencia(cmd).Tables[0].Rows[fila];
-            int val = Convert.ToInt32(row[0]);
+            int val = Convert.ToInt32(row[0].ToString()) - 2;
 
 
             cmd.CommandType = CommandType.Text;
@@ -239,11 +254,11 @@ namespace DAO
         public DataSet busca2()
         {
             // select * from EVENTO e inner join DIRECCION d on e.DIRECCION=d.CODIGO  
-            SqlCommand cmd = new SqlCommand(" select MAX(CODIGO) from EVENTO where CODIGO=((select max (CODIGO) from EVENTO)-1) and  EVENTO.APROVACION='1';");
+            SqlCommand cmd = new SqlCommand("select MAX(CODIGO) from EVENTO;");
 
 
             DataRow row = conectar.EjecutarSentencia(cmd).Tables[0].Rows[fila];
-            int val = Convert.ToInt32(row[0]);
+            int val = Convert.ToInt32(row[0].ToString()) - 1;
 
 
             cmd.CommandType = CommandType.Text;
@@ -258,11 +273,11 @@ namespace DAO
         public DataSet busca1()
         {
             // select * from EVENTO e inner join DIRECCION d on e.DIRECCION=d.CODIGO  
-            SqlCommand cmd = new SqlCommand(" select MAX(CODIGO) from EVENTO where CODIGO=((select max (CODIGO) from EVENTO)) and  EVENTO.APROVACION='1';");
+            SqlCommand cmd = new SqlCommand("select MAX(CODIGO) from EVENTO;"); //tener cuidado cuando usen aprobacion correctamente
            
             
             DataRow row = conectar.EjecutarSentencia(cmd).Tables[0].Rows[fila];
-            int val = Convert.ToInt32(row[0]);
+            int val = Convert.ToInt32(row[0].ToString());
             
 
             cmd.CommandType = CommandType.Text;
@@ -272,6 +287,43 @@ namespace DAO
 
 
             return conectar.EjecutarSentencia(coma);
+        }
+        //buscar los eventos de danza
+        public DataSet buscar_aprovados_danza()
+        {
+            // select * from EVENTO e inner join DIRECCION d on e.DIRECCION=d.CODIGO  
+            SqlCommand cmd = new SqlCommand("  select * from EVENTO e  inner join DIRECCION d on e.DIRECCION=d.CODIGO inner join USUARIOS u on  u.CODIGO=e.USUARIO where e.APROVACION='1' and e.CATEGORIA=1 order by e.CODIGO DESC  ");
+
+           
+            cmd.CommandType = CommandType.Text;
+
+
+            return conectar.EjecutarSentencia(cmd);
+        }
+        //buscar los eventos de danza
+        public DataSet buscar_aprovados_teatro()
+        {
+            // select * from EVENTO e inner join DIRECCION d on e.DIRECCION=d.CODIGO   2
+            SqlCommand cmd = new SqlCommand("  select * from EVENTO e  inner join DIRECCION d on e.DIRECCION=d.CODIGO inner join USUARIOS u on  u.CODIGO=e.USUARIO where e.APROVACION='1' and e.CATEGORIA=2 order by e.CODIGO DESC  ");
+
+            
+
+            cmd.CommandType = CommandType.Text;
+
+
+            return conectar.EjecutarSentencia(cmd);
+        }
+        //buscar los eventos de danza
+        public DataSet buscar_aprovados_musica()
+        {
+            // select * from EVENTO e inner join DIRECCION d on e.DIRECCION=d.CODIGO  3
+            SqlCommand cmd = new SqlCommand("  select * from EVENTO e  inner join DIRECCION d on e.DIRECCION=d.CODIGO inner join USUARIOS u on  u.CODIGO=e.USUARIO where e.APROVACION='1' and e.CATEGORIA=3 order by e.CODIGO DESC ");
+
+         
+            cmd.CommandType = CommandType.Text;
+
+
+            return conectar.EjecutarSentencia(cmd);
         }
 
 

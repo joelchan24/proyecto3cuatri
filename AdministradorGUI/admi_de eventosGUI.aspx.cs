@@ -31,7 +31,7 @@ namespace AdministradorGUI
 
             if (!IsPostBack)
             {
-                
+
                 ddl_categoria.DataSource = eventado.buscar_categoria().Tables[0];
                 ddl_categoria.DataTextField = "NOMBRE";
                 ddl_categoria.DataValueField = "CODIGO";
@@ -42,11 +42,13 @@ namespace AdministradorGUI
                 ddl_municipio.DataBind();
                 refrescar();
                 usuario();
-                
-
 
             }
-    }
+
+
+           
+            }  
+    
         public void usuario()
         {
             try
@@ -96,6 +98,7 @@ namespace AdministradorGUI
             obj.CodigoCategoria = Convert.ToInt32(ddl_categoria.SelectedValue);
             obj.CodigoUsuario =Convert.ToInt32( txt_usuario.Text);
             //
+            obj.aprovacion = (rbt_noapro.Checked) ? "0" : "1";
             int iddir = 0; int.TryParse(txt_codir.Value, out iddir);
             obj.Codigo_dir = iddir;
             obj.Colonia = txt_colonia.Text;
@@ -269,6 +272,23 @@ namespace AdministradorGUI
         protected void HiddenField1_ValueChanged(object sender, EventArgs e)
         {
 
+        }
+
+        protected void rbt_noapro_CheckedChanged(object sender, EventArgs e)
+        {
+            if (rbt_noapro.Checked == true)
+            {
+                rbt_aprovado.Checked = false;
+            }
+         
+        }
+
+        protected void rbt_aprovado_CheckedChanged(object sender, EventArgs e)
+        {
+            if (rbt_aprovado.Checked == true)
+            {
+                rbt_noapro.Checked = false;
+            }
         }
     }
 }

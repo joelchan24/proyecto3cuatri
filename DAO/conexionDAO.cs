@@ -71,11 +71,10 @@ namespace DAO
 
         }
 
-        //nota joel .yo agregar estas clases de conexionews por que me serviran ustedes usen la de arirba 
-        //posatata puto jesus
+        
         public int ejecutarComandostring(string comando)
         {
-            // string strcomandoSQL = comando;
+            //string strcomandoSQL = comando;
             comandosql.Connection = this.establecerConexion();
             this.abrirConexion();
             comandosql.CommandText = comando;

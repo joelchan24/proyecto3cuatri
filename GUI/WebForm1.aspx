@@ -77,7 +77,9 @@
                 
           	<div class="col-md-4">
 					<div class="thumbnail">
-						<img alt="Bootstrap Thumbnail First" src="../img/<%# DataBinder.Eval(Container.DataItem,"FOTOPROMOCION")%>" />
+           
+                        
+						<img alt="Bootstrap Thumbnail First" src="C:\Users\Lenovo\Source\Repos\proyecto3cuatri\GUI\img/<%# DataBinder.Eval(Container.DataItem,"FOTOPROMOCION")%>"/>
 						<div class="caption">
 							<h3>
                               <%# DataBinder.Eval(Container.DataItem,"NOMBRE")%>	
@@ -151,8 +153,8 @@
               
 				
               
-				 <asp:Repeater ID="Repeater1" runat="server" 
-            >
+				 <asp:Repeater ID="Repeater1" runat="server" >
+            
                        <ItemTemplate>
                 
           	<div class="col-md-4">
