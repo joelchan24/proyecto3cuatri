@@ -15,6 +15,7 @@ namespace AdministradorGUI
     public partial class QuienesSomos : System.Web.UI.Page
     {
         CTRL_QuienesSomos oCTRL_QuienesSomos = new CTRL_QuienesSomos();
+        
         protected void Page_Load(object sender, EventArgs e)
         {
             actualizar();
@@ -56,7 +57,7 @@ namespace AdministradorGUI
         protected void btnBuscar_Click(object sender, EventArgs e)
         {
             SqlConnection con = new SqlConnection("Data Source = RODRIGO\\SQLEXPRESS; Initial catalog = CULTURA; integrated security = true");
-            SqlDataAdapter adaptar = new SqlDataAdapter("select * from QUIENESSOMOS where DESCRIPCION like '%" + txtDescripcion.Text + "%'", con);
+            SqlDataAdapter adaptar = new SqlDataAdapter("select * from QUIENESSOMOS where  DESCRIPCION like '%" + txtDescripcion.Text + "%'", con);
             SqlDataAdapter ds = new SqlDataAdapter("select * from QUIENESSOMOS where CODIGO like '%" + txtDescripcion.Text + "%'", con);
             DataTable dt = new DataTable();
             adaptar.Fill(dt);
@@ -67,7 +68,8 @@ namespace AdministradorGUI
 
         protected void btnNuevo_Click(object sender, EventArgs e)
         {
-            
+            txtDescripcion.Text = "";
+            txtID.Text = "";
         }
     }
 }

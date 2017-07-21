@@ -9,7 +9,7 @@ using DAO;
 
 namespace Services
 {
-    class CTRL_Contactos
+   public class CTRL_Contactos
     {
         ContactosDAO oContactosDAO;
 
