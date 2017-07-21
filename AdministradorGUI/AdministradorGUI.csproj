@@ -155,6 +155,7 @@
     <Content Include="js\npm.js" />
     <Content Include="js\pagina.js" />
     <Content Include="Pais.aspx" />
+    <Content Include="QuienesSomos.aspx" />
     <Content Include="Usuario.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -216,6 +217,13 @@
       <DependentUpon>Pais.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QuienesSomos.aspx.cs">
+      <DependentUpon>QuienesSomos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="QuienesSomos.aspx.designer.cs">
+      <DependentUpon>QuienesSomos.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Usuario.aspx.cs">
       <DependentUpon>Usuario.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

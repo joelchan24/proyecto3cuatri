@@ -3,45 +3,46 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Data;
 using BO;
 using DAO;
-using System.Data;
 
 namespace Services
 {
-    public class CTRL_QuienesSomos
+    class CTRL_Contactos
     {
-        QuienesSomosDAO oQuienesSomosDAO;
+        ContactosDAO oContactosDAO;
 
-        public CTRL_QuienesSomos()
+        public CTRL_Contactos()
         {
-            oQuienesSomosDAO = new QuienesSomosDAO();
+            oContactosDAO = new ContactosDAO();
         }
 
-        public bool Accion(string strAccion, QuienesSomosBO oQuienesSomosBO)
+        public bool Accion(string strAccion, ContactosBO oContactosBO)
         {
             switch(strAccion)
             {
                 case "btnAgregar":
-                    oQuienesSomosDAO.agregar(oQuienesSomosBO);
+                    oContactosDAO.agregar(oContactosBO);
                     break;
                 case "btnEliminar":
-                    oQuienesSomosDAO.eliminar(oQuienesSomosBO);
+                    oContactosDAO.eliminar(oContactosBO);
                     break;
                 case "btnModificar":
-                    oQuienesSomosDAO.modificar(oQuienesSomosBO);
+                    oContactosDAO.modificar(oContactosBO);
                     break;
                 case "btnBuscar":
-                    oQuienesSomosDAO.buscar(oQuienesSomosBO);
-                    break;
+                    oContactosDAO.buscar();
                     
+                    break;
+
             }
             return true;
         }
 
         public DataSet listar()
         {
-            return oQuienesSomosDAO.listar();
+            return oContactosDAO.listar();
         }
     }
 }

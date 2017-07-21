@@ -24,7 +24,7 @@
 
             <asp:Button ID="btn_Eliminar" runat="server" Text="Eliminar"  CssClass="btn-primary col-md-2 col-lg-offset-1" OnClick="Accion" />
 
-            <asp:Button ID="btn_Buscar" runat="server" Text="Buscar"  CssClass="btn-primary col-md-2 col-lg-offset-1" OnClick="Accion" />
+            <asp:Button ID="btn_Buscar" runat="server" Text="Buscar"  CssClass="btn-primary col-md-2 col-lg-offset-1" OnClick="btn_Buscar_Click" />
             </div>
         </p>
         <p>
