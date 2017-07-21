@@ -221,11 +221,11 @@ namespace DAO
         {
             // select * from EVENTO e inner join DIRECCION d on e.DIRECCION=d.CODIGO  
             // select * from EVENTO e inner join DIRECCION d on e.DIRECCION=d.CODIGO  
-            SqlCommand cmd = new SqlCommand(" select MAX(CODIGO) from EVENTO where CODIGO=((select max (CODIGO) from EVENTO where EVENTO.APROVACION='1')-2);");
+            SqlCommand cmd = new SqlCommand("select MAX(CODIGO) from EVENTO;");
 
 
             DataRow row = conectar.EjecutarSentencia(cmd).Tables[0].Rows[fila];
-            int val = Convert.ToInt32(row[0]);
+            int val = Convert.ToInt32(row[0].ToString()) - 2;
 
 
             cmd.CommandType = CommandType.Text;
@@ -239,11 +239,11 @@ namespace DAO
         public DataSet busca2()
         {
             // select * from EVENTO e inner join DIRECCION d on e.DIRECCION=d.CODIGO  
-            SqlCommand cmd = new SqlCommand(" select MAX(CODIGO) from EVENTO where CODIGO=((select max (CODIGO) from EVENTO where EVENTO.APROVACION='1')-1)");
+            SqlCommand cmd = new SqlCommand("select MAX(CODIGO) from EVENTO;");
 
 
             DataRow row = conectar.EjecutarSentencia(cmd).Tables[0].Rows[fila];
-            int val = Convert.ToInt32(row[0]);
+            int val = Convert.ToInt32(row[0].ToString()) - 1;
 
 
             cmd.CommandType = CommandType.Text;
@@ -258,11 +258,11 @@ namespace DAO
         public DataSet busca1()
         {
             // select * from EVENTO e inner join DIRECCION d on e.DIRECCION=d.CODIGO  
-            SqlCommand cmd = new SqlCommand(" select MAX(CODIGO) from EVENTO where CODIGO=((select max (CODIGO) from EVENTO where EVENTO.APROVACION='1')) ;");
+            SqlCommand cmd = new SqlCommand("select MAX(CODIGO) from EVENTO;"); //tener cuidado cuando usen aprobacion correctamente
            
             
             DataRow row = conectar.EjecutarSentencia(cmd).Tables[0].Rows[fila];
-            int val = Convert.ToInt32(row[0]);
+            int val = Convert.ToInt32(row[0].ToString());
             
 
             cmd.CommandType = CommandType.Text;
