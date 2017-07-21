@@ -34,9 +34,26 @@ namespace GUI
             {
                 Session["usuario"] = txt_usuario.Text;
                 Session["id"] = login.buscarelid(obj);
-             
+
+                var Roles = usuario.ObtenerTipoCuenta(txt_usuario.Text);
+                var fila = Roles.Tables[0].Rows[0];
+
+                string Rol = fila[0].ToString();
+
                 Response.Write("<script>alert('usuario correcto')</script>");
-                Response.Redirect("WebForm1.aspx", true);
+
+                if (Rol == "USUARIO")
+                {
+                    Response.Redirect("WebForm1.aspx", true);
+                }
+                else if(Rol == "ADMINISTRADOR")
+                {
+                    Response.Redirect("http://localhost:52104/Usuario.aspx", true);
+                }
+                else if(Rol == "ORGANIZADOR")
+                {
+                    Response.Redirect("registroevento.aspx", true);
+                }
             }
             else
             {

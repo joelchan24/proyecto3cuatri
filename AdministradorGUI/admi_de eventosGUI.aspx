@@ -82,7 +82,7 @@
          <div class="row">
             <div class="col-md-4">
                 <div class="form-group">
-                    <label for="exampleinput">Ubicacion</label>
+                    <label for="exampleinput" >Ubicacion</label>
                    
                     <asp:TextBox ID="txt_ubicar" runat="server" CssClass="form-control"></asp:TextBox>
 
@@ -186,14 +186,14 @@
                     <div class="form-group">
                        <label for="exampleinput" >aprovacion</label><br />
                       <label class="radio-inline" >
-                          <asp:RadioButton ID="rbt_aprovado" runat="server" type="radio" name="aprovado"  />  Aprovado
+                          <asp:RadioButton ID="rbt_aprovado" runat="server" type="radio" name="aprovado" OnCheckedChanged="rbt_aprovado_CheckedChanged"  />  Aprovado
       
     </label>
                         
     <label class="radio-inline">
       <input type="radio" name="optradio">
 
-        <asp:RadioButton ID="rbt_noapro" runat="server" type="radio" name="optradio" />  No aprovado
+        <asp:RadioButton ID="rbt_noapro" runat="server" type="radio" name="optradio" OnCheckedChanged="rbt_noapro_CheckedChanged" />  No aprovado
     </label>
                        
               &nbsp;</div>

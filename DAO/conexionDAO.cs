@@ -27,7 +27,7 @@ namespace DAO
 
         public SqlConnection establecerConexion()
         {
-            string cs = "Data Source=RODRIGO\\SQLEXPRESS; Initial catalog=CULTURA; integrated security=true";
+            string cs = "Data Source=DESKTOP-TT12AGM\\SQLEXPRESS; Initial catalog=CULTURA; integrated security=true";
             coneccion = new SqlConnection(cs);
             return coneccion;
         }
@@ -71,11 +71,10 @@ namespace DAO
 
         }
 
-        //nota joel .yo agregar estas clases de conexionews por que me serviran ustedes usen la de arirba 
-        //posatata puto jesus
+        
         public int ejecutarComandostring(string comando)
         {
-            // string strcomandoSQL = comando;
+            //string strcomandoSQL = comando;
             comandosql.Connection = this.establecerConexion();
             this.abrirConexion();
             comandosql.CommandText = comando;

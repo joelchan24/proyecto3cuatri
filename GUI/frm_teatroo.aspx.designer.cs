@@ -10,6 +10,15 @@
 namespace GUI {
     
     
-    public partial class pueblos {
+    public partial class frm_teatroo {
+        
+        /// <summary>
+        /// Control rpt_teatro.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Repeater rpt_teatro;
     }
 }
