@@ -113,14 +113,41 @@ namespace AdministradorGUI
             {
                 int indice = Convert.ToInt32(e.CommandArgument);
                 txtID.Text = dtgDatos.Rows[indice].Cells[1].Text.ToString();
+                txtNombre.Text = dtgDatos.Rows[indice].Cells[2].Text.ToString();
+                txtApellido.Text = dtgDatos.Rows[indice].Cells[3].Text.ToString();
+                txtTelefono.Text = dtgDatos.Rows[indice].Cells[4].Text.ToString();
+                DateTime fecha = Convert.ToDateTime(dtgDatos.Rows[indice].Cells[5].Text);
+                txtfecha.Text = dtgDatos.Rows[indice].Cells[5].Text;
+                txtCorreo.Text = dtgDatos.Rows[indice].Cells[6].Text.ToString();
+                txtUsuario.Text = dtgDatos.Rows[indice].Cells[7].Text.ToString();
+                txtContraseña.Text = dtgDatos.Rows[indice].Cells[8].Text.ToString();
                 imgFoto.ImageUrl = "img/" + dtgDatos.Rows[indice].Cells[9].Text.ToString() + ".jpg";
                 txtDir.Value= dtgDatos.Rows[indice].Cells[11].Text;
+                txtColonia.Text = dtgDatos.Rows[indice].Cells[12].Text.ToString();
+                txtCodigoPostal.Text = dtgDatos.Rows[indice].Cells[13].Text.ToString();
+                txtCruzamiento.Text = dtgDatos.Rows[indice].Cells[14].Text.ToString();
+                txtNumeroInterior.Text = dtgDatos.Rows[indice].Cells[15].Text.ToString();
+                txtNumeroExteriror.Text = dtgDatos.Rows[indice].Cells[16].Text.ToString();
+
             }
         }
 
         protected void ocultar(object sender, GridViewRowEventArgs e)
         {
             e.Row.Cells[1].Visible = false;
+            e.Row.Cells[4].Visible = false;
+            e.Row.Cells[6].Visible = false;
+            e.Row.Cells[8].Visible = false;
+            e.Row.Cells[9].Visible = false;
+            e.Row.Cells[10].Visible = false;
+            e.Row.Cells[14].Visible = false;
+            e.Row.Cells[15].Visible = false;
+            e.Row.Cells[16].Visible = false;
+            e.Row.Cells[17].Visible = false;
+            e.Row.Cells[18].Visible = false;
+            e.Row.Cells[20].Visible = false;
+            e.Row.Cells[11].Visible = false;
+
         }
     }
 }
