@@ -73,6 +73,7 @@
     <Content Include="css\footer.css" />
     <Content Include="css\loginverdadero.css" />
     <Content Include="css\_all-skins.min.css" />
+    <Content Include="eventos_engeneral.aspx" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="frm_danza.aspx" />
     <Content Include="frm_eventos.aspx" />
@@ -129,6 +130,13 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="eventos_engeneral.aspx.cs">
+      <DependentUpon>eventos_engeneral.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="eventos_engeneral.aspx.designer.cs">
+      <DependentUpon>eventos_engeneral.aspx</DependentUpon>
+    </Compile>
     <Compile Include="frm_danza.aspx.cs">
       <DependentUpon>frm_danza.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

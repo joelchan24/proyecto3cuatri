@@ -91,6 +91,21 @@ namespace DAO
         public int eliminar(object eliminar)
         {
              EventoBO obejto = (EventoBO)eliminar;
+            //eliminar galeria 
+            SqlCommand galeria = new SqlCommand("delete  from GALERIA where GALERIA.IDEVENTO=@cod");
+            galeria.Parameters.Add("@cod", SqlDbType.Int).Value = obejto.Codigo;
+            galeria.CommandType = CommandType.Text;
+            conectar.EjecutarComando(galeria);
+
+            //eliminar horario
+
+            SqlCommand horario = new SqlCommand("delete  from HORARIOS where  HORARIOS.EVENTO=@cod");
+            horario.Parameters.Add("@cod", SqlDbType.Int).Value = obejto.Codigo;
+            horario.CommandType = CommandType.Text;
+            conectar.EjecutarComando(horario);
+
+
+            //eliminar evento
             SqlCommand cmd = new SqlCommand("delete  from EVENTO where CODIGO=@cod");
             cmd.Parameters.Add("@cod", SqlDbType.Int).Value = obejto.Codigo;
             cmd.CommandType = CommandType.Text;
@@ -212,7 +227,7 @@ namespace DAO
         public int modificarVisistas(EventoBO oevento, int suma)
         {
             SqlCommand comando = new SqlCommand("UPDATE EVENTO set VISITAS=@vis WHERE CODIGO=@ID");
-            comando.Parameters.Add("@visi", SqlDbType.Int).Value = suma;
+            comando.Parameters.Add("@visi", SqlDbType.Int).Value = suma + 1;
             comando.Parameters.Add("id", SqlDbType.Int).Value = oevento.Codigo;
 
             return conectar.EjecutarComando(comando);
@@ -272,6 +287,43 @@ namespace DAO
 
 
             return conectar.EjecutarSentencia(coma);
+        }
+        //buscar los eventos de danza
+        public DataSet buscar_aprovados_danza()
+        {
+            // select * from EVENTO e inner join DIRECCION d on e.DIRECCION=d.CODIGO  
+            SqlCommand cmd = new SqlCommand("  select * from EVENTO e  inner join DIRECCION d on e.DIRECCION=d.CODIGO inner join USUARIOS u on  u.CODIGO=e.USUARIO where e.APROVACION='1' and e.CATEGORIA=1 order by e.CODIGO DESC  ");
+
+           
+            cmd.CommandType = CommandType.Text;
+
+
+            return conectar.EjecutarSentencia(cmd);
+        }
+        //buscar los eventos de danza
+        public DataSet buscar_aprovados_teatro()
+        {
+            // select * from EVENTO e inner join DIRECCION d on e.DIRECCION=d.CODIGO   2
+            SqlCommand cmd = new SqlCommand("  select * from EVENTO e  inner join DIRECCION d on e.DIRECCION=d.CODIGO inner join USUARIOS u on  u.CODIGO=e.USUARIO where e.APROVACION='1' and e.CATEGORIA=2 order by e.CODIGO DESC  ");
+
+            
+
+            cmd.CommandType = CommandType.Text;
+
+
+            return conectar.EjecutarSentencia(cmd);
+        }
+        //buscar los eventos de danza
+        public DataSet buscar_aprovados_musica()
+        {
+            // select * from EVENTO e inner join DIRECCION d on e.DIRECCION=d.CODIGO  3
+            SqlCommand cmd = new SqlCommand("  select * from EVENTO e  inner join DIRECCION d on e.DIRECCION=d.CODIGO inner join USUARIOS u on  u.CODIGO=e.USUARIO where e.APROVACION='1' and e.CATEGORIA=3 order by e.CODIGO DESC ");
+
+         
+            cmd.CommandType = CommandType.Text;
+
+
+            return conectar.EjecutarSentencia(cmd);
         }
 
 

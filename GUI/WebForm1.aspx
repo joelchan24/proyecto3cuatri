@@ -153,8 +153,8 @@
               
 				
               
-				 <asp:Repeater ID="Repeater1" runat="server" 
-            >
+				 <asp:Repeater ID="Repeater1" runat="server" >
+            
                        <ItemTemplate>
                 
           	<div class="col-md-4">
