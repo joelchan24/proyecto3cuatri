@@ -72,6 +72,7 @@
     <Content Include="css\estilo-usuario.css" />
     <Content Include="css\footer.css" />
     <Content Include="css\loginverdadero.css" />
+    <Content Include="css\style.css" />
     <Content Include="css\_all-skins.min.css" />
     <Content Include="eventos_engeneral.aspx" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
@@ -100,6 +101,7 @@
     <Content Include="js\jquery.slimscroll.min.js" />
     <Content Include="js\locationpicker.jquery.js" />
     <Content Include="js\pagina.js" />
+    <Content Include="js\scripts.js" />
     <Content Include="loginn.aspx" />
     <Content Include="packages.config" />
     <Content Include="homevisor.Master" />

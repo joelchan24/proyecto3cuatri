@@ -79,7 +79,7 @@
 					<div class="thumbnail">
            
                         
-						<img alt="Bootstrap Thumbnail First" src="C:\Users\Lenovo\Source\Repos\proyecto3cuatri\GUI\img/<%# DataBinder.Eval(Container.DataItem,"FOTOPROMOCION")%>"/>
+						<img alt="Bootstrap Thumbnail First" src="<%# DataBinder.Eval(Container.DataItem,"FOTOPROMOCION")%>"/>
 						<div class="caption">
 							<h3>
                               <%# DataBinder.Eval(Container.DataItem,"NOMBRE")%>	
@@ -145,6 +145,13 @@
 					
 				</div>
 			</div>-->
+            <br />
+            
+            <div class="clearfix"></div>
+            <div class="col-md-12 text-center">
+
+                 <asp:Button ID="btn_vermas" runat="server" Text="Ver Más Eventos" CssClass="btn btn-info" />
+            </div>
 			<h3 class="text-center" style="color:#b69da8">
 			MÁS VISITADOS
 			</h3>
@@ -159,7 +166,7 @@
                 
           	<div class="col-md-4">
 					<div class="thumbnail">
-						<img alt="Bootstrap Thumbnail First" src="~/img/<%# DataBinder.Eval(Container.DataItem,"FOTOPROMOCION")%>" />
+                      <img alt="Bootstrap Thumbnail First" src="~/img/<%# DataBinder.Eval(Container.DataItem,"FOTOPROMOCION")%>" />
 						<div class="caption">
 							<h3>
                               <%# DataBinder.Eval(Container.DataItem,"NOMBRE")%>	

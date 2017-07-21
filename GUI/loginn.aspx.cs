@@ -35,7 +35,7 @@ namespace GUI
                 Session["usuario"] = txt_usuario.Text;
                 Session["id"] = login.buscarelid(obj);
 
-                var Roles = usuario.ObtenerTipoCuenta(txt_usuario.Text);
+               var Roles = usuario.ObtenerTipoCuenta(txt_usuario.Text);
                 var fila = Roles.Tables[0].Rows[0];
 
                 string Rol = fila[0].ToString();

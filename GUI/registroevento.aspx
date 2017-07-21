@@ -11,6 +11,43 @@
   
       
           <div class="row">
+
+    <div class="container-fluid">
+	<div class="row">
+		<div class="col-md-12">
+			 &nbsp;<div class="modal fade" id="modal-container-827047" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+				<div class="modal-dialog">
+					<div class="modal-content">
+						<div class="modal-header">
+							 
+							<button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+								×
+							</button>
+							<h4 class="modal-title" id="myModalLabel">
+								Modal title
+							</h4>
+						</div>
+						<div class="modal-body">
+						</div>
+						<div class="modal-footer">
+							 
+							<button type="button" class="btn btn-default" data-dismiss="modal">
+								Close
+							</button> 
+							<button type="button" class="btn btn-primary">
+								Save changes
+							</button>
+						</div>
+					</div>
+					
+				</div>
+				
+			</div>
+			
+		</div>
+	</div>
+</div>
+
               <h1 > control</h1>
                <asp:HiddenField  ID="txtid" runat="server" />
               <asp:HiddenField ID="txtx_usuariop" runat="server" />
@@ -229,8 +266,7 @@
 		</div>
 		<div class="col-md-3">
               
-        <asp:Button ID="btn_nuevo" runat="server" Text="nuevo" CssClass="btn btn-warning   " OnClick="accion" style="text-align:right"/>
-        
+        <asp:Button ID="btn_nuevo" runat="server" Text="nuevo" CssClass="btn btn-warning   " OnClick="accion" style="text-align:right"/> <asp:Button ID="btnGaleria" runat="server" Text="Agregar Galeria" CssClass="btn btn-warning" style="text-align:right" href="#modal-container-827047" />        
 		</div>
 	</div>
        
