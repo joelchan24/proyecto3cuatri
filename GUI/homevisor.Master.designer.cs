@@ -58,6 +58,15 @@ namespace GUI {
         protected global::System.Web.UI.WebControls.Label txt_usuaer;
         
         /// <summary>
+        /// Control btn_cerrar.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btn_cerrar;
+        
+        /// <summary>
         /// Control ContentPlaceHolder1.
         /// </summary>
         /// <remarks>

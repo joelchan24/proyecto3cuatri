@@ -11,9 +11,18 @@ namespace GUI
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (Session["usuario"] != null)
+            /*if (Session["usuario"] != null)
             {
                 txt_usuaer.Text = "welcome " + Session["usuario"].ToString();
+            }*/
+            if (Session["usuario"] != null && Session["id"] != null)
+            {
+                txt_usuaer.Text = "welcome " + Session["usuario"].ToString();
+             //   Label1.Text = "id es " + Session["id"].ToString();
+            }
+            else
+            {
+
             }
         }
 
