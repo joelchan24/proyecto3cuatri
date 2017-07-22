@@ -16,13 +16,7 @@ namespace GUI
         eventoDAO evento = new eventoDAO();
         protected void Page_Load(object sender, EventArgs e)
         {
-            ArrayList lista = new ArrayList();
-            string[] archivos = System.IO.Directory.GetFiles(Server.MapPath("~/img"), "*.*");
-
-            foreach(string archivo in archivos)
-            {
-                lista.Add("/img/" + System.IO.Path.GetFileName(archivo));
-            }
+            
            Repeater1.DataSource = evento.buscar_aprovados().Tables[0];
            Repeater1.DataBind();
             //aqui el maximo resgiutro

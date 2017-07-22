@@ -157,6 +157,7 @@
                     <ul>
                         <li>
                             <asp:Label ID="txt_usuaer" runat="server" Text="Label"></asp:Label>
+                             <asp:Button ID="btn_cerrar" runat="server" Text="cerrar secion"  />
 
                         </li>
                     </ul>

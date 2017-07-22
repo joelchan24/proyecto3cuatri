@@ -32,8 +32,8 @@ namespace GUI
 
             if (login.verificar(obj))
             {
-                Session["usuario"] = txt_usuario.Text;
-                Session["id"] = login.buscarelid(obj);
+               // Session["usuario"] = txt_usuario.Text;
+               // Session["id"] = login.buscarelid(obj);
 
                var Roles = usuario.ObtenerTipoCuenta(txt_usuario.Text);
                 var fila = Roles.Tables[0].Rows[0];
@@ -45,6 +45,8 @@ namespace GUI
                 if (Rol == "USUARIO")
                 {
                     Response.Redirect("WebForm1.aspx", true);
+                    Session["usuario"] = txt_usuario.Text;
+                    Session["id"] = login.buscarelid(obj);
                 }
                 else if(Rol == "ADMINISTRADOR")
                 {
