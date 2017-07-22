@@ -34,18 +34,22 @@ namespace GUI
             {
                Session["usuario"] = txt_usuario.Text;
                 Session["id"] = login.buscarelid(obj);
+           
 
-               var Roles = usuario.ObtenerTipoCuenta(txt_usuario.Text);
+
+                var Roles = usuario.ObtenerTipoCuenta(txt_usuario.Text);
                 var fila = Roles.Tables[0].Rows[0];
-
+            
                 string Rol = fila[0].ToString();
-
-                Response.Write("<script>alert('usuario correcto')</script>");
+              
+               
+               Response.Write("<script>alert('usuario correcto')</script>");
 
                 if (Rol == "USUARIO")
                 {
                     Response.Redirect("WebForm1.aspx", true);
                   
+
                 }
                 else if(Rol == "ADMINISTRADOR")
                 {

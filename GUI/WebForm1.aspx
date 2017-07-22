@@ -149,6 +149,7 @@
             
             <div class="clearfix"></div>
             <div class="col-md-12 text-center">
+                <asp:HiddenField ID="txt" runat="server" />
 
                  <asp:Button ID="btn_vermas" runat="server" Text="Ver Más Eventos" CssClass="btn btn-info" />
             </div>

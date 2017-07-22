@@ -124,26 +124,45 @@
                             <li class="dropdown mega-dropdown"><a href="registroevento.aspx" data-toggle="dropdown">Municipios</a></li>
                              
                           <li class="dropdown">
-                          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" style="margin-right:80px;"><span class="glyphicon glyphicon-star"></span>Categorias <span class="caret"></span></a>
+                          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" style="margin-right:60px;"><span class="glyphicon glyphicon-star"></span>Categorias <span class="caret"></span></a>
                           <ul class="dropdown-menu" role="menu" style="display: none;">
                             <li><a href="frm_danza.aspx">Danza</a></li>
                             <li><a href="frm_teatroo.aspx">Teatro</a></li>                           
                               <li><a href="frm_musica.aspx">Musica</a></li>
                           </ul>
                         </li>
-
+                          
                 		</ul>
                         <ul class="nav navbar-nav navbar-right">
                              <!---->
-                    
-                            <%if (Session["usuario"] !=null && Session["id"] != null) { %>
-                            <% txt_usuaer.Text = "welcome " + Session["usuario"].ToString();%> 
-                              <li>     
-                              <asp:Label ID="txt_usuaer" runat="server" Text="Label"></asp:Label>
-                             <asp:Button ID="btn_cerrar" runat="server" Text="cerrar secion"  />
-                                   </li>
+                   
+ 
+                      <%  
+                          if ( Session["usuario"] != null && Session["id"] != null ) {
+
+                           %> 
+                            
+ <% txt_usuaer.Text = "welcome " + Session["usuario"].ToString(); %>
+                          
+                           
+                               <li class="dropdown">                          
+                               <a href="#" class=" dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" style="margin-right:20px;"><span class="glyphicon glyphicon-wrench"></span>editar <span class="caret"></span></a>
+                          <ul class="dropdown-menu" role="menu" style="display: none;">
+                            <li><a href="loginn.aspx">editar datos </a></li>
+                            <li><a href="registrode_usuariosGUI.aspx">subir evento</a>
+                          </ul>
+                      
+                               </li>      
+
+                                
+                              <asp:Label ID="txt_usuaer" runat="server" Text="Label" style="margin-right:10px;padding-top: 10px;" ></asp:Label>
+                               <asp:Button ID="btn_cerrar" runat="server" Text="cerrar secion" OnClick="cerrar" style="margin-right:15px;padding-top: 10px; "  />
+                          
+
+                      
                   
 
+        
                         
                              <%} %>
                             <%else { %>

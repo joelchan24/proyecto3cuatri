@@ -16,10 +16,9 @@ namespace GUI
         eventoDAO evento = new eventoDAO();
         protected void Page_Load(object sender, EventArgs e)
         {
-           
+          
 
-
-Repeater1.DataSource = evento.buscar_aprovados().Tables[0];
+            Repeater1.DataSource = evento.buscar_aprovados().Tables[0];
            Repeater1.DataBind();
             //aqui el maximo resgiutro
             rpt_uno.DataSource = evento.busca1().Tables[0];
