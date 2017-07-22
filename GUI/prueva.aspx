@@ -11,7 +11,7 @@
     <form id="form1" runat="server">
     <div>
         <asp:Label ID="txt_usuaer" runat="server" Text="Label"></asp:Label>
-        <asp:Button ID="btn_loguat" runat="server" Text="cerrar secion" OnClick="btn_loguat_Click" />
+        <asp:Button ID="btn_loguat" runat="server" Text="cerrar secion"  />
        
         <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
        

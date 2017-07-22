@@ -136,6 +136,14 @@ namespace DAO
             cmd.CommandType = CommandType.Text;
             return obj.EjecutarSentencia(cmd);
         }
+        public string ObtenerTipoCuenta1(string username)
+        {
+            SqlCommand cmd = new SqlCommand("select t.NOMBRE from TIPOCUENTA t INNER JOIN TIPOCUENTA_USUARIO tu ON t.CODIGO = tu.IDTIPO INNER JOIN USUARIOS u ON tu.IDUSUARIO = u.CODIGO WHERE USUARIO = '" + username + "'");
+            cmd.CommandType = CommandType.Text;
+          int   resultado = obj.EjecutarComando(cmd);
+            string tipo = Convert.ToString(resultado);
+            return tipo;
+        }
 
         public DataSet listarMunicipio()
         {
