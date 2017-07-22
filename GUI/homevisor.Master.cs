@@ -15,15 +15,21 @@ namespace GUI
             {
                 txt_usuaer.Text = "welcome " + Session["usuario"].ToString();
             }*/
-            if (Session["usuario"] != null && Session["id"] != null)
-            {
-                txt_usuaer.Text = "welcome " + Session["usuario"].ToString();
-             //   Label1.Text = "id es " + Session["id"].ToString();
-            }
-            else
-            {
+            /*  if (Session["usuario"] !=null && Session["id"] != null)
+              {
+                  txt_usuaer.Text = "welcome " + Session["usuario"].ToString();
+               //   Label1.Text = "id es " + Session["id"].ToString();
+              }
+              else
+              {
 
-            }
+              }*/
+        }
+
+        protected void btn_loguat_Click(object sender, EventArgs e)
+        {
+            Session.Remove("usuario");
+            Response.Redirect("loginn.aspx");
         }
 
 
