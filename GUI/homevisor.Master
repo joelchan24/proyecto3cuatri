@@ -138,45 +138,88 @@
                    
  
                       <%  
-                          if ( Session["usuario"] != null && Session["id"] != null ) {
+    if (Session["usuario"] == null && Session["id"] == null)
+    {
 
                            %> 
-                            
- <% txt_usuaer.Text = "welcome " + Session["usuario"].ToString(); %>
-                          
-                           
-                               <li class="dropdown">                          
-                               <a href="#" class=" dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" style="margin-right:20px;"><span class="glyphicon glyphicon-wrench"></span>editar <span class="caret"></span></a>
+                             <li>                             </li>
+                           <li class="dropdown">
+                          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" style="margin-right:80px;"><span class="glyphicon glyphicon-user"></span>Cuenta <span class="caret"></span></a>
                           <ul class="dropdown-menu" role="menu" style="display: none;">
-                            <li><a href="loginn.aspx">editar datos </a></li>
-                            <li><a href="registrode_usuariosGUI.aspx">subir evento</a>
+                            <li><a href="loggin_fuerademasterpage.aspx">Iniciar Sesion </a></li>
+                            <li><a href="registro_usuarios_fueramasterpge.aspx">Registrarme</a></li>
                           </ul>
-                      
-                               </li>      
-
-                                
-                              <asp:Label ID="txt_usuaer" runat="server" Text="Label" style="margin-right:10px;padding-top: 10px;" ></asp:Label>
-                               <asp:Button ID="btn_cerrar" runat="server" Text="cerrar secion" OnClick="cerrar" style="margin-right:15px;padding-top: 10px; "  />
-                          
-
+ </li>
                       
                   
 
         
                         
                              <%} %>
-                            <%else { %>
+                                  <% else if ( Session["tipo"].ToString() == "ORGANIZADOR" && Session["usuario"] != null && Session["id"] != null) { %>
+                                                   
+ <% txt_usuaer2.Text = "welcome " + Session["usuario"].ToString(); %>
+                          
+                           
+                               <li class="dropdown">                          
+                               <a href="#" class=" dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" style="margin-right:20px;"><span class="glyphicon glyphicon-wrench"></span>editar <span class="caret"></span></a>
+                          <ul class="dropdown-menu" role="menu" style="display: none;">
+                           <li><a href="loginn.aspx">editar datos </a></li>
+                            <li><a href="registrode_usuariosGUI.aspx">subir evento</a>
+                           
+                          </ul>
+                      
+                               </li>      
+
+                                
+                              <asp:Label ID="txt_usuaer2" runat="server" Text="Label" style="margin-right:10px;padding-top: 10px;" ></asp:Label>
+                               <asp:Button ID="btn_cerrar2" runat="server" Text="cerrar secion" OnClick="cerrar" style="margin-right:15px;padding-top: 10px; "  />
+                          
+
+                               
+                            
+                             <%} %>
+                           
+                            <%  if (Session["usuario"] == null && Session["id"] == null ){ %>
+                              
                              <li>                             </li>
-                           <li class="dropdown">
+                           <li class="dropdown" style="display:none">
                           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" style="margin-right:80px;"><span class="glyphicon glyphicon-user"></span>Cuenta <span class="caret"></span></a>
                           <ul class="dropdown-menu" role="menu" style="display: none;">
-                            <li><a href="loginn.aspx">Iniciar Sesion </a></li>
-                            <li><a href="registrode_usuariosGUI.aspx">Registrarme</a></li>
+                            <li><a href="loggin_fuerademasterpage.aspx">Iniciar Sesion </a></li>
+                            <li><a href="registro_usuarios_fueramasterpge.aspx">Registrarme</a></li>
                           </ul>
                         </li>
+             
+
+                                
+                                
+                                
+                             
+                            
+                            
+                         
 
                             <%} %>
-                                  
+                                  <% else if (Session["tipo"].ToString()=="USUARIO" && Session["usuario"] != null && Session["id"] != null ) { %>
+                                                                       
+ <% txt_usuaer1.Text = "welcome " + Session["usuario"].ToString(); %>
+                          
+                           
+                               <li class="dropdown">                          
+                               <a href="#" class=" dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" style="margin-right:20px;"><span class="glyphicon glyphicon-wrench"></span>editar <span class="caret"></span></a>
+                          <ul class="dropdown-menu" role="menu" style="display: none;">
+                            <li><a href="loginn.aspx">editar datos </a></li>
+                            
+                          </ul>
+                      
+                               </li>      
+
+                                
+                              <asp:Label ID="txt_usuaer1" runat="server" Text="Label" style="margin-right:10px;padding-top: 10px;" ></asp:Label>
+                               <asp:Button ID="btn_cerrar1" runat="server" Text="cerrar secion" OnClick="cerrar" style="margin-right:15px;padding-top: 10px; "  />
+                          
+                             <%} %>
                        
                       </ul>
                     <ul>

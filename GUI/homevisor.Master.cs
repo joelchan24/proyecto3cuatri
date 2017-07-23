@@ -38,7 +38,7 @@ namespace GUI
         protected void cerrar(object sender, EventArgs e)
         {
             Session.Remove("usuario");
-            Response.Redirect("loginn.aspx");
+            Response.Redirect("loggin_fuerademasterpage.aspx");
         }
     }
 }

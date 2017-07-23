@@ -1,7 +1,16 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/homevisor.Master" AutoEventWireup="true" CodeBehind="registrode_usuariosGUI.aspx.cs" Inherits="GUI.registrode_usuariosGUI" %>
-<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-</asp:Content>
-<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="registro_usuarios_fueramasterpge.aspx.cs" Inherits="GUI.registro_usuarios_fueramasterpge" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+     <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <link href="css/bootstrap.css" rel="stylesheet" />
+    <title></title>
+</head>
+<body>
+    <form id="form1" runat="server">
     <div class="container">    
         <div id="loginbox" style="display:none;   margin-top:50px;" class="mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">                    
             <div class="panel panel-info" >
@@ -67,11 +76,12 @@
                         </div>                     
                     </div>  
         </div>
+        <!-- gerardo ignora lo que aqrrib es que si no se pongo lo tira feo nose por que de todos modos lo checas -->
         <div id="signupbox" style=" margin-top:50px" class="mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
                     <div class="panel panel-info">
                         <div class="panel-heading">
                             <div class="panel-title">Sign Up</div>
-                            <div style="float:right; font-size: 85%; position: relative; top:-10px"><a id="signinlink" href="#" onclick="$('#signupbox').hide(); $('#loginbox').show()">Ingresar</a></div>
+                            <div style="float:right; font-size: 85%; position: relative; top:-10px"><a id="signinlink" href="loggin_fuerademasterpage.aspx" >Ingresar</a></div>
                         </div>  
                         <div class="panel-body" >
                             <form id="signupform" class="form-horizontal" role="form">
@@ -197,8 +207,6 @@
       
   
     </div>
-
-         
-    
-    
-</asp:Content>
+    </form>
+</body>
+</html>
