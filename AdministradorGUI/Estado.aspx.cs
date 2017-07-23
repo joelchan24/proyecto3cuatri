@@ -64,7 +64,7 @@ namespace AdministradorGUI
         protected void btn_Buscar_Click(object sender, EventArgs e)
         {
            SqlConnection con = new SqlConnection("Data Source=RODRIGO\\SQLEXPRESS;Initial Catalog= CULTURA;Integrated Security=True");
-            SqlDataAdapter adaptar = new SqlDataAdapter("select * from ESTADO where nombre like '%" +txt_Nombre.Text + "%'", con);
+            SqlDataAdapter adaptar = new SqlDataAdapter("select * from ESTADO where nombre like '%" +txtNombre.Text + "%'", con);
             DataTable dt = new DataTable();
             adaptar.Fill(dt);
             this.dgv_Estados.DataSource = dt;

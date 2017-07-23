@@ -8,6 +8,8 @@ using System.Data;
 using BO;
 using DAO;
 using Services;
+using System.Data.SqlClient;
+
 namespace AdministradorGUI
 {
     public partial class admin_eventosporaprovar : System.Web.UI.Page
@@ -41,6 +43,17 @@ namespace AdministradorGUI
                 eventado.modificaraprovacion(obj, Convert.ToString(1));
                 refrescar();
             }
+        }
+
+        protected void btnBuscar_Click(object sender, EventArgs e)
+        {
+            SqlConnection con = new SqlConnection("Data Source=RODRIGO\\SQLEXPRESS; Initial catalog=CULTURA; integrated security=true");
+            SqlDataAdapter adaptar = new SqlDataAdapter("select * from EVENTO where NOMBRE LIKE '%" + txtBuscar.Text + "%'", con);
+            //SqlDataAdapter adp = new SqlDataAdapter("select * from EVENTO e inner join CATEGORIA c on e.CATEGORIA=c.CODIGO'" + txtBuscar.Text + "'", con);
+            DataTable dt = new DataTable();
+            adaptar.Fill(dt);
+            this.dgb_porconfirmar.DataSource = dt;
+            dgb_porconfirmar.DataBind();
         }
     }
 }
