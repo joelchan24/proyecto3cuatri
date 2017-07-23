@@ -7,7 +7,7 @@ using System.Data.SqlClient;
 using System.Data;
 namespace DAO
 {
-    class conexionDAO
+    public class conexionDAO
     {
         SqlCommand comandosql;
         SqlDataAdapter adaptador;
