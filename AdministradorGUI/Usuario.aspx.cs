@@ -25,6 +25,7 @@ namespace AdministradorGUI
             {
                 ListarPais();
                 vista();
+               
             }
 
         }

@@ -7,7 +7,7 @@ using System.Data.SqlClient;
 using System.Data;
 namespace DAO
 {
-    class conexionDAO
+    public class conexionDAO
     {
         SqlCommand comandosql;
         SqlDataAdapter adaptador;
@@ -27,7 +27,7 @@ namespace DAO
 
         public SqlConnection establecerConexion()
         {
-            string cs = "Data Source=RODRIGO\\SQLEXPRESS; Initial catalog=CULTURA; integrated security=true";
+            string cs = "Data Source=DESKTOP-TT12AGM\\SQLEXPRESS; Initial catalog=CULTURA; integrated security=true";
             coneccion = new SqlConnection(cs);
             return coneccion;
         }

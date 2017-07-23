@@ -102,12 +102,13 @@
     <Content Include="js\locationpicker.jquery.js" />
     <Content Include="js\pagina.js" />
     <Content Include="js\scripts.js" />
-    <Content Include="loginn.aspx" />
+    <Content Include="loggin_fuerademasterpage.aspx" />
+    <Content Include="modalprueva.aspx" />
     <Content Include="packages.config" />
     <Content Include="homevisor.Master" />
     <Content Include="prueva.aspx" />
-    <Content Include="registrode_usuariosGUI.aspx" />
     <Content Include="registroevento.aspx" />
+    <Content Include="registro_usuarios_fueramasterpge.aspx" />
     <Content Include="WebForm1.aspx" />
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
@@ -174,12 +175,19 @@
     <Compile Include="homevisor.Master.designer.cs">
       <DependentUpon>homevisor.Master</DependentUpon>
     </Compile>
-    <Compile Include="loginn.aspx.cs">
-      <DependentUpon>loginn.aspx</DependentUpon>
+    <Compile Include="loggin_fuerademasterpage.aspx.cs">
+      <DependentUpon>loggin_fuerademasterpage.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="loginn.aspx.designer.cs">
-      <DependentUpon>loginn.aspx</DependentUpon>
+    <Compile Include="loggin_fuerademasterpage.aspx.designer.cs">
+      <DependentUpon>loggin_fuerademasterpage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="modalprueva.aspx.cs">
+      <DependentUpon>modalprueva.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="modalprueva.aspx.designer.cs">
+      <DependentUpon>modalprueva.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="prueva.aspx.cs">
@@ -189,19 +197,19 @@
     <Compile Include="prueva.aspx.designer.cs">
       <DependentUpon>prueva.aspx</DependentUpon>
     </Compile>
-    <Compile Include="registrode_usuariosGUI.aspx.cs">
-      <DependentUpon>registrode_usuariosGUI.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="registrode_usuariosGUI.aspx.designer.cs">
-      <DependentUpon>registrode_usuariosGUI.aspx</DependentUpon>
-    </Compile>
     <Compile Include="registroevento.aspx.cs">
       <DependentUpon>registroevento.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="registroevento.aspx.designer.cs">
       <DependentUpon>registroevento.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="registro_usuarios_fueramasterpge.aspx.cs">
+      <DependentUpon>registro_usuarios_fueramasterpge.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="registro_usuarios_fueramasterpge.aspx.designer.cs">
+      <DependentUpon>registro_usuarios_fueramasterpge.aspx</DependentUpon>
     </Compile>
     <Compile Include="WebForm1.aspx.cs">
       <DependentUpon>WebForm1.aspx</DependentUpon>

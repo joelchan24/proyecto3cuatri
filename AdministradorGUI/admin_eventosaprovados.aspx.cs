@@ -14,6 +14,7 @@ namespace AdministradorGUI
 {
     public partial class admin_eventosaprovados : System.Web.UI.Page
     {
+        
         protected void Page_Load(object sender, EventArgs e)
         {
             refrecar();
@@ -66,12 +67,22 @@ namespace AdministradorGUI
             SqlDataAdapter adaptar = new SqlDataAdapter("select * from EVENTO where CODIGO like '%" + txtBuscar.Text + "%'", con);
             DataTable dt = new DataTable();
             adaptar.Fill(dt);
-           
+
             this.dgv_desaprovados.DataSource = dt;
             dgv_desaprovados.DataBind();
         }
 
         protected void btnBuscar_Click1(object sender, EventArgs e)
+        {
+            SqlConnection con = new SqlConnection("Data Source=RODRIGO\\SQLEXPRESS; Initial catalog=CULTURA; integrated security=true");
+            SqlDataAdapter adaptar = new SqlDataAdapter("select * from EVENTO where NOMBRE LIKE '%" + txtBuscar.Text + "%'", con);
+            DataTable dt = new DataTable();
+            adaptar.Fill(dt);
+            this.dgv_desaprovados.DataSource = dt;
+            dgv_desaprovados.DataBind();
+        }
+
+        protected void btnBuscar_Click(object sender, EventArgs e)
         {
             SqlConnection con = new SqlConnection("Data Source=RODRIGO\\SQLEXPRESS; Initial catalog=CULTURA; integrated security=true");
             SqlDataAdapter adaptar = new SqlDataAdapter("select * from EVENTO where NOMBRE LIKE '%" + txtBuscar.Text + "%'", con);

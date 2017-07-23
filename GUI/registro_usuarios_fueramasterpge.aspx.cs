@@ -7,7 +7,7 @@ using System.Web.UI.WebControls;
 
 namespace GUI
 {
-    public partial class registrode_usuariosGUI : System.Web.UI.Page
+    public partial class registro_usuarios_fueramasterpge : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
