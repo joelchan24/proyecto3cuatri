@@ -117,11 +117,11 @@ namespace GUI
 
         protected void mandaralcajas(object sender, GridViewCommandEventArgs e)
         {
-            if (e.CommandName == "btn_seleccionar")
-            {
+            //if (e.CommandName == "btn_seleccionar")
+           // {
                 //foto promocion 7
-                // int fila = Convert.ToInt32(e.CommandArgument.ToString());
-                int fila = Convert.ToInt32(e.CommandArgument);
+                int fila = Convert.ToInt32(e.CommandArgument.ToString());
+                //int fila = Convert.ToInt32(e.CommandArgument);
                 txtid.Value = dgb_eventos.Rows[fila].Cells[1].Text;
                 txt_ubicar.Text = dgb_eventos.Rows[fila].Cells[8].Text;
                 txt_lo.Text = dgb_eventos.Rows[fila].Cells[10].Text;
@@ -148,7 +148,7 @@ namespace GUI
                 ddl_categoria.SelectedValue = dgb_eventos.Rows[fila].Cells[13].Text;
                 ddl_municipio.SelectedValue = dgb_eventos.Rows[fila].Cells[22].Text;
 
-            }
+           // }
             // if (e.CommandName == "btn_selecionar")
             //  {
             //foto promocion 7
