@@ -79,7 +79,7 @@
 					<div class="thumbnail">
            
                         
-						<img alt="Bootstrap Thumbnail First" src="img/<%# DataBinder.Eval(Container.DataItem,"FOTOPROMOCION")%>.jpg"/>
+						<img alt="Bootstrap Thumbnail First" width="400" height="400" src="img/<%# DataBinder.Eval(Container.DataItem,"FOTOPROMOCION")%>.jpg"/>
 						<div class="caption">
 							<h3>
                               <%# DataBinder.Eval(Container.DataItem,"NOMBRE")%>	
@@ -100,7 +100,7 @@
                 
           	<div class="col-md-4">
 					<div class="thumbnail">
-						<img alt="Bootstrap Thumbnail First" src="img/<%# DataBinder.Eval(Container.DataItem,"FOTOPROMOCION")%>.jpg" />
+						<img alt="Bootstrap Thumbnail First" width="400" height="400" src="img/<%# DataBinder.Eval(Container.DataItem,"FOTOPROMOCION")%>.jpg" />
 						<div class="caption">
 							<h3>
                               <%# DataBinder.Eval(Container.DataItem,"NOMBRE")%>	
@@ -121,7 +121,7 @@
                 
           	<div class="col-md-4">
 					<div class="thumbnail">
-						<img alt="Bootstrap Thumbnail First" src="img/<%# DataBinder.Eval(Container.DataItem,"FOTOPROMOCION")%>.jpg" />
+						<img alt="Bootstrap Thumbnail First" width="400" height="400" src="img/<%# DataBinder.Eval(Container.DataItem,"FOTOPROMOCION")%>.jpg" />
 						<div class="caption">
 							<h3>
                               <%# DataBinder.Eval(Container.DataItem,"NOMBRE")%>	
@@ -151,7 +151,7 @@
             <div class="col-md-12 text-center">
                 <asp:HiddenField ID="txt" runat="server" />
 
-                 <asp:Button ID="btn_vermas" runat="server" Text="Ver Más Eventos" CssClass="btn btn-info" />
+                 <asp:Button ID="btn_vermas" runat="server" Text="Ver Más Eventos" CssClass="btn btn-info" OnClick="mandar" />
             </div>
 			<h3 class="text-center" style="color:#b69da8">
 			MÁS VISITADOS
@@ -167,7 +167,7 @@
                 
           	<div class="col-md-4">
 					<div class="thumbnail">
-                      <img alt="Bootstrap Thumbnail First" src="img/<%# DataBinder.Eval(Container.DataItem,"FOTOPROMOCION")%>.jpg" />
+                      <img alt="Bootstrap Thumbnail First" width="400" height="400" src="img/<%# DataBinder.Eval(Container.DataItem,"FOTOPROMOCION")%>.jpg" />
 						<div class="caption">
 							<h3>
                               <%# DataBinder.Eval(Container.DataItem,"NOMBRE")%>

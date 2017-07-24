@@ -30,5 +30,10 @@ namespace GUI
             rtb_3.DataSource = evento.busca3().Tables[0];
             rtb_3.DataBind();
         }
+
+        protected void mandar(object sender, EventArgs e)
+        {
+            Response.Redirect("eventos_engeneral.aspx");
+        }
     }
 }

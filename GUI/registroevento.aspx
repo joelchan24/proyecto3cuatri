@@ -2,14 +2,18 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+        <div class="panel panel-info">
+                        <div class="panel-heading">
+                            <div class="panel-title"><h3 style="text-align:center">CONTROL DE REGISTRO DE EVENTOS</h3></div>
+
+                        </div> 
     <div class="container">
        
         
     <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
     <script type="text/javascript" src='https://maps.google.com/maps/api/js?sensor=false&libraries=places&key=AIzaSyCuiUJxL3eVPwCyGdf1P6g9TUQ4KW95YtA'></script>
     <script src="js/locationpicker.jquery.js"></script>
-  
-      
+
           <div class="row">
 
               <h1 > control</h1>
@@ -134,7 +138,7 @@
                 <div class="form-group">
                       <label for="exampleinput">Subir Imagen</label>
                      
-                        <asp:Image ID="Image1" runat="server" />
+                        <asp:Image ID="Image1" runat="server" Width="100px" Height="50px"/>
                     <asp:FileUpload ID="file_foto" runat="server" />
                      
                   </div>
@@ -278,6 +282,7 @@
     </script>
        
 </div>
+        </div>
 
     
 

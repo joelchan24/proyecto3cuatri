@@ -30,27 +30,11 @@ namespace GUI
         {
 
 
-             DataRow row = eve.buscar_aprovados().Tables[0].Rows[fila];
-                int val = Convert.ToInt32(row[0].ToString());
 
+            Button btn = sender as Button;
 
-            //   EventoBO obj = new EventoBO();*/
-            //   foreach( i As RepeaterItem In rp .Items)
-            // string id= ((Label)  rpt_todos.Items[1].FindControl("id")).Text;
-            //   ImageButton imgBtnEliminar = (ImageButton)rptitems.FindControl("imgBtnEliminar"); // obtenemos el control.
-            //  Repeater tableR = (Repeater)this.Page.Master.FindControl("tablaR");
-            //  Label milabel = new Label();
-            //Label lblRut =ctype (Label)rpt_todos.Items[1].FindControl("id");
-            //Label1.Text=
-            //  milabe
-            // Label1.Text = lblRut.Text;
-
-
-
-            //string t =Convert.ToString( (Label)rpt_todos.Items[1].FindControl("id"));
-            // string id = t.ToString();
-            // 
-            Label1.Text = val.ToString();
+            Label lbl = btn.Parent.FindControl("id") as Label;
+            string a = lbl.Text;
 
 
             // Response.Redirect("frm_eventos.aspx");
