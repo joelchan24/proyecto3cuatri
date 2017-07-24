@@ -67,6 +67,7 @@
                    <asp:GridView ID="dtgCategoria" runat="server" CssClass="auto-style4" Width="590px" OnRowCommand="Seleccionar">
                        <Columns>
                            <asp:ButtonField CommandName="dgvbtnSeleccionar" Text="Seleccionar" />
+
                        </Columns>
                    </asp:GridView>
                </div>

@@ -87,7 +87,7 @@
 							<p>
 								<%# DataBinder.Eval(Container.DataItem,"DESCRIPCION")%>	
 							<p>
-							<asp:Button ID="btn_vermas" runat="server" Text="Ver Detalles Evento" class="btn btn-primary" href="#" />
+							<asp:Button ID="btn_vermas1" runat="server" Text="Ver Detalles Evento" class="btn btn-primary" href="#" />
 							</p>
 						</div>
 					</div>
@@ -108,7 +108,7 @@
 							<p>
 								<%# DataBinder.Eval(Container.DataItem,"DESCRIPCION")%>	
 							<p>
-							<asp:Button ID="btn_vermas" runat="server" Text="Ver Detalles Evento" class="btn btn-primary" href="#" />
+							<asp:Button ID="btn_vermas2" runat="server" Text="Ver Detalles Evento" class="btn btn-primary" href="#" />
 							</p>
 						</div>
 					</div>
@@ -129,7 +129,7 @@
 							<p>
 								<%# DataBinder.Eval(Container.DataItem,"DESCRIPCION")%>	
 							<p>
-							<asp:Button ID="btn_vermas" runat="server" Text="Ver Detalles Evento" class="btn btn-primary" href="#" />
+							<asp:Button ID="btn_vermas3" runat="server" Text="Ver Detalles Evento" class="btn btn-primary" href="#" />
 							</p>
 						</div>
 					</div>
@@ -170,12 +170,15 @@
                       <img alt="Bootstrap Thumbnail First" src="img/<%# DataBinder.Eval(Container.DataItem,"FOTOPROMOCION")%>.jpg" />
 						<div class="caption">
 							<h3>
-                              <%# DataBinder.Eval(Container.DataItem,"NOMBRE")%>	
+                              <%# DataBinder.Eval(Container.DataItem,"NOMBRE")%>
+                              
 							</h3>
-							<p>
+                              	
+                           <p>
+                                
 								<%# DataBinder.Eval(Container.DataItem,"DESCRIPCION")%>	
 							<p>
-							<asp:Button ID="btn_vermas1" runat="server" Text="Ver Más" class="btn btn-primary" href="#" />
+							<asp:Button ID="btn_vermas4" runat="server" Text="Ver Más" class="btn btn-primary" href="#" />
 							</p>
 						</div>
 					</div>

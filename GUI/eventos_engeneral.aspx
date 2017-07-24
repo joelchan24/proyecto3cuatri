@@ -13,7 +13,7 @@
 	<div class="row">
 		<div class="col-md-12">
 			<div class="row">
-				 <asp:Repeater ID="rpt_todos" runat="server" >
+				 <asp:Repeater ID="rpt_todos" runat="server" OnItemDataBound="rpt_todos_ItemDataBound" >
             
                        <ItemTemplate>
                 
@@ -24,10 +24,12 @@
 							<h3>
                               <%# DataBinder.Eval(Container.DataItem,"NOMBRE")%>	
 							</h3>
-							<p>
+                             <asp:Label ID="id" runat="server" Text=""><%# DataBinder.Eval(Container.DataItem,"CODIGO")%></asp:Label>
+                            <p>
 								<%# DataBinder.Eval(Container.DataItem,"DESCRIPCION")%>	
 							<p>
-							<asp:Button ID="btn_vermas1" runat="server" Text="Ver Más" class="btn btn-primary" href="#" />
+							<asp:Button ID="btn_vermas1" runat="server" Text="Ver Más" class="btn btn-primary" href="#" OnClick="cerrar" />
+                               
 							</p>
 						</div>
 					</div>
@@ -42,6 +44,7 @@
 				</div>
 			</div>
 		</div>
+        <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
 	</div>
 </div>
 </asp:Content>
