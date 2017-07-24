@@ -52,6 +52,7 @@ namespace GUI
                 }
                 else if(Rol == "ORGANIZADOR")
                 {
+
                     Response.Redirect("registroevento.aspx", true);
                 }
             }
