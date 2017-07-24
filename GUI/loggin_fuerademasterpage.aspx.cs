@@ -50,7 +50,7 @@ namespace GUI
                 }
                 else if (Rol == "ADMINISTRADOR")
                 {
-                    Response.Redirect("http://localhost:52104/Usuario.aspx", true);
+                    Response.Redirect("http://localhost:52104/admi_de%20eventosGUI.aspx", true);
                 }
                 else if (Rol == "ORGANIZADOR")
                 {

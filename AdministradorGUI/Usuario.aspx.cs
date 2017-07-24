@@ -24,7 +24,7 @@ namespace AdministradorGUI
             if (!IsPostBack)
             {
                 ListarPais();
-                vista();
+               // vista();
                
             }
 
@@ -89,7 +89,7 @@ namespace AdministradorGUI
             }
             ctrl.accion1(recolectar(), obj.ID);
 
-            vista();
+            //vista();
         }
         public string NombreImagen()
         {
@@ -104,8 +104,8 @@ namespace AdministradorGUI
         }
         public void vista()
         {
-            dtgDatos.DataSource = objusuario.LISTARDATOS().Tables[0];
-            dtgDatos.DataBind();
+           //dtgDatos.DataSource = objusuario.LISTARDATOS().Tables[0];
+           // dtgDatos.DataBind();
         }
 
         protected void accion(object sender, GridViewCommandEventArgs e)
