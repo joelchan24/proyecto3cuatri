@@ -82,7 +82,7 @@ namespace AdministradorGUI
             dgv_desaprovados.DataBind();
         }
 
-        protected void btnBuscar_Click(object sender, EventArgs e)
+       /* protected void btnBuscar_Click(object sender, EventArgs e)
         {
             SqlConnection con = new SqlConnection("Data Source=RODRIGO\\SQLEXPRESS; Initial catalog=CULTURA; integrated security=true");
             SqlDataAdapter adaptar = new SqlDataAdapter("select * from EVENTO where NOMBRE LIKE '%" + txtBuscar.Text + "%'", con);
@@ -90,6 +90,6 @@ namespace AdministradorGUI
             adaptar.Fill(dt);
             this.dgv_desaprovados.DataSource = dt;
             dgv_desaprovados.DataBind();
-        }
+        }*/
     }
 }

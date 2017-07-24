@@ -40,7 +40,7 @@
 
 
     <body id="page-top" name="page-top" class="active">
-         <form id="form1" runat="server">
+        
 		<div class="container">
 			<div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModal" aria-hidden="true">
 				<div class="modal-dialog modal-default">
@@ -134,7 +134,7 @@
                           
                 		</ul>
                         <ul class="nav navbar-nav navbar-right">
-                             <!---->
+                        <form id="form1" runat="server">      <!---->
                    
  
                       <%  

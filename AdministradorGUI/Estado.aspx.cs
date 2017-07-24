@@ -31,11 +31,11 @@ namespace AdministradorGUI
         public EstadoBO RecolectarDAtos()
         {
             EstadoBO oEstadosBO = new EstadoBO();
-            int ID = 0; int.TryParse(txt_Id.Text, out ID);
-            int ID_Pais; int.TryParse(txt_Pais.Text, out ID_Pais);
+            int ID = 0; int.TryParse(txtID.Text, out ID);
+           // int ID_Pais; int.TryParse(tx.Text, out ID_Pais);
             oEstadosBO.id_estado = ID;
-            oEstadosBO.nombre_estado = txt_Nombre.Text;
-            oEstadosBO.id_pais = ID_Pais;
+            oEstadosBO.nombre_estado = txtNombre.Text;
+           // oEstadosBO.id_pais = ID_Pais;
             return oEstadosBO;
         }
 
@@ -50,9 +50,9 @@ namespace AdministradorGUI
             if (e.CommandName == "dgvbtnSeleccionar")
             {
                 int indice = Convert.ToInt32(e.CommandArgument);
-                txt_Id.Text = dgv_Estados.Rows[indice].Cells[1].Text;
-                txt_Nombre.Text = dgv_Estados.Rows[indice].Cells[2].Text;
-                txt_Pais.Text = dgv_Estados.Rows[indice].Cells[3].Text;
+                txtID.Text = dgv_Estados.Rows[indice].Cells[1].Text;
+                txtNombre.Text = dgv_Estados.Rows[indice].Cells[2].Text;
+                //txt_Pais.Text = dgv_Estados.Rows[indice].Cells[3].Text;
             }
         }
 

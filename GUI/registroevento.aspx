@@ -242,11 +242,9 @@
         <br/>
             <div class="row">
   <div class="col-md-12">
-      <asp:GridView ID="dgb_eventos" runat="server" CssClass=" table-resposive table table-bordered" OnRowCommand="mandaralcajas">
+      <asp:GridView ID="dgb_todos" runat="server" OnRowCommand="mandar">
           <Columns>
-              <asp:ButtonField CommandName="btn_seleccionar" Text="Seleccionar">
-              <ControlStyle CssClass="btn btn-primary" />
-              </asp:ButtonField>
+              <asp:ButtonField CommandName="btn_seleccionar" Text="seleccionar" />
           </Columns>
       </asp:GridView>
                 </div>
