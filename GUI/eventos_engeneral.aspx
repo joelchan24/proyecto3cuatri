@@ -13,7 +13,7 @@
 	<div class="row">
 		<div class="col-md-12">
 			<div class="row">
-				 <asp:Repeater ID="rpt_todos" runat="server" OnItemDataBound="rpt_todos_ItemDataBound" >
+			 <asp:Repeater ID="rpt_todos" runat="server" OnItemDataBound="rpt_todos_ItemDataBound" >
             
                        <ItemTemplate>
                 
