@@ -17,7 +17,7 @@
 		<div class="col-md-6">
             <div class="form-group">
              <label for="exampleinput">Escriba Su Mensaje</label><br />
-            <asp:TextBox id="txt_mensaje" TextMode="multiline" Rows="3" cols="500" runat="server">           
+            <asp:TextBox id="txt_mensaje" TextMode="multiline" Rows="3" cols="20" style="margin: 0px; width: 999px" runat="server">           
             </asp:TextBox>
             <button type="button" class="btn  btn-xs btn-info">
 				Default
