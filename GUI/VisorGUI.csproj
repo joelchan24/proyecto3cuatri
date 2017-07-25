@@ -82,6 +82,7 @@
     <Content Include="frm_mensaje.aspx" />
     <Content Include="frm_musica.aspx" />
     <Content Include="frm_teatroo.aspx" />
+    <Content Include="HorariosEventos.aspx" />
     <Content Include="img\avatar.png" />
     <Content Include="img\ccaae9ad-e297-462c-84ad-414e7f30ab51image16.jpeg" />
     <Content Include="img\obra-cholo.jpg" />
@@ -190,6 +191,13 @@
     </Compile>
     <Compile Include="homevisor.Master.designer.cs">
       <DependentUpon>homevisor.Master</DependentUpon>
+    </Compile>
+    <Compile Include="HorariosEventos.aspx.cs">
+      <DependentUpon>HorariosEventos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HorariosEventos.aspx.designer.cs">
+      <DependentUpon>HorariosEventos.aspx</DependentUpon>
     </Compile>
     <Compile Include="loggin_fuerademasterpage.aspx.cs">
       <DependentUpon>loggin_fuerademasterpage.aspx</DependentUpon>
