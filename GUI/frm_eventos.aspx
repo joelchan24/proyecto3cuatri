@@ -4,6 +4,8 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
      <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
     <script type="text/javascript" src='https://maps.google.com/maps/api/js?sensor=false&libraries=places&key=AIzaSyCuiUJxL3eVPwCyGdf1P6g9TUQ4KW95YtA'></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js" type="text/javascript"></script>
+
     <script src="js/locationpicker.jquery.js"></script>
   <div class="container">
 	<div class="row">
@@ -217,5 +219,47 @@
 			</div>
 		</div>
 	</div>
+      <div>
+    <textarea id="TextArea1" cols="200" rows="2"></textarea>
+    <input type="button" id="Button1" runat="server" value="Button" onclick="AgregarComentario()"/>
+      </div>
+      <div id="Mensajes">
+          
+      </div>
 </div>
+    
+    <script>
+
+        function AgregarComentario() {
+            var texto = $("#TextArea1").val();
+
+            //alert(texto);
+
+            $.ajax({
+                type: "POST",
+                url: "frm_eventos.aspx/AgregarMensaje",
+                data: '{Texto:"'+ texto+'"}',
+                contentType: "application/json; charset=utf-8",
+                dataType: "json",
+                success: function (response) {
+                    var r = JSON.parse(JSON.stringify(response));
+                    //var r = JSON.parse(JSON.stringify(d));
+
+                    var Usuario = "<label>" + r.d.Usuario + "</label>"
+                    var Comentario = "<p>" + r.d.Mensaje + "</p><hr />"
+                  
+                    $("#Mensajes").append(Usuario);
+                    $("#Mensajes").append(Comentario);
+                },
+                failure: function (response) {
+                    alert("Error");
+                }
+            });
+        }
+        function OnSuccess(response) {
+            var Comentario="<label>"+response+"</label>"
+            $("#Mensajes").html(Comentario);
+        }
+</script>
 </asp:Content>
+
