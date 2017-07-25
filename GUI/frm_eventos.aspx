@@ -7,7 +7,7 @@
     <script src="js/locationpicker.jquery.js"></script>
   <div class="container">
 	<div class="row">
-        <asp:Repeater ID="rpt_evento" runat="server">
+        <asp:Repeater ID="rpt" runat="server">
             <ItemTemplate>
                 <div class="col-md-12">
                    
@@ -15,7 +15,7 @@
 				<%# DataBinder.Eval(Container.DataItem,"NOMBRE") %>
 			</h3>
 			<h3 class="text-info">
-				FOTO PRINCIPALhjjjjjj
+				FOTO PRINCIPAL
 			</h3>
 		</div>
 	</div>

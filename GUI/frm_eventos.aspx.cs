@@ -23,8 +23,8 @@ namespace GUI
             else if (Request.QueryString["id"] != null)
             {
                id = Convert.ToInt32( Request.QueryString["id"]);
-                rpt_evento.DataSource = evento.datoseventoselecionado(id).Tables[0];
-                rpt_evento.DataBind();
+                rpt.DataSource = evento.datoseventoselecionado(id).Tables[0];
+                rpt.DataBind();
 
             }
 
