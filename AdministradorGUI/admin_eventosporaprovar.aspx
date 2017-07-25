@@ -26,7 +26,7 @@
         <div class="row">
 		<div class="auto-style3">
 			<asp:TextBox ID="txtBuscar" runat="server" Width="705px" Height="30px"></asp:TextBox>
-            <asp:Button ID="btnBuscar" Text="Buscar" runat="server" CssClass="btn btn-dropbox" Width="100px" OnClick="btnBuscar_Click" />
+            <asp:Button ID="btnBuscar" Text="Buscar" runat="server" CssClass="btn btn-dropbox" Width="100px"  />
 
 		</div>
 	</div><br />

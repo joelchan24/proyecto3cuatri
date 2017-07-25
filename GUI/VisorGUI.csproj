@@ -79,6 +79,7 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="frm_danza.aspx" />
     <Content Include="frm_eventos.aspx" />
+    <Content Include="frm_mensaje.aspx" />
     <Content Include="frm_musica.aspx" />
     <Content Include="frm_teatroo.aspx" />
     <Content Include="img\avatar.png" />
@@ -161,6 +162,13 @@
     </Compile>
     <Compile Include="frm_eventos.aspx.designer.cs">
       <DependentUpon>frm_eventos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frm_mensaje.aspx.cs">
+      <DependentUpon>frm_mensaje.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frm_mensaje.aspx.designer.cs">
+      <DependentUpon>frm_mensaje.aspx</DependentUpon>
     </Compile>
     <Compile Include="frm_musica.aspx.cs">
       <DependentUpon>frm_musica.aspx</DependentUpon>

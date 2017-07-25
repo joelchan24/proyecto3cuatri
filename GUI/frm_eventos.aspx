@@ -4,6 +4,8 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
      <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
     <script type="text/javascript" src='https://maps.google.com/maps/api/js?sensor=false&libraries=places&key=AIzaSyCuiUJxL3eVPwCyGdf1P6g9TUQ4KW95YtA'></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js" type="text/javascript"></script>
+
     <script src="js/locationpicker.jquery.js"></script>
   <div class="container">
 	<div class="row">
@@ -25,14 +27,38 @@
 				DATOS DEL EVENTO
 			</h3>
 			<h2>
-				Heading
+				YUCATÁN
 			</h2>
-			<p>
-				Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
-			</p>
-			<p>
-				<a class="btn" href="#">View details »</a>
-			</p>
+            <div class="form-group">
+                      <label for="exampleinput">Descripción</label>
+                    <p>danza</p>
+                     
+                  </div>
+			
+                  <div class="form-group">
+                      <label for="exampleinput">Fecha De  Inicio</label>
+                    <p>danza</p>
+                     
+                  </div>
+
+              
+            
+                    <div class="form-group">
+                       <label for="exampleinput">Fecha De Cierre</label>
+                    <p>danza</p>
+                       
+              </div>
+               
+                    <div class="form-group">
+                         <label for="exampleinput">Cantegoria</label>
+                      <p>danza</p>
+                    </div>
+                
+
+              
+            
+            
+			
 		</div>
 	</div>
 	<div class="row">
@@ -43,19 +69,42 @@
 			<h2>
 				Heading
 			</h2>
-			<p>
-				Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
-			</p>
-			<p>
-				<a class="btn" href="#">View details »</a>
-			</p>
+			 <div class="form-group">
+                      <label for="exampleinput">Colonia</label>
+                    <p>danza</p>
+                     
+                  </div>
+			
+                  <div class="form-group">
+                      <label for="exampleinput">Municipio</label>
+                    <p>danza</p>
+                     
+                  </div>
+
+              
+            
+                    <div class="form-group">
+                       <label for="exampleinput">C.P</label>
+                    <p>danza</p>
+                       
+              </div>
+               
+                    <div class="form-group">
+                         <label for="exampleinput">Cruzamientos</label>
+                      <p>danza</p>
+                    </div>
+                
+
+              
+			
 		</div>
         <!-- mapa gay-->
 		<div class="col-md-6">
 			    <div class="form-group">
-                    <label for="exampleinput" >Ubicacion</label>
-                   
+                    <label for="exampleinput" >Ubicación</label>
+                    
                     <asp:TextBox ID="txt_ubicar" runat="server" CssClass="form-control"></asp:TextBox>
+                    
 
 
                 </div>
@@ -98,9 +147,17 @@
 
     </script>
 		</div>
-        <!-- mapa gay-->
+        <div class="row">
+		<div class="col-md-6">
+            <p class="text-right"><strong>Para Más Infromación Del Evento </strong></p>
+		</div>
+		<div class="col-md-6">
+           
+            <asp:Button ID="btn_mas" runat="server" Text="Más información" class="btn btn-outline-info" OnClick="mandar" />
+		</div>
 	</div>
-	--
+	</div>
+
 	<div class="row">
 		<div class="col-md-12">
 			<h3>
@@ -162,5 +219,47 @@
 			</div>
 		</div>
 	</div>
+      <div>
+    <textarea id="TextArea1" cols="200" rows="2"></textarea>
+    <input type="button" id="Button1" runat="server" value="Button" onclick="AgregarComentario()"/>
+      </div>
+      <div id="Mensajes">
+          
+      </div>
 </div>
+    
+    <script>
+
+        function AgregarComentario() {
+            var texto = $("#TextArea1").val();
+
+            //alert(texto);
+
+            $.ajax({
+                type: "POST",
+                url: "frm_eventos.aspx/AgregarMensaje",
+                data: '{Texto:"'+ texto+'"}',
+                contentType: "application/json; charset=utf-8",
+                dataType: "json",
+                success: function (response) {
+                    var r = JSON.parse(JSON.stringify(response));
+                    //var r = JSON.parse(JSON.stringify(d));
+
+                    var Usuario = "<label>" + r.d.Usuario + "</label>"
+                    var Comentario = "<p>" + r.d.Mensaje + "</p><hr />"
+                  
+                    $("#Mensajes").append(Usuario);
+                    $("#Mensajes").append(Comentario);
+                },
+                failure: function (response) {
+                    alert("Error");
+                }
+            });
+        }
+        function OnSuccess(response) {
+            var Comentario="<label>"+response+"</label>"
+            $("#Mensajes").html(Comentario);
+        }
+</script>
 </asp:Content>
+

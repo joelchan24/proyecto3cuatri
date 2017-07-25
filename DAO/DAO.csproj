@@ -50,6 +50,7 @@
     <Compile Include="interface_metodos_guardar_eliminar_actualizar_buscar.cs" />
     <Compile Include="LitarTODO.cs" />
     <Compile Include="loginDAO.cs" />
+    <Compile Include="mensajeDAO.cs" />
     <Compile Include="MensajesDAO.cs" />
     <Compile Include="MunicipioDAO.cs" />
     <Compile Include="PaisDAO.cs" />
