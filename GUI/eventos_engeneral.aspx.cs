@@ -29,17 +29,7 @@ namespace GUI
         
         protected void cerrar(object sender, EventArgs e)
         {
-            int id=Convert.ToInt32(list.SelectedValue);
-
-            DataRow row = eve.buscar_aprovados().Tables[0].Rows[fila];
-            int val = Convert.ToInt32(row[0].ToString());
-
-
-
-            Button btn = sender as Button;
-
-            Label lbl = btn.Parent.FindControl("id") as Label;
-            Label1.Text = id.ToString();
+            
              
 
 

@@ -5,7 +5,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using DAO;
-
+using BO;
 namespace GUI
 {
     public partial class frm_eventos : System.Web.UI.Page
@@ -25,7 +25,9 @@ namespace GUI
                id = Convert.ToInt32( Request.QueryString["id"]);
                 rpt.DataSource = evento.datoseventoselecionado(id).Tables[0];
                 rpt.DataBind();
-
+                EventoBO obj = new EventoBO();
+                obj.Codigo = id;
+                evento.modificarVisistas(obj);
             }
 
         }

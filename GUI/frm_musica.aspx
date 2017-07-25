@@ -28,7 +28,7 @@
 							<p>
 								<%# DataBinder.Eval(Container.DataItem,"DESCRIPCION")%>	
 							<p>
-							<asp:Button ID="btn_vermas1" runat="server" Text="Ver Más" class="btn btn-primary" href="#" />
+												 <a href="frm_eventos.aspx?id=<%#Eval("CODIGO")%>">Ver Más </a>
 							</p>
 						</div>
 					</div>
