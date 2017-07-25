@@ -15,6 +15,7 @@ namespace GUI
         
         protected void Page_Load(object sender, EventArgs e)
         {
+            
             if (Request.QueryString["id"] == null)
             {
                 id = 0;
@@ -23,11 +24,13 @@ namespace GUI
             else if (Request.QueryString["id"] != null)
             {
                id = Convert.ToInt32( Request.QueryString["id"]);
+                
                 rpt.DataSource = evento.datoseventoselecionado(id).Tables[0];
                 rpt.DataBind();
                 EventoBO obj = new EventoBO();
                 obj.Codigo = id;
                 evento.modificarVisistas(obj);
+                Session["evento"] = id;
             }
 
         }
