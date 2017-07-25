@@ -12,7 +12,11 @@ body {
 }
 
 /* Set widths on the form inputs since otherwise they're 100% wide */
-
+input,
+select,
+textarea {
+    max-width: 680px;
+}
 
 /* Responsive: Portrait tablets and up */
 @media screen and (min-width: 768px) {
