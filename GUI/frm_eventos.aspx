@@ -15,7 +15,7 @@
 				<%# DataBinder.Eval(Container.DataItem,"NOMBRE") %>
 			</h3>
 			<h3 class="text-info">
-				FOTO PRINCIPAL
+				FOTO PRINCIPALhjjjjjj
 			</h3>
 		</div>
 	</div>
