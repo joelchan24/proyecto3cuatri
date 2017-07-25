@@ -22,10 +22,10 @@ namespace GUI
             UsuarioBO obj = new UsuarioBO();
             obj.Usuario = txt_usuario.Text;
             obj.Contraseña = txt_contraseña.Text;
-
+          
             usuarioDAO usuario = new usuarioDAO();
             loginDAO login = new loginDAO();
-
+            
 
             if (login.verificar(obj))
             {
@@ -54,7 +54,8 @@ namespace GUI
                 }
                 else if (Rol == "ORGANIZADOR")
                 {
-                    Response.Redirect("WebForm1.aspx", true);
+
+                    Response.Redirect("registroevento.aspx", true);
                 }
             }
             else
