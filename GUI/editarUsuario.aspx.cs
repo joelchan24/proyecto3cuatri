@@ -7,6 +7,9 @@ using System.Web.UI.WebControls;
 using DAO;
 using BO;
 using Services;
+using System.Security.Cryptography;
+using System.Text;
+using System.IO;
 
 namespace GUI
 {
@@ -16,6 +19,8 @@ namespace GUI
         LitarTODO objeditar = new LitarTODO();
         public int id;
         usuarioDAO objusuario = new usuarioDAO();
+        ctrol_usuarioSERVICIOS ctrlusu = new ctrol_usuarioSERVICIOS();
+        string nombrefoto = "";
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
@@ -25,6 +30,28 @@ namespace GUI
             }
             
 
+        }
+        public UsuarioBO recolectar()
+        {
+            UsuarioBO obj = new UsuarioBO();
+            int id = 0; int.TryParse(txtID.Value, out id);
+            obj.Codigo = id;
+            obj.Nombre = txtNombre.Text;
+            obj.Apellidos = txtapellidos.Text;
+            obj.FechaNacimineto = Convert.ToDateTime(txtFecha.Text);
+            obj.Telefono = TxtTelefono.Text;
+            obj.Correo = txtCorreo.Text;
+            obj.IDCUENTA = Convert.ToInt32(ddlTipoUsuario.SelectedValue);
+            obj.Usuario = txtusuario.Text;
+            obj.Contraseña = txtContraseña.Text;
+            obj.CodigoMunicipio = Convert.ToInt32(ddlMunicipio.SelectedValue);
+            obj.Colonia = txtColonia.Text;
+            obj.CodigoPostal = txtCOdigoPostal.Text;
+            obj.Cruzamiento = txtCruzamiento.Text;
+            obj.NumeroInterior = txtNumeroInterior.Text;
+            obj.NumeroExterior = txtNumeroExteriror.Text;
+            obj.Fotografia = nombrefoto;
+            return obj;
         }
         public void vista()
         {
@@ -84,6 +111,34 @@ namespace GUI
             e.Row.Cells[17].Visible = false;
             e.Row.Cells[18].Visible = false;
             e.Row.Cells[20].Visible = false;
+        }
+
+        protected void seleccionar(object sender, EventArgs e)
+        {
+            Button selec = (Button)sender;
+            if (selec.ID == "btnModificar")
+            {
+                if (file_foto.HasFile)
+                {
+                    File.Delete(MapPath(imgFoto.ImageUrl));
+                    nombrefoto = NombreImagen();
+                    file_foto.SaveAs(Server.MapPath("~/img/") + nombrefoto + ".jpg");
+                }
+                //FileUploadFoto.Save("miimagen.jpg",ImageFormat.Jpeg);
+            }
+            ctrlusu.accion1(recolectar(), selec.ID);
+            vista();
+        }
+        public string NombreImagen()
+        {
+            DateTime tiempo = DateTime.Now;
+            MD5 md5 = MD5CryptoServiceProvider.Create();
+            ASCIIEncoding encoding = new ASCIIEncoding();
+            byte[] stream = null;
+            StringBuilder sb = new StringBuilder();
+            stream = md5.ComputeHash(encoding.GetBytes(tiempo.ToString(System.Globalization.CultureInfo.InvariantCulture)));
+            for (int i = 0; i < stream.Length; i++) sb.AppendFormat("{0:x2}", stream[i]);
+            return sb.ToString();
         }
     }
 }

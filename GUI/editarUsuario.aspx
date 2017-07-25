@@ -93,7 +93,7 @@
                             <div class="row">
                                 <div class="col-lg-5"></div>
                                 <div class="form-group col-lg-5">
-                                    <!-- Button -->   <asp:Button ID="btnAgregar" runat="server" Text="MODIFICAR" CssClass="btn btn-info" />                                        
+                                    <!-- Button -->   <asp:Button ID="btnModificar" runat="server" Text="MODIFICAR" CssClass="btn btn-info" OnClick="seleccionar" />                                        
                                 </div>
                                 <div class="col-lg-2"><asp:HiddenField ID="txtID" runat="server" /></div>
                                 </div>
