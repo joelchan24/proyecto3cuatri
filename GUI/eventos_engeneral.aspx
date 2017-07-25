@@ -14,12 +14,13 @@
 		<div class="col-md-12">
 			<div class="row">
 			 
-                 <asp:ListView id="list" runat="server" OnItemCommand="mandar">
+                 <asp:ListView id="list" runat="server" OnItemCommand="mandar" datakeynames="CODIGO" OnSelectedIndexChanged="cerrar">
+
                        <ItemTemplate>
                 
           	<div class="col-md-4">
 					<div class="thumbnail">
-						<img alt="Bootstrap Thumbnail First" src="~/img/<%# Eval("FOTOPROMOCION")%>.jpg" />
+						<img alt="Bootstrap Thumbnail First" src="img/<%# Eval("FOTOPROMOCION")%>.jpg" />
 						<div class="caption">
 							<h3>
                               <%# Eval("NOMBRE")%>	
@@ -28,15 +29,19 @@
                             <p>
 								<%# Eval("DESCRIPCION")%>	
 							<p>
-							<asp:Button ID="btn_vermas1" runat="server" Text="Ver Más" class="btn btn-primary" href="#" OnClick="cerrar" />
                                
+                               <a href="frm_eventos.aspx?id=<%#Eval("CODIGO")%>">ir</a>
 							</p>
 						</div>
 					</div>
 				</div>
                                            </ItemTemplate>
      </asp:ListView>
+                <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<% Data Source=DESKTOP-TT12AGM\\SQLEXPRESS; Initial catalog=CULTURA; integrated security=true%>">
+                    
+                </asp:SqlDataSource>
 				<div class="col-md-4">
+                    
 					
 				</div>
 				<div class="col-md-4">

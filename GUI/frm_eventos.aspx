@@ -7,18 +7,21 @@
     <script src="js/locationpicker.jquery.js"></script>
   <div class="container">
 	<div class="row">
-		<div class="col-md-12">
-			<h3 class="text-center text-primary">
-				NOMBRE DEL EVENTO
+        <asp:Repeater ID="rpt_evento" runat="server">
+            <ItemTemplate>
+                <div class="col-md-12">
+                   
+			<h3 class="text-center text-primary" >
+				<%# DataBinder.Eval(Container.DataItem,"NOMBRE") %>
 			</h3>
 			<h3 class="text-info">
-				h3. Lorem ipsum dolor sit amet.
+				FOTO PRINCIPAL
 			</h3>
 		</div>
 	</div>
 	<div class="row">
 		<div class="col-md-6">
-			<img alt="Bootstrap Image Preview" src="http://lorempixel.com/140/140/" class="img-rounded" /><!-- aqui iria la foro promocialan-->
+			<img alt="Bootstrap Image Preview" src="img/<%# DataBinder.Eval(Container.DataItem,"FOTOPROMOCION")%>.jpg" class="img-rounded" style="width:500px;height:370px" /><!-- aqui iria la foro promocialan-->
 		</div>
 		<div class="col-md-6">
 			 <h3>
@@ -29,13 +32,13 @@
 			</h2>
             <div class="form-group">
                       <label for="exampleinput">Descripción</label>
-                    <p>danza</p>
+                    <p><%# DataBinder.Eval(Container.DataItem,"DESCRIPCION") %></p>
                      
                   </div>
 			
                   <div class="form-group">
                       <label for="exampleinput">Fecha De  Inicio</label>
-                    <p>danza</p>
+                    <p ><%# DataBinder.Eval(Container.DataItem,"FECHAAPERTURA") %></p>
                      
                   </div>
 
@@ -43,13 +46,13 @@
             
                     <div class="form-group">
                        <label for="exampleinput">Fecha De Cierre</label>
-                    <p>danza</p>
+                    <p ><%# DataBinder.Eval(Container.DataItem,"FECHACIERRE") %></p>
                        
               </div>
                
                     <div class="form-group">
                          <label for="exampleinput">Cantegoria</label>
-                      <p>danza</p>
+                      <p><%# DataBinder.Eval(Container.DataItem,"nombrecat") %></p>
                     </div>
                 
 
@@ -64,18 +67,16 @@
 			<h3>
 				DIRRECION
 			</h3>
-			<h2>
-				Heading
-			</h2>
+		
 			 <div class="form-group">
                       <label for="exampleinput">Colonia</label>
-                    <p>danza</p>
+                    <p><%# DataBinder.Eval(Container.DataItem,"NOMBRE") %></p>
                      
                   </div>
 			
                   <div class="form-group">
                       <label for="exampleinput">Municipio</label>
-                    <p>danza</p>
+                    <p><%# DataBinder.Eval(Container.DataItem,"muni") %></p>
                      
                   </div>
 
@@ -83,13 +84,13 @@
             
                     <div class="form-group">
                        <label for="exampleinput">C.P</label>
-                    <p>danza</p>
+                    <p><%# DataBinder.Eval(Container.DataItem,"CODIGOPOSTAL") %></p>
                        
               </div>
                
                     <div class="form-group">
                          <label for="exampleinput">Cruzamientos</label>
-                      <p>danza</p>
+                      <p><%# DataBinder.Eval(Container.DataItem,"CRUZAMIENTO") %></p>
                     </div>
                 
 
@@ -101,7 +102,7 @@
 			    <div class="form-group">
                     <label for="exampleinput" >Ubicación</label>
                     
-                    <asp:TextBox ID="txt_ubicar" runat="server" CssClass="form-control"></asp:TextBox>
+             
                     
 
 
@@ -112,34 +113,33 @@
                 <!--altitud y lon-->
                
                 <div class="form-group" style="display:none;">
-                    <label for="exampleinput">lat:</label>
-                    <asp:TextBox ID="txtlat" runat="server" Text="20.938297181414647" CssClass="form-control"></asp:TextBox>
-                     <label for="exampleinput">log:</label>
-                    <asp:TextBox ID="txt_lo" runat="server" Text="-89.61501516379462" CssClass="form-control"></asp:TextBox>
+                    
+                    <input type="text" id="a" value="<%# DataBinder.Eval(Container.DataItem,"UBICACIONGEOGRAFICA") %>" />
+                <input   type="text" id="b" value="<%# DataBinder.Eval(Container.DataItem,"LONGITUD") %>" />
+                   <input  type="text" id="c" value="<%# DataBinder.Eval(Container.DataItem,"LATITUD") %>"/>
+                  
+           
                 </div>
                 <!--altasb  , bjaas y ca,mbios botonos-->
                 <div>
                          </div>
              <script>
-        $('#ModalMapPreview').locationpicker({
+       $('#ModalMapPreview').locationpicker({
             radius: 0,
             location: {
-                latitude: $('#<%=txtlat.ClientID%>').val(),
-                longitude: $('#<%=txt_lo.ClientID%>').val()
+                latitude: $('#c').val(),
+                longitude: $('#b').val()
             },
             inputBinding: {
-                latitudeInput: $('#<%=txtlat.ClientID%>'),
-                longitudeInput: $('#<%=txt_lo.ClientID%>'),
-                locationNameInput: $('#<%=txt_ubicar.ClientID%>')
+                latitudeInput: $('#c'),
+                longitudeInput: $('#b'),
+                locationNameInput: $('#a')
             },
             enableAutocomplete: true
 
 
         });
-
-
-
-            
+                            
 
 
 
@@ -216,6 +216,10 @@
 				</div>
 			</div>
 		</div>
+        </ItemTemplate>
+		
+       </asp:Repeater>
 	</div>
 </div>
+    
 </asp:Content>
