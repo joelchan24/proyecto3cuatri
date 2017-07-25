@@ -5,13 +5,27 @@
     
    <div class="container">
         <div class="row">
+
+
+
+            <br />
+            <br />
+             <br />
+            <br />
+             <br />
+            <br />
 		<div class="col-md-6">
+            <div class="form-group">
+             <label for="exampleinput">Escriba Su Mensaje</label><br />
             <asp:TextBox id="txt_mensaje" TextMode="multiline" Rows="3" cols="500" runat="server">           
             </asp:TextBox>
-            <button type="button" class="btn btn-block btn-xs btn-info">
+            <button type="button" class="btn  btn-xs btn-info">
+				Default
+			</button>
+                </div>
 		</div>
 		<div class="col-md-6">
-             
+            
 		</div>
 
 	</div>
