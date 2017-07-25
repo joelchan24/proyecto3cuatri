@@ -12,7 +12,7 @@
                 <div class="row">
                     <div class="form-group col-lg-6">
                         <asp:label ID="Label1" runat="server" text="Label" for="email"></asp:label>
-                        <asp:dropdownlist ID="Dropdownlist1" runat="server" with="100px" heigh="50px"></asp:dropdownlist>
+                        <asp:dropdownlist ID="Dropdownlist1" runat="server" with="400px" heigh="50px"></asp:dropdownlist><br />
                         <asp:label ID="lblHoraInicio" runat="server" text="Label" for="email"></asp:label><br />
                         <asp:textbox ID="txtHorainicio" runat="server" class="form-control" type="text" placeholder="Digite(10 digitos)"></asp:textbox>
                     </div>
