@@ -135,7 +135,7 @@ namespace AdministradorGUI
 
         protected void ocultar(object sender, GridViewRowEventArgs e)
         {
-            e.Row.Cells[1].Visible = false;
+            /*e.Row.Cells[1].Visible = false;
             e.Row.Cells[4].Visible = false;
             e.Row.Cells[6].Visible = false;
             e.Row.Cells[8].Visible = false;
@@ -147,7 +147,7 @@ namespace AdministradorGUI
             e.Row.Cells[17].Visible = false;
             e.Row.Cells[18].Visible = false;
             e.Row.Cells[20].Visible = false;
-            e.Row.Cells[11].Visible = false;
+            e.Row.Cells[11].Visible = false;*/
 
         }
     }

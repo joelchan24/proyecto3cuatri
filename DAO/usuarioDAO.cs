@@ -153,7 +153,7 @@ namespace DAO
         }
         public DataSet LISTARDATOS()
         {
-            SqlCommand CMD = new SqlCommand("select h.*,d.*,f.* from USUARIOS H, DIRECCION D, MUNICIPIO F WHERE H.IDDIRECCION=D.CODIGO AND F.CODIGO=(SELECT MUNICIPIO FROM DIRECCION WHERE CODIGO=(SELECT IDDIRECCION FROM USUARIOS))");
+            SqlCommand CMD = new SqlCommand("select * from USUARIOS");
             CMD.CommandType = CommandType.Text;
             return obj.EjecutarSentencia(CMD);
         }
