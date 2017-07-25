@@ -16,14 +16,9 @@ namespace GUI
         eventoDAO evento = new eventoDAO();
         protected void Page_Load(object sender, EventArgs e)
         {
-            ArrayList lista = new ArrayList();
-            string[] archivos = System.IO.Directory.GetFiles(Server.MapPath("~/img"), "*.*");
+          
 
-            foreach(string archivo in archivos)
-            {
-                lista.Add("/img/" + System.IO.Path.GetFileName(archivo));
-            }
-           Repeater1.DataSource = evento.buscar_aprovados().Tables[0];
+            Repeater1.DataSource = evento.buscar_aprovados().Tables[0];
            Repeater1.DataBind();
             //aqui el maximo resgiutro
             rpt_uno.DataSource = evento.busca1().Tables[0];
@@ -34,6 +29,11 @@ namespace GUI
             //aqui el maximo resgiutro
             rtb_3.DataSource = evento.busca3().Tables[0];
             rtb_3.DataBind();
+        }
+
+        protected void mandar(object sender, EventArgs e)
+        {
+            Response.Redirect("eventos_engeneral.aspx");
         }
     }
 }

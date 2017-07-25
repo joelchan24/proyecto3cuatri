@@ -40,6 +40,24 @@ namespace GUI {
         protected global::System.Web.UI.WebControls.Repeater rtb_3;
         
         /// <summary>
+        /// Control txt.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HiddenField txt;
+        
+        /// <summary>
+        /// Control btn_vermas.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btn_vermas;
+        
+        /// <summary>
         /// Control Repeater1.
         /// </summary>
         /// <remarks>

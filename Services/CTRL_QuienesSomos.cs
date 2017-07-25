@@ -9,7 +9,7 @@ using System.Data;
 
 namespace Services
 {
-    class CTRL_QuienesSomos
+    public class CTRL_QuienesSomos
     {
         QuienesSomosDAO oQuienesSomosDAO;
 

@@ -2,15 +2,20 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+        <div class="panel panel-info">
+                        <div class="panel-heading">
+                            <div class="panel-title"><h3 style="text-align:center">CONTROL DE REGISTRO DE EVENTOS</h3></div>
+
+                        </div> 
     <div class="container">
        
         
     <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
     <script type="text/javascript" src='https://maps.google.com/maps/api/js?sensor=false&libraries=places&key=AIzaSyCuiUJxL3eVPwCyGdf1P6g9TUQ4KW95YtA'></script>
     <script src="js/locationpicker.jquery.js"></script>
-  
-      
+
           <div class="row">
+
               <h1 > control</h1>
                <asp:HiddenField  ID="txtid" runat="server" />
               <asp:HiddenField ID="txtx_usuariop" runat="server" />
@@ -133,7 +138,7 @@
                 <div class="form-group">
                       <label for="exampleinput">Subir Imagen</label>
                      
-                        <asp:Image ID="Image1" runat="server" />
+                        <asp:Image ID="Image1" runat="server" Width="100px" Height="50px"/>
                     <asp:FileUpload ID="file_foto" runat="server" />
                      
                   </div>
@@ -162,7 +167,7 @@
                 
                   <div class="form-group">
                       <label for="exampleinput">Descripcion</label>
-                     <asp:TextBox id="txt_descrip" TextMode="multiline" Columns="50" Rows="5" runat="server" CssClass="form-control " width="349px" height=350px                  />
+                     <asp:TextBox id="txt_descrip" TextMode="multiline" Columns="50" Rows="5" runat="server" CssClass="form-control " width="349px" height="350px"></asp:TextBox>                 />
                      
                   </div>
 
@@ -229,8 +234,7 @@
 		</div>
 		<div class="col-md-3">
               
-        <asp:Button ID="btn_nuevo" runat="server" Text="nuevo" CssClass="btn btn-warning   " OnClick="accion" style="text-align:right"/>
-        
+        <asp:Button ID="btn_nuevo" runat="server" Text="nuevo" CssClass="btn btn-warning   " OnClick="accion" style="text-align:right"/> 
 		</div>
 	</div>
        
@@ -242,11 +246,9 @@
         <br/>
             <div class="row">
   <div class="col-md-12">
-      <asp:GridView ID="dgb_eventos" runat="server" CssClass=" table-resposive table table-bordered" OnRowCommand="mandaralcajas">
+      <asp:GridView ID="dgb_todos" runat="server" OnRowCommand="mandar">
           <Columns>
-              <asp:ButtonField CommandName="btn_seleccionar" Text="Seleccionar">
-              <ControlStyle CssClass="btn btn-primary" />
-              </asp:ButtonField>
+              <asp:ButtonField CommandName="btn_seleccionar" Text="seleccionar" />
           </Columns>
       </asp:GridView>
                 </div>
@@ -280,6 +282,7 @@
     </script>
        
 </div>
+        </div>
 
     
 

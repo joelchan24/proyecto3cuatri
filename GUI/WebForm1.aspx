@@ -79,7 +79,7 @@
 					<div class="thumbnail">
            
                         
-						<img alt="Bootstrap Thumbnail First" src="C:\Users\Lenovo\Source\Repos\proyecto3cuatri\GUI\img/<%# DataBinder.Eval(Container.DataItem,"FOTOPROMOCION")%>"/>
+						<img alt="Bootstrap Thumbnail First" width="400" height="400" src="img/<%# DataBinder.Eval(Container.DataItem,"FOTOPROMOCION")%>.jpg"/>
 						<div class="caption">
 							<h3>
                               <%# DataBinder.Eval(Container.DataItem,"NOMBRE")%>	
@@ -87,7 +87,7 @@
 							<p>
 								<%# DataBinder.Eval(Container.DataItem,"DESCRIPCION")%>	
 							<p>
-							<asp:Button ID="btn_vermas" runat="server" Text="Ver Detalles Evento" class="btn btn-primary" href="#" />
+							<asp:Button ID="btn_vermas1" runat="server" Text="Ver Detalles Evento" class="btn btn-primary" href="#" />
 							</p>
 						</div>
 					</div>
@@ -100,7 +100,7 @@
                 
           	<div class="col-md-4">
 					<div class="thumbnail">
-						<img alt="Bootstrap Thumbnail First" src="~/img/<%# DataBinder.Eval(Container.DataItem,"FOTOPROMOCION")%>" />
+						<img alt="Bootstrap Thumbnail First" width="400" height="400" src="img/<%# DataBinder.Eval(Container.DataItem,"FOTOPROMOCION")%>.jpg" />
 						<div class="caption">
 							<h3>
                               <%# DataBinder.Eval(Container.DataItem,"NOMBRE")%>	
@@ -108,7 +108,7 @@
 							<p>
 								<%# DataBinder.Eval(Container.DataItem,"DESCRIPCION")%>	
 							<p>
-							<asp:Button ID="btn_vermas" runat="server" Text="Ver Detalles Evento" class="btn btn-primary" href="#" />
+							<asp:Button ID="btn_vermas2" runat="server" Text="Ver Detalles Evento" class="btn btn-primary" href="#" />
 							</p>
 						</div>
 					</div>
@@ -121,7 +121,7 @@
                 
           	<div class="col-md-4">
 					<div class="thumbnail">
-						<img alt="Bootstrap Thumbnail First" src="~/img/<%# DataBinder.Eval(Container.DataItem,"FOTOPROMOCION")%>" />
+						<img alt="Bootstrap Thumbnail First" width="400" height="400" src="img/<%# DataBinder.Eval(Container.DataItem,"FOTOPROMOCION")%>.jpg" />
 						<div class="caption">
 							<h3>
                               <%# DataBinder.Eval(Container.DataItem,"NOMBRE")%>	
@@ -129,7 +129,7 @@
 							<p>
 								<%# DataBinder.Eval(Container.DataItem,"DESCRIPCION")%>	
 							<p>
-							<asp:Button ID="btn_vermas" runat="server" Text="Ver Detalles Evento" class="btn btn-primary" href="#" />
+							<asp:Button ID="btn_vermas3" runat="server" Text="Ver Detalles Evento" class="btn btn-primary" href="#" />
 							</p>
 						</div>
 					</div>
@@ -145,6 +145,14 @@
 					
 				</div>
 			</div>-->
+            <br />
+            
+            <div class="clearfix"></div>
+            <div class="col-md-12 text-center">
+                <asp:HiddenField ID="txt" runat="server" />
+
+                 <asp:Button ID="btn_vermas" runat="server" Text="Ver Más Eventos" CssClass="btn btn-info" OnClick="mandar" />
+            </div>
 			<h3 class="text-center" style="color:#b69da8">
 			MÁS VISITADOS
 			</h3>
@@ -159,15 +167,18 @@
                 
           	<div class="col-md-4">
 					<div class="thumbnail">
-						<img alt="Bootstrap Thumbnail First" src="~/img/<%# DataBinder.Eval(Container.DataItem,"FOTOPROMOCION")%>" />
+                      <img alt="Bootstrap Thumbnail First" width="400" height="400" src="img/<%# DataBinder.Eval(Container.DataItem,"FOTOPROMOCION")%>.jpg" />
 						<div class="caption">
 							<h3>
-                              <%# DataBinder.Eval(Container.DataItem,"NOMBRE")%>	
+                              <%# DataBinder.Eval(Container.DataItem,"NOMBRE")%>
+                              
 							</h3>
-							<p>
+                              	
+                           <p>
+                                
 								<%# DataBinder.Eval(Container.DataItem,"DESCRIPCION")%>	
 							<p>
-							<asp:Button ID="btn_vermas1" runat="server" Text="Ver Más" class="btn btn-primary" href="#" />
+							<asp:Button ID="btn_vermas4" runat="server" Text="Ver Más" class="btn btn-primary" href="#" />
 							</p>
 						</div>
 					</div>

@@ -1,38 +1,79 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/administrador.Master" AutoEventWireup="true" CodeBehind="Estado.aspx.cs" Inherits="AdministradorGUI.Estado" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+     <style type="text/css">
+        .auto-style1 {
+            height: 483px;
+            width: 667px;
+        }
+        .auto-style2 {
+            position: relative;
+            min-height: 1px;
+            width: 55%;
+            top: 17px;
+            left: 126px;
+            height: 213px;
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+        .auto-style3 {
+            position: relative;
+            min-height: 1px;
+            width: 77%;
+            top: 6px;
+            left: 75px;
+            height: 81px;
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+        .auto-style4 {
+            margin-left: 14px;
+        }
+        .auto-style5 {
+            width: 586px;
+            margin-left: 62px;
+            margin-right: -15px;
+        }
+        </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder2" runat="server">
+  
+    <form id="form1" runat="server" class="auto-style1">
+       <div class="row">
+		<div class="auto-style2 primary" style="left: 61px; top: 17px; width: 80%">
+			<div role="form" class="form-inline" >
+				<div class="form-group">
+					<asp:Label ID="Label1" runat="server" Text="ID" CssClass="text-primary"  ></asp:Label><br />
+                    <asp:TextBox ID="txtID" runat="server" Width="505px" Height="30px" Enabled="False"></asp:TextBox>
+				</div><br />
+				<div class="form-group">
+					 <asp:Label ID="Label2" runat="server" Text="Nombre del Estado" CssClass="text-primary"></asp:Label><br />
+                    <asp:TextBox ID="txtNombre" runat="server" Width="505px" Height="30px"></asp:TextBox>
 
-    <form id="form1" runat="server">
-        <p>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ID&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;<asp:TextBox ID="txt_Id" runat="server"></asp:TextBox>
-        </p>
-        <p>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Nombre&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;
-            <asp:TextBox ID="txt_Nombre" runat="server"></asp:TextBox>
-        </p>
-        <p>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Codigo País&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <asp:TextBox ID="txt_Pais" runat="server"></asp:TextBox>
-            <br />
-        </p>
-        <p>
-     <div class="col-md-12">
-            <asp:Button ID="btn_Nuevo" runat="server" Text="Nuevo"  CssClass="btn-primary col-md-2 col-lg-offset-1" OnClick="Accion"/>
+				</div>
+			</div>
+		</div>
+	<div class="row">
+		<div class="auto-style3">
+			<asp:Button ID="btnAgregar" Text="Agregar" runat="server" CssClass="btn btn-dropbox" Width="100px" OnClick="Accion" /> 
+            <asp:Button ID="btnModificar" Text="Modificar" runat="server" CssClass="btn btn-dropbox" Width="100px" OnClick="Accion"  />
+            <asp:Button ID="btnEliminar" Text="Eliminar" runat="server" CssClass="btn btn-dropbox" Width="100px" OnClick="Accion" />
+            <asp:Button ID="btnNuevo" Text="Nuevo" runat="server" CssClass="btn btn-dropbox" Width="100px" OnClick="Accion" />
+            <asp:Button ID="btnBuscar" Text="Buscar" runat="server" CssClass="btn btn-dropbox" Width="100px" OnClick="btn_Buscar_Click" />
 
-            <asp:Button ID="btn_Modificar" runat="server" Text="Modificar"  CssClass="btn-primary col-md-2 col-lg-offset-1" OnClick="Accion"/>
+		</div>
+	</div><br />
+           <div class="row">
+           <div class="auto-style5">
+               <div class="form-group">
+                   <asp:GridView ID="dgv_Estados" runat="server" CssClass="auto-style4" Width="590px" OnRowCommand="Seleccionar">
+                       <Columns>
+                           <asp:ButtonField CommandName="dgvbtnSeleccionar" Text="Seleccionar" />
 
-            <asp:Button ID="btn_Eliminar" runat="server" Text="Eliminar"  CssClass="btn-primary col-md-2 col-lg-offset-1" OnClick="Accion" />
-
-            <asp:Button ID="btn_Buscar" runat="server" Text="Buscar"  CssClass="btn-primary col-md-2 col-lg-offset-1" OnClick="Accion" />
-            </div>
-        </p>
-        <p>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;<asp:GridView ID="dgv_Estados" runat="server" OnRowCommand="Seleccionar">
-                <Columns>
-                    <asp:ButtonField CommandName="dgvbtnSeleccionar" Text="Seleccionar" />
-                </Columns>
-            </asp:GridView>
-        </p>
+                       </Columns>
+                   </asp:GridView>
+               </div>
+           </div>
+               </div>
+    </div>
     </form>
 </asp:Content>

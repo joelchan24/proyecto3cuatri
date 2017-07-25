@@ -85,7 +85,31 @@ namespace DAO
 
         public int modificar(object modificar)
         {
-            throw new NotImplementedException();
+            UsuarioBO OBJJUSUARIO = (UsuarioBO)modificar;
+            SqlCommand cmd = new SqlCommand("update DIRECCION SET COLONIA=@COL,CODIGOPOSTAL=@CODP,CRUZAMIENTO=@CRUZA,NUMEROINTERIOR=@INTE,NUMEROEXTERIOR=@EXTE,MUNICIPIO=@MUNI WHERE CODIGO=(SELECT IDDIRECCION FROM USUARIOS WHERE CODIGO=@USU) ");
+            cmd.Parameters.Add("@COL", SqlDbType.VarChar).Value = OBJJUSUARIO.Colonia;
+            cmd.Parameters.Add("CODP", SqlDbType.Char).Value = OBJJUSUARIO.CodigoPostal;
+            cmd.Parameters.Add("@CRUZA", SqlDbType.VarChar).Value = OBJJUSUARIO.Cruzamiento;
+            cmd.Parameters.Add("INTE", SqlDbType.VarChar).Value = OBJJUSUARIO.NumeroInterior;
+            cmd.Parameters.Add("@EXTE", SqlDbType.VarChar).Value = OBJJUSUARIO.NumeroExterior;
+            cmd.Parameters.Add("@MUNI", SqlDbType.Int).Value = OBJJUSUARIO.CodigoMunicipio;
+            cmd.Parameters.Add("@USU", SqlDbType.Int).Value = OBJJUSUARIO.Codigo;
+            cmd.CommandType = CommandType.Text;
+            int direccion = obj.EjecutarComando(cmd);
+
+            SqlCommand usuario = new SqlCommand("update USUARIOS SET NOMBRE=@NO,APELLIDOS=@APE,TELEFONO=@TELE,FECHANACIMIENTO=@FECH,CORRERO=@COR,USUARIO=@USUARIO,CONTRASEÑA=@CON,FOTOGRAFIA=@FOTO WHERE CODIGO=@COD");
+            usuario.Parameters.Add("@NO", SqlDbType.VarChar).Value = OBJJUSUARIO.Nombre;
+            usuario.Parameters.Add("@APE", SqlDbType.VarChar).Value = OBJJUSUARIO.Apellidos;
+            usuario.Parameters.Add("@TELE", SqlDbType.Char).Value = OBJJUSUARIO.Telefono;
+            usuario.Parameters.Add("@FECH", SqlDbType.Date).Value = OBJJUSUARIO.FechaNacimineto;
+            usuario.Parameters.Add("@COR", SqlDbType.VarChar).Value = OBJJUSUARIO.Correo;
+            usuario.Parameters.Add("@USUARIO", SqlDbType.VarChar).Value = OBJJUSUARIO.Usuario;
+            usuario.Parameters.Add("@CON", SqlDbType.VarChar).Value = OBJJUSUARIO.Contraseña;
+            usuario.Parameters.Add("@FOTO", SqlDbType.VarChar).Value = OBJJUSUARIO.Fotografia;
+            usuario.Parameters.Add("@COD", SqlDbType.Int).Value = OBJJUSUARIO.Codigo;
+            usuario.CommandType = CommandType.Text;
+
+            return obj.EjecutarComando(usuario);
         }
         public bool verificar(object agregar)
         {
@@ -112,6 +136,14 @@ namespace DAO
             cmd.CommandType = CommandType.Text;
             return obj.EjecutarSentencia(cmd);
         }
+        public string ObtenerTipoCuenta1(string username)
+        {
+            SqlCommand cmd = new SqlCommand("select t.NOMBRE from TIPOCUENTA t INNER JOIN TIPOCUENTA_USUARIO tu ON t.CODIGO = tu.IDTIPO INNER JOIN USUARIOS u ON tu.IDUSUARIO = u.CODIGO WHERE USUARIO = '" + username + "'");
+            cmd.CommandType = CommandType.Text;
+          int   resultado = obj.EjecutarComando(cmd);
+            string tipo = Convert.ToString(resultado);
+            return tipo;
+        }
 
         public DataSet listarMunicipio()
         {
@@ -121,7 +153,7 @@ namespace DAO
         }
         public DataSet LISTARDATOS()
         {
-            SqlCommand CMD = new SqlCommand("select h.*,d.* from USUARIOS H, DIRECCION D WHERE H.IDDIRECCION=D.CODIGO");
+            SqlCommand CMD = new SqlCommand("select * from USUARIOS");
             CMD.CommandType = CommandType.Text;
             return obj.EjecutarSentencia(CMD);
         }

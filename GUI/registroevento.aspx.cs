@@ -106,8 +106,8 @@ namespace GUI
         public void refrescar()
         {
 
-            dgb_eventos.DataSource = eventado.buscar_usuriounico(id);
-            dgb_eventos.DataBind();
+            dgb_todos.DataSource = eventado.buscar_usuriounico(id);
+            dgb_todos.DataBind();
 
         }
         protected void txt_nombre_TextChanged(object sender, EventArgs e)
@@ -115,73 +115,7 @@ namespace GUI
 
         }
 
-        protected void mandaralcajas(object sender, GridViewCommandEventArgs e)
-        {
-            if (e.CommandName == "btn_seleccionar")
-            {
-                //foto promocion 7
-                // int fila = Convert.ToInt32(e.CommandArgument.ToString());
-                int fila = Convert.ToInt32(e.CommandArgument);
-                txtid.Value = dgb_eventos.Rows[fila].Cells[1].Text;
-                txt_ubicar.Text = dgb_eventos.Rows[fila].Cells[8].Text;
-                txt_lo.Text = dgb_eventos.Rows[fila].Cells[10].Text;
-                txtlat.Text = dgb_eventos.Rows[fila].Cells[9].Text;
-                DateTime fechaapertura = Convert.ToDateTime(dgb_eventos.Rows[fila].Cells[5].Text);
-                txt_aperura.Text = fechaapertura.ToString("yyyy-MM-dd");
-                txt_codir.Value = dgb_eventos.Rows[fila].Cells[12].Text;
-                txt_colonia.Text = dgb_eventos.Rows[fila].Cells[17].Text;
-                txt_crizamiento.Text = dgb_eventos.Rows[fila].Cells[19].Text;
-                txt_descrip.Text = dgb_eventos.Rows[fila].Cells[2].Text;
-                DateTime ida = Convert.ToDateTime(dgb_eventos.Rows[fila].Cells[6].Text);
-                txt_fecha_cierre.Text = ida.ToString("yyyy-MM-dd");
-                txt_nombre.Text = dgb_eventos.Rows[fila].Cells[3].Text;
-                txt_numexter.Text = dgb_eventos.Rows[fila].Cells[21].Text;
-                txt_numint.Text = dgb_eventos.Rows[fila].Cells[20].Text;
-                txt_postal.Text = dgb_eventos.Rows[fila].Cells[18].Text;
-                txt_precio.Text = dgb_eventos.Rows[fila].Cells[4].Text;
-                txt_codir.Value = dgb_eventos.Rows[fila].Cells[16].Text;
-                txt_visitas.Text = dgb_eventos.Rows[fila].Cells[15].Text;
-                Image1.ImageUrl = "img/" + dgb_eventos.Rows[fila].Cells[7].Text.ToString() + ".jpg";
-                rbt_aprovado.Checked = (Convert.ToString(dgb_eventos.Rows[fila].Cells[11].Text) != "0") ? true : false;
-                rbt_noapro.Checked = (Convert.ToString(dgb_eventos.Rows[fila].Cells[11].Text) == "0") ? true : false;
-                txt_usuario.Text = dgb_eventos.Rows[fila].Cells[22].Text;
-                ddl_categoria.SelectedValue = dgb_eventos.Rows[fila].Cells[13].Text;
-                ddl_municipio.SelectedValue = dgb_eventos.Rows[fila].Cells[22].Text;
-
-            }
-            // if (e.CommandName == "btn_selecionar")
-            //  {
-            //foto promocion 7
-
-          /*  int fila = Convert.ToInt32(e.CommandArgument.ToString());
-            txtid.Value = dgb_eventos.Rows[fila].Cells[1].Text;
-            txt_ubicar.Text = dgb_eventos.Rows[fila].Cells[8].Text;
-            txt_lo.Text = dgb_eventos.Rows[fila].Cells[10].Text;
-            txtlat.Text = dgb_eventos.Rows[fila].Cells[9].Text;
-          DateTime fechaapertura =Convert.ToDateTime(dgb_eventos.Rows[fila].Cells[5].Text);
-           txt_aperura.Text=fechaapertura.ToString("yyyy-MM-dd");
-            txt_codir.Value = dgb_eventos.Rows[fila].Cells[12].Text;
-            txt_colonia.Text = dgb_eventos.Rows[fila].Cells[16].Text;
-            txt_crizamiento.Text = dgb_eventos.Rows[fila].Cells[18].Text;
-            txt_descrip.Text = dgb_eventos.Rows[fila].Cells[2].Text;
-            DateTime ida =Convert.ToDateTime (dgb_eventos.Rows[fila].Cells[6].Text);
-            txt_fecha_cierre.Text = ida.ToString("yyyy-MM-dd");
-            txt_nombre.Text = dgb_eventos.Rows[fila].Cells[3].Text;
-            txt_numexter.Text = dgb_eventos.Rows[fila].Cells[20].Text;
-            txt_numint.Text = dgb_eventos.Rows[fila].Cells[19].Text;
-            txt_postal.Text = dgb_eventos.Rows[fila].Cells[17].Text;
-            txt_precio.Text = dgb_eventos.Rows[fila].Cells[4].Text;
-            txt_codir.Value = dgb_eventos.Rows[fila].Cells[15].Text;
-            valor = dgb_eventos.Rows[fila].Cells[11].Text;
-          /*  rbt_aprovado.Checked = (Convert.ToString(dgb_eventos.Rows[fila].Cells[11].Text) == "aprovado") ? true : false;
-            rbt_noapro.Checked = (Convert.ToString(dgb_eventos.Rows[fila].Cells[11].Text) == "no aprovado") ? true : false;
-            txt_usuario.Text = dgb_eventos.Rows[fila].Cells[22].Text;
-            ddl_categoria.SelectedValue = dgb_eventos.Rows[fila].Cells[13].Text;
-            ddl_municipio.SelectedValue = dgb_eventos.Rows[fila].Cells[21].Text;
-            */
-
-            // }
-        }
+       
         public string NombreImagen()
         {
             DateTime tiempo = DateTime.Now;
@@ -238,6 +172,42 @@ namespace GUI
             obj.Usuario.ToString();
             obj.Contraseña.ToString();
             txt_usuario.Text = login.verificar(obj).ToString();
+        }
+
+        protected void mandar(object sender, GridViewCommandEventArgs e)
+        {
+            if (e.CommandName == "btn_seleccionar")
+            {
+                //foto promocion 7
+                //int fila = Convert.ToInt32(e.CommandArgument.ToString());
+
+                 int fila = Convert.ToInt32(e.CommandArgument);
+                txtid.Value = dgb_todos.Rows[fila].Cells[1].Text;
+                txt_ubicar.Text = dgb_todos.Rows[fila].Cells[8].Text;
+                txt_lo.Text = dgb_todos.Rows[fila].Cells[10].Text;
+                txtlat.Text = dgb_todos.Rows[fila].Cells[9].Text;
+                DateTime fechaapertura = Convert.ToDateTime(dgb_todos.Rows[fila].Cells[5].Text);
+                txt_aperura.Text = fechaapertura.ToString("yyyy-MM-dd");
+                txt_codir.Value = dgb_todos.Rows[fila].Cells[12].Text;
+                txt_colonia.Text = dgb_todos.Rows[fila].Cells[17].Text;
+                txt_crizamiento.Text = dgb_todos.Rows[fila].Cells[19].Text;
+                txt_descrip.Text = dgb_todos.Rows[fila].Cells[2].Text;
+                DateTime ida = Convert.ToDateTime(dgb_todos.Rows[fila].Cells[6].Text);
+                txt_fecha_cierre.Text = ida.ToString("yyyy-MM-dd");
+                txt_nombre.Text = dgb_todos.Rows[fila].Cells[3].Text;
+                txt_numexter.Text = dgb_todos.Rows[fila].Cells[21].Text;
+                txt_numint.Text = dgb_todos.Rows[fila].Cells[20].Text;
+                txt_postal.Text = dgb_todos.Rows[fila].Cells[18].Text;
+                txt_precio.Text = dgb_todos.Rows[fila].Cells[4].Text;
+                txt_codir.Value = dgb_todos.Rows[fila].Cells[16].Text;
+                txt_visitas.Text = dgb_todos.Rows[fila].Cells[15].Text;
+                Image1.ImageUrl = "img/" + dgb_todos.Rows[fila].Cells[7].Text.ToString() + ".jpg";
+                rbt_aprovado.Checked = (Convert.ToString(dgb_todos.Rows[fila].Cells[11].Text) != "0") ? true : false;
+                rbt_noapro.Checked = (Convert.ToString(dgb_todos.Rows[fila].Cells[11].Text) == "0") ? true : false;
+                txt_usuario.Text = dgb_todos.Rows[fila].Cells[22].Text;
+                ddl_categoria.SelectedValue = dgb_todos.Rows[fila].Cells[13].Text;
+                ddl_municipio.SelectedValue = dgb_todos.Rows[fila].Cells[22].Text;
+            }
         }
     }
 }

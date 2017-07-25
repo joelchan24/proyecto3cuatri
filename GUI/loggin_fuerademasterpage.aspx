@@ -1,43 +1,18 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/homevisor.Master" AutoEventWireup="true" CodeBehind="loginn.aspx.cs" Inherits="GUI.loginn" %>
-<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-</asp:Content>
-<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="loggin_fuerademasterpage.aspx.cs" Inherits="GUI.loggin_fuerademasterpage" %>
 
-   <!--    
-        <div class="form-horizontal">
-            <div class="row">
-                <div class="jumbotron">
-            <h2 class="fa-align-center">Ingresar</h2>
-            <div class="form-group">
-                <label>Nombre de Usuario  </label>
-    <asp:TextBox ID="TextBox2" runat="server"  ></asp:TextBox>
+<!DOCTYPE html>
 
-    <asp:TextBox ID="TextBox3" runat="server" ></asp:TextBox>
-                <div>
-    <asp:Button ID="Button2" runat="server" Text="ingresar" CssClass="btn btn-info" />
-                    </div>
-    <asp:Button ID="Button1" runat="server" Text="hjjhj"  CssClass=" btn btn-success"/>
-                </div>
-                </div>
-                </div>
-            </div>
-        
-    </div
-    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
-<div class="main">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <link href="css/bootstrap.css" rel="stylesheet" />
+    <title></title>
+</head>
+<body>
+    <form id="form1" runat="server">
     
-    
-    <div class="container">
-<center>
-<div class="middle">
-      <div id="login">
-
-        <form action="javascript:void(0);" method="get">
-
-          <fieldset class="clearfix">
-
-            <p ><span class="fa fa-user"></span><input type="text"  Placeholder="Username" required></p> <!-- JS because of IE support; better: placeholder="Username" -->
-      <div class="container">    
+    <div class="container">    
         <div id="loginbox" style="margin-top:50px;" class="mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">                    
             <div class="panel panel-info" >
                     <div class="panel-heading">
@@ -78,9 +53,9 @@
                                     <!-- Button -->
 
                                     <div class="col-sm-12 controls">
-        <asp:Button ID="btn_ingresar" runat="server" Text="Ingresar"  href="#" class="btn  btn-primary " OnClick="Button1_Click" />
+        <asp:Button ID="btn_ingresar" runat="server" Text="Ingresar"  href="#" class="btn  btn-primary " OnClick="condicion_de_login" />
                                       
-                                      <a id="btn-fblogin" href="#" onclick="$('#loginbox').hide(); $('#signupbox').show()" class="btn btn-success">registrarse</a>
+                                      <a id="btn-fblogin" href="registro_usuarios_fueramasterpge.aspx"  class="btn btn-success">registrarse</a>
 
                                     </div>
                                 </div>
@@ -90,7 +65,7 @@
                                     <div class="col-md-12 control">
                                         <div style="border-top: 1px solid#888; padding-top:15px; font-size:85%" >
                                             No te has Registrado?
-                                        <a href="#" onClick="$('#loginbox').hide(); $('#signupbox').show()">
+                                        <a href="registro_usuarios_fueramasterpge.aspx" >
                                             Registrate Aqui
                                         </a>
                                         </div>
@@ -233,5 +208,7 @@
       
   
     </div>
-
-</asp:Content>
+    </div>
+    </form>
+</body>
+</html>

@@ -43,11 +43,14 @@
     <Compile Include="CategoriaDAO.cs" />
     <Compile Include="ComentarioDAO.cs" />
     <Compile Include="conexionDAO.cs" />
+    <Compile Include="ContactosDAO.cs" />
     <Compile Include="direccionDAO.cs" />
     <Compile Include="EstadoDAO.cs" />
     <Compile Include="eventoDAO.cs" />
     <Compile Include="interface_metodos_guardar_eliminar_actualizar_buscar.cs" />
+    <Compile Include="LitarTODO.cs" />
     <Compile Include="loginDAO.cs" />
+    <Compile Include="mensajeDAO.cs" />
     <Compile Include="MensajesDAO.cs" />
     <Compile Include="MunicipioDAO.cs" />
     <Compile Include="PaisDAO.cs" />

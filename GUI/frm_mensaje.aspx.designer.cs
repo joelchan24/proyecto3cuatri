@@ -10,6 +10,15 @@
 namespace GUI {
     
     
-    public partial class registrode_usuariosGUI {
+    public partial class frm_mensaje {
+        
+        /// <summary>
+        /// Control txt_mensaje.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txt_mensaje;
     }
 }

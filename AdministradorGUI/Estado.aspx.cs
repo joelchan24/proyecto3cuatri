@@ -4,6 +4,8 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.Data;
+using System.Data.SqlClient;
 using BO;
 using DAO;
 using Services;
@@ -29,11 +31,11 @@ namespace AdministradorGUI
         public EstadoBO RecolectarDAtos()
         {
             EstadoBO oEstadosBO = new EstadoBO();
-            int ID = 0; int.TryParse(txt_Id.Text, out ID);
-            int ID_Pais; int.TryParse(txt_Pais.Text, out ID_Pais);
+            int ID = 0; int.TryParse(txtID.Text, out ID);
+           // int ID_Pais; int.TryParse(tx.Text, out ID_Pais);
             oEstadosBO.id_estado = ID;
-            oEstadosBO.nombre_estado = txt_Nombre.Text;
-            oEstadosBO.id_pais = ID_Pais;
+            oEstadosBO.nombre_estado = txtNombre.Text;
+           // oEstadosBO.id_pais = ID_Pais;
             return oEstadosBO;
         }
 
@@ -48,15 +50,25 @@ namespace AdministradorGUI
             if (e.CommandName == "dgvbtnSeleccionar")
             {
                 int indice = Convert.ToInt32(e.CommandArgument);
-                txt_Id.Text = dgv_Estados.Rows[indice].Cells[1].Text;
-                txt_Nombre.Text = dgv_Estados.Rows[indice].Cells[2].Text;
-                txt_Pais.Text = dgv_Estados.Rows[indice].Cells[3].Text;
+                txtID.Text = dgv_Estados.Rows[indice].Cells[1].Text;
+                txtNombre.Text = dgv_Estados.Rows[indice].Cells[2].Text;
+                //txt_Pais.Text = dgv_Estados.Rows[indice].Cells[3].Text;
             }
         }
 
         protected void dgv_Estados_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        protected void btn_Buscar_Click(object sender, EventArgs e)
+        {
+           SqlConnection con = new SqlConnection("Data Source=RODRIGO\\SQLEXPRESS;Initial Catalog= CULTURA;Integrated Security=True");
+            SqlDataAdapter adaptar = new SqlDataAdapter("select * from ESTADO where nombre like '%" +txtNombre.Text + "%'", con);
+            DataTable dt = new DataTable();
+            adaptar.Fill(dt);
+            this.dgv_Estados.DataSource = dt;
+            dgv_Estados.DataBind();
         }
     }
 }

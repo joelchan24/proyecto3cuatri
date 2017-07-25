@@ -42,6 +42,7 @@
   <ItemGroup>
     <Compile Include="CTRL_Categoria.cs" />
     <Compile Include="CTRL_comentario.cs" />
+    <Compile Include="CTRL_Contactos.cs" />
     <Compile Include="CTRL_Estados.cs" />
     <Compile Include="CTRL_Mensajes.cs" />
     <Compile Include="CTRL_Municipio.cs" />

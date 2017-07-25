@@ -41,5 +41,20 @@ namespace DAO
 
 
         }
+        public string buscartipo(object agregar)
+        {
+            UsuarioBO usuario = (UsuarioBO)agregar;
+            conexionDAO conectar = new conexionDAO();
+            SqlCommand cmd = new SqlCommand("select t.NOMBRE from TIPOCUENTA t inner join TIPOCUENTA_USUARIO tu on tu.IDTIPO = t.CODIGO inner join USUARIOS u on u.CODIGO = tu.IDUSUARIO where u.USUARIO =@usuario");
+            cmd.Parameters.Add("@usuario", SqlDbType.VarChar).Value = usuario.Usuario;
+           
+            cmd.CommandType = CommandType.Text;
+            int resultado = conectar.EjecutarComando(cmd);
+
+            return Convert.ToString( resultado);
+
+
+
+        }
     }
 }

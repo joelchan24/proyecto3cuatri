@@ -1,5 +1,17 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/administrador.Master" AutoEventWireup="true" CodeBehind="admin_eventosporaprovar.aspx.cs" Inherits="AdministradorGUI.admin_eventosporaprovar" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+    <style type="text/css">
+        .auto-style3 {
+            position: relative;
+            min-height: 1px;
+            width: 80%;
+            top: 6px;
+            left: 75px;
+            height: 81px;
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+         </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder2" runat="server">
     <form id="form5" runat="server">
@@ -10,6 +22,15 @@
 </div>
 		</div>
 	</div>
+      
+        <div class="row">
+		<div class="auto-style3">
+			<asp:TextBox ID="txtBuscar" runat="server" Width="705px" Height="30px"></asp:TextBox>
+            <asp:Button ID="btnBuscar" Text="Buscar" runat="server" CssClass="btn btn-dropbox" Width="100px"  />
+
+		</div>
+	</div><br />
+
 	<div class="row">
         
 		<div class="col-md-12">

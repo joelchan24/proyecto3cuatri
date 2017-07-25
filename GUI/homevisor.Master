@@ -9,6 +9,7 @@
     <link href="css/bootstrap.css" rel="stylesheet" type="text/css" />
     <link href="css/Site.css" rel="stylesheet" type="text/css" />
     <link href="css/pagina.css" rel="stylesheet" type="text/css"/>
+    
     <!--<link href="css/bootstrap.min.css" rel="stylesheet " type="text/css"/>-->
     <link href="css/bootstrap-theme.css" rel="stylesheet" type="text/css" />
     <link href="css/Site.css" rel="stylesheet"  type="text/css"      />
@@ -27,6 +28,7 @@
     <script src="js/holder.min.js"></script>
     <script src="js/ie-emulation-modes-warning.js"></script>
     <script src="js/ie10-viewport-bug-workaround.js"></script>
+    <script src="js/scripts.js"></script>
     
     <title></title>
   
@@ -35,7 +37,7 @@
 </head>
 
   
- 
+
 
     <body id="page-top" name="page-top" class="active">
         
@@ -78,7 +80,7 @@
 										</div>
 									</fieldset>
 								
-         </form>
+        
 							</article>
 						</div>
 						<div class="modal-footer">
@@ -105,6 +107,7 @@
 					</a>
 				</div>
 				<!-- Collect the nav links, forms, and other content for toggling -->
+                            <form id="form1" runat="server">
                 <div class="collapse navbar-collapse js-navbar-collapse" style="color:#fff;">
                 		<ul class="nav navbar-nav navbar-left">
                              <li class="dropdown mega-dropdown" >
@@ -116,42 +119,123 @@
                 			<li class="dropdown mega-dropdown">
                 				<a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-phone"></span>Contactos </a>				
                 			</li>
-                            <li class="dropdown mega-dropdown">
-                    			<a href="#" class="dropdown-toggle" data-toggle="dropdown">Acerca De</a>				
-                			</li>
-                            <li class="dropdown mega-dropdown"><a href="registroevento.aspx" data-toggle="dropdown">Municipios</a></li>
                              
                           <li class="dropdown">
-                          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" style="margin-right:80px;"><span class="glyphicon glyphicon-star"></span>Categorias <span class="caret"></span></a>
+                          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" style="margin-right:10px;"><span class="glyphicon glyphicon-star"></span>Categorias <span class="caret"></span></a>
                           <ul class="dropdown-menu" role="menu" style="display: none;">
                             <li><a href="frm_danza.aspx">Danza</a></li>
                             <li><a href="frm_teatroo.aspx">Teatro</a></li>                           
                               <li><a href="frm_musica.aspx">Musica</a></li>
                           </ul>
                         </li>
-
+                          
                 		</ul>
                         <ul class="nav navbar-nav navbar-right">
-                        <li class="dropdown">
+                          <!---->
+                   
+ 
+                      <%  
+    if (Session["usuario"] == null && Session["id"] == null)
+    {
+
+                           %> 
+                             <li>                             </li>
+                           <li class="dropdown">
                           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" style="margin-right:80px;"><span class="glyphicon glyphicon-user"></span>Cuenta <span class="caret"></span></a>
                           <ul class="dropdown-menu" role="menu" style="display: none;">
-                            <li><a href="loginn.aspx">Iniciar Sesion </a></li>
-                            <li><a href="registrode_usuariosGUI.aspx">Registrarme</a></li>
+                            <li><a href="loggin_fuerademasterpage.aspx">Iniciar Sesion </a></li>
+                            <li><a href="registro_usuarios_fueramasterpge.aspx">Registrarme</a></li>
+                          </ul>
+ </li>
+                      
+                  
+
+        
+                        
+                             <%} %>
+                                  <% else if ( Session["tipo"].ToString() == "ORGANIZADOR" && Session["usuario"] != null && Session["id"] != null) { %>
+                                                   
+ <% txt_usuaer2.Text = "welcome " + Session["usuario"].ToString(); %>
+                          
+                           <li class="dropdown">
+                                                       
+                               <a href="#" class=" dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" style="margin-right:20px;"><span class="glyphicon glyphicon-wrench"></span>editar <span class="caret"></span></a>
+                          <ul class="dropdown-menu" role="menu" style="display: none;">
+                           <li><a href="editarUsuario.aspx">editar datos </a></li>
+                            <li><a href="registroevento.aspx">subir evento</a></li>
+                           
+                          </ul>
+                      
+                              <li />
+                                
+                              <asp:Label ID="txt_usuaer2" runat="server" Text="Label" style="margin-right:10px;padding-top: 10px;" ></asp:Label>
+                               <asp:Button ID="btn_cerrar2" runat="server" Text="cerrar secion" OnClick="cerrar" style="margin-right:15px;padding-top: 10px; "  />
+                          
+
+                               
+                            
+                             <%} %>
+                           
+                            <%  if (Session["usuario"] == null && Session["id"] == null ){ %>
+                              
+                             <li>                             </li>
+                           <li class="dropdown" style="display:none">
+                          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" style="margin-right:80px;"><span class="glyphicon glyphicon-user"></span>Cuenta <span class="caret"></span></a>
+                          <ul class="dropdown-menu" role="menu" style="display: none;">
+                            <li><a href="loggin_fuerademasterpage.aspx">Iniciar Sesion </a></li>
+                            <li><a href="registro_usuarios_fueramasterpge.aspx">Registrarme</a></li>
                           </ul>
                         </li>
+             
+
+                                
+                                
+                                
+                             
+                            
+                            
+                         
+
+                            <%} %>
+                                  <% else if (Session["tipo"].ToString()=="USUARIO" && Session["usuario"] != null && Session["id"] != null ) { %>
+                                                                       
+ <% txt_usuaer1.Text = "welcome " + Session["usuario"].ToString(); %>
+                          
+                           
+                               <li class="dropdown">                          
+                               <a href="#" class=" dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" style="margin-right:20px;"><span class="glyphicon glyphicon-wrench"></span>editar <span class="caret"></span></a>
+                          <ul class="dropdown-menu" role="menu" style="display: none;">
+                            <li><a href="loginn.aspx">editar datos </a></li>
+                            
+                          </ul>
+                      
+                               </li>      
+
+                                
+                              <asp:Label ID="txt_usuaer1" runat="server" Text="Label" style="margin-right:10px;padding-top: 10px;" ></asp:Label>
+                               <asp:Button ID="btn_cerrar1" runat="server" Text="cerrar secion" OnClick="cerrar" style="margin-right:15px;padding-top: 10px; "  />
+                          
+                             <%} %>
                        
                       </ul>
                     <ul>
                    <li>
-                       <form id="form2" runat="server"
-                   class="navbar-form left  " role="search" >
+                      
+                       <div class="form-inline navbar-form left  " role="search">
 
 
 <asp:TextBox ID="TextBox1" runat="server" CssClass="form-control" Width="250px" placeholder="Nombre a buscar"></asp:TextBox>&nbsp;
 <asp:LinkButton ID="LinkButton1" runat="server" CssClass="btn btn-info" Text="Buscar"><span class="glyphicon glyphicon-search"></span>&nbsp;Buscar</asp:LinkButton>
-                      </li>  
+                     </div>
+                            </li>  
 
                     </ul>
+                    <ul>
+                        <li>
+                          
+                        </li>
+                    </ul>
+
   <!--
                               <button type="submit" class="btn btn-default" style="background-color:#fff;"><span class="glyphicon glyphicon-search"></span></button>-->
                  
@@ -218,8 +302,8 @@
 
            
     </div>
-
-           </form>
+            </form>
+           <!---->
         <br />
         <br />
     
@@ -250,8 +334,9 @@
          
         </div>
         
-    
+      
        
+       <body>
        
       
      
