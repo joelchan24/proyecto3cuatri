@@ -174,7 +174,7 @@
                
       
           <li class="treeview">
-          <a href="#">
+          <a href="http://localhost:50790/loggin_fuerademasterpage.aspx");">
             <i class="fa fa-edit"></i> <span>Salir </span>
             <span class="pull-right-container"></span>
               </a>

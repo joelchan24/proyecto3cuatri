@@ -371,6 +371,18 @@ namespace DAO
 
             return conectar.EjecutarSentencia(cmd);
         }
+        public DataSet top_recientes()
+        {
+            // select * from EVENTO e inner join DIRECCION d on e.DIRECCION=d.CODIGO   2
+            SqlCommand cmd = new SqlCommand("   select   * from EVEnto order by (visitas) desc   ");
+
+
+
+            cmd.CommandType = CommandType.Text;
+
+
+            return conectar.EjecutarSentencia(cmd);
+        }
 
 
 
