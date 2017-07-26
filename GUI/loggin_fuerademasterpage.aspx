@@ -14,10 +14,9 @@
     
     <div class="container">    
         <div id="loginbox" style="margin-top:50px;" class="mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">                    
-            <div class="panel panel-info" >
+            <div class="panel panel-primary" >
                     <div class="panel-heading">
-                        <div class="panel-title">Sign In</div>
-                        <div style="float:right; font-size: 80%; position: relative; top:-10px"><a href="#">Forgot password?</a></div>
+                        <div class="panel-title">Inicio de sesión</div>
                     </div>     
 
                     <div style="padding-top:30px" class="panel-body" >
@@ -30,12 +29,12 @@
                                 
                             <div style="margin-bottom: 25px " class="input-group col-lg-offset-2 ">
                                         <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-        <asp:TextBox ID="txt_usuario" runat="server" type="text" class="form-control " name="username" value="" placeholder="username or email"></asp:TextBox>
+        <asp:TextBox ID="txt_usuario" runat="server" type="text" CssClass="form-control " name="username" value="" placeholder="username or email"></asp:TextBox>
                                         </div>
                                 
                             <div style="margin-bottom: 25px" class="input-group col-lg-offset-2 ">
                                         <span class="input-group-addon "><i class="glyphicon glyphicon-lock " ></i></span>
-        <asp:TextBox ID="txt_contraseña" runat="server" type="password" class="form-control " name="password" placeholder="password"></asp:TextBox>
+        <asp:TextBox ID="txt_contraseña" runat="server" CssClass="dropdown-toggle form-control" type="password" class="form-control " name="password" placeholder="password"></asp:TextBox>
                                               </div>
                                     
 
@@ -53,9 +52,11 @@
                                     <!-- Button -->
 
                                     <div class="col-sm-12 controls">
-        <asp:Button ID="btn_ingresar" runat="server" Text="Ingresar"  href="#" class="btn  btn-primary " OnClick="condicion_de_login" />
+        <asp:Button ID="btn_ingresar" runat="server" Text="Ingresar"  href="#" class="btn btn-sm  btn-primary " Width="80px" OnClick="condicion_de_login" />
+                                        <asp:LinkButton ID="LinkButton1" runat="server" class="btn btn-sm  btn-success" Height="35px" Width="80px" PostBackUrl="registro_usuarios_fueramasterpge.aspx">Registrarme</asp:LinkButton>
+                                         <!--<asp:Button ID="btnRegistrarme" runat="server" Text="Ingresar"   class="btn btn-sm  btn-success" />-->
                                       
-                                      <a id="btn-fblogin" href="registro_usuarios_fueramasterpge.aspx"  class="btn btn-success">registrarse</a>
+                                      <!--<a id="btn-fblogin" href="registro_usuarios_fueramasterpge.aspx"  class="btn btn-sm btn-success">registrarse</a>-->
 
                                     </div>
                                 </div>
