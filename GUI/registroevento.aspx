@@ -219,7 +219,8 @@
      
             <div class="row">
 		<div class="col-md-3">
-              <asp:Button ID="btn_agregar" runat="server" Text="agregar" CssClass=" btn btn-primary  " OnClick="accion" style="text-align:right" />
+              <asp:Button ID="btn_agregar" runat="server" Text="agregar" CssClass=" btn btn-primary  " OnClick="accion" style="text-align:right" /> 
+             <asp:LinkButton ID="LinkButton1" runat="server" PostBackUrl="~/GaleriaImagenesaspx.aspx" CssClass="btn btn-danger">LinkButton</asp:LinkButton>
       
 		</div>
 		<div class="col-md-3">
