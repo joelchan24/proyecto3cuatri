@@ -7,32 +7,59 @@
     <script src="js/locationpicker.jquery.js"></script>
   <div class="container">
 	<div class="row">
-		<div class="col-md-12">
-			<h3 class="text-center text-primary">
-				NOMBRE DEL EVENTO
+        <asp:Repeater ID="rpt" runat="server">
+            <ItemTemplate>
+                <div class="col-md-12">
+                   
+			<h3 class="text-center text-primary" >
+				<%# DataBinder.Eval(Container.DataItem,"NOMBRE") %>
 			</h3>
 			<h3 class="text-info">
-				h3. Lorem ipsum dolor sit amet.
+				FOTO PRINCIPAL
 			</h3>
 		</div>
 	</div>
 	<div class="row">
 		<div class="col-md-6">
-			<img alt="Bootstrap Image Preview" src="http://lorempixel.com/140/140/" class="img-rounded" /><!-- aqui iria la foro promocialan-->
+			<img alt="Bootstrap Image Preview" src="img/<%# DataBinder.Eval(Container.DataItem,"FOTOPROMOCION")%>.jpg" class="img-rounded" style="width:500px;height:370px" /><!-- aqui iria la foro promocialan-->
 		</div>
 		<div class="col-md-6">
 			 <h3>
 				DATOS DEL EVENTO
 			</h3>
 			<h2>
-				Heading
+				YUCATÁN
 			</h2>
-			<p>
-				Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
-			</p>
-			<p>
-				<a class="btn" href="#">View details »</a>
-			</p>
+            <div class="form-group">
+                      <label for="exampleinput">Descripción</label>
+                    <p><%# DataBinder.Eval(Container.DataItem,"DESCRIPCION") %></p>
+                     
+                  </div>
+			
+                  <div class="form-group">
+                      <label for="exampleinput">Fecha De  Inicio</label>
+                    <p ><%# DataBinder.Eval(Container.DataItem,"FECHAAPERTURA") %></p>
+                     
+                  </div>
+
+              
+            
+                    <div class="form-group">
+                       <label for="exampleinput">Fecha De Cierre</label>
+                    <p ><%# DataBinder.Eval(Container.DataItem,"FECHACIERRE") %></p>
+                       
+              </div>
+               
+                    <div class="form-group">
+                         <label for="exampleinput">Cantegoria</label>
+                      <p><%# DataBinder.Eval(Container.DataItem,"nombrecat") %></p>
+                    </div>
+                
+
+              
+            
+            
+			
 		</div>
 	</div>
 	<div class="row">
@@ -40,22 +67,43 @@
 			<h3>
 				DIRRECION
 			</h3>
-			<h2>
-				Heading
-			</h2>
-			<p>
-				Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
-			</p>
-			<p>
-				<a class="btn" href="#">View details »</a>
-			</p>
+		
+			 <div class="form-group">
+                      <label for="exampleinput">Colonia</label>
+                    <p><%# DataBinder.Eval(Container.DataItem,"NOMBRE") %></p>
+                     
+                  </div>
+			
+                  <div class="form-group">
+                      <label for="exampleinput">Municipio</label>
+                    <p><%# DataBinder.Eval(Container.DataItem,"muni") %></p>
+                     
+                  </div>
+
+              
+            
+                    <div class="form-group">
+                       <label for="exampleinput">C.P</label>
+                    <p><%# DataBinder.Eval(Container.DataItem,"CODIGOPOSTAL") %></p>
+                       
+              </div>
+               
+                    <div class="form-group">
+                         <label for="exampleinput">Cruzamientos</label>
+                      <p><%# DataBinder.Eval(Container.DataItem,"CRUZAMIENTO") %></p>
+                    </div>
+                
+
+              
+			
 		</div>
         <!-- mapa gay-->
 		<div class="col-md-6">
 			    <div class="form-group">
-                    <label for="exampleinput" >Ubicacion</label>
-                   
-                    <asp:TextBox ID="txt_ubicar" runat="server" CssClass="form-control"></asp:TextBox>
+                    <label for="exampleinput" >Ubicación</label>
+                    
+             
+                    
 
 
                 </div>
@@ -65,42 +113,49 @@
                 <!--altitud y lon-->
                
                 <div class="form-group" style="display:none;">
-                    <label for="exampleinput">lat:</label>
-                    <asp:TextBox ID="txtlat" runat="server" Text="20.938297181414647" CssClass="form-control"></asp:TextBox>
-                     <label for="exampleinput">log:</label>
-                    <asp:TextBox ID="txt_lo" runat="server" Text="-89.61501516379462" CssClass="form-control"></asp:TextBox>
+                    
+                    <input type="text" id="a" value="<%# DataBinder.Eval(Container.DataItem,"UBICACIONGEOGRAFICA") %>" />
+                <input   type="text" id="b" value="<%# DataBinder.Eval(Container.DataItem,"LONGITUD") %>" />
+                   <input  type="text" id="c" value="<%# DataBinder.Eval(Container.DataItem,"LATITUD") %>"/>
+                  
+           
                 </div>
                 <!--altasb  , bjaas y ca,mbios botonos-->
                 <div>
                          </div>
              <script>
-        $('#ModalMapPreview').locationpicker({
+       $('#ModalMapPreview').locationpicker({
             radius: 0,
             location: {
-                latitude: $('#<%=txtlat.ClientID%>').val(),
-                longitude: $('#<%=txt_lo.ClientID%>').val()
+                latitude: $('#c').val(),
+                longitude: $('#b').val()
             },
             inputBinding: {
-                latitudeInput: $('#<%=txtlat.ClientID%>'),
-                longitudeInput: $('#<%=txt_lo.ClientID%>'),
-                locationNameInput: $('#<%=txt_ubicar.ClientID%>')
+                latitudeInput: $('#c'),
+                longitudeInput: $('#b'),
+                locationNameInput: $('#a')
             },
             enableAutocomplete: true
 
 
         });
-
-
-
-            
+                            
 
 
 
     </script>
 		</div>
-        <!-- mapa gay-->
+        <div class="row">
+		<div class="col-md-6">
+            <p class="text-right"><strong>Para Más Infromación Del Evento </strong></p>
+		</div>
+		<div class="col-md-6">
+  
+            <asp:Button ID="btn_mas" runat="server" Text="Más información" class="btn btn-outline-info" OnClick="mandar"  />
+		</div>
 	</div>
-	--
+	</div>
+
 	<div class="row">
 		<div class="col-md-12">
 			<h3>
@@ -161,6 +216,51 @@
 				</div>
 			</div>
 		</div>
+        </ItemTemplate>
+		
+       </asp:Repeater>
 	</div>
+      <div>
+    <textarea id="TextArea1" cols="200" rows="2"></textarea>
+    <input type="button" id="Button1" runat="server" value="Button" onclick="AgregarComentario()"/>
+      </div>
+      <div id="Mensajes">
+          
+      </div>
 </div>
+    
+    <script>
+
+        function AgregarComentario() {
+            var texto = $("#TextArea1").val();
+
+            //alert(texto);
+
+            $.ajax({
+                type: "POST",
+                url: "frm_eventos.aspx/AgregarMensaje",
+                data: '{Texto:"'+ texto+'"}',
+                contentType: "application/json; charset=utf-8",
+                dataType: "json",
+                success: function (response) {
+                    var r = JSON.parse(JSON.stringify(response));
+                    //var r = JSON.parse(JSON.stringify(d));
+
+                    var Usuario = "<label>" + r.d.Usuario + "</label>"
+                    var Comentario = "<p>" + r.d.Mensaje + "</p><hr />"
+                  
+                    $("#Mensajes").append(Usuario);
+                    $("#Mensajes").append(Comentario);
+                },
+                failure: function (response) {
+                    alert("Error");
+                }
+            });
+        }
+        function OnSuccess(response) {
+            var Comentario="<label>"+response+"</label>"
+            $("#Mensajes").html(Comentario);
+        }
+</script>
+    
 </asp:Content>

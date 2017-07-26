@@ -24,6 +24,12 @@
                   <div class="form-group">
                       <label for="exampleinput">nombre</label>
                       <asp:TextBox ID="txt_nombre" runat="server" CssClass="form-control" OnTextChanged="txt_nombre_TextChanged"></asp:TextBox>
+                      <asp:RequiredFieldValidator id="RequiredFieldValidator1" runat="server"
+  ControlToValidate="txt_nombre"
+  ErrorMessage="No se puede dejar los campos vacios"
+  ForeColor="Red">
+</asp:RequiredFieldValidator>
+                      <br />
                      
                   </div>
 
@@ -54,7 +60,18 @@
                      
                        <span class="input-group-addon "><i   >$</i></span>
                       <asp:TextBox ID="txt_precio" runat="server" CssClass="form-control " style="width:70%"></asp:TextBox>
-                       
+                       <asp:RequiredFieldValidator id="RequiredFieldValidator2" runat="server"
+  ControlToValidate="txt_precio"
+  ErrorMessage="No se puede dejar los campos vacios"
+  ForeColor="Red">
+</asp:RequiredFieldValidator>
+                      <br />
+                      <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server"
+                            ControlToValidate="txt_precio" ErrorMessage="*Ingrese Valores Numericos"
+                            ForeColor="Red"
+                            ValidationExpression="^[0-9]*">
+</asp:RegularExpressionValidator>
+                      <br />
                      
                   </div>
 
@@ -106,7 +123,18 @@
                   <div class="form-group">
                       <label for="exampleinput">C.P</label>
                       <asp:TextBox ID="txt_postal" runat="server" CssClass="form-control"></asp:TextBox>
-                     
+                     <asp:RequiredFieldValidator id="RequiredFieldValidator4" runat="server"
+  ControlToValidate="txt_postal"
+  ErrorMessage="No se puede dejar los campos vacios"
+  ForeColor="Red">
+</asp:RequiredFieldValidator>
+                      <br />
+                      <asp:RegularExpressionValidator ID="RegularExpressionValidator2" runat="server"
+                            ControlToValidate="txt_postal" ErrorMessage="*Ingrese Valores Numericos"
+                            ForeColor="Red"
+                            ValidationExpression="^[0-9]*">
+</asp:RegularExpressionValidator>
+                      <br />
                   </div>
 
               
@@ -114,16 +142,46 @@
                     <div class="form-group">
                        <label for="exampleinput">Colonia</label>
                       <asp:TextBox ID="txt_colonia" runat="server" CssClass="form-control"></asp:TextBox>
+                        <asp:RequiredFieldValidator id="RequiredFieldValidator3" runat="server"
+  ControlToValidate="txt_colonia"
+  ErrorMessage="No se puede dejar los campos vacios"
+  ForeColor="Red">
+</asp:RequiredFieldValidator>
+                      <br />
                        
               </div>
                
                     <div class="form-group">
                          <label for="exampleinput">Número Interior</label>
                         <asp:TextBox ID="txt_numint" runat="server" CssClass="form-control"></asp:TextBox>
+                        <asp:RequiredFieldValidator id="RequiredFieldValidator5" runat="server"
+  ControlToValidate="txt_numint"
+  ErrorMessage="No se puede dejar los campos vacios"
+  ForeColor="Red">
+</asp:RequiredFieldValidator>
+                      <br />
+                        <asp:RegularExpressionValidator ID="RegularExpressionValidator3" runat="server"
+                            ControlToValidate="txt_numint" ErrorMessage="*Ingrese Valores Numericos"
+                            ForeColor="Red"
+                            ValidationExpression="^[0-9]*">
+</asp:RegularExpressionValidator>
+                        <br />
                     </div>
                  <div class="form-group">
                       <label for="exampleinput">Número Exterior</label>
                       <asp:TextBox ID="txt_numexter" runat="server" CssClass="form-control"></asp:TextBox>
+                     <asp:RequiredFieldValidator id="RequiredFieldValidator6" runat="server"
+  ControlToValidate="txt_numexter"
+  ErrorMessage="No se puede dejar los campos vacios"
+  ForeColor="Red">
+</asp:RequiredFieldValidator>
+                      <br />
+                     <asp:RegularExpressionValidator ID="RegularExpressionValidator4" runat="server"
+                            ControlToValidate="txt_numexter" ErrorMessage="*Ingrese Valores Numericos"
+                            ForeColor="Red"
+                            ValidationExpression="^[0-9]*">
+</asp:RegularExpressionValidator>
+                     <br />
                      
                   </div>
 
@@ -132,7 +190,11 @@
                     <div class="form-group">
                        <label for="exampleinput">Cruzamientos</label>
                       <asp:TextBox ID="txt_crizamiento" runat="server" CssClass="form-control"></asp:TextBox>
-                       
+                       <asp:RequiredFieldValidator id="RequiredFieldValidator7" runat="server"
+  ControlToValidate="txt_crizamiento"
+  ErrorMessage="No se puede dejar los campos vacios"
+  ForeColor="Red">
+</asp:RequiredFieldValidator>
               </div>
                 <br />
                 <div class="form-group">
@@ -197,7 +259,11 @@
                     <div class="form-group">
                        <label for="exampleinput">Usuariol</label>
                       <asp:TextBox ID="txt_usuario" runat="server" CssClass="form-control"></asp:TextBox>
-                         
+                         <asp:RequiredFieldValidator id="RequiredFieldValidator8" runat="server"
+  ControlToValidate="txt_usuario"
+  ErrorMessage="No se puede dejar los campos vacios"
+  ForeColor="Red">
+</asp:RequiredFieldValidator>
               </div>
                     <div class="form-group">
                        <label for="exampleinput">VISITAS</label>
@@ -219,7 +285,8 @@
      
             <div class="row">
 		<div class="col-md-3">
-              <asp:Button ID="btn_agregar" runat="server" Text="agregar" CssClass=" btn btn-primary  " OnClick="accion" style="text-align:right" />
+              <asp:Button ID="btn_agregar" runat="server" Text="agregar" CssClass=" btn btn-primary  " OnClick="accion" style="text-align:right" /> 
+             <asp:LinkButton ID="LinkButton1" runat="server" PostBackUrl="~/GaleriaImagenesaspx.aspx" CssClass="btn btn-danger">LinkButton</asp:LinkButton>
       
 		</div>
 		<div class="col-md-3">

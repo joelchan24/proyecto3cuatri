@@ -10,6 +10,7 @@ using Services;
 using System.Security.Cryptography;
 using System.Text;
 using System.IO;
+using System.Data;
 
 namespace AdministradorGUI
 {
@@ -24,7 +25,7 @@ namespace AdministradorGUI
             if (!IsPostBack)
             {
                 ListarPais();
-                vista();
+               // vista();
                
             }
 
@@ -87,9 +88,38 @@ namespace AdministradorGUI
                 }
                 //FileUploadFoto.Save("miimagen.jpg",ImageFormat.Jpeg);
             }
+            if(obj.ID == "btnNuevo") //cambiar por btnReporte
+            {
+                DataSet usuarios = objusuario.LISTARDATOS();
+                DataTable dt = usuarios.Tables[0];
+
+                Reportes.ReporteUsuarios rpFac = new Reportes.ReporteUsuarios();
+                rpFac.SetDataSource(dt);
+
+                Session["llena"] = rpFac;
+
+                abreVentana("Reporte.aspx");
+            }
             ctrl.accion1(recolectar(), obj.ID);
 
-            vista();
+            //vista();
+            //GeneraXML();
+        }
+
+        private void abreVentana(string ventana)
+        {
+            Response.Redirect(ventana, true);
+        }
+
+        public void GeneraXML()
+        {
+            UsuarioBO usuario = new UsuarioBO();
+
+
+            DataSet usuarios = objusuario.LISTARDATOS();
+            DataTable dt = usuarios.Tables[0];
+
+            dt.WriteXml("usuarios.xml");
         }
         public string NombreImagen()
         {
@@ -104,8 +134,8 @@ namespace AdministradorGUI
         }
         public void vista()
         {
-            dtgDatos.DataSource = objusuario.LISTARDATOS().Tables[0];
-            dtgDatos.DataBind();
+           //dtgDatos.DataSource = objusuario.LISTARDATOS().Tables[0];
+           // dtgDatos.DataBind();
         }
 
         protected void accion(object sender, GridViewCommandEventArgs e)
@@ -135,7 +165,7 @@ namespace AdministradorGUI
 
         protected void ocultar(object sender, GridViewRowEventArgs e)
         {
-            e.Row.Cells[1].Visible = false;
+            /*e.Row.Cells[1].Visible = false;
             e.Row.Cells[4].Visible = false;
             e.Row.Cells[6].Visible = false;
             e.Row.Cells[8].Visible = false;
@@ -147,7 +177,7 @@ namespace AdministradorGUI
             e.Row.Cells[17].Visible = false;
             e.Row.Cells[18].Visible = false;
             e.Row.Cells[20].Visible = false;
-            e.Row.Cells[11].Visible = false;
+            e.Row.Cells[11].Visible = false;*/
 
         }
     }

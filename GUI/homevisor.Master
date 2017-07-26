@@ -34,6 +34,11 @@
   
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .clearfix {
+            height: 90px;
+        }
+    </style>
 </head>
 
   
@@ -119,10 +124,6 @@
                 			<li class="dropdown mega-dropdown">
                 				<a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-phone"></span>Contactos </a>				
                 			</li>
-                            <li class="dropdown mega-dropdown">
-                    			<a href="#" class="dropdown-toggle" data-toggle="dropdown">Acerca De</a>				
-                			</li>
-                            <li class="dropdown mega-dropdown"><a href="registroevento.aspx" data-toggle="dropdown">Municipios</a></li>
                              
                           <li class="dropdown">
                           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" style="margin-right:10px;"><span class="glyphicon glyphicon-star"></span>Categorias <span class="caret"></span></a>
@@ -165,8 +166,8 @@
                                                        
                                <a href="#" class=" dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" style="margin-right:20px;"><span class="glyphicon glyphicon-wrench"></span>editar <span class="caret"></span></a>
                           <ul class="dropdown-menu" role="menu" style="display: none;">
-                           <li><a href="loginn.aspx">editar datos </a></li>
-                            <li><a href="registrode_usuariosGUI.aspx">subir evento</a>
+                           <li><a href="editarUsuario.aspx">editar datos </a></li>
+                            <li><a href="registroevento.aspx">subir evento</a></li>
                            
                           </ul>
                       
@@ -209,7 +210,7 @@
                                <li class="dropdown">                          
                                <a href="#" class=" dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" style="margin-right:20px;"><span class="glyphicon glyphicon-wrench"></span>editar <span class="caret"></span></a>
                           <ul class="dropdown-menu" role="menu" style="display: none;">
-                            <li><a href="loginn.aspx">editar datos </a></li>
+                            <li><a href="editarUsuario.aspx">editar datos </a></li>
                             
                           </ul>
                       
@@ -309,11 +310,12 @@
             </form>
            <!---->
         <br />
+         
+        <div class="clearfix"></div>
         <br />
     
         <br />
          
-        <div class="clearfix"></div>
         <div class="footer11">
             <div  class="row">
                 <div class="col-md-4">

@@ -193,9 +193,10 @@ namespace DAO
 
         public int modificaraprovacion(EventoBO oevento, string aprovacion)
         {
-            SqlCommand comando = new SqlCommand("UPDATE EVENTO set APROVACION=@apro WHERE CODIGO=@ID");
+            SqlCommand comando = new SqlCommand("UPDATE EVENTO set APROVACION=@apro WHERE CODIGO=@id");
             comando.Parameters.Add("@apro", SqlDbType.VarChar).Value = aprovacion;
-            comando.Parameters.Add("id", SqlDbType.Int).Value = oevento.Codigo;
+            comando.Parameters.Add("@id", SqlDbType.Int).Value = oevento.Codigo;
+            //id ID
 
             return conectar.EjecutarComando(comando);
         }
@@ -216,7 +217,7 @@ namespace DAO
         public DataSet buscar_aprovados()
         {
             // select * from EVENTO e inner join DIRECCION d on e.DIRECCION=d.CODIGO  
-            SqlCommand cmd = new SqlCommand("select * from EVENTO e  inner join DIRECCION d on e.DIRECCION=d.CODIGO inner join USUARIOS u on  u.CODIGO=e.USUARIO where e.APROVACION='1'order by e.CODIGO DESC  ");
+            SqlCommand cmd = new SqlCommand("select * from EVENTO e  inner join DIRECCION d on e.DIRECCION=d.CODIGO inner join USUARIOS u on  u.CODIGO=e.USUARIO inner join CATEGORIA cat on cat.CODIGO=e.CATEGORIA where e.APROVACION='1'  order by e.CODIGO DESC  ");
 
 
             cmd.CommandType = CommandType.Text;
@@ -224,11 +225,19 @@ namespace DAO
 
             return conectar.EjecutarSentencia(cmd);
         }
-        public int modificarVisistas(EventoBO oevento, int suma)
+        public int modificarVisistas(EventoBO oevento)
         {
-            SqlCommand comando = new SqlCommand("UPDATE EVENTO set VISITAS=@vis WHERE CODIGO=@ID");
-            comando.Parameters.Add("@visi", SqlDbType.Int).Value = suma + 1;
-            comando.Parameters.Add("id", SqlDbType.Int).Value = oevento.Codigo;
+            SqlCommand com = new SqlCommand("select VISITAS from EVENTO where CODIGO=@id");
+            com.Parameters.Add("@id", SqlDbType.Int).Value = oevento.Codigo;
+
+            DataRow row = conectar.EjecutarSentencia(com).Tables[0].Rows[fila];
+            int suma = Convert.ToInt32(row[0].ToString());
+
+            
+
+            SqlCommand comando = new SqlCommand("UPDATE EVENTO set VISITAS=@vis WHERE CODIGO=@id");
+            comando.Parameters.Add("@vis", SqlDbType.Int).Value = suma + 1;
+            comando.Parameters.Add("@id", SqlDbType.Int).Value = oevento.Codigo;
 
             return conectar.EjecutarComando(comando);
         }
@@ -320,6 +329,31 @@ namespace DAO
             SqlCommand cmd = new SqlCommand("  select * from EVENTO e  inner join DIRECCION d on e.DIRECCION=d.CODIGO inner join USUARIOS u on  u.CODIGO=e.USUARIO where e.APROVACION='1' and e.CATEGORIA=3 order by e.CODIGO DESC ");
 
          
+            cmd.CommandType = CommandType.Text;
+
+
+            return conectar.EjecutarSentencia(cmd);
+        }
+
+
+        public DataSet datoseventoselecionado(int id)
+        {
+            SqlCommand coma = new SqlCommand("  select  e.* , cat.NOMBRE as nombrecat  ,cat.CODIGO , d.*,u.*, mu.NOMBRE as muni from EVENTO e  inner join DIRECCION d on e.DIRECCION=d.CODIGO inner join USUARIOS u on  u.CODIGO=e.USUARIO inner join CATEGORIA cat on  cat.CODIGO=e.CATEGORIA inner join MUNICIPIO mu on mu.CODIGO=d.MUNICIPIO where e.APROVACION='1' and e.CODIGO=@cod "
+);
+            coma.Parameters.Add("@cod", SqlDbType.Int).Value = id;
+            coma.CommandType = CommandType.Text;
+
+
+
+            return conectar.EjecutarSentencia(coma);
+        }
+        public DataSet top_3visitas()
+        {
+            // select * from EVENTO e inner join DIRECCION d on e.DIRECCION=d.CODIGO   2
+            SqlCommand cmd = new SqlCommand("   select  TOP 3 * from EVEnto order by (visitas) desc   ");
+
+
+
             cmd.CommandType = CommandType.Text;
 
 

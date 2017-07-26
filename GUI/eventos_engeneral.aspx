@@ -13,30 +13,35 @@
 	<div class="row">
 		<div class="col-md-12">
 			<div class="row">
-				 <asp:Repeater ID="rpt_todos" runat="server" OnItemDataBound="rpt_todos_ItemDataBound" >
-            
+			 
+                 <asp:ListView id="list" runat="server" OnItemCommand="mandar" datakeynames="CODIGO" OnSelectedIndexChanged="cerrar">
+
                        <ItemTemplate>
                 
           	<div class="col-md-4">
 					<div class="thumbnail">
-						<img alt="Bootstrap Thumbnail First" src="~/img/<%# DataBinder.Eval(Container.DataItem,"FOTOPROMOCION")%>.jpg" />
+						<img alt="Bootstrap Thumbnail First" src="img/<%# Eval("FOTOPROMOCION")%>.jpg" />
 						<div class="caption">
 							<h3>
-                              <%# DataBinder.Eval(Container.DataItem,"NOMBRE")%>	
+                              <%# Eval("NOMBRE")%>	
 							</h3>
-                             <asp:Label ID="id" runat="server" Text=""><%# DataBinder.Eval(Container.DataItem,"CODIGO")%></asp:Label>
+                             <asp:Label ID="id" runat="server" Text=""><%# Eval("CODIGO")%></asp:Label>
                             <p>
-								<%# DataBinder.Eval(Container.DataItem,"DESCRIPCION")%>	
+								<%# Eval("DESCRIPCION")%>	
 							<p>
-							<asp:Button ID="btn_vermas1" runat="server" Text="Ver Más" class="btn btn-primary" href="#" OnClick="cerrar" />
                                
+                               <a href="frm_eventos.aspx?id=<%#Eval("CODIGO")%>">ir</a>
 							</p>
 						</div>
 					</div>
 				</div>
                                            </ItemTemplate>
-      </asp:Repeater>
+     </asp:ListView>
+                <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<% Data Source=DESKTOP-TT12AGM\\SQLEXPRESS; Initial catalog=CULTURA; integrated security=true%>">
+                    
+                </asp:SqlDataSource>
 				<div class="col-md-4">
+                    
 					
 				</div>
 				<div class="col-md-4">
