@@ -11,10 +11,10 @@ using System.Data.SqlClient;
 
 namespace DAO
 {
-    class mensajeDAO : interface_metodos_guardar_eliminar_actualizar_buscar
+  public  class mensajeDAO : interface_metodos_guardar_eliminar_actualizar_buscar
     {
         conexionDAO conectar = new conexionDAO();
-            
+        int fila = 0;
         public int agregar(object agregar)
         {
             MensajeBO mensa = (MensajeBO)agregar;
@@ -39,7 +39,7 @@ namespace DAO
         public DataSet buscar()
         {
 
-            SqlCommand coma = new SqlCommand("select  * from MENSAJES ");
+            SqlCommand coma = new SqlCommand("select  * from MENSAJES where MESTATUS=0");
             coma.CommandType = CommandType.Text;
             return conectar.EjecutarSentencia(coma);
         }
@@ -71,5 +71,24 @@ namespace DAO
 
 
         }
+
+        public int modificarmensajedao(int valor)
+        {
+           
+            
+            SqlCommand comando = new SqlCommand("update mensajes set MESTATUS=1 where CODIGO=@id");
+
+            comando.Parameters.Add("@id", SqlDbType.Int).Value = valor ;
+
+            return conectar.EjecutarComando(comando);
+        }
+
+
+
+
+
+
+
+
     }
 }

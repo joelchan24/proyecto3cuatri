@@ -13,7 +13,9 @@ namespace GUI
 {
     public partial class frm_mensaje : System.Web.UI.Page
     {
-        MensajesDAO mensaje = new MensajesDAO();
+        mensajeDAO mensaje = new mensajeDAO();
+      
+
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -72,19 +74,25 @@ namespace GUI
             e.Row.Cells[2].Visible = false;
             e.Row.Cells[7].Visible = false;
             e.Row.Cells[6].Visible = false;
+            
         }
 
         protected void dgb_mismensajes_RowCommand(object sender, GridViewCommandEventArgs e)
         {
-            if (e.CommandName == "btn_enviar")
+            if (e.CommandName == "btn_leer")
             {
                 //foto promocion 7
                 //int fila = Convert.ToInt32(e.CommandArgument.ToString());
 
                 int fila = Convert.ToInt32(e.CommandArgument);
-                txt_mensaje.Text = dgb_mismensajes.Rows[fila].Cells[5].Text;
+                txt_resivido.Text = dgb_mismensajes.Rows[fila].Cells[5].Text;
+                int id = int.Parse(dgb_mismensajes.Rows[fila].Cells[1].Text);
+
+          
+                mensaje.modificarmensajedao(id);
                 
-                    }
+                refresh();
+            }
         }
     }
     
