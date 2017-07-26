@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+VisualStudioVersion = 14.0.23107.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VisorGUI", "GUI\VisorGUI.csproj", "{9269640E-85C4-4D20-80AE-BE956573A4C8}"
 EndProject
@@ -12,6 +12,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdministradorGUI", "AdministradorGUI\AdministradorGUI.csproj", "{DD4A98AF-E946-4ABB-BFA1-ECC398E323CA}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Services", "Services\Services.csproj", "{DC236FF7-CB2F-4910-8C84-CED9125BFD61}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Reportes", "Reportes\Reportes.csproj", "{59E025A5-7259-4658-97EC-2A06C79E60DC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{DC236FF7-CB2F-4910-8C84-CED9125BFD61}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DC236FF7-CB2F-4910-8C84-CED9125BFD61}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DC236FF7-CB2F-4910-8C84-CED9125BFD61}.Release|Any CPU.Build.0 = Release|Any CPU
+		{59E025A5-7259-4658-97EC-2A06C79E60DC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{59E025A5-7259-4658-97EC-2A06C79E60DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{59E025A5-7259-4658-97EC-2A06C79E60DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{59E025A5-7259-4658-97EC-2A06C79E60DC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

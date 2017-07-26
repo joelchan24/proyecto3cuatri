@@ -60,19 +60,7 @@
                      
                        <span class="input-group-addon "><i   >$</i></span>
                       <asp:TextBox ID="txt_precio" runat="server" CssClass="form-control " style="width:70%"></asp:TextBox>
-                       <asp:RequiredFieldValidator id="RequiredFieldValidator2" runat="server"
-  ControlToValidate="txt_precio"
-  ErrorMessage="No se puede dejar los campos vacios"
-  ForeColor="Red">
-</asp:RequiredFieldValidator>
-                      <br />
-                      <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server"
-                            ControlToValidate="txt_precio" ErrorMessage="*Ingrese Valores Numericos"
-                            ForeColor="Red"
-                            ValidationExpression="^[0-9]*">
-</asp:RegularExpressionValidator>
-                      <br />
-                     
+                       
                   </div>
 
               </div>
