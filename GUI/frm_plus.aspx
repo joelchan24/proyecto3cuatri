@@ -7,18 +7,29 @@
     
  <style>
         #map_canvas {
-    width: 500px;
-    height: 400px;
-    margin: 2em auto;
+    width: 1100px;
+    height: 500px;
+    margin: 1em auto;
 }
     </style>
-
-    <div id="map_canvas"></div>
-
+    <div class="container">
+    <div class="panel panel-default">
+        <div class="panel-heading">
+             <h3 class="panel-title">EVENTOS CULTURALES</h3>
+        </div>
+        <div class="panel-body">
+             <div id="map_canvas"></div>
+         </div>
+        
+    
+    </div>
+      </div>
+           <asp:Repeater ID="Repeater1" runat="server">
+            <ItemTemplate>
      <script>
-
+        
         var markers = [
-  ['Bondi Beach ,kjakjkja , hjhjhj', -33.890542, 151.274856],
+  [' <%# DataBinder.Eval(Container.DataItem,"UBICACIONGEOGRAFICA")%> ', <%# DataBinder.Eval(Container.DataItem,"LATITUD")%>,<%# DataBinder.Eval(Container.DataItem,"LONGITUD")%>],
   ['Coogee Beach', -33.923036, 151.259052],
   ['Cronulla Beach', -34.028249, 151.157507],
   ['Manly Beach', -33.80010128657071, 151.28747820854187],
@@ -58,7 +69,8 @@
 
 
     </script>
-
+                </ItemTemplate>
+    </asp:Repeater>
 
 
 

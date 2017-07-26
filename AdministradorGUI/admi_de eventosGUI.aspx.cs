@@ -174,7 +174,7 @@ namespace AdministradorGUI
                 txt_precio.Text = dgb_eventos.Rows[fila].Cells[4].Text;
                 txt_codir.Value = dgb_eventos.Rows[fila].Cells[16].Text;
                txt_visitas.Text= dgb_eventos.Rows[fila].Cells[15].Text;
-                Image1.ImageUrl = "img/" + dgb_eventos.Rows[fila].Cells[7].Text.ToString() + ".jpg";
+                Image1.ImageUrl = "/img" + dgb_eventos.Rows[fila].Cells[7].Text.ToString() + ".jpg";
                 rbt_aprovado.Checked = (Convert.ToString(dgb_eventos.Rows[fila].Cells[11].Text) != "0") ? true : false;
                 rbt_noapro.Checked = (Convert.ToString(dgb_eventos.Rows[fila].Cells[11].Text) == "0") ? true : false;
                 txt_usuario.Text = dgb_eventos.Rows[fila].Cells[22].Text;
@@ -222,7 +222,7 @@ namespace AdministradorGUI
                 if (file_foto.HasFile)
                 {
                     strNuevoNombre = NombreImagen();
-                    file_foto.SaveAs(Server.MapPath("~/img/") + strNuevoNombre + ".jpg");
+                    file_foto.SaveAs(Server.MapPath("~/img") + strNuevoNombre + ".jpg");
                 }
                 //FileUploadFoto.Save("miimagen.jpg",ImageFormat.Jpeg);
             }
@@ -232,7 +232,7 @@ namespace AdministradorGUI
                 {
                     File.Delete(MapPath(Image1.ImageUrl));
                     strNuevoNombre = NombreImagen();
-                    file_foto.SaveAs(Server.MapPath("~/img/") + strNuevoNombre + ".jpg");
+                    file_foto.SaveAs(Server.MapPath("~img") + strNuevoNombre + ".jpg");
                 }
                 //FileUploadFoto.Save("miimagen.jpg",ImageFormat.Jpeg);
             }
@@ -240,7 +240,7 @@ namespace AdministradorGUI
             {
                 if (file_foto.HasFile)
                 {
-                    File.Delete("~/img/" + Image1.ImageUrl);
+                    File.Delete("~/img" + Image1.ImageUrl);
                 }
                 //FileUploadFoto.Save("miimagen.jpg",ImageFormat.Jpeg);
             }
