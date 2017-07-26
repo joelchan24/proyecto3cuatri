@@ -1,20 +1,21 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/homevisor.Master" AutoEventWireup="true" CodeBehind="eventos_engeneral.aspx.cs" Inherits="GUI.eventos_engeneral" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/homevisor.Master" AutoEventWireup="true" CodeBehind="frm_topvisitados.aspx.cs" Inherits="GUI.frm_topvisitados" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <div class="container">
+     <div class="container">
 	<div class="row">
 		<div class="col-md-12">
 			<h3>
-				TOP EVENTOS AGREGADOS
+				TOP EVENTOS VISITADOS
 			</h3>
 		</div>
 	</div>
 	<div class="row">
 		<div class="col-md-12">
 			<div class="row">
+                <asp:ListView ID="ListView1" runat="server">
 			 
-                 <asp:ListView id="list" runat="server" OnItemCommand="mandar" datakeynames="CODIGO" OnSelectedIndexChanged="cerrar">
+                
 
                        <ItemTemplate>
                 
@@ -36,8 +37,7 @@
 					</div>
 				</div>
                                            </ItemTemplate>
-     </asp:ListView>
-               
+   </asp:ListView>
                     
 					
 				

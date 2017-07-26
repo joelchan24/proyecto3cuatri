@@ -28,7 +28,13 @@ namespace GUI
 
         protected void mandar(object sender, EventArgs e)
         {
-            Response.Redirect("eventos_engeneral.aspx");
+            Response.Redirect("eventos_engeneral.aspx",true);
+        }
+
+        protected void mandarar(object sender, EventArgs e)
+        {
+            Response.Redirect("frm_topvisitados.aspx",true);
+            
         }
     }
 }

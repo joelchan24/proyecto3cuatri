@@ -83,6 +83,7 @@
     <Content Include="frm_musica.aspx" />
     <Content Include="frm_plus.aspx" />
     <Content Include="frm_teatroo.aspx" />
+    <Content Include="frm_topvisitados.aspx" />
     <Content Include="GaleriaImagenesaspx.aspx" />
     <Content Include="HorariosEventos.aspx" />
     <Content Include="img\avatar.png" />
@@ -193,6 +194,13 @@
     </Compile>
     <Compile Include="frm_teatroo.aspx.designer.cs">
       <DependentUpon>frm_teatroo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frm_topvisitados.aspx.cs">
+      <DependentUpon>frm_topvisitados.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frm_topvisitados.aspx.designer.cs">
+      <DependentUpon>frm_topvisitados.aspx</DependentUpon>
     </Compile>
     <Compile Include="GaleriaImagenesaspx.aspx.cs">
       <DependentUpon>GaleriaImagenesaspx.aspx</DependentUpon>
