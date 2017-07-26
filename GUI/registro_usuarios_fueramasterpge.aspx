@@ -177,13 +177,13 @@
                                      <asp:Label ID="lblNumeroExterior" runat="server" Text="Numero Exterior" for="email"></asp:Label>
                                      <asp:TextBox ID="txtNumeroExteriror" runat="server" CssClass="form-control"  placeholder="Numero Exterior"></asp:TextBox>
                                     <asp:RequiredFieldValidator id="RequiredFieldValidator12" runat="server"
-  ControlToValidate="txtNumeroExterior"
+  ControlToValidate="txtNumeroExteriror"
   ErrorMessage="No se puede dejar los campos vacios"
   ForeColor="Red">
 </asp:RequiredFieldValidator>
                                     <br />
                                     <asp:RegularExpressionValidator ID="RegularExpressionValidator4" runat="server"
-                            ControlToValidate="txtNumeroExterior" ErrorMessage="*Ingrese Valores Numericos"
+                            ControlToValidate="txtNumeroExteriror" ErrorMessage="*Ingrese Valores Numericos"
                             ForeColor="Red"
                             ValidationExpression="^[0-9]*">
 </asp:RegularExpressionValidator>
