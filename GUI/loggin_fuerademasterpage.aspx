@@ -25,7 +25,6 @@
                             
                         <form id="loginform" class="form-horizontal" role="form">
                                     
-                                    
                                 
                             <div style="margin-bottom: 25px " class="input-group col-lg-offset-2 ">
                                         <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
@@ -34,7 +33,7 @@
                                 
                             <div style="margin-bottom: 25px" class="input-group col-lg-offset-2 ">
                                         <span class="input-group-addon "><i class="glyphicon glyphicon-lock " ></i></span>
-        <asp:TextBox ID="txt_contraseña" runat="server" CssClass="dropdown-toggle form-control" type="password" class="form-control " name="password" placeholder="password"></asp:TextBox>
+        <asp:TextBox ID="txt_contraseña" runat="server" CssClass="form-group form-control" type="password" class="form-control " name="password" placeholder="password"></asp:TextBox>
                                               </div>
                                     
 
@@ -52,11 +51,10 @@
                                     <!-- Button -->
 
                                     <div class="col-sm-12 controls">
-        <asp:Button ID="btn_ingresar" runat="server" Text="Ingresar"  href="#" class="btn btn-sm  btn-primary " Width="80px" OnClick="condicion_de_login" />
-                                        <asp:LinkButton ID="LinkButton1" runat="server" class="btn btn-sm  btn-success" Height="35px" Width="80px" PostBackUrl="registro_usuarios_fueramasterpge.aspx">Registrarme</asp:LinkButton>
+        <asp:Button ID="btn_ingresar" runat="server" Text="Ingresar"  href="#" class="btn btn-sm  btn-primary " Width="90px" OnClick="condicion_de_login" />
+                                        <!--<asp:LinkButton ID="LinkButton1" runat="server" class="btn btn-sm  btn-success" Height="35px" Width="80px" PostBackUrl="registro_usuarios_fueramasterpge.aspx">Registrarme</asp:LinkButton>
                                          <!--<asp:Button ID="btnRegistrarme" runat="server" Text="Ingresar"   class="btn btn-sm  btn-success" />-->
-                                      
-                                      <!--<a id="btn-fblogin" href="registro_usuarios_fueramasterpge.aspx"  class="btn btn-sm btn-success">registrarse</a>-->
+                                      <asp:Button ID="Button1" runat="server" CssClass="btn btn-sm  btn-success " Text="Registrarme" OnClick="Button1_Click" />
 
                                     </div>
                                 </div>
