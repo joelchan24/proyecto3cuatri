@@ -131,6 +131,17 @@
                <li><a href="admin_eventosaprovados.aspx"><i class="fa fa-circle-o"></i> Eventos Aprovados</a></li>
              
           </ul>
+
+                <a href="#">
+            <i class="fa fa-dashboard"></i> <span>Acerca de</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+          </a>
+                <ul class="treeview-menu menu-open" style="display: block;">
+           <li> <a href="QuienesSomos.aspx"><i class="fa fa-circle-o"></i>Quienes Somos </a></li>
+           </ul>
+
         </li>
           <li class="active">
           <a href="#">
