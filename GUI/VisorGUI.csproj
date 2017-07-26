@@ -81,6 +81,7 @@
     <Content Include="frm_eventos.aspx" />
     <Content Include="frm_mensaje.aspx" />
     <Content Include="frm_musica.aspx" />
+    <Content Include="frm_plus.aspx" />
     <Content Include="frm_teatroo.aspx" />
     <Content Include="GaleriaImagenesaspx.aspx" />
     <Content Include="HorariosEventos.aspx" />
@@ -178,6 +179,13 @@
     </Compile>
     <Compile Include="frm_musica.aspx.designer.cs">
       <DependentUpon>frm_musica.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frm_plus.aspx.cs">
+      <DependentUpon>frm_plus.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frm_plus.aspx.designer.cs">
+      <DependentUpon>frm_plus.aspx</DependentUpon>
     </Compile>
     <Compile Include="frm_teatroo.aspx.cs">
       <DependentUpon>frm_teatroo.aspx</DependentUpon>

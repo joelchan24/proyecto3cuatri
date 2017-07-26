@@ -150,8 +150,8 @@
             <p class="text-right"><strong>Para Más Infromación Del Evento </strong></p>
 		</div>
 		<div class="col-md-6">
-           
-            <asp:Button ID="btn_mas" runat="server" Text="Más información" class="btn btn-outline-info" OnClick="mandar" />
+  
+            <asp:Button ID="btn_mas" runat="server" Text="Más información" class="btn btn-outline-info" OnClick="mandar"  />
 		</div>
 	</div>
 	</div>
