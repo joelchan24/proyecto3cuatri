@@ -47,6 +47,18 @@
 				<div class="form-group">
 					 <asp:Label ID="Label2" runat="server" Text="Telefono" CssClass="text-primary"></asp:Label><br />
                     <asp:TextBox ID="txtTelefono" runat="server" Width="505px" Height="30px"></asp:TextBox>
+                    <asp:RequiredFieldValidator id="RequiredFieldValidator1" runat="server"
+  ControlToValidate="txtTelefono"
+  ErrorMessage="No se puede dejar los campos vacios"
+  ForeColor="Red">
+</asp:RequiredFieldValidator>
+                    <br />
+                    <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server"
+                            ControlToValidate="txtTelefono" ErrorMessage="*Ingrese Valores Numericos"
+                            ForeColor="Red"
+                            ValidationExpression="^[0-9]*">
+</asp:RegularExpressionValidator>
+                    <br />
 
 				</div>
 			</div>

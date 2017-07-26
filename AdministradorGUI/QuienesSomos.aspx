@@ -47,7 +47,12 @@
 				<div class="form-group">
 					 <asp:Label ID="Label2" runat="server" Text="Descripción" CssClass="text-primary"></asp:Label><br />
                     <asp:TextBox ID="txtDescripcion" runat="server" Width="505px" Height="30px"></asp:TextBox>
-
+                    <asp:RequiredFieldValidator id="RequiredFieldValidator1" runat="server"
+  ControlToValidate="txtDescripcion"
+  ErrorMessage="No se puede dejar los campos vacios"
+  ForeColor="Red">
+</asp:RequiredFieldValidator>
+                    <br />
 				</div>
 			</div>
 		</div>
