@@ -17,7 +17,7 @@
                     <div class="panel panel-primary">
                         <div class="panel-heading">
                             <div class="panel-title">Registrame</div>
-                            <div style="float:right; font-size: 85%; position: relative; top:-10px"><a id="hop" href="WebForm1.aspx" >Regresar al Inicio</a>&nbsp;&nbsp;<a id="signinlink" href="loggin_fuerademasterpage.aspx" >Ingresar</a></div>
+                            <div style="float:right; font-size: 85%; position: relative; top:-10px"><a id="hop" style="color:white" href="WebForm1.aspx" >Regresar al Inicio</a>&nbsp;&nbsp;<a id="signinlink" class="alert-link" style="color:white" href="loggin_fuerademasterpage.aspx" >Ingresar</a></div>
 
                         </div>  
                         <div class="panel-body col-lg-12" >
