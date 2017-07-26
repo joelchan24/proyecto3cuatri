@@ -94,48 +94,8 @@
 				</div>
                                            </ItemTemplate>
       </asp:Repeater>
-                 <asp:Repeater ID="rtp_dos" runat="server" >
-            
-                       <ItemTemplate>
                 
-          	<div class="col-md-4">
-					<div class="thumbnail">
-						<img alt="Bootstrap Thumbnail First" width="400" height="400" src="img/<%# DataBinder.Eval(Container.DataItem,"FOTOPROMOCION")%>.jpg" />
-						<div class="caption">
-							<h3>
-                              <%# DataBinder.Eval(Container.DataItem,"NOMBRE")%>	
-							</h3>
-							<p>
-								<%# DataBinder.Eval(Container.DataItem,"DESCRIPCION")%>	
-							<p>
-												 <a href="frm_eventos.aspx?id=<%#Eval("CODIGO")%>">Ver Más </a>
-							</p>
-						</div>
-					</div>
-				</div>
-                                           </ItemTemplate>
-      </asp:Repeater>
-                 <asp:Repeater ID="rtb_3" runat="server" >
-            
-                       <ItemTemplate>
                 
-          	<div class="col-md-4">
-					<div class="thumbnail">
-						<img alt="Bootstrap Thumbnail First" width="400" height="400" src="img/<%# DataBinder.Eval(Container.DataItem,"FOTOPROMOCION")%>.jpg" />
-						<div class="caption">
-							<h3>
-                              <%# DataBinder.Eval(Container.DataItem,"NOMBRE")%>	
-							</h3>
-							<p>
-								<%# DataBinder.Eval(Container.DataItem,"DESCRIPCION")%>	
-							<p>
-													 <a href="frm_eventos.aspx?id=<%#Eval("CODIGO")%>">Ver Más </a>
-							</p>
-						</div>
-					</div>
-				</div>
-                                           </ItemTemplate>
-      </asp:Repeater>
                
 				</div>
 				<!--<div class="col-md-4">

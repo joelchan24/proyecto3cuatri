@@ -359,6 +359,18 @@ namespace DAO
 
             return conectar.EjecutarSentencia(cmd);
         }
+        public DataSet top_3recientes()
+        {
+            // select * from EVENTO e inner join DIRECCION d on e.DIRECCION=d.CODIGO   2
+            SqlCommand cmd = new SqlCommand("   select  TOP 3 * from EVEnto order by (CODIGO) desc   ");
+
+
+
+            cmd.CommandType = CommandType.Text;
+
+
+            return conectar.EjecutarSentencia(cmd);
+        }
 
 
 
