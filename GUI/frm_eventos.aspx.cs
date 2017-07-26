@@ -54,7 +54,7 @@ namespace GUI
             ComentarioModel modelo = new ComentarioModel();
 
             modelo.Mensaje = Texto;
-            modelo.Usuario = "Admin"; //(string)Session["usuario"];
+            modelo.Usuario = "COMENTARIO"; //(string)Session["usuario"];
             return modelo;
         }
     }

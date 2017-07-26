@@ -80,6 +80,7 @@
     <Content Include="frm_danza.aspx" />
     <Content Include="frm_eventos.aspx" />
     <Content Include="frm_mensaje.aspx" />
+    <Content Include="frm_mensajesdelorgaizador.aspx" />
     <Content Include="frm_musica.aspx" />
     <Content Include="frm_plus.aspx" />
     <Content Include="frm_teatroo.aspx" />
@@ -173,6 +174,13 @@
     </Compile>
     <Compile Include="frm_mensaje.aspx.designer.cs">
       <DependentUpon>frm_mensaje.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frm_mensajesdelorgaizador.aspx.cs">
+      <DependentUpon>frm_mensajesdelorgaizador.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frm_mensajesdelorgaizador.aspx.designer.cs">
+      <DependentUpon>frm_mensajesdelorgaizador.aspx</DependentUpon>
     </Compile>
     <Compile Include="frm_musica.aspx.cs">
       <DependentUpon>frm_musica.aspx</DependentUpon>
