@@ -202,8 +202,8 @@ namespace GUI
                 txt_codir.Value = dgb_todos.Rows[fila].Cells[16].Text;
                 txt_visitas.Text = dgb_todos.Rows[fila].Cells[15].Text;
                 Image1.ImageUrl = "img/" + dgb_todos.Rows[fila].Cells[7].Text.ToString() + ".jpg";
-                rbt_aprovado.Checked = (Convert.ToString(dgb_todos.Rows[fila].Cells[11].Text) != "0") ? true : false;
-                rbt_noapro.Checked = (Convert.ToString(dgb_todos.Rows[fila].Cells[11].Text) == "0") ? true : false;
+              //  rbt_aprovado.Checked = (Convert.ToString(dgb_todos.Rows[fila].Cells[11].Text) != "0") ? true : false;
+               // rbt_noapro.Checked = (Convert.ToString(dgb_todos.Rows[fila].Cells[11].Text) == "0") ? true : false;
                 txt_usuario.Text = dgb_todos.Rows[fila].Cells[22].Text;
                 ddl_categoria.SelectedValue = dgb_todos.Rows[fila].Cells[13].Text;
                 ddl_municipio.SelectedValue = dgb_todos.Rows[fila].Cells[22].Text;

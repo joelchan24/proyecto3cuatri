@@ -94,48 +94,8 @@
 				</div>
                                            </ItemTemplate>
       </asp:Repeater>
-                 <asp:Repeater ID="rtp_dos" runat="server" >
-            
-                       <ItemTemplate>
                 
-          	<div class="col-md-4">
-					<div class="thumbnail">
-						<img alt="Bootstrap Thumbnail First" width="400" height="400" src="img/<%# DataBinder.Eval(Container.DataItem,"FOTOPROMOCION")%>.jpg" />
-						<div class="caption">
-							<h3>
-                              <%# DataBinder.Eval(Container.DataItem,"NOMBRE")%>	
-							</h3>
-							<p>
-								<%# DataBinder.Eval(Container.DataItem,"DESCRIPCION")%>	
-							<p>
-												 <a href="frm_eventos.aspx?id=<%#Eval("CODIGO")%>">Ver Más </a>
-							</p>
-						</div>
-					</div>
-				</div>
-                                           </ItemTemplate>
-      </asp:Repeater>
-                 <asp:Repeater ID="rtb_3" runat="server" >
-            
-                       <ItemTemplate>
                 
-          	<div class="col-md-4">
-					<div class="thumbnail">
-						<img alt="Bootstrap Thumbnail First" width="400" height="400" src="img/<%# DataBinder.Eval(Container.DataItem,"FOTOPROMOCION")%>.jpg" />
-						<div class="caption">
-							<h3>
-                              <%# DataBinder.Eval(Container.DataItem,"NOMBRE")%>	
-							</h3>
-							<p>
-								<%# DataBinder.Eval(Container.DataItem,"DESCRIPCION")%>	
-							<p>
-													 <a href="frm_eventos.aspx?id=<%#Eval("CODIGO")%>">Ver Más </a>
-							</p>
-						</div>
-					</div>
-				</div>
-                                           </ItemTemplate>
-      </asp:Repeater>
                
 				</div>
 				<!--<div class="col-md-4">
@@ -186,27 +146,23 @@
                                            </ItemTemplate>
       </asp:Repeater>
 
-                
+              
 
 
-
-			<!--	<div class="col-md-4">
-					<div class="thumbnail">
-						<img alt="Bootstrap Thumbnail Third" src="http://lorempixel.com/output/sports-q-c-600-200-1.jpg" />
-						<div class="caption">
-							<h3>
-								Thumbnail label
-							</h3>
-							<p>
-								Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.
-							</p>
-							<p>
-								<a class="btn btn-primary" href="#">Action</a> <a class="btn" href="#">Action</a>
-							</p>
-						</div>
-					</div>
-				</div>-->
+			
 			</div>
+              
+                  <br />
+             <br />
+             <br />
+             
+            
+           
+            <div class="col-md-12 text-center">
+               
+                  <asp:Button ID="btn_masvisi" runat="server" Text="Ver Más Eventos Visitados" CssClass="btn btn-info" OnClick="mandarar"  />
+
+            </div>
 		</div>
 	</div>
 </div>

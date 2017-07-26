@@ -166,9 +166,9 @@
                                                        
                                <a href="#" class=" dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" style="margin-right:20px;"><span class="glyphicon glyphicon-wrench"></span>editar <span class="caret"></span></a>
                           <ul class="dropdown-menu" role="menu" style="display: none;">
-                           <li><a href="editarUsuario.aspx">editar datos </a></li>
-                            <li><a href="registroevento.aspx">subir evento</a></li>
-                           
+                           <li><a href="editarUsuario.aspx">Editar Datos </a></li>
+                            <li><a href="registroevento.aspx">Subir Evento</a></li>
+                           <li><a href="frm_mensajesdelorgaizador.aspx">Mensajes</a></li>
                           </ul>
                       
                               <li />

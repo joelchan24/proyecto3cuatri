@@ -290,5 +290,21 @@ namespace AdministradorGUI
                 rbt_noapro.Checked = false;
             }
         }
+
+        protected void btn_limpiar_Click(object sender, EventArgs e)
+        {
+            txt_nombre.Text = "";
+            txt_aperura.Text = "";
+            txt_fecha_cierre.Text = "";
+            txt_precio.Text = "";
+            txt_ubicar.Text = "";
+            txt_postal.Text = "";
+            txt_colonia.Text = "";
+            txt_numint.Text = "";
+            txt_numexter.Text = "";
+            txt_crizamiento.Text = "";
+            txt_descrip.Text = "";
+
+        }
     }
 }

@@ -350,7 +350,31 @@ namespace DAO
         public DataSet top_3visitas()
         {
             // select * from EVENTO e inner join DIRECCION d on e.DIRECCION=d.CODIGO   2
-            SqlCommand cmd = new SqlCommand("   select  TOP 3 * from EVEnto order by (visitas) desc   ");
+            SqlCommand cmd = new SqlCommand("   select  TOP 3 * from EVEnto where aprovacion=1 order by (visitas) desc   ");
+
+
+
+            cmd.CommandType = CommandType.Text;
+
+
+            return conectar.EjecutarSentencia(cmd);
+        }
+        public DataSet top_3recientes()
+        {
+            // select * from EVENTO e inner join DIRECCION d on e.DIRECCION=d.CODIGO   2
+            SqlCommand cmd = new SqlCommand("   select  TOP 3 * from EVEnto where aprovacion=1 order by (CODIGO) desc   ");
+
+
+
+            cmd.CommandType = CommandType.Text;
+
+
+            return conectar.EjecutarSentencia(cmd);
+        }
+        public DataSet top_recientes()
+        {
+            // select * from EVENTO e inner join DIRECCION d on e.DIRECCION=d.CODIGO   2
+            SqlCommand cmd = new SqlCommand("   select   * from EVEnto  where aprovacion=1  order by (visitas) desc   ");
 
 
 
