@@ -68,7 +68,7 @@
 	<div class="row">
 		<div class="col-md-12">
 			<h3 class="text-center" style="color:#b69da8">
-				TOP TRES EVENTOS
+				MÁS RECIENTES
 			</h3>
 			<div class="row">
 				 <asp:Repeater ID="rpt_uno" runat="server" >

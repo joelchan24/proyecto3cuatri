@@ -18,7 +18,7 @@ namespace GUI
         {
           
 
-            Repeater1.DataSource = evento.buscar_aprovados().Tables[0];
+            Repeater1.DataSource = evento.top_3visitas().Tables[0];
            Repeater1.DataBind();
             //aqui el maximo resgiutro
             rpt_uno.DataSource = evento.busca1().Tables[0];
