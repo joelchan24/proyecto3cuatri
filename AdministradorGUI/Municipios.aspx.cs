@@ -53,5 +53,10 @@ namespace AdministradorGUI
                 txt_Estado.Text = dgv_Estados.Rows[indice].Cells[3].Text;
             }
         }
+
+        protected void ocultar(object sender, GridViewRowEventArgs e)
+        {
+            e.Row.Cells[3].Visible = false;
+        }
     }
 }

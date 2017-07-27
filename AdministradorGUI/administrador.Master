@@ -110,9 +110,9 @@
             </span>
           </a>
           <ul class="treeview-menu menu-open" style="display: block;">
-            <li><a href="Usuario.aspx"><i class="fa fa-circle-o"></i> Control de usuarios</a></li>
+            <li><a href="Usuario.aspx"><i class="fa fa-circle-o"></i>  Usuarios y Organizadores</a></li>
            
-               <li><a href="admi_organizadoresGUI.aspx"><i class="fa fa-circle-o"></i> control de Organizadores</a></li>
+               
               <li><a href="Categoria.aspx"><i class="fa fa-circle-o"></i>Control de Categoria</a></li>
           </ul>
         </li>
@@ -144,33 +144,8 @@
            </ul>
 
         </li>
-          <li class="active">
-          <a href="#">
-            <i class="fa fa-calendar"></i> <span>calenar</span>
-            <span class="pull-right-container">
-              <small class="label pull-right bg-red">3</small>
-              <small class="label pull-right bg-blue">17</small>
-            </span>
-          </a>
-        </li>
-          <li class="treeview active">
-          <a href="admin_mensajes.aspx">
-            <i class="fa fa-envelope"></i> <span>Mensajes</span>
-            <span class="pull-right-container">
-              <i class="fa fa-angle-left pull-right"></i>
-            </span>
-          </a>
-          <ul class="treeview-menu">
-            <li class="active">
-              <a href="mailbox.html">Mensajes enviados
-                <span class="pull-right-container">
-                  <span class="label label-primary pull-right">13</span>
-                </span>
-              </a>
-            </li>
-            <li><a href="compose.html">Mensajes Recividos</a></li>
           
-          </ul>
+        
         </li>
         <%--<li class="treeview">
 

@@ -198,7 +198,7 @@
                        
               &nbsp;</div>
                   
-                    <div class="form-group">
+                    <div class="form-group" style="display:none">
                        <label for="exampleinput">Usuariol</label>
                       <asp:TextBox ID="txt_usuario" runat="server" CssClass="form-control"></asp:TextBox>
                          

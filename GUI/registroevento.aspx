@@ -287,13 +287,15 @@
         <br/>
             <div class="row">
   <div class="col-md-12">
-      <asp:GridView ID="dgb_todos" runat="server" OnRowCommand="mandar">
+      <asp:GridView ID="dgb_todos" runat="server" OnRowCommand="mandar" OnRowCreated="ocultar" CssClass="table-resposive table table-bordered">
           <Columns>
               <asp:ButtonField CommandName="btn_seleccionar" Text="seleccionar" />
           </Columns>
       </asp:GridView>
                 </div>
                   </div>
+        <br />
+        <br />
         
            
         
