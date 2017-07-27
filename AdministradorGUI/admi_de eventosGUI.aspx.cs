@@ -177,7 +177,7 @@ namespace AdministradorGUI
                 Image1.ImageUrl = "/img" + dgb_eventos.Rows[fila].Cells[7].Text.ToString() + ".jpg";
                 rbt_aprovado.Checked = (Convert.ToString(dgb_eventos.Rows[fila].Cells[11].Text) != "0") ? true : false;
                 rbt_noapro.Checked = (Convert.ToString(dgb_eventos.Rows[fila].Cells[11].Text) == "0") ? true : false;
-                txt_usuario.Text = dgb_eventos.Rows[fila].Cells[22].Text;
+                txt_usuario.Text = dgb_eventos.Rows[fila].Cells[14].Text;
                 ddl_categoria.SelectedValue = dgb_eventos.Rows[fila].Cells[13].Text;
                 ddl_municipio.SelectedValue = dgb_eventos.Rows[fila].Cells[22].Text;
 
