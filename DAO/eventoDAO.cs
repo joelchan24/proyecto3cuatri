@@ -414,6 +414,13 @@ namespace DAO
 
             return conectar.EjecutarSentencia(cmd);
         }
+        public DataSet galeria(int id)
+        {
+            SqlCommand cmd = new SqlCommand("select FOTO from GALERIA where IDEVENTO=@ID");
+            cmd.Parameters.Add("@ID", SqlDbType.Int).Value = id;
+            cmd.CommandType = CommandType.Text;
+            return conectar.EjecutarSentencia(cmd);
+        }
 
 
 

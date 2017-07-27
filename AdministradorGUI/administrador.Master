@@ -99,6 +99,7 @@
       </form>
       <!-- /.search form -->
       <!-- sidebar menu: : style can be found in sidebar.less -->
+        
       <ul class="sidebar-menu">
         <li class="header">OBCIONES</li>
           <li class="treeview active">
@@ -171,20 +172,19 @@
           
           </ul>
         </li>
-        <li class="treeview">
-          <a href="inicio.aspx">
-            <i class="fa fa-th"></i> <span>Reportes de Usuarios</span>
-            
-          </a>
-         
+        <%--<li class="treeview">
+
+         <asp:LinkButton ID="btn_usuarios" runat="server" OnClick="action">
+              <i class="fa fa-th"></i> <span>Reportes de Usuarios</span>
+         </asp:LinkButton>
         </li>
            <li class="treeview">
-         <a href="productos.aspx">
-            <i class="fa fa-th"></i> <span>Reportes de eventos</span>
-          
-          </a>
+
+               <asp:LinkButton ID="btn_eventos" runat="server" OnClick="action">
+              <i class="fa fa-th"></i> <span>Reportes de eventos</span>
+         </asp:LinkButton>
          
-        </li>
+        </li>--%>
                
       
           <li class="treeview">

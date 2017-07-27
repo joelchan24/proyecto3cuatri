@@ -215,7 +215,7 @@ namespace AdministradorGUI
 
         protected void accion(object sender, EventArgs e)
         {
-            GeneraXML();
+            //GeneraXML();
             var btnSeleccionado = (Button)sender;
             // cargar la foto
             if (btnSeleccionado.ID == "btn_agregar")

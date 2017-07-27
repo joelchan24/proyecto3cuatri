@@ -102,7 +102,7 @@
             <div class="auto-style6">
                 <div class="auto-style5">
                     <asp:Label ID="label1" Text="ID:" runat="server" CssClass="text-blue"></asp:Label>
-                    <asp:TextBox ID="txtID" runat="server" CssClass="form-control"  Width="300px" Height="32px"></asp:TextBox>
+                    <asp:TextBox ID="txtID" runat="server" CssClass="form-control"  Width="300px" Height="32px" Enabled="False"></asp:TextBox>
                     <asp:Label ID="Label2" runat="server" Text="Nombre:" CssClass="text-blue"></asp:Label>
                     <asp:TextBox ID="txtNombre" runat="server" CssClass="form-control" Width="300px" Height="32px"></asp:TextBox>
                     <asp:RequiredFieldValidator id="RequiredFieldValidator1" runat="server"
