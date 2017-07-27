@@ -232,7 +232,7 @@
                        <div class="form-inline navbar-form left  " role="search">
 
 
-<asp:TextBox ID="txt_buscar" runat="server" CssClass="form-control" Width="250px" placeholder="Nombre a buscar" type="date"></asp:TextBox>&nbsp;
+<asp:TextBox ID="txt_buscar" runat="server" CssClass="form-control" Width="250px" placeholder="Nombre a buscar" ></asp:TextBox>&nbsp;
 <asp:LinkButton ID="LinkButton1" runat="server" CssClass="btn btn-info" Text="Buscar" OnClick="mandar"><span class="glyphicon glyphicon-search" ></span>&nbsp;Buscar</asp:LinkButton>
                      </div>
                             </li>  
