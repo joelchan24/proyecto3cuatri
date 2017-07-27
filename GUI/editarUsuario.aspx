@@ -2,18 +2,13 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-     <div class="panel panel-info">
+         <div class="container">
+             <div class="panel panel-primary">
                         <div class="panel-heading">
                             <div class="panel-title"><h3 style="text-align:center">Mis Datos</h3></div>
 
                         </div> 
-         <div class="container">
-         <div class="row">
-                    <div class="panel panel-info">
-                        <div class="panel-heading">
-                            <div class="panel-title">DATOS PERSONALES</div>
-
-                        </div>  
+         <div class="row">  
                         <div class="panel-body col-lg-12" >
                                 
                                 <div id="signupalert" style="display:none" class="alert alert-danger">
@@ -213,7 +208,6 @@
                 </div>
       
   
-    </div>
              </div>
          </div>
 </asp:Content>
