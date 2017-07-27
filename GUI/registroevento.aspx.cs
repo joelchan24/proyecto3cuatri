@@ -44,10 +44,17 @@ namespace GUI
                 ddl_municipio.DataValueField = "CODIGO";
                 ddl_municipio.DataBind();
                 refrescar();
-              
-           
 
-                
+              
+                dgb_todos.HeaderRow.Cells[3].Text = "Nombre Del Evento";
+                dgb_todos.HeaderRow.Cells[2].Text = "Descripción";
+                dgb_todos.HeaderRow.Cells[24].Text = "Nombre Del Usuario";
+                dgb_todos.HeaderRow.Cells[25].Text = "Apellido Del Usuario";
+                dgb_todos.HeaderRow.Cells[26].Text = "Teléfono";
+                dgb_todos.HeaderRow.Cells[28].Text = "Correo";
+                dgb_todos.HeaderRow.Cells[29].Text = "Alias del Usuario";
+
+
 
             }
         }
@@ -208,6 +215,37 @@ namespace GUI
                 ddl_categoria.SelectedValue = dgb_todos.Rows[fila].Cells[13].Text;
                 ddl_municipio.SelectedValue = dgb_todos.Rows[fila].Cells[22].Text;
             }
+        }
+
+        protected void ocultar(object sender, GridViewRowEventArgs e)
+        {
+            e.Row.Cells[1].Visible = false;
+            e.Row.Cells[4].Visible = false;
+            e.Row.Cells[5].Visible = false;
+            e.Row.Cells[6].Visible = false;
+            e.Row.Cells[7].Visible = false;
+            e.Row.Cells[8].Visible = false;
+            e.Row.Cells[9].Visible = false;
+            e.Row.Cells[10].Visible = false;
+            e.Row.Cells[11].Visible = false;
+            e.Row.Cells[12].Visible = false;
+            e.Row.Cells[11].Visible = false;
+            e.Row.Cells[13].Visible = false;
+            e.Row.Cells[14].Visible = false;
+            e.Row.Cells[15].Visible = false;
+            e.Row.Cells[16].Visible = false;
+            e.Row.Cells[17].Visible = false;
+            e.Row.Cells[18].Visible = false;
+            e.Row.Cells[19].Visible = false;
+            e.Row.Cells[20].Visible = false;
+            e.Row.Cells[21].Visible = false;
+            e.Row.Cells[22].Visible = false;
+            e.Row.Cells[23].Visible = false;
+
+            e.Row.Cells[31].Visible = false;
+            e.Row.Cells[30].Visible = false;
+            e.Row.Cells[32].Visible = false;
+            e.Row.Cells[27].Visible = false;
         }
     }
 }

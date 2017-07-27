@@ -41,7 +41,7 @@ namespace AdministradorGUI
                 ddl_municipio.DataValueField = "CODIGO";
                 ddl_municipio.DataBind();
                 refrescar();
-                usuario();
+
                 //este cambia los emcabezados del tabla
                 dgb_eventos.HeaderRow.Cells[3].Text = "Nombre Del Evento";
                 dgb_eventos.HeaderRow.Cells[2].Text = "Descripción";

@@ -32,7 +32,7 @@
             </div>
         </p>
         <p>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;<asp:GridView ID="dgv_Pais" runat="server" OnRowCommand="Seleccionar">
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;<asp:GridView ID="dgv_Pais" runat="server" OnRowCommand="Seleccionar" CssClass="table-resposive table table-bordered" >
                 <Columns>
                     <asp:ButtonField CommandName="dgvbtnSeleccionar" Text="Seleccionar" />
                 </Columns>
