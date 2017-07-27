@@ -8,7 +8,7 @@
   <div class="container">
         <div class="panel panel-primary">
                         <div class="panel-heading">
-                            <div class="panel-title">GALERIA</div>
+                            <div class="panel-title">INFORMACIÓN GENERAL DEL EVENTO</div>
 
                         </div> 
 	<div class="row">
@@ -161,7 +161,7 @@
 	</div>
 	</div>
 
-	<div class="row">
+	<!--<div class="row">
 		<div class="col-md-12">
 			<h3>
 				GALERIA EVENTO
@@ -172,19 +172,26 @@
 		<div class="col-md-12">
 			<div class="row">
 			</div>
-		</div>
+		</div>-->
         </ItemTemplate>
 		
        </asp:Repeater>
 	</div>
             </div>
+      <br />
+      <div class="container">
+       <div class="panel panel-primary">
+                        <div class="panel-heading">
+                            <div class="panel-title">Galeria</div>
+
+                        </div> 
       <div class="row">
-         <div class="col-md-12">
-         <asp:Repeater ID="rpiter" runat="server">
+          <asp:Repeater ID="rpiter" runat="server">
         <ItemTemplate>
+         <div class="col-md-12">
               <div class="col-md-4">
                   <div class="thumbnail">
-						<img alt="Bootstrap Thumbnail First" src="img/<%# DataBinder.Eval(Container.DataItem,"FOTO")%>.jpg"/>
+						<img alt="Bootstrap Thumbnail First" width="200" height="200" src="img/<%# DataBinder.Eval(Container.DataItem,"FOTO")%>.jpg"/>
 					</div>
               </div>
           </div>
@@ -193,19 +200,30 @@
               </asp:Repeater>
           </div>
           </div>
+           </div>
+          </div>
+    <div class="container">
       <div class="row">
           <div class="col-lg-1">
 
           </div>
+                <div class="panel panel-warning">
+                        <div class="panel-heading">
+                            <div class="panel-title">Galeria</div>
+
+                        </div> 
+                    <div class="row">
           <div class="col-lg-10">
     <textarea id="TextArea1" cols="200" rows="2"></textarea>
     <input type="button" id="Button1" runat="server" value="Enviar Comentario " text="Enviar" onclick="AgregarComentario()"/>
       </div>
-          </div>
       <div id="Mensajes">
           
       </div>
-      </div>
+          </div>
+          </div>
+          </div>
+        </div>
     
     <script>
 
