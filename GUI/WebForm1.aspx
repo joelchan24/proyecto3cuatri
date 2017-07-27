@@ -23,36 +23,19 @@
                 <div class="carousel-inner">
                     <div class="item slides active">
                        <!-- <div class="slide-1"></div>-->
-                         <img class="slide-1" src="img/foto.jpg" alt="slide-1"  />
-                            <div class="hero">
-                                <hgroup>
-                                    <h1>We are creative</h1>        
-                                    <h3>Get start your next awesome project</h3>
-                                </hgroup>
-                            <button class="btn btn-hero btn-lg" role="button">See all features</button>
-                        </div>
+                         <img class="slide-1" src="img/Orquesta-Sinfonica-Colegio-Bilbao16.jpg" alt="slide-1"  />
+                           
+                       
                     </div>
                     <div class="item slides">
                        <!--    <div class="slide-2"></div>-->
-                      <img class="slide-2" src="img/vaqueria-yucateca-2.jpg" alt="slide-2"/>
-                            <div class="hero">        
-                                <hgroup>
-                                    <h1>We are smart</h1>        
-                                    <h3>Get start your next awesome project</h3>
-                                </hgroup>       
-                                <button class="btn btn-hero btn-lg" role="button">See all features</button>
-                            </div>
+                      <img class="slide-2" src="img/escuela-teatro-2013-06-29-181304.jpg" alt="slide-2"/>
+                            
                         </div>
                         <div class="item slides">
                           <!-- <div class="slide-3"></div>-->
                             <img class="slide-3" src="img/ja (2).jpg" />
-                                <div class="hero">        
-                                    <hgroup>
-                                        <h1>We are amazing</h1>        
-                                        <h3>Get start your next awesome project</h3>
-                                    </hgroup>
-                                    <button class="btn btn-hero btn-lg" role="button">See all features</button>
-                                </div>
+                                
                             </div>
                         </div> 
                     </div>
