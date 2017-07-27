@@ -29,7 +29,7 @@
 							<h3>
                               <%# Eval("NOMBRE")%>	
 							</h3>
-                             <asp:Label ID="id" runat="server" Text=""><%# Eval("CODIGO")%></asp:Label>
+                          
                             <p>
 								<%# Eval("DESCRIPCION")%>	
 							<p>
