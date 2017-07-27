@@ -174,7 +174,7 @@
                               <li />
                                 
                               <asp:Label ID="txt_usuaer2" runat="server" Text="Label" style="margin-right:10px;padding-top: 10px;" ></asp:Label>
-                               <asp:Button ID="btn_cerrar2" runat="server" Text="cerrar secion" OnClick="cerrar" style="margin-right:15px;padding-top: 10px; "  />
+                               <asp:Button ID="btn_cerrar2" runat="server" Text="cerrar secion" OnClick="cerrar" style="margin-right:15px;padding-top: 10px; "  CausesValidation="False" />
                           
 
                                

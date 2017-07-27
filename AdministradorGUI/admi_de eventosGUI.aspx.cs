@@ -215,6 +215,7 @@ namespace AdministradorGUI
 
         protected void accion(object sender, EventArgs e)
         {
+            GeneraXML();
             var btnSeleccionado = (Button)sender;
             // cargar la foto
             if (btnSeleccionado.ID == "btn_agregar")
@@ -244,14 +245,43 @@ namespace AdministradorGUI
                 }
                 //FileUploadFoto.Save("miimagen.jpg",ImageFormat.Jpeg);
             }
+            //se crea el reporte y se agrega la funcion de accion del boton
+            if (btnSeleccionado.ID == "btn_nuevo") //cambiar por btnReporte
+            {
+                DataSet Evento = eventado.buscar();
+                DataTable dt = Evento.Tables[0];
+
+                Reportes.ReporteEVentos rpFac = new Reportes.ReporteEVentos();
+                rpFac.SetDataSource(dt);
+
+                Session["llena"] = rpFac;
+
+                abreVentana("Reporte.aspx");
+            }
 
             Button btnsellcionado = (Button)sender;
 
            control.accion(devolver(), btnsellcionado.ID);
            // ser_direccion.accion(mandar(), btnsellcionado.ID);
             refrescar();
+           
+
+        }
+        //primero se genera el xml
+        private void abreVentana(string ventana)
+        {
+            Response.Redirect(ventana, true);
+        }
+
+        public void GeneraXML()
+        {
+            //UsuarioBO usuario = new UsuarioBO();
 
 
+            DataSet usuarios = eventado.buscar();
+            DataTable dt = usuarios.Tables[0];
+
+            dt.WriteXml("eventos.xml");
         }
 
         protected void btn_eliminar_Click1(object sender, EventArgs e)
