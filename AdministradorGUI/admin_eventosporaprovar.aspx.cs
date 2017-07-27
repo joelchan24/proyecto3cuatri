@@ -42,5 +42,13 @@ namespace AdministradorGUI
                 refrescar();
             }
         }
+
+        protected void btnBuscar_Click(object sender, EventArgs e)
+        {
+            string valor = txtBuscar.Text;
+
+            dgb_porconfirmar.DataSource = eventado.buscar_noaprovados12(valor);
+            dgb_porconfirmar.DataBind();
+        }
     }
 }
