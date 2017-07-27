@@ -166,7 +166,9 @@
     <Content Include="Reporte.aspx" />
     <Content Include="Usuario.aspx" />
     <Content Include="usuarios.xml" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="administrador.Master.cs">
