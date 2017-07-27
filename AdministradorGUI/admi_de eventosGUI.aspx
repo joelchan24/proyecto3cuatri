@@ -254,7 +254,7 @@
  
          <asp:Button ID="btn_agregar" runat="server" Text="Agregar" CssClass=" btn btn-primary  col-sm-1 " OnClick="accion" />
         
-        <asp:Button ID="btn_limpiar" runat="server" Text="Limpiar" CssClass="btn btn-warning  col-sm-1 " OnClick="btn_limpiar_Click" />
+        <asp:Button ID="btn_limpiar" runat="server" Text="Limpiar" CssClass="btn btn-warning  col-sm-1 " />
           </div>
             <div class="row">
   <div class="col-md-12">

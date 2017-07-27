@@ -3,7 +3,8 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
-     <script type="text/javascript" src='https://maps.google.com/maps/api/js?sensor=false&libraries=places&key=AIzaSyCuiUJxL3eVPwCyGdf1P6g9TUQ4KW95YtA'></script>
+     <script  type="text/javascript"src="http://maps.google.com/maps/api/js?sensor=falseplaces&key=AIzaSyCuiUJxL3eVPwCyGdf1P6g9TUQ4KW95YtA" ></script>
+   
     
  <style>
         #map_canvas {
@@ -24,17 +25,18 @@
     
     </div>
       </div>
-           <asp:Repeater ID="Repeater1" runat="server">
-            <ItemTemplate>
+          
      <script>
         
-        var markers = [
-  [' <%# DataBinder.Eval(Container.DataItem,"UBICACIONGEOGRAFICA")%> ', <%# DataBinder.Eval(Container.DataItem,"LATITUD")%>,<%# DataBinder.Eval(Container.DataItem,"LONGITUD")%>],
-  ['Coogee Beach', -33.923036, 151.259052],
-  ['Cronulla Beach', -34.028249, 151.157507],
-  ['Manly Beach', -33.80010128657071, 151.28747820854187],
-  ['Maroubra Beach', -33.950198, 151.259302]
+       
+         var markers = [
+               <asp:Repeater ID="Repeater1" runat="server">
+           <ItemTemplate>
+  [' <%# DataBinder.Eval(Container.DataItem,"NOMBRE")%>,<%# DataBinder.Eval(Container.DataItem,"nombrecat")%> ,<%# DataBinder.Eval(Container.DataItem,"UBICACIONGEOGRAFICA")%>', <%# DataBinder.Eval(Container.DataItem,"LATITUD")%>,<%# DataBinder.Eval(Container.DataItem,"LONGITUD")%>]
+,    </ItemTemplate>
+ </asp:Repeater>
         ];
+       
 
         function initializeMaps() {
             var myOptions = {
@@ -69,9 +71,7 @@
 
 
     </script>
-                </ItemTemplate>
-    </asp:Repeater>
-
+             
 
 
 
