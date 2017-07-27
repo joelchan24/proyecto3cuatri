@@ -23,7 +23,7 @@
                 <div class="carousel-inner">
                     <div class="item slides active">
                        <!-- <div class="slide-1"></div>-->
-                         <img class="slide-1" src="img/progreso-malecon.jpg" alt="slide-1"  />
+                         <img class="slide-1" src="img/foto.jpg" alt="slide-1"  />
                             <div class="hero">
                                 <hgroup>
                                     <h1>We are creative</h1>        
@@ -45,7 +45,7 @@
                         </div>
                         <div class="item slides">
                           <!-- <div class="slide-3"></div>-->
-                            <img class="slide-3" src="img/obra-cholo.jpg" />
+                            <img class="slide-3" src="img/ja (2).jpg" />
                                 <div class="hero">        
                                     <hgroup>
                                         <h1>We are amazing</h1>        
