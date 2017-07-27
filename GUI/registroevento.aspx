@@ -13,7 +13,11 @@
     <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
     <script type="text/javascript" src='https://maps.google.com/maps/api/js?sensor=false&libraries=places&key=AIzaSyCuiUJxL3eVPwCyGdf1P6g9TUQ4KW95YtA'></script>
     <script src="js/locationpicker.jquery.js"></script>
+        <div class="panel panel-primary">
+                       <div class="panel-heading">
+                            <div class="panel-title text-center"></div>
 
+                        </div>
           <div class="row">
 
               <h1 > control</h1>
@@ -294,6 +298,7 @@
       </asp:GridView>
                 </div>
                   </div>
+            </div>
         <br />
         <br />
         
