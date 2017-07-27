@@ -88,7 +88,7 @@
 					<div class="thumbnail">
            
                         
-						<img alt="Bootstrap Thumbnail First" width="400" height="400" src="img/<%# DataBinder.Eval(Container.DataItem,"FOTOPROMOCION")%>.jpg"/>
+						<img alt="Bootstrap Thumbnail First" style="height:00px !important; width:300px !important" src="img/<%# DataBinder.Eval(Container.DataItem,"FOTOPROMOCION")%>.jpg"/>
 						<div class="caption">
 							<h3>
                               <%# DataBinder.Eval(Container.DataItem,"NOMBRE")%>	
