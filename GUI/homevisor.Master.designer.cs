@@ -58,7 +58,7 @@ namespace GUI {
         protected global::System.Web.UI.WebControls.Button btn_cerrar2;
         
         /// <summary>
-        /// Control txt_usuaer1.
+        /// txt_usuaer1 control.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.

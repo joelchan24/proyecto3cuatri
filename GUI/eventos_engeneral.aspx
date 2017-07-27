@@ -4,12 +4,16 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="container">
 	<div class="row">
+        <div class="panel panel-primary">
+                       <div class="panel-heading">
+                            <div class="panel-title text-center"></div>
+
+                        </div>
 		<div class="col-md-12">
 			<h3>
 				 EVENTOS AGREGADOS
 			</h3>
 		</div>
-	</div>
 	<div class="row">
 		<div class="col-md-12">
 			<div class="row">
@@ -42,6 +46,8 @@
 					
 				
 			</div>
+            </div>
+        </div>
 		</div>
       
 	</div>
