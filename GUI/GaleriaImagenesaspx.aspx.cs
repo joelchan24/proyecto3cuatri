@@ -82,5 +82,10 @@ namespace GUI
             dgvGaleria.DataBind();
         }
 
+        protected void esconder(object sender, GridViewRowEventArgs e)
+        {
+            e.Row.Cells[1].Visible = false;
+            e.Row.Cells[3].Visible = false;
+        }
     }
 }
