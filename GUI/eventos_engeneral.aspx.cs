@@ -19,9 +19,24 @@ namespace GUI
         int fila;
         protected void Page_Load(object sender, EventArgs e)
         {
-            
-            list.DataSource = eve.buscar_aprovados().Tables[0];
-            list.DataBind();
+            if (Request.QueryString["buscar"] ==null)
+            {
+
+                list.DataSource = eve.buscar_aprovados().Tables[0];
+                list.DataBind();
+
+            }
+            else if (Request.QueryString["buscar"] != null)
+                    {
+                EventoBO obj = new EventoBO();
+                DateTime dato = Convert.ToDateTime(Request.QueryString["buscar"]);
+                obj.FechaApertura = dato;
+                list.DataSource = eve.buscar_aprovadosdelmater(obj).Tables[0];
+                list.DataBind();
+            }
+
+
+
             
         }
 

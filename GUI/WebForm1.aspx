@@ -123,11 +123,6 @@
 			<h3 class="text-center" style="color:#b69da8">
 			MÁS VISITADOS
 			</h3>
-                 <div class="panel panel-primary">
-                       <div class="panel-heading">
-                            <div class="panel-title text-center"></div>
-
-                        </div>
                      <div class="row">
               
 				
@@ -166,6 +161,5 @@
                </div><br />
                      </div>
             </div>
-</div>
 </div>
 </asp:Content>

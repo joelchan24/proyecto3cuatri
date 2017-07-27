@@ -126,7 +126,7 @@
           <ul class="treeview-menu menu-open" style="display: block;">
             <li><a href="admi_de eventosGUI.aspx"><i class="fa fa-circle-o"></i> Catalogo De Eventos</a></li>
               <li> <a href="Municipios.aspx"><i class="fa fa-circle-o"></i>Catalogo De Municipios </a></li>
-              <li> <a href="Estados.aspx"><i class="fa fa-circle-o"></i>Catalogo De Estados </a></li>
+              <li> <a href="Estado.aspx"><i class="fa fa-circle-o"></i>Catalogo De Estados </a></li>
               <li> <a href="Pais.aspx"><i class="fa fa-circle-o"></i>Catalogo De Paises </a></li>
             <li><a href="admin_eventosporaprovar.aspx"><i class="fa fa-circle-o"></i> Pendientes Por Aprovar</a></li>
                <li><a href="admin_eventosaprovados.aspx"><i class="fa fa-circle-o"></i> Eventos Aprovados</a></li>
