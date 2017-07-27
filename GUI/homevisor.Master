@@ -161,7 +161,7 @@
                              <%} %>
                                   <% else if ( Session["tipo"].ToString() == "ORGANIZADOR" && Session["usuario"] != null && Session["id"] != null) { %>
                                                    
- <% txt_usuaer2.Text = "welcome " + Session["usuario"].ToString(); %>
+ <% txt_usuaer2.Text = "Bienvenido " + Session["usuario"].ToString(); %>
                           
                            <li class="dropdown">
                                                        
@@ -206,7 +206,7 @@
                             <%} %>
                                   <% else if (Session["tipo"].ToString()=="USUARIO" && Session["usuario"] != null && Session["id"] != null ) { %>
                                                                        
- <% txt_usuaer1.Text = "welcome " + Session["usuario"].ToString(); %>
+ <% txt_usuaer1.Text = "Binvenido " + Session["usuario"].ToString(); %>
                           
                            
                                <li class="dropdown">                          
@@ -254,7 +254,8 @@
              <br/>
         			<!-- /.container-fluid -->
 		</nav>
-		<nav id="sidebar-wrapper" class="">
+		
+		<!--<nav id="sidebar-wrapper" class="">
 			<ul class="sidebar-nav">
 				<a id="menu-close" href="#" class="btn btn-danger pull-right hidden-md hidden-lg toggle"><i class="fa fa-times"></i></a>
 				<li class="sidebar-brand" style="left: 0px; top: 9px; width: 100%; height: 44px">
@@ -275,7 +276,7 @@
 				<!-- Future Development
 				<li>
 					<a href="#portfolio">Portfolio</a>
-				</li> -->
+				</li> 
 				<li>
 					<a href="/blog" title="Our Blog">Blog</a>
 				</li>
@@ -283,7 +284,7 @@
 					<a data-toggle="modal" data-href="#loginModal" data-target="#loginModal" style="cursor:pointer;"> Hosting</a>
 				</li>
 			</ul>
-		</nav>
+		</nav>-->
 		<!--<aside id="accordion" class="social text-vertical-center" style="left: 0%; top: 11%; height: 137px">
 			<div class="accordion-social">
                 <br/>
