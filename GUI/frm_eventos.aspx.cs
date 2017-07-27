@@ -27,6 +27,8 @@ namespace GUI
                 
                 rpt.DataSource = evento.datoseventoselecionado(id).Tables[0];
                 rpt.DataBind();
+                rpiter.DataSource = evento.galeria(id).Tables[0];
+                rpiter.DataBind();
                 EventoBO obj = new EventoBO();
                 obj.Codigo = id;
                 evento.modificarVisistas(obj);

@@ -63,13 +63,18 @@
     <!---->
 
 			
-    <div class="container">
+    <div class="container"><br />
 	
 	<div class="row">
 		<div class="col-md-12">
-			<h3 class="text-center" style="color:#b69da8">
-				MÁS RECIENTES
+             <h3 class="text-center" style="color:#b69da8">
+			MÁS RECIENTES
 			</h3>
+        <div class="panel panel-primary">
+                       <div class="panel-heading">
+                            <div class="panel-title text-center"></div>
+
+                        </div>
 			<div class="row">
 				 <asp:Repeater ID="rpt_uno" runat="server" >
             
@@ -87,7 +92,7 @@
 							<p>
 								<%# DataBinder.Eval(Container.DataItem,"DESCRIPCION")%>	
 							<p>
-						 <a href="frm_eventos.aspx?id=<%#Eval("CODIGO")%>">Ver Más </a>
+						 <a href="frm_eventos.aspx?id=<%#Eval("CODIGO")%>" class="btn-group-lg btn-sm btn-success"><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>Ver Más </a>
 							</p>
 						</div>
 					</div>
@@ -96,8 +101,6 @@
       </asp:Repeater>
                 
                 
-               
-				</div>
 				<!--<div class="col-md-4">
 					
 				</div>
@@ -108,16 +111,24 @@
             <br />
             
             <div class="clearfix"></div>
+                	</div><br />
+            <div class="row">
             <div class="col-md-12 text-center">
                 <asp:HiddenField ID="txt" runat="server" />
 
-                 <asp:Button ID="btn_vermas" runat="server" Text="Ver Más Eventos" CssClass="btn btn-info" OnClick="mandar" />
+                 <asp:Button ID="btn_vermas" runat="server"  Text="Ver Más Eventos" CssClass="btn-group-lg btn-sm btn-info "  OnClick="mandar" />
+            </div>
+                    </div><br />
             </div>
 			<h3 class="text-center" style="color:#b69da8">
 			MÁS VISITADOS
 			</h3>
-			<div class="row">
+                 <div class="panel panel-primary">
+                       <div class="panel-heading">
+                            <div class="panel-title text-center"></div>
 
+                        </div>
+                     <div class="row">
               
 				
               
@@ -138,7 +149,7 @@
                                 
 								<%# DataBinder.Eval(Container.DataItem,"DESCRIPCION")%>	
 							<p>
-				        <a href="frm_eventos.aspx?id=<%#Eval("CODIGO")%>">Ver Más </a>
+				        <a href="frm_eventos.aspx?id=<%#Eval("CODIGO")%>"class="btn-group-lg btn-sm btn-success"><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>Ver Más </a>
 							</p>
 						</div>
 					</div>
@@ -146,24 +157,15 @@
                                            </ItemTemplate>
       </asp:Repeater>
 
-              
-
-
-			
-			</div>
-              
-                  <br />
-             <br />
-             <br />
-             
-            
-           
+            </div><br />
+                      <div class="row">
             <div class="col-md-12 text-center">
                
-                  <asp:Button ID="btn_masvisi" runat="server" Text="Ver Más Eventos Visitados" CssClass="btn btn-info" OnClick="mandarar"  />
-
+                  <asp:Button ID="btn_masvisi" runat="server" Text="Ver Más Eventos Visitados" CssClass="btn-group-lg btn-sm btn-info" OnClick="mandarar"  />
+                </div>
+               </div><br />
+                     </div>
             </div>
-		</div>
-	</div>
+</div>
 </div>
 </asp:Content>
