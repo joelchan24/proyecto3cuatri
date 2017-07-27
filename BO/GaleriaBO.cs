@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace BO
 {
-    class GaleriaBO
+   public class GaleriaBO
     {
         public int Codigo { get; set; }
         public string Foto { get; set; }
-        public int IDDireccion { get; set; }
+        public int IDEVENTO { get; set; }
     }
 }

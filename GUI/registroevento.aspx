@@ -185,10 +185,29 @@
 </asp:RequiredFieldValidator>
               </div>
                 <br />
-                <div class="form-group">
-                      <label for="exampleinput">Subir Imagen</label>
+               
+              
+        </div>
+              <div class="col-md-4">
+
+                
+                  <div class="form-group">
+                      <label for="exampleinput">Descripcion</label>
+                     <asp:TextBox id="txt_descrip" TextMode="multiline" Columns="50" Rows="5" runat="server" CssClass="form-control " width="349px" height="350px"></asp:TextBox>                 />
                      
-                        <asp:Image ID="Image1" runat="server" Width="100px" Height="50px"/>
+                  </div>
+
+              
+            
+                   
+                   
+                   
+
+              
+             <div class="form-group">
+                      
+                     
+                        <asp:Image ID="Image1" runat="server" Width="350px" Height="150px"/>
                     <asp:FileUpload ID="file_foto" runat="server" />
                      
                   </div>
@@ -210,41 +229,8 @@
                             });
                         </script>
                
-              
-        </div>
-              <div class="col-md-4">
-
-                
-                  <div class="form-group">
-                      <label for="exampleinput">Descripcion</label>
-                     <asp:TextBox id="txt_descrip" TextMode="multiline" Columns="50" Rows="5" runat="server" CssClass="form-control " width="349px" height="350px"></asp:TextBox>                 />
-                     
-                  </div>
-
-              
-            
-                   
-                   
-                   
-
-              
-            
-                    <div class="form-group">
-                       <label for="exampleinput" >aprovacion</label><br />
-                      <label class="radio-inline" >
-                          <asp:RadioButton ID="rbt_aprovado" runat="server" type="radio" name="aprovado"  />  Aprovado
-      
-    </label>
-                        
-    <label class="radio-inline">
-      <input type="radio" name="optradio">
-
-        <asp:RadioButton ID="rbt_noapro" runat="server" type="radio" name="optradio" />  No aprovado
-    </label>
-                       
-              &nbsp;</div>
                   
-                    <div class="form-group">
+                    <div class="form-group" style="display:none">
                        <label for="exampleinput">Usuariol</label>
                       <asp:TextBox ID="txt_usuario" runat="server" CssClass="form-control"></asp:TextBox>
                          <asp:RequiredFieldValidator id="RequiredFieldValidator8" runat="server"
@@ -253,7 +239,7 @@
   ForeColor="Red">
 </asp:RequiredFieldValidator>
               </div>
-                    <div class="form-group">
+                    <div class="form-group" style="display:none">
                        <label for="exampleinput">VISITAS</label>
                       <asp:Label ID="txt_visitas" runat="server" Text="Label"></asp:Label>
                          

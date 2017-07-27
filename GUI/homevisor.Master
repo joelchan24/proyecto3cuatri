@@ -166,9 +166,10 @@
                                                        
                                <a href="#" class=" dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" style="margin-right:20px;"><span class="glyphicon glyphicon-wrench"></span>editar <span class="caret"></span></a>
                           <ul class="dropdown-menu" role="menu" style="display: none;">
-                           <li><a href="editarUsuario.aspx">editar datos </a></li>
-                            <li><a href="registroevento.aspx">subir evento</a></li>
-                           
+                           <li><a href="editarUsuario.aspx">Editar Datos </a></li>
+                            <li><a href="registroevento.aspx">Subir Evento</a></li>
+                           <li><a href="frm_mensajesdelorgaizador.aspx">Mensajes</a></li>
+                              <li class="panel-info">&middot;&middot; <asp:Button ID="Button1" runat="server" CssClass="btn btn-sm btn-info" OnClick="cerrar" Text="Cerrar Sesión" /></li>
                           </ul>
                       
                               <li />
@@ -281,7 +282,7 @@
 				</li>
 			</ul>
 		</nav>
-		<aside id="accordion" class="social text-vertical-center" style="left: 0%; top: 11%; height: 137px">
+		<!--<aside id="accordion" class="social text-vertical-center" style="left: 0%; top: 11%; height: 137px">
 			<div class="accordion-social">
                 <br/>
 				<ul class="panel-collapse collapse in nav nav-stacked" role="tabpanel" aria-labelledby="social-collapse" id="collapseOne">
@@ -292,7 +293,7 @@
                     <li><a href="http://stackexchange.com/users/4992378/blayderunner123" target="_blank"><i class="fa fa-lg fa-stack-exchange"></i></a></li>
 				</ul>
 			</div>
-		</aside>
+		</aside>-->
     
     <div>
        

@@ -212,6 +212,28 @@ namespace DAO
 
             return conectar.EjecutarSentencia(cmd);
         }
+        public DataSet buscar_noaprovados12(string valor)
+        {
+            // select * from EVENTO e inner join DIRECCION d on e.DIRECCION=d.CODIGO  
+            SqlCommand cmd = new SqlCommand("   select * from EVENTO e  inner join DIRECCION d on e.DIRECCION=d.CODIGO inner join USUARIOS u on  u.CODIGO=e.USUARIO where e.APROVACION='0' and  e.NOMBRE LIKE '%'+ @apro +'%'  ;  ");
+
+            cmd.Parameters.Add("@apro", SqlDbType.VarChar).Value = valor;
+            cmd.CommandType = CommandType.Text;
+
+
+            return conectar.EjecutarSentencia(cmd);
+        }
+        public DataSet buscar_noaprovados123(string valor)
+        {
+            // select * from EVENTO e inner join DIRECCION d on e.DIRECCION=d.CODIGO  
+            SqlCommand cmd = new SqlCommand("   select * from EVENTO e  inner join DIRECCION d on e.DIRECCION=d.CODIGO inner join USUARIOS u on  u.CODIGO=e.USUARIO where e.APROVACION='1' and  e.NOMBRE LIKE '%'+ @apro +'%'  ;  ");
+
+            cmd.Parameters.Add("@apro", SqlDbType.VarChar).Value = valor;
+            cmd.CommandType = CommandType.Text;
+
+
+            return conectar.EjecutarSentencia(cmd);
+        }
 
 
         public DataSet buscar_aprovados()
@@ -347,10 +369,43 @@ namespace DAO
 
             return conectar.EjecutarSentencia(coma);
         }
+        public DataSet MAPA()
+        {
+            SqlCommand coma = new SqlCommand("  select  e.* , cat.NOMBRE as nombrecat  ,cat.CODIGO , d.*,u.*, mu.NOMBRE as muni from EVENTO e  inner join DIRECCION d on e.DIRECCION=d.CODIGO inner join USUARIOS u on  u.CODIGO=e.USUARIO inner join CATEGORIA cat on  cat.CODIGO=e.CATEGORIA inner join MUNICIPIO mu on mu.CODIGO=d.MUNICIPIO where e.APROVACION='1'  "
+);
+
+
+            coma.CommandType = CommandType.Text;
+            return conectar.EjecutarSentencia(coma);
+        }
         public DataSet top_3visitas()
         {
             // select * from EVENTO e inner join DIRECCION d on e.DIRECCION=d.CODIGO   2
-            SqlCommand cmd = new SqlCommand("   select  TOP 3 * from EVEnto order by (visitas) desc   ");
+            SqlCommand cmd = new SqlCommand("   select  TOP 3 * from EVEnto where aprovacion=1 order by (visitas) desc   ");
+
+
+
+            cmd.CommandType = CommandType.Text;
+
+
+            return conectar.EjecutarSentencia(cmd);
+        }
+        public DataSet top_3recientes()
+        {
+            // select * from EVENTO e inner join DIRECCION d on e.DIRECCION=d.CODIGO   2
+            SqlCommand cmd = new SqlCommand("   select  TOP 3 * from EVEnto where aprovacion=1 order by (CODIGO) desc   ");
+
+
+
+            cmd.CommandType = CommandType.Text;
+
+
+            return conectar.EjecutarSentencia(cmd);
+        }
+        public DataSet top_recientes()
+        {
+            // select * from EVENTO e inner join DIRECCION d on e.DIRECCION=d.CODIGO   2
+            SqlCommand cmd = new SqlCommand("   select   * from EVEnto  where aprovacion=1  order by (visitas) desc   ");
 
 
 

@@ -265,6 +265,15 @@ namespace AdministradorGUI {
         protected global::System.Web.UI.WebControls.Button btn_agregar;
         
         /// <summary>
+        /// btn_limpiar control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btn_limpiar;
+        
+        /// <summary>
         /// btn_nuevo control.
         /// </summary>
         /// <remarks>

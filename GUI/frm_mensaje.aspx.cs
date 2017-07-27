@@ -74,7 +74,8 @@ namespace GUI
             e.Row.Cells[2].Visible = false;
             e.Row.Cells[7].Visible = false;
             e.Row.Cells[6].Visible = false;
-            
+            e.Row.Cells[3].Visible = false;
+
         }
 
         protected void dgb_mismensajes_RowCommand(object sender, GridViewCommandEventArgs e)

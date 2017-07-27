@@ -21,19 +21,20 @@ namespace GUI
             Repeater1.DataSource = evento.top_3visitas().Tables[0];
            Repeater1.DataBind();
             //aqui el maximo resgiutro
-            rpt_uno.DataSource = evento.busca1().Tables[0];
+            rpt_uno.DataSource = evento.top_3recientes().Tables[0];
             rpt_uno.DataBind();
-            //aqui el maximo resgiutro
-            rtp_dos.DataSource = evento.busca2().Tables[0];
-            rtp_dos.DataBind();
-            //aqui el maximo resgiutro
-            rtb_3.DataSource = evento.busca3().Tables[0];
-            rtb_3.DataBind();
+
         }
 
         protected void mandar(object sender, EventArgs e)
         {
-            Response.Redirect("eventos_engeneral.aspx");
+            Response.Redirect("eventos_engeneral.aspx",true);
+        }
+
+        protected void mandarar(object sender, EventArgs e)
+        {
+            Response.Redirect("frm_topvisitados.aspx",true);
+            
         }
     }
 }

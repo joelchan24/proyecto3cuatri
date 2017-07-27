@@ -14,10 +14,10 @@
     <form id="form1" runat="server">
         <!-- gerardo ignora lo que aqrrib es que si no se pongo lo tira feo nose por que de todos modos lo checas -->
         <div id="signupbox" style=" margin-top:50px" class="mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
-                    <div class="panel panel-info">
+                    <div class="panel panel-primary">
                         <div class="panel-heading">
                             <div class="panel-title">Registrame</div>
-                            <div style="float:right; font-size: 85%; position: relative; top:-10px"><a id="hop" href="WebForm1.aspx" >Regresar al Inicio</a>&nbsp;&nbsp;<a id="signinlink" href="loggin_fuerademasterpage.aspx" >Ingresar</a></div>
+                            <div style="float:right; font-size: 85%; position: relative; top:-10px"><a id="hop" style="color:white" href="WebForm1.aspx" >Regresar al Inicio</a>&nbsp;&nbsp;<a id="signinlink" class="alert-link" style="color:white" href="loggin_fuerademasterpage.aspx" >Ingresar</a></div>
 
                         </div>  
                         <div class="panel-body col-lg-12" >
@@ -193,7 +193,7 @@
                             <div class="row">
                                 <div class="col-lg-5"></div>
                                 <div class="form-group col-lg-5">
-                                    <!-- Button -->   <asp:Button ID="btnAgregar" runat="server" Text="Registrarme" CssClass="btn btn-info" OnClick="accion1"/>                                        
+                                    <!-- Button -->   <asp:Button ID="btnAgregar" runat="server" Text="Registrarme" CssClass="btn btn-sm btn-primary" OnClick="accion1"/>                                        
                                 </div>
                                 <div class="col-lg-2"><asp:HiddenField ID="txtID" runat="server" /></div>
                                 </div>

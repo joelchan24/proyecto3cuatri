@@ -5,6 +5,16 @@
     {
      border-radius: 15px;
     }
+         .auto-style1 {
+             position: relative;
+             min-height: 1px;
+             float: left;
+             width: 16.666666666666664%;
+             left: 2px;
+             top: -2px;
+             padding-left: 15px;
+             padding-right: 15px;
+         }
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
@@ -20,8 +30,8 @@
 
                         </div> 
             <div class="row">
-            <div class="form-group col-lg-6">
-               <asp:Image ID="imgFoto" runat="server" CssClass="fa-arrow-circle-o-up" Height="80px" Width="140px" ImageUrl="~/img/avatar.png" />
+            <div class="form-group col-lg-6"><br />
+              <asp:Image ID="imgFoto" runat="server" CssClass="fa-arrow-circle-o-up" Height="80px" Width="140px" ImageUrl="~/img/avatar.png" />
                 <asp:fileupload ID="fileFoto" runat="server"  width="145px" heigh="50px"></asp:fileupload>
             </div>
                  <script>
@@ -40,35 +50,39 @@
                             $('#<%=this.fileFoto.ClientID%>').change(function () {
                                 readURL(this);
                             });
-                        </script>
-            <div class="form-group col-lg-6">
+                        </script><br />
+            <div class="form-group col-lg-6" style="left: 0px; top: 0px">
                 <asp:label ID="lblEvento" runat="server" text="Seleccionar Evento"></asp:label><br />
                 <asp:dropdownlist ID="ddlEventos" CssClass="btn btn-default dropdown-toggle form-control"  data-toggle="dropdown" runat="server" width="150px" heigh="30px"></asp:dropdownlist>
                 <asp:hiddenfield ID="txtID"  runat="server"></asp:hiddenfield>
-            </div>
+            </div><div class="row">
+
+                  </div>
             </div><br />
             <div class="row">
                 <div class="col-lg-12">
                     <div class="col-lg-4">
 
                     </div>
-                     <div class="panel panel-primary">
                     <div class="col-lg-10"><br />
                         <div class="btn-group-sm">
-                        <asp:button ID="btnAgregar" runat="server" text="Agregar" width="80px" CssClass="btn btn-sm btn-danger" />
+                        <asp:button ID="btnAgregar" runat="server" text="Agregar" width="80px" CssClass="btn btn-sm btn-info" OnClick="seleccionar" />
                         <asp:button ID="btnModificar" runat="server" text="Modificar" width="80px" CssClass="btn btn-sm btn-warning" />
-                        <asp:button ID="btnEliminar" runat="server" text="Eliminar" width="80px" CssClass="btn btn-sm btn-info" />
+                        <asp:button ID="btnEliminar" runat="server" text="Eliminar" width="80px" CssClass="btn btn-sm btn-danger" />
                         <asp:button ID="btnBuscar" runat="server" text="Buscar" width="80px" CssClass="btn btn-sm btn-success" />
                         <asp:button ID="btnLimpiar" runat="server" text="Limpiar" width="80px" CssClass="btn btn-sm btn-primary" />
                         </div>
                     </div>
-                </div>
                         </div>
             </div><br />
             <div class="row">
                 <div class="col-lg-12">
-                    <div class="col-lg-2">
-
+                    <div class="col-lg-4">
+                        <asp:GridView ID="dgvGaleria" CssClass="table table-bordered "  runat="server" OnRowCreated="esconder">
+                            <Columns>
+                                <asp:ButtonField CommandName="btnSeleccionar" ControlStyle-CssClass="btn btn-sm btn-warning" Text="Seleccionar" />
+                            </Columns>
+                        </asp:GridView>
                     </div>
                     <div class="panel-info">
                         <div class="col-lg-8">
@@ -80,7 +94,7 @@
             </div>
             </div>
             </div>
-        <div class="col-lg-2">
+        <div class="auto-style1">
 
         </div>
     </div>
