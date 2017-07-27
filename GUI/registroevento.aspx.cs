@@ -45,7 +45,7 @@ namespace GUI
                 ddl_municipio.DataBind();
                 refrescar();
 
-              
+
                 dgb_todos.HeaderRow.Cells[3].Text = "Nombre Del Evento";
                 dgb_todos.HeaderRow.Cells[2].Text = "Descripción";
                 dgb_todos.HeaderRow.Cells[24].Text = "Nombre Del Usuario";
@@ -53,7 +53,6 @@ namespace GUI
                 dgb_todos.HeaderRow.Cells[26].Text = "Teléfono";
                 dgb_todos.HeaderRow.Cells[28].Text = "Correo";
                 dgb_todos.HeaderRow.Cells[29].Text = "Alias del Usuario";
-
 
 
             }
