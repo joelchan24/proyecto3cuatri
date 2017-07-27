@@ -212,6 +212,28 @@ namespace DAO
 
             return conectar.EjecutarSentencia(cmd);
         }
+        public DataSet buscar_noaprovados12(string valor)
+        {
+            // select * from EVENTO e inner join DIRECCION d on e.DIRECCION=d.CODIGO  
+            SqlCommand cmd = new SqlCommand("   select * from EVENTO e  inner join DIRECCION d on e.DIRECCION=d.CODIGO inner join USUARIOS u on  u.CODIGO=e.USUARIO where e.APROVACION='0' and  e.NOMBRE LIKE '%'+ @apro +'%'  ;  ");
+
+            cmd.Parameters.Add("@apro", SqlDbType.VarChar).Value = valor;
+            cmd.CommandType = CommandType.Text;
+
+
+            return conectar.EjecutarSentencia(cmd);
+        }
+        public DataSet buscar_noaprovados123(string valor)
+        {
+            // select * from EVENTO e inner join DIRECCION d on e.DIRECCION=d.CODIGO  
+            SqlCommand cmd = new SqlCommand("   select * from EVENTO e  inner join DIRECCION d on e.DIRECCION=d.CODIGO inner join USUARIOS u on  u.CODIGO=e.USUARIO where e.APROVACION='1' and  e.NOMBRE LIKE '%'+ @apro +'%'  ;  ");
+
+            cmd.Parameters.Add("@apro", SqlDbType.VarChar).Value = valor;
+            cmd.CommandType = CommandType.Text;
+
+
+            return conectar.EjecutarSentencia(cmd);
+        }
 
 
         public DataSet buscar_aprovados()

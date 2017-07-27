@@ -14,7 +14,7 @@ namespace AdministradorGUI
 {
     public partial class admin_eventosaprovados : System.Web.UI.Page
     {
-        
+        eventoDAO evento = new eventoDAO();
         protected void Page_Load(object sender, EventArgs e)
         {
             refrecar();
@@ -24,7 +24,7 @@ namespace AdministradorGUI
 
         public void refrecar ()
         {
-            eventoDAO evento = new eventoDAO();
+           
             dgv_desaprovados.DataSource = evento.buscar_aprovados().Tables[0];
             dgv_desaprovados.DataBind();
         }
@@ -63,33 +63,35 @@ namespace AdministradorGUI
 
         protected void btnBuscar_Click(object sender, EventArgs e)
         {
-            SqlConnection con = new SqlConnection("Data Source=RODRIGO\\SQLEXPRESS; Initial catalog=CULTURA; integrated security=true");
-            SqlDataAdapter adaptar = new SqlDataAdapter("select * from EVENTO where CODIGO like '%" + txtBuscar.Text + "%'", con);
-            DataTable dt = new DataTable();
-            adaptar.Fill(dt);
-
-            this.dgv_desaprovados.DataSource = dt;
-            dgv_desaprovados.DataBind();
+            
         }
 
         protected void btnBuscar_Click1(object sender, EventArgs e)
         {
-            SqlConnection con = new SqlConnection("Data Source=RODRIGO\\SQLEXPRESS; Initial catalog=CULTURA; integrated security=true");
-            SqlDataAdapter adaptar = new SqlDataAdapter("select * from EVENTO where NOMBRE LIKE '%" + txtBuscar.Text + "%'", con);
-            DataTable dt = new DataTable();
-            adaptar.Fill(dt);
-            this.dgv_desaprovados.DataSource = dt;
-            dgv_desaprovados.DataBind();
+            
         }
 
-       /* protected void btnBuscar_Click(object sender, EventArgs e)
+        protected void txtBuscar_TextChanged(object sender, EventArgs e)
         {
-            SqlConnection con = new SqlConnection("Data Source=RODRIGO\\SQLEXPRESS; Initial catalog=CULTURA; integrated security=true");
-            SqlDataAdapter adaptar = new SqlDataAdapter("select * from EVENTO where NOMBRE LIKE '%" + txtBuscar.Text + "%'", con);
-            DataTable dt = new DataTable();
-            adaptar.Fill(dt);
-            this.dgv_desaprovados.DataSource = dt;
+        }
+
+        protected void btnBuscar_Click2(object sender, EventArgs e)
+        {
+            string valor = txtBuscar.Text;
+
+            dgv_desaprovados.DataSource = evento.buscar_noaprovados123(valor);
             dgv_desaprovados.DataBind();
-        }*/
+        
+    }
+
+        /* protected void btnBuscar_Click(object sender, EventArgs e)
+         {
+             SqlConnection con = new SqlConnection("Data Source=RODRIGO\\SQLEXPRESS; Initial catalog=CULTURA; integrated security=true");
+             SqlDataAdapter adaptar = new SqlDataAdapter("select * from EVENTO where NOMBRE LIKE '%" + txtBuscar.Text + "%'", con);
+             DataTable dt = new DataTable();
+             adaptar.Fill(dt);
+             this.dgv_desaprovados.DataSource = dt;
+             dgv_desaprovados.DataBind();
+         }*/
     }
 }

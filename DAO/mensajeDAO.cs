@@ -82,7 +82,16 @@ namespace DAO
 
             return conectar.EjecutarComando(comando);
         }
+        public int modificarmensajedao1(int valor)
+        {
 
+
+            SqlCommand comando = new SqlCommand("update mensajes set MESTATUS=0 where CODIGO=@id");
+
+            comando.Parameters.Add("@id", SqlDbType.Int).Value = valor;
+
+            return conectar.EjecutarComando(comando);
+        }
 
 
 

@@ -177,7 +177,7 @@ namespace AdministradorGUI
                 Image1.ImageUrl = "/img" + dgb_eventos.Rows[fila].Cells[7].Text.ToString() + ".jpg";
                 rbt_aprovado.Checked = (Convert.ToString(dgb_eventos.Rows[fila].Cells[11].Text) != "0") ? true : false;
                 rbt_noapro.Checked = (Convert.ToString(dgb_eventos.Rows[fila].Cells[11].Text) == "0") ? true : false;
-                txt_usuario.Text = dgb_eventos.Rows[fila].Cells[22].Text;
+                txt_usuario.Text = dgb_eventos.Rows[fila].Cells[14].Text;
                 ddl_categoria.SelectedValue = dgb_eventos.Rows[fila].Cells[13].Text;
                 ddl_municipio.SelectedValue = dgb_eventos.Rows[fila].Cells[22].Text;
 
@@ -215,6 +215,7 @@ namespace AdministradorGUI
 
         protected void accion(object sender, EventArgs e)
         {
+            //GeneraXML();
             var btnSeleccionado = (Button)sender;
             // cargar la foto
             if (btnSeleccionado.ID == "btn_agregar")
@@ -244,14 +245,43 @@ namespace AdministradorGUI
                 }
                 //FileUploadFoto.Save("miimagen.jpg",ImageFormat.Jpeg);
             }
+            //se crea el reporte y se agrega la funcion de accion del boton
+            if (btnSeleccionado.ID == "btn_nuevo") //cambiar por btnReporte
+            {
+                DataSet Evento = eventado.buscar();
+                DataTable dt = Evento.Tables[0];
+
+                Reportes.ReporteEVentos rpFac = new Reportes.ReporteEVentos();
+                rpFac.SetDataSource(dt);
+
+                Session["llena"] = rpFac;
+
+                abreVentana("Reporte.aspx");
+            }
 
             Button btnsellcionado = (Button)sender;
 
            control.accion(devolver(), btnsellcionado.ID);
            // ser_direccion.accion(mandar(), btnsellcionado.ID);
             refrescar();
+           
+
+        }
+        //primero se genera el xml
+        private void abreVentana(string ventana)
+        {
+            Response.Redirect(ventana, true);
+        }
+
+        public void GeneraXML()
+        {
+            //UsuarioBO usuario = new UsuarioBO();
 
 
+            DataSet usuarios = eventado.buscar();
+            DataTable dt = usuarios.Tables[0];
+
+            dt.WriteXml("eventos.xml");
         }
 
         protected void btn_eliminar_Click1(object sender, EventArgs e)

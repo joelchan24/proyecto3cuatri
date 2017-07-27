@@ -193,7 +193,7 @@
           </div>
           <div class="col-lg-10">
     <textarea id="TextArea1" cols="200" rows="2"></textarea>
-    <input type="button" id="Button1" runat="server" value="Button" onclick="AgregarComentario()"/>
+    <input type="button" id="Button1" runat="server" value="Enviar Comentario " text="Enviar" onclick="AgregarComentario()"/>
       </div>
           </div>
       <div id="Mensajes">

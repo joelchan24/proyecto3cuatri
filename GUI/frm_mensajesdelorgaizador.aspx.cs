@@ -59,18 +59,18 @@ namespace GUI
 
                 int fila = Convert.ToInt32(e.CommandArgument);
                 txt_resivido.Text = Gridview1.Rows[fila].Cells[5].Text;
-                int id = int.Parse(Gridview1.Rows[fila].Cells[1].Text);
-
-
-                mensaje.modificarmensajedao(id);
-
-                refresh();
+        
             }
         }
-
+        int fila;
         protected void btn_enviar_Click(object sender, EventArgs e)
         {
-            mensaje.agregar(recuperar());
+            int id = int.Parse(Gridview1.Rows[fila].Cells[1].Text);
+
+
+            mensaje.modificarmensajedao1(id);
+
+            refresh();
             refresh();
             txt_mensaje.Text = "";
             Response.Write("<script>window.alert('mensaje enviado');</script>");
