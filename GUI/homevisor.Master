@@ -133,6 +133,7 @@
                               <li><a href="frm_musica.aspx">Musica</a></li>
                           </ul>
                         </li>
+                            <li><a href="frm_plus.aspx"><span class="glyphicon glyphicon-screenshot" aria-hidden="true"></span>Ubicación</a></li>
                           
                 		</ul>
                         <ul class="nav navbar-nav navbar-right">
@@ -169,13 +170,13 @@
                            <li><a href="editarUsuario.aspx">Editar Datos </a></li>
                             <li><a href="registroevento.aspx">Subir Evento</a></li>
                            <li><a href="frm_mensajesdelorgaizador.aspx">Mensajes</a></li>
-                              <li class="panel-info">&middot;&middot; <asp:Button ID="Button1" runat="server" CssClass="btn btn-sm btn-info" OnClick="cerrar" Text="Cerrar Sesión" CausesValidation="False" /></li>
+                              <li class="panel-info">&middot;&middot; <asp:Button ID="Button1" runat="server" CssClass="btn btn-sm btn-link" OnClick="cerrar" Text="Salir" CausesValidation="False" /></li>
                           </ul>
                       
                               <li />
                                 
                               <asp:Label ID="txt_usuaer2" runat="server" Text="Label" style="margin-right:10px;padding-top: 10px;" ></asp:Label>
-                               <asp:Button ID="btn_cerrar2" runat="server" Text="cerrar secion" OnClick="cerrar" style="margin-right:15px;padding-top: 10px; "  CausesValidation="False" />
+                               <!--<asp:Button ID="btn_cerrar2" runat="server" Text="cerrar secion" OnClick="cerrar" style="margin-right:15px;padding-top: 10px; "  CausesValidation="False" />-->
                           
 
                                
@@ -212,6 +213,7 @@
                                <a href="#" class=" dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" style="margin-right:20px;"><span class="glyphicon glyphicon-wrench"></span>editar <span class="caret"></span></a>
                           <ul class="dropdown-menu" role="menu" style="display: none;">
                             <li><a href="editarUsuario.aspx">editar datos </a></li>
+                              <li class="panel-info">&middot;&middot; <asp:Button ID="Button2" runat="server" CssClass="btn btn-sm btn-link" OnClick="cerrar" Text="Salir" CausesValidation="False" /></li>
                             
                           </ul>
                       
@@ -219,7 +221,7 @@
 
                                 
                               <asp:Label ID="txt_usuaer1" runat="server" Text="Label" style="margin-right:10px;padding-top: 10px;" ></asp:Label>
-                               <asp:Button ID="btn_cerrar1" runat="server" Text="cerrar secion" OnClick="cerrar" style="margin-right:15px;padding-top: 10px; "  />
+                               <!--<asp:Button ID="btn_cerrar1" runat="server" Text="cerrar secion" OnClick="cerrar" style="margin-right:15px;padding-top: 10px; "  />-->
                           
                              <%} %>
                        
