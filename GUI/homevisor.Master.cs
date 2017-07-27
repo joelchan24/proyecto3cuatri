@@ -40,5 +40,11 @@ namespace GUI
             Session.Remove("usuario");
             Response.Redirect("loggin_fuerademasterpage.aspx");
         }
+
+        protected void mandar(object sender, EventArgs e)
+        {
+            //  Response.Redirect("WebForm1.aspx?accion=" + txtlat.Text.Trim());
+            Response.Redirect("eventos_engeneral.aspx?buscar=" + Convert.ToDateTime(txt_buscar.Text));
+        }
     }
 }

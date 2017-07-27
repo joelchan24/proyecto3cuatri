@@ -42,6 +42,14 @@ namespace AdministradorGUI
                 ddl_municipio.DataBind();
                 refrescar();
                 usuario();
+                //este cambia los emcabezados del tabla
+                dgb_eventos.HeaderRow.Cells[3].Text = "Nombre Del Evento";
+                dgb_eventos.HeaderRow.Cells[2].Text = "Descripción";
+                dgb_eventos.HeaderRow.Cells[24].Text = "Nombre Del Usuario";
+                dgb_eventos.HeaderRow.Cells[25].Text = "Apellido Del Usuario";
+                dgb_eventos.HeaderRow.Cells[26].Text = "Teléfono";
+                dgb_eventos.HeaderRow.Cells[28].Text = "Correo";
+                dgb_eventos.HeaderRow.Cells[29].Text = "Alias del Usuario";
 
             }
 
@@ -199,7 +207,33 @@ namespace AdministradorGUI
 
         protected void dgb_eventos_RowCreated(object sender, GridViewRowEventArgs e)
         {
-           // e.Row.Cells[1].Visible = false;
+            e.Row.Cells[1].Visible = false;
+            e.Row.Cells[4].Visible = false;
+            e.Row.Cells[5].Visible = false;
+            e.Row.Cells[6].Visible = false;
+            e.Row.Cells[7].Visible = false;
+            e.Row.Cells[8].Visible = false;
+            e.Row.Cells[9].Visible = false;
+            e.Row.Cells[10].Visible = false;
+            e.Row.Cells[11].Visible = false;
+            e.Row.Cells[12].Visible = false;
+            e.Row.Cells[11].Visible = false;
+            e.Row.Cells[13].Visible = false;
+            e.Row.Cells[14].Visible = false;
+            e.Row.Cells[15].Visible = false;
+            e.Row.Cells[16].Visible = false;
+            e.Row.Cells[17].Visible = false;
+            e.Row.Cells[18].Visible = false;
+            e.Row.Cells[19].Visible = false;
+            e.Row.Cells[20].Visible = false;
+            e.Row.Cells[21].Visible = false;
+            e.Row.Cells[22].Visible = false;
+            e.Row.Cells[23].Visible = false;
+           
+            e.Row.Cells[31].Visible = false;
+            e.Row.Cells[30].Visible = false;
+            e.Row.Cells[32].Visible = false;
+            e.Row.Cells[27].Visible = false;
         }
         public string NombreImagen()
         {
