@@ -6,6 +6,11 @@
     <script type="text/javascript" src='https://maps.google.com/maps/api/js?sensor=false&libraries=places&key=AIzaSyCuiUJxL3eVPwCyGdf1P6g9TUQ4KW95YtA'></script>
     <script src="js/locationpicker.jquery.js"></script>
   <div class="container">
+        <div class="panel panel-primary">
+                        <div class="panel-heading">
+                            <div class="panel-title">GALERIA</div>
+
+                        </div> 
 	<div class="row">
         <asp:Repeater ID="rpt" runat="server">
             <ItemTemplate>
@@ -172,6 +177,7 @@
 		
        </asp:Repeater>
 	</div>
+            </div>
       <div class="row">
          <div class="col-md-12">
          <asp:Repeater ID="rpiter" runat="server">
