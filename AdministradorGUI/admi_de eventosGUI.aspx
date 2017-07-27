@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/administrador.Master" AutoEventWireup="true" CodeBehind="admi_de eventosGUI.aspx.cs" Inherits="AdministradorGUI.admi_de_eventosGUI" ValidateRequest=false %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/administrador.Master" AutoEventWireup="true" CodeBehind="admi_de eventosGUI.aspx.cs" Inherits="AdministradorGUI.admi_de_eventosGUI" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <style type="text/css">
         #form1 {
@@ -250,11 +250,12 @@
                
                 <asp:Button ID="btn_eliminar" runat="server" Text="Eliminar" CssClass="btn btn-danger  col-sm-1 " OnClick="accion" />
          
-        <asp:Button ID="btn_modificar" runat="server" Text="Modificar" CssClass="btn btn-success col-sm-1 " OnClick="accion"   />
+        <asp:Button ID="btn_modificar" runat="server" Text="Modificar" CssClass="btn btn-success col-sm-1" OnClick="accion"   />
  
          <asp:Button ID="btn_agregar" runat="server" Text="Agregar" CssClass=" btn btn-primary  col-sm-1 " OnClick="accion" />
         
         <asp:Button ID="btn_limpiar" runat="server" Text="Limpiar" CssClass="btn btn-warning  col-sm-1 " />
+        <asp:Button ID="btn_nuevo" runat="server" Text="nuevo" CssClass="btn btn-warning  col-sm-1 " OnClick="accion"  />
           </div>
             <div class="row">
   <div class="col-md-12">

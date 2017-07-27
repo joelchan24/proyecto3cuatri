@@ -125,12 +125,6 @@
                 <div class="form-group">
                     <asp:Label ID="lblFecha" runat="server" CssClass="text-blue" Text="Fecha de Nacimiento"></asp:Label>
                     <asp:TextBox ID="txtfecha" runat="server" CssClass="form-control" type="date"  Width="300px" Height="32px"></asp:TextBox>
-                    <asp:RequiredFieldValidator id="RequiredFieldValidator3" runat="server"
-  ControlToValidate="txtfecha"
-  ErrorMessage="No se puede dejar los campos vacios."
-  ForeColor="Red">
-</asp:RequiredFieldValidator>
-                    <br />
                     <asp:Label ID="lblTelefono" runat="server" CssClass="text-blue" Text="Telefono"></asp:Label>
                     <asp:TextBox ID="txtTelefono" runat="server" CssClass="form-control" Width="300px" Height="32px"></asp:TextBox>
                     <asp:RegularExpressionValidator ID="RegularExpressionValidator3" runat="server"
@@ -253,7 +247,9 @@
         <div class="row">
             <div class="col-lg-12">
                 <div class="form-group">
-                 <asp:Button ID="btnAgregar" runat="server" Text="Agregar" CssClass="btn btn-dropbox" Width="100px" Height="50px" OnClick="accion1"  /> <asp:Button ID="btnModificar" Text="Modificar" runat="server" CssClass="btn btn-dropbox" Width="100px" Height="50px" OnClick="accion1" /> <asp:Button ID="btnEliminar" Text="Eliminar" runat="server" CssClass="btn btn-dropbox" Width="100px" Height="50px" OnClick="accion1" /> <asp:Button ID="btnNuevo" Text="Nuevo" runat="server" CssClass="btn btn-dropbox" Width="100px" Height="50px" OnClick="accion1" /> <asp:Button ID="btnBuscar" Text="Buscar" runat="server" CssClass="btn btn-dropbox" Width="100px" Height="50px" />
+                 <asp:Button ID="btnAgregar" runat="server" Text="Agregar" CssClass="btn btn-dropbox" Width="100px" Height="50px" OnClick="accion1"  /> <asp:Button ID="btnModificar" Text="Modificar" runat="server" CssClass="btn btn-dropbox" Width="100px" Height="50px" OnClick="accion1" /> <asp:Button ID="btnEliminar" Text="Eliminar" runat="server" CssClass="btn btn-dropbox" Width="100px" Height="50px" OnClick="accion1" /> 
+                    <asp:Button ID="btnNuevo" Text="Nuevo" runat="server" CssClass="btn btn-dropbox" Width="100px" Height="50px" OnClick="accion1" CausesValidation="False" /> 
+                    <asp:Button ID="btnBuscar" Text="Buscar" runat="server" CssClass="btn btn-dropbox" Width="100px" Height="50px" />
                 </div>
 
             </div>
