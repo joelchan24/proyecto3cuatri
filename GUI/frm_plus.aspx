@@ -14,9 +14,9 @@
 }
     </style>
     <div class="container">
-    <div class="panel panel-default">
+    <div class="panel panel-primary">
         <div class="panel-heading">
-             <h3 class="panel-title">EVENTOS CULTURALES</h3>
+             <h3 class="panel-title">Ubicación de eventos registrados </h3>
         </div>
         <div class="panel-body">
              <div id="map_canvas"></div>

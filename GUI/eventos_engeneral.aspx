@@ -33,23 +33,25 @@
 
                        <ItemTemplate>
                 
-          	<div class="col-md-4">
+          	<div class="col-md-4"><br />
+                  <div class="panel panel-danger">
+                        <div class="panel-heading">
+                            <div class="panel-title">  <%# Eval("NOMBRE")%>	</div>
+
+                        </div> 
 					<div class="thumbnail">
 						<img alt="Bootstrap Thumbnail First" style="height:223px !important; width:350px !important" src="img/<%# Eval("FOTOPROMOCION")%>.jpg" />
 						<div class="caption">
-							<h3>
-                              <%# Eval("NOMBRE")%>	
-							</h3>
-                          
                             <p>
 								<%# Eval("DESCRIPCION")%>	
 							<p>
                                
-                               <a href="frm_eventos.aspx?id=<%#Eval("CODIGO")%>">ir</a>
+                               <a href="frm_eventos.aspx?id=<%#Eval("CODIGO")%>"class="btn-group-lg btn-sm btn-success"><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>Ver Más </a>
 							</p>
 						</div>
 					</div>
 				</div>
+                  </div>
                                            </ItemTemplate>
      </asp:ListView>
                
