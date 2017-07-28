@@ -255,14 +255,16 @@
         <br/>
      
             <div class="row">
+                <div class="panel panel-danger">
+                <div class="panel-heading">
 		<div class="col-md-12">
             <div class="btn-group-sm">
-              <asp:Button ID="btn_agregar" runat="server" Text="agregar" CssClass="btn btn-sm  btn-primary  " OnClick="accion" style="text-align:right" /> 
-                <asp:Button ID="btn_eliminar" runat="server" Text="Eliminar" CssClass="btn btn-sm  btn-danger   " OnClick="accion" style="text-align:right" />
-              <asp:Button ID="btn_modificar" runat="server" Text="Modificar" CssClass="btn btn-sm  btn-success  " OnClick="accion" style="text-align:right"  />        
-        <asp:Button ID="btn_nuevo" runat="server" Text="nuevo" CssClass="btn btn-sm  btn-warning   " OnClick="accion" style="text-align:right"/> 
-                         <asp:LinkButton ID="LinkButton1" runat="server" PostBackUrl="~/GaleriaImagenesaspx.aspx" CssClass="btn btn-sm  btn-danger">Galeria</asp:LinkButton>
-	</div>
+              <asp:Button ID="btn_agregar" runat="server"  Text="agregar" CssClass="btn btn-sm  btn-primary  " OnClick="accion" style="text-align:right" /> 
+                <asp:Button ID="btn_eliminar"  runat="server" Text="Eliminar" CssClass="btn btn-sm  btn-danger   " OnClick="accion" style="text-align:right" />
+              <asp:Button ID="btn_modificar"  runat="server" Text="Modificar" CssClass="btn btn-sm  btn-success  " OnClick="accion" style="text-align:right"  />        
+        <asp:Button ID="btn_nuevo"  runat="server" Text="nuevo" CssClass="btn btn-sm  btn-warning   " OnClick="accion" style="text-align:right"/> 
+                         <asp:LinkButton ID="LinkButton1" runat="server" Width="60px" Height="34px" PostBackUrl="~/GaleriaImagenesaspx.aspx" CssClass="btn btn-sm  btn-danger">Galeria</asp:LinkButton>
+	</div></div></div>
        
            
               
