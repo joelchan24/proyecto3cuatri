@@ -266,9 +266,11 @@
             </div></div>
             <div class="col-md-12">
                 <div class="form-group">
-                    <asp:GridView ID="dtgDatos" runat="server" CssClass="fc-grid" OnRowCommand="accion" OnRowCreated="ocultar">
+                    <asp:GridView ID="dtgDatos" runat="server" CssClass="table-resposive table table-bordered" OnRowCommand="accion" OnRowCreated="ocultar">
                         <Columns>
-                            <asp:ButtonField CommandName="btnSeleccionar" Text="Seleccionar" />
+                            <asp:ButtonField CommandName="btnSeleccionar" Text="Seleccionar" >
+                            <ControlStyle CssClass="btn btn-primary" />
+                            </asp:ButtonField>
                         </Columns>
                     </asp:GridView>
                     <asp:HiddenField  ID="txtDir" runat="server" />

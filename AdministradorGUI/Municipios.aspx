@@ -35,7 +35,9 @@
         <p>
             <asp:GridView ID="dgv_Estados" runat="server" OnRowCommand="Seleccionar" CssClass="table-resposive table table-bordered" OnRowCreated="ocultar" >
                 <Columns>
-                    <asp:ButtonField CommandName="dgvbtnSeleccionar" Text="Seleccionar" />
+                    <asp:ButtonField CommandName="dgvbtnSeleccionar" Text="Seleccionar" >
+                    <ControlStyle CssClass="btn btn-primary" />
+                    </asp:ButtonField>
                 </Columns>
             </asp:GridView>
         </p>
