@@ -2,25 +2,18 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-        <div class="panel panel-info">
-                        <div class="panel-heading">
-                            <div class="panel-title"><h3 style="text-align:center">CONTROL DE REGISTRO DE EVENTOS</h3></div>
 
-                        </div> 
     <div class="container">
-       
-        
+        <div class="panel panel-primary">
+                       <div class="panel-heading">
+                            <div class="panel-title text-center">CONTROL DE EVENTOS</div>
+
+                        </div>
+        <div class="col-md-12">
     <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
     <script type="text/javascript" src='https://maps.google.com/maps/api/js?sensor=false&libraries=places&key=AIzaSyCuiUJxL3eVPwCyGdf1P6g9TUQ4KW95YtA'></script>
     <script src="js/locationpicker.jquery.js"></script>
-        <div class="panel panel-primary">
-                       <div class="panel-heading">
-                            <div class="panel-title text-center"></div>
-
-                        </div>
           <div class="row">
-
-              <h1 > control</h1>
                <asp:HiddenField  ID="txtid" runat="server" />
               <asp:HiddenField ID="txtx_usuariop" runat="server" />
               <asp:HiddenField ID="txt_codir" runat="server"  />
@@ -197,7 +190,7 @@
                 
                   <div class="form-group">
                       <label for="exampleinput">Descripcion</label>
-                     <asp:TextBox id="txt_descrip" TextMode="multiline" Columns="50" Rows="5" runat="server" CssClass="form-control " width="349px" height="350px"></asp:TextBox>                 />
+                     <asp:TextBox id="txt_descrip" TextMode="multiline" Columns="50" Rows="5" runat="server" CssClass="form-control " width="349px" height="350px"></asp:TextBox>                 
                      
                   </div>
 
@@ -262,26 +255,16 @@
         <br/>
      
             <div class="row">
-		<div class="col-md-3">
-              <asp:Button ID="btn_agregar" runat="server" Text="agregar" CssClass=" btn btn-primary  " OnClick="accion" style="text-align:right" /> 
-             <asp:LinkButton ID="LinkButton1" runat="server" PostBackUrl="~/GaleriaImagenesaspx.aspx" CssClass="btn btn-danger">LinkButton</asp:LinkButton>
-      
-		</div>
-		<div class="col-md-3">
-             
-                <asp:Button ID="btn_eliminar" runat="server" Text="Eliminar" CssClass="btn btn-danger   " OnClick="accion" style="text-align:right" />
-         
-		</div>
-		<div class="col-md-3">
-              <asp:Button ID="btn_modificar" runat="server" Text="Modificar" CssClass="btn btn-success  " OnClick="accion" style="text-align:right"  />
- 
-      
-		</div>
-		<div class="col-md-3">
-              
-        <asp:Button ID="btn_nuevo" runat="server" Text="nuevo" CssClass="btn btn-warning   " OnClick="accion" style="text-align:right"/> 
-		</div>
-	</div>
+                <div class="panel panel-danger">
+                <div class="panel-heading">
+		<div class="col-md-12">
+            <div class="btn-group-sm">
+              <asp:Button ID="btn_agregar" runat="server"  Text="agregar" CssClass="btn btn-sm  btn-primary  " OnClick="accion" style="text-align:right" /> 
+                <asp:Button ID="btn_eliminar"  runat="server" Text="Eliminar" CssClass="btn btn-sm  btn-danger   " OnClick="accion" style="text-align:right" />
+              <asp:Button ID="btn_modificar"  runat="server" Text="Modificar" CssClass="btn btn-sm  btn-success  " OnClick="accion" style="text-align:right"  />        
+        <asp:Button ID="btn_nuevo"  runat="server" Text="nuevo" CssClass="btn btn-sm  btn-warning   " OnClick="accion" style="text-align:right"/> 
+                         <asp:LinkButton ID="LinkButton1" runat="server" Width="60px" Height="34px" PostBackUrl="~/GaleriaImagenesaspx.aspx" CssClass="btn btn-sm  btn-danger">Galeria</asp:LinkButton>
+	</div></div></div>
        
            
               
@@ -293,7 +276,7 @@
   <div class="col-md-12">
       <asp:GridView ID="dgb_todos" runat="server" OnRowCommand="mandar" OnRowCreated="ocultar" CssClass="table-resposive table table-bordered">
           <Columns>
-              <asp:ButtonField CommandName="btn_seleccionar" Text="seleccionar" />
+              <asp:ButtonField CommandName="btn_seleccionar" ControlStyle-CssClass="btn btn-sm btn-success" Text="seleccionar" />
           </Columns>
       </asp:GridView>
                 </div>
@@ -330,7 +313,9 @@
     </script>
        
 </div>
+            </div>
         </div>
+    </div>
 
     
 

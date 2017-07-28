@@ -137,7 +137,7 @@ namespace DAO
             cmd.Parameters.Add("@cos", SqlDbType.Money).Value = obejto.costo;
             cmd.Parameters.Add("@feaper", SqlDbType.Date).Value = obejto.FechaApertura.ToString("yyyy-MM-dd");
             cmd.Parameters.Add("@fecier", SqlDbType.Date).Value = obejto.FechaCierre.ToString("yyyy-MM-dd");
-            cmd.Parameters.Add("@foto", SqlDbType.VarChar).Value = obejto.FotoPromocion+".jgp";
+            cmd.Parameters.Add("@foto", SqlDbType.VarChar).Value = obejto.FotoPromocion;
             cmd.Parameters.Add("@ubicacion", SqlDbType.VarChar).Value = obejto.UbicacionGeografica;
             cmd.Parameters.Add("@lat", SqlDbType.VarChar).Value = obejto.latitud;
             cmd.Parameters.Add("@long", SqlDbType.VarChar).Value = obejto.longitud;
@@ -422,6 +422,17 @@ namespace DAO
             return conectar.EjecutarSentencia(cmd);
         }
         public DataSet buscar_aprovadosdelmater(EventoBO fecha)
+        {
+            // select * from EVENTO e inner join DIRECCION d on e.DIRECCION=d.CODIGO  
+            SqlCommand cmd = new SqlCommand("select * from EVENTO e  inner join DIRECCION d on e.DIRECCION=d.CODIGO inner join USUARIOS u on  u.CODIGO=e.USUARIO inner join CATEGORIA cat on cat.CODIGO=e.CATEGORIA where e.APROVACION='1' and e.NOMBRE LIKE '%'+ @nom +'%'  ");
+
+            cmd.Parameters.Add("@nom", SqlDbType.VarChar).Value = fecha.Nombre ;
+            cmd.CommandType = CommandType.Text;
+
+
+            return conectar.EjecutarSentencia(cmd);
+        }
+        public DataSet buscar_aprovadosdelmater1(EventoBO fecha)
         {
             // select * from EVENTO e inner join DIRECCION d on e.DIRECCION=d.CODIGO  
             SqlCommand cmd = new SqlCommand("select * from EVENTO e  inner join DIRECCION d on e.DIRECCION=d.CODIGO inner join USUARIOS u on  u.CODIGO=e.USUARIO inner join CATEGORIA cat on cat.CODIGO=e.CATEGORIA where e.APROVACION='1' and  @fecha between e.FECHAAPERTURA AND FECHACIERRE  order by e.CODIGO DESC ");

@@ -29,15 +29,20 @@ namespace GUI
             else if (Request.QueryString["buscar"] != null)
                     {
                 EventoBO obj = new EventoBO();
+                string dato = Request.QueryString["buscar"];
+                obj.Nombre = dato;
+                list.DataSource = eve.buscar_aprovadosdelmater(obj).Tables[0];
+                list.DataBind();
+                /* EventoBO obj = new EventoBO();
                 DateTime dato = Convert.ToDateTime(Request.QueryString["buscar"]);
                 obj.FechaApertura = dato;
                 list.DataSource = eve.buscar_aprovadosdelmater(obj).Tables[0];
-                list.DataBind();
+                list.DataBind();*/
             }
 
 
 
-            
+
         }
 
 
@@ -55,6 +60,16 @@ namespace GUI
         protected void mandar(object sender, ListViewCommandEventArgs e)
         {
             
+        }
+
+        protected void buscar(object sender, EventArgs e)
+        {
+            EventoBO obj = new EventoBO();
+            obj.FechaApertura = Convert.ToDateTime(txt_buscar.Text);
+          
+            list.DataSource = eve.buscar_aprovadosdelmater1(obj).Tables[0];
+            list.DataBind();
+
         }
     }
 }

@@ -24,18 +24,39 @@
                     <div class="item slides active">
                        <!-- <div class="slide-1"></div>-->
                          <img class="slide-1" src="img/Orquesta-Sinfonica-Colegio-Bilbao16.jpg" alt="slide-1"  />
-                           
+                            <div class="hero">
+                                <hgroup>
+                                    <h1>EVENTOS DE MUSICA</h1>        
+                                    <h3>AQUI LOS EVENTOS DE MUSICA</h3>
+                                </hgroup>
+                         <button class="btn btn-hero btn-lg" role="button"> <a href="frm_musica.aspx">IR ALOS EVENTOS</a>  </button>  
+                        </div>
+
                        
                     </div>
                     <div class="item slides">
                        <!--    <div class="slide-2"></div>-->
                       <img class="slide-2" src="img/escuela-teatro-2013-06-29-181304.jpg" alt="slide-2"/>
-                            
+                            <div class="hero">        
+                                <hgroup>
+                                    <h1>EVENTOS DE TEATRO</h1>        
+                                    <h3>AQUI LOS EVENTOS DE TEATRO</h3>
+                                </hgroup>       
+                      <button class="btn btn-hero btn-lg" role="button"> <a href="frm_teatroo.aspx">IR ALOS EVENTOS</a>  </button>  
+                            </div>
+
                         </div>
                         <div class="item slides">
                           <!-- <div class="slide-3"></div>-->
                             <img class="slide-3" src="img/ja (2).jpg" />
-                                
+                                <div class="hero">        
+                                    <hgroup>
+                              <h1>EVENTOS DE DANZA</h1>        
+                                    <h3>AQUI LOS EVENTOS DE DANZA</h3>
+                                    </hgroup>
+                       <button class="btn btn-hero btn-lg" role="button"> <a href="frm_danza.aspx">IR ALOS EVENTOS</a>  </button>  
+                                </div>
+
                             </div>
                         </div> 
                     </div>
@@ -63,15 +84,18 @@
             
                        <ItemTemplate>
                 
-          	<div class="col-md-4">
+          	<div class="col-md-4"><br />
+                  <div class="panel panel-danger">
+                       <div class="panel-heading">
+                            <div class="panel-title text-center"> <%# DataBinder.Eval(Container.DataItem,"NOMBRE")%>	</div>
+
+                        </div>
 					<div class="thumbnail">
            
                         
-						<img alt="Bootstrap Thumbnail First" width="400" height="400" src="img/<%# DataBinder.Eval(Container.DataItem,"FOTOPROMOCION")%>.jpg"/>
+						<img alt="Bootstrap Thumbnail First" style="height:223px !important; width:350px !important" src="img/<%# DataBinder.Eval(Container.DataItem,"FOTOPROMOCION")%>.jpg"/>
 						<div class="caption">
-							<h3>
-                              <%# DataBinder.Eval(Container.DataItem,"NOMBRE")%>	
-							</h3>
+							
 							<p>
 								<%# DataBinder.Eval(Container.DataItem,"DESCRIPCION")%>	
 							<p>
@@ -80,6 +104,7 @@
 						</div>
 					</div>
 				</div>
+                  </div>
                                            </ItemTemplate>
       </asp:Repeater>
                 
@@ -106,6 +131,11 @@
 			<h3 class="text-center" style="color:#b69da8">
 			MÁS VISITADOS
 			</h3>
+             <div class="panel panel-primary">
+                       <div class="panel-heading">
+                            <div class="panel-title text-center"></div>
+
+                        </div>
                      <div class="row">
               
 				
@@ -114,14 +144,12 @@
             
                        <ItemTemplate>
                 
-          	<div class="col-md-4">
+          	<div class="col-md-4"><br />
+                  <div class="panel panel-danger">
+                       <div class="panel-heading"> <%# DataBinder.Eval(Container.DataItem,"NOMBRE")%></div>
 					<div class="thumbnail">
-                      <img alt="Bootstrap Thumbnail First" width="400" height="400" src="img/<%# DataBinder.Eval(Container.DataItem,"FOTOPROMOCION")%>.jpg" />
+                      <img alt="Bootstrap Thumbnail First" style="height:223px !important; width:350px !important" src="img/<%# DataBinder.Eval(Container.DataItem,"FOTOPROMOCION")%>.jpg" />
 						<div class="caption">
-							<h3>
-                              <%# DataBinder.Eval(Container.DataItem,"NOMBRE")%>
-                              
-							</h3>
                               	
                            <p>
                                 
@@ -132,6 +160,7 @@
 						</div>
 					</div>
 				</div>
+                  </div>
                                            </ItemTemplate>
       </asp:Repeater>
 

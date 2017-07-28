@@ -9,6 +9,7 @@ using BO;
 using Services;
 using System.Security.Cryptography;
 using System.Text;
+using System.IO;
 
 namespace GUI
 {
@@ -49,10 +50,34 @@ namespace GUI
                 }
                 //FileUploadFoto.Save("miimagen.jpg",ImageFormat.Jpeg);
             }
+            if(selec.ID == "btn_modificar")
+                {
+                if (fileFoto.HasFile)
+                {
+                    File.Delete(MapPath(imgFoto.ImageUrl));
+                    nombrefoto= NombreImagen();
+                    fileFoto.SaveAs(Server.MapPath("~/img/") + nombrefoto + ".jpg");
+                }
+                //FileUploadFoto.Save("miimagen.jpg",ImageFormat.Jpeg);
+            }
+            if (fileFoto.ID == "btn_eliminar")
+            {
+                if (fileFoto.HasFile)
+                {
+                    File.Delete("~/img/" + imgFoto.ImageUrl);
+                }
+                //FileUploadFoto.Save("miimagen.jpg",ImageFormat.Jpeg);
+            }
             ctrlgaleria.accion1(listar(), selec.ID);
             datagriew();
 
         }
+
+        private string MapPath(object imageUrl)
+        {
+            throw new NotImplementedException();
+        }
+
         public string NombreImagen()
         {
 
@@ -86,6 +111,19 @@ namespace GUI
         {
             e.Row.Cells[1].Visible = false;
             e.Row.Cells[3].Visible = false;
+        }
+
+        protected void se(object sender, GridViewCommandEventArgs e)
+        {
+            try
+            {
+
+
+                int fila = Convert.ToInt32(e.CommandArgument.ToString());
+                txtID.Value = dgvGaleria.Rows[fila].Cells[1].Text;
+                imgFoto.ImageUrl = "img/" + dgvGaleria.Rows[fila].Cells[2].Text.ToString() + ".jpg";
+                ddlEventos.SelectedValue = dgvGaleria.Rows[fila].Cells[3].Text;
+            }catch { }
         }
     }
 }

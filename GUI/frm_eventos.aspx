@@ -182,18 +182,22 @@
       <div class="container">
        <div class="panel panel-primary">
                         <div class="panel-heading">
-                            <div class="panel-title">Galeria</div>
+                            <div class="panel-title">Galería</div>
 
                         </div> 
       <div class="row">
           <asp:Repeater ID="rpiter" runat="server">
         <ItemTemplate>
          <div class="col-md-12">
-              <div class="col-md-4">
+              <div class="col-md-4"><br />
+                   <div class="panel panel-primary">
+                       <div class="panel-heading">
                   <div class="thumbnail">
-						<img alt="Bootstrap Thumbnail First" width="200" height="200" src="img/<%# DataBinder.Eval(Container.DataItem,"FOTO")%>.jpg"/>
+						<img alt="Bootstrap Thumbnail First" style="height:223px !important; width:350px !important" src="img/<%# DataBinder.Eval(Container.DataItem,"FOTO")%>.jpg"/>
 					</div>
+                           </div>
               </div>
+                  </div>
           </div>
 
                   </ItemTemplate>
@@ -202,7 +206,7 @@
           </div>
            </div>
           </div>
-    <div class="container">
+   <!-- <div class="container">
       <div class="row">
           <div class="col-lg-1">
 
@@ -223,7 +227,7 @@
           </div>
           </div>
           </div>
-        </div>
+        </div>-->
     
     <script>
 

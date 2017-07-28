@@ -12,27 +12,35 @@
 	</div>
 	<div class="row">
 		<div class="col-md-12">
+              <div class="panel panel-primary">
+                        <div class="panel-heading">
+                            <div class="panel-title"></div>
+
+                        </div> 
 			<div class="row">
 				
 				 <asp:Repeater ID="rpt_danza" runat="server" >
             
                        <ItemTemplate>
                 
-          	<div class="col-md-4">
+          	<div class="col-md-4"><br />
+                   <div class="panel panel-danger">
+                        <div class="panel-heading">
+                            <div class="panel-title"> <%# DataBinder.Eval(Container.DataItem,"NOMBRE")%></div>
+
+                        </div> 
 					<div class="thumbnail">
-						<img alt="Bootstrap Thumbnail First" width="400" height="400" src="img/<%# DataBinder.Eval(Container.DataItem,"FOTOPROMOCION")%>.jpg" />
+						<img alt="Bootstrap Thumbnail First" style="height:223px !important; width:350px !important" src="img/<%# DataBinder.Eval(Container.DataItem,"FOTOPROMOCION")%>.jpg" />
 						<div class="caption">
-							<h3>
-                              <%# DataBinder.Eval(Container.DataItem,"NOMBRE")%>	
-							</h3>
 							<p>
 								<%# DataBinder.Eval(Container.DataItem,"DESCRIPCION")%>	
 							<p>
-												 <a href="frm_eventos.aspx?id=<%#Eval("CODIGO")%>">Ver Más </a>
+												 <a href="frm_eventos.aspx?id=<%#Eval("CODIGO")%>"class="btn-group-lg btn-sm btn-success"><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>Ver Más </a>
 							</p>
 						</div>
 					</div>
 				</div>
+                  </div>
                                            </ItemTemplate>
       </asp:Repeater>
 				<div class="col-md-4">
@@ -45,4 +53,5 @@
 		</div>
 	</div>
 </div>
+        </div>
 </asp:Content>

@@ -25,21 +25,25 @@ namespace AdministradorGUI
             if (!IsPostBack)
             {
                 ListarPais();
-               // vista();
+               //vista();
                
             }
 
         }
         public void ListarPais()
         {
-            ddlTipousuario.DataSource = objusuario.listarusuario().Tables[0];
-            ddlTipousuario.DataTextField = "NOMBRE";
-            ddlTipousuario.DataValueField = "CODIGO";
-            ddlTipousuario.DataBind();
-            ddlMunicipio.DataSource = objusuario.listarMunicipio().Tables[0];
-            ddlMunicipio.DataTextField = "NOMBRE";
-            ddlMunicipio.DataValueField = "CODIGO";
-            ddlMunicipio.DataBind();
+            try
+            {
+                ddlTipousuario.DataSource = objusuario.listarusuario().Tables[0];
+                ddlTipousuario.DataTextField = "NOMBRE";
+                ddlTipousuario.DataValueField = "CODIGO";
+                ddlTipousuario.DataBind();
+                ddlMunicipio.DataSource = objusuario.listarMunicipio().Tables[0];
+                ddlMunicipio.DataTextField = "NOMBRE";
+                ddlMunicipio.DataValueField = "CODIGO";
+                ddlMunicipio.DataBind();
+            }
+            catch { }
         }
 
         public UsuarioBO recolectar()
@@ -70,46 +74,56 @@ namespace AdministradorGUI
 
         protected void accion1(object sender, EventArgs e)
         {
-            Button obj = (Button)sender;
-            if (obj.ID == "btnAgregar")
+            try
             {
-                if (file_foto.HasFile)
+                Button obj = (Button)sender;
+                if (obj.ID == "btnAgregar")
                 {
-                    strNuevoNombre = NombreImagen();
-                    file_foto.SaveAs(Server.MapPath("~/img/") + strNuevoNombre + ".jpg");
+                    if (file_foto.HasFile)
+                    {
+                        strNuevoNombre = NombreImagen();
+                        file_foto.SaveAs(Server.MapPath("~/img/") + strNuevoNombre + ".jpg");
+                    }
+                    //FileUploadFoto.Save("miimagen.jpg",ImageFormat.Jpeg);
                 }
-                //FileUploadFoto.Save("miimagen.jpg",ImageFormat.Jpeg);
-            }
-            if (obj.ID == "btnEliminar")
-            {
-                if (file_foto.HasFile)
+                if (obj.ID == "btnEliminar")
                 {
-                    File.Delete("~/img/" + imgFoto.ImageUrl);
+                    if (file_foto.HasFile)
+                    {
+                        File.Delete("~/img/" + imgFoto.ImageUrl);
+                    }
+                    //FileUploadFoto.Save("miimagen.jpg",ImageFormat.Jpeg);
                 }
-                //FileUploadFoto.Save("miimagen.jpg",ImageFormat.Jpeg);
+                if (obj.ID == "btnNuevo") //cambiar por btnReporte
+                {
+                    DataSet usuarios = objusuario.LISTARDATOS();
+                    DataTable dt = usuarios.Tables[0];
+
+                    Reportes.ReporteUsuarios rpFac = new Reportes.ReporteUsuarios();
+                    rpFac.SetDataSource(dt);
+
+                    Session["llena"] = rpFac;
+
+                    abreVentana("Reporte.aspx");
+                }
+                ctrl.accion1(recolectar(), obj.ID);
+
+                vista();
+                //GeneraXML();
             }
-            if(obj.ID == "btnNuevo") //cambiar por btnReporte
+            catch
             {
-                DataSet usuarios = objusuario.LISTARDATOS();
-                DataTable dt = usuarios.Tables[0];
-
-                Reportes.ReporteUsuarios rpFac = new Reportes.ReporteUsuarios();
-                rpFac.SetDataSource(dt);
-
-                Session["llena"] = rpFac;
-
-                abreVentana("Reporte.aspx");
+                Response.Write("");
             }
-            ctrl.accion1(recolectar(), obj.ID);
-
-            //vista();
-            //GeneraXML();
         }
 
         private void abreVentana(string ventana)
         {
-            Response.Redirect(ventana, true);
-        }
+            try {
+                Response.Redirect(ventana, true);
+            }
+            catch { }
+         }
 
         public void GeneraXML()
         {
@@ -134,33 +148,41 @@ namespace AdministradorGUI
         }
         public void vista()
         {
-           //dtgDatos.DataSource = objusuario.LISTARDATOS().Tables[0];
-           // dtgDatos.DataBind();
+            try
+            {
+                dtgDatos.DataSource = objusuario.LISTARDATOS().Tables[0];
+                dtgDatos.DataBind();
+            }
+            catch { }
         }
 
         protected void accion(object sender, GridViewCommandEventArgs e)
         {
-            if (e.CommandName == "btnSeleccionar")
+            try
             {
-                int indice = Convert.ToInt32(e.CommandArgument);
-                txtID.Text = dtgDatos.Rows[indice].Cells[1].Text.ToString();
-                txtNombre.Text = dtgDatos.Rows[indice].Cells[2].Text.ToString();
-                txtApellido.Text = dtgDatos.Rows[indice].Cells[3].Text.ToString();
-                txtTelefono.Text = dtgDatos.Rows[indice].Cells[4].Text.ToString();
-                DateTime fecha = Convert.ToDateTime(dtgDatos.Rows[indice].Cells[5].Text);
-                txtfecha.Text = dtgDatos.Rows[indice].Cells[5].Text;
-                txtCorreo.Text = dtgDatos.Rows[indice].Cells[6].Text.ToString();
-                txtUsuario.Text = dtgDatos.Rows[indice].Cells[7].Text.ToString();
-                txtContraseña.Text = dtgDatos.Rows[indice].Cells[8].Text.ToString();
-                imgFoto.ImageUrl = "img/" + dtgDatos.Rows[indice].Cells[9].Text.ToString() + ".jpg";
-                txtDir.Value= dtgDatos.Rows[indice].Cells[11].Text;
-                txtColonia.Text = dtgDatos.Rows[indice].Cells[12].Text.ToString();
-                txtCodigoPostal.Text = dtgDatos.Rows[indice].Cells[13].Text.ToString();
-                txtCruzamiento.Text = dtgDatos.Rows[indice].Cells[14].Text.ToString();
-                txtNumeroInterior.Text = dtgDatos.Rows[indice].Cells[15].Text.ToString();
-                txtNumeroExteriror.Text = dtgDatos.Rows[indice].Cells[16].Text.ToString();
+                if (e.CommandName == "btnSeleccionar")
+                {
+                   /* int indice = Convert.ToInt32(e.CommandArgument);
+                    txtID.Text = dtgDatos.Rows[indice].Cells[1].Text.ToString();
+                    txtNombre.Text = dtgDatos.Rows[indice].Cells[2].Text.ToString();
+                    txtApellido.Text = dtgDatos.Rows[indice].Cells[3].Text.ToString();
+                    txtTelefono.Text = dtgDatos.Rows[indice].Cells[4].Text.ToString();
+                    DateTime fecha = Convert.ToDateTime(dtgDatos.Rows[indice].Cells[5].Text);
+                    txtfecha.Text = dtgDatos.Rows[indice].Cells[5].Text;
+                    txtCorreo.Text = dtgDatos.Rows[indice].Cells[6].Text.ToString();
+                    txtUsuario.Text = dtgDatos.Rows[indice].Cells[7].Text.ToString();
+                    txtContraseña.Text = dtgDatos.Rows[indice].Cells[8].Text.ToString();
+                    imgFoto.ImageUrl = "img/" + dtgDatos.Rows[indice].Cells[9].Text.ToString() + ".jpg";
+                    txtDir.Value = dtgDatos.Rows[indice].Cells[11].Text;
+                    txtColonia.Text = dtgDatos.Rows[indice].Cells[12].Text.ToString();
+                    txtCodigoPostal.Text = dtgDatos.Rows[indice].Cells[13].Text.ToString();
+                    txtCruzamiento.Text = dtgDatos.Rows[indice].Cells[14].Text.ToString();
+                    txtNumeroInterior.Text = dtgDatos.Rows[indice].Cells[15].Text.ToString();
+                    txtNumeroExteriror.Text = dtgDatos.Rows[indice].Cells[16].Text.ToString();*/
 
+                }
             }
+            catch { }
         }
 
         protected void ocultar(object sender, GridViewRowEventArgs e)

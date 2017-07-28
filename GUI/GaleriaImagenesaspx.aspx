@@ -20,10 +20,10 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="container">
     <div class="row">
-        <div class="col-lg-3">
+        <div class="col-md-2">
 
         </div>
-        <div class="col-lg-6">
+        <div class="col-md-8">
         <div class="panel panel-primary">
                         <div class="panel-heading">
                             <div class="panel-title">GALERIA</div>
@@ -55,48 +55,37 @@
                 <asp:label ID="lblEvento" runat="server" text="Seleccionar Evento"></asp:label><br />
                 <asp:dropdownlist ID="ddlEventos" CssClass="btn btn-default dropdown-toggle form-control"  data-toggle="dropdown" runat="server" width="150px" heigh="30px"></asp:dropdownlist>
                 <asp:hiddenfield ID="txtID"  runat="server"></asp:hiddenfield>
-            </div><div class="row">
-
-                  </div>
+            </div>
             </div><br />
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="col-lg-4">
-
-                    </div>
-                    <div class="col-lg-10"><br />
+                            <div class="panel panel-danger">
+                        <div class="panel-heading">
+                    <div class="col-md-12"><br />
                         <div class="btn-group-sm">
                         <asp:button ID="btnAgregar" runat="server" text="Agregar" width="80px" CssClass="btn btn-sm btn-info" OnClick="seleccionar" />
-                        <asp:button ID="btnModificar" runat="server" text="Modificar" width="80px" CssClass="btn btn-sm btn-warning" />
-                        <asp:button ID="btnEliminar" runat="server" text="Eliminar" width="80px" CssClass="btn btn-sm btn-danger" />
+                        <asp:button ID="btnModificar" runat="server" text="Modificar" width="80px" CssClass="btn btn-sm btn-warning" OnClick="seleccionar" />
+                        <asp:button ID="btnEliminar" runat="server" text="Eliminar" width="80px" CssClass="btn btn-sm btn-danger" OnClick="seleccionar" />
                         <asp:button ID="btnBuscar" runat="server" text="Buscar" width="80px" CssClass="btn btn-sm btn-success" />
                         <asp:button ID="btnLimpiar" runat="server" text="Limpiar" width="80px" CssClass="btn btn-sm btn-primary" />
                         </div>
                     </div>
-                        </div>
-            </div><br />
+                            </div>
+            <br />
             <div class="row">
-                <div class="col-lg-12">
-                    <div class="col-lg-4">
-                        <asp:GridView ID="dgvGaleria" CssClass="table table-bordered "  runat="server" OnRowCreated="esconder">
+                <div class="col-md-12">
+                    <div class="col-md-4">
+                        <asp:GridView ID="dgvGaleria" runat="server" OnRowCreated="esconder" CssClass="table-resposive table table-bordered " OnRowCommand="se">
                             <Columns>
-                                <asp:ButtonField CommandName="btnSeleccionar" ControlStyle-CssClass="btn btn-sm btn-warning" Text="Seleccionar" />
+                                <asp:ButtonField CommandName="btnSeleccionar" ControlStyle-CssClass="btn btn-sm btn-success" Text="Seleccionar" />
                             </Columns>
                         </asp:GridView>
-                    </div>
-                    <div class="panel-info">
-                        <div class="col-lg-8">
-
-                        </div>
-                    </div>
-                    <div class="col-lg-2"></div>
+                    </div></div>
                 </div>
             </div>
-            </div>
+                    </div>
             </div>
         <div class="auto-style1">
 
         </div>
     </div>
-    </div>
+        </div>
 </asp:Content>

@@ -16,14 +16,14 @@ namespace AdministradorGUI.Reportes {
     using CrystalDecisions.CrystalReports.Engine;
     
     
-    public class ReporteEVentos : ReportClass {
+    public class ReporteCategoria : ReportClass {
         
-        public ReporteEVentos() {
+        public ReporteCategoria() {
         }
         
         public override string ResourceName {
             get {
-                return "ReporteEVentos.rpt";
+                return "ReporteCategoria.rpt";
             }
             set {
                 // Do nothing
@@ -41,7 +41,7 @@ namespace AdministradorGUI.Reportes {
         
         public override string FullResourceName {
             get {
-                return "AdministradorGUI.Reportes.ReporteEVentos.rpt";
+                return "AdministradorGUI.Reportes.ReporteCategoria.rpt";
             }
             set {
                 // Do nothing
@@ -90,9 +90,9 @@ namespace AdministradorGUI.Reportes {
     }
     
     [System.Drawing.ToolboxBitmapAttribute(typeof(CrystalDecisions.Shared.ExportOptions), "report.bmp")]
-    public class CachedReporteEVentos : Component, ICachedReport {
+    public class CachedReporteCategoria : Component, ICachedReport {
         
-        public CachedReporteEVentos() {
+        public CachedReporteCategoria() {
         }
         
         [Browsable(false)]
@@ -129,7 +129,7 @@ namespace AdministradorGUI.Reportes {
         }
         
         public virtual CrystalDecisions.CrystalReports.Engine.ReportDocument CreateReport() {
-            ReporteEVentos rpt = new ReporteEVentos();
+            ReporteCategoria rpt = new ReporteCategoria();
             rpt.Site = this.Site;
             return rpt;
         }

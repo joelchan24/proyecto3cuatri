@@ -1,0 +1,23 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <Table>
+    <CODIGO>1</CODIGO>
+    <NOMBRE>DANZA</NOMBRE>
+  </Table>
+  <Table>
+    <CODIGO>3</CODIGO>
+    <NOMBRE>MUSICA</NOMBRE>
+  </Table>
+  <Table>
+    <CODIGO>1004</CODIGO>
+    <NOMBRE>OTRO</NOMBRE>
+  </Table>
+  <Table>
+    <CODIGO>1003</CODIGO>
+    <NOMBRE>Pintura</NOMBRE>
+  </Table>
+  <Table>
+    <CODIGO>2</CODIGO>
+    <NOMBRE>TEATRO</NOMBRE>
+  </Table>
+</NewDataSet>

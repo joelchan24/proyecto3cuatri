@@ -189,9 +189,9 @@
                                 </div>
                             <div class="row">
                                 <div class="col-lg-12">
-                                    <asp:gridview ID="dgvEditarUsuario" runat="server" OnRowCommand="seleccionar" OnRowCreated="ocultar">
+                                    <asp:gridview ID="dgvEditarUsuario" CssClass="table-resposive table table-bordered" runat="server" OnRowCommand="seleccionar" OnRowCreated="ocultar">
                                         <Columns>
-                                            <asp:ButtonField CommandName="btnSeleccionar" Text="Seleccionar" />
+                                            <asp:ButtonField ControlStyle-CssClass="btn-group-lg btn-sm btn-success" CommandName="btnSeleccionar" Text="Seleccionar" />
                                         </Columns>
                                     </asp:gridview>
                                 </div>

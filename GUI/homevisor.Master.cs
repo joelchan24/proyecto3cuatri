@@ -44,7 +44,8 @@ namespace GUI
         protected void mandar(object sender, EventArgs e)
         {
             //  Response.Redirect("WebForm1.aspx?accion=" + txtlat.Text.Trim());
-            Response.Redirect("eventos_engeneral.aspx?buscar=" + Convert.ToDateTime(txt_buscar.Text));
+            // Response.Redirect("eventos_engeneral.aspx?buscar=" + Convert.ToDateTime(txt_buscar.Text));
+            Response.Redirect("eventos_engeneral.aspx?buscar=" + txt_buscar.Text);
         }
     }
 }
