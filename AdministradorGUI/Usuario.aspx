@@ -74,6 +74,11 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder2" runat="server">
     <link href="css/estilo-usuario.css" rel="stylesheet" />
+    <div class="panel panel-primary">
+                       <div class="panel-heading">
+                            <div class="panel-title text-center">CONTROL DE USUARIOS</div>
+
+                        </div>
     <form id="form1" runat="server" class="auto-style13">
         <div class="row auto-style9" style="height: 262px">
                 <div class="auto-style4">
@@ -244,19 +249,22 @@
                 </div>
             </div>
         </div>
-        <div class="row">
-            <div class="col-lg-12">
+        <div class="row col-md-12">
+            <br />
+             <div class="panel panel-danger">
+                       <div class="panel-heading">
+                            <div class="panel-title text-center"></div>
+
+                        
+            <div class="col-md-12">
                 <div class="form-group">
                  <asp:Button ID="btnAgregar" runat="server" Text="Agregar" CssClass="btn btn-dropbox" Width="100px" Height="50px" OnClick="accion1"  /> <asp:Button ID="btnModificar" Text="Modificar" runat="server" CssClass="btn btn-dropbox" Width="100px" Height="50px" OnClick="accion1" /> <asp:Button ID="btnEliminar" Text="Eliminar" runat="server" CssClass="btn btn-dropbox" Width="100px" Height="50px" OnClick="accion1" /> 
                     <asp:Button ID="btnNuevo" Text="Reporte" runat="server" CssClass="btn btn-dropbox" Width="100px" Height="50px" OnClick="accion1" CausesValidation="False" /> 
                     <asp:Button ID="btnBuscar" Text="Buscar" runat="server" CssClass="btn btn-dropbox" Width="100px" Height="50px" />
                 </div>
 
-            </div>
-
-        </div>
-        <div class="row">
-            <div class="col-lg-12">
+            </div></div>
+            <div class="col-md-12">
                 <div class="form-group">
                     <asp:GridView ID="dtgDatos" runat="server" CssClass="fc-grid" OnRowCommand="accion" OnRowCreated="ocultar">
                         <Columns>
@@ -267,5 +275,9 @@
                 </div>
                 </div>
         </div>
+            </div>
+            
     </form>
+        </div>
+
 </asp:Content>

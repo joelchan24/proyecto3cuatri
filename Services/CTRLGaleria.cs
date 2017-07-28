@@ -23,10 +23,10 @@ namespace Services
                     obDao.agregar(obj);
                     break;
                 case "btnModificar":
-                    obDao.ELIMINAR(obj);
+                    obDao.modificar(obj);
                     break;
                 case "btnEliminar":
-                    obDao.modificar(obj);
+                    obDao.ELIMINAR(obj);
                     break;
             }
             return true;
