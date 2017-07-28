@@ -88,7 +88,7 @@
 					<div class="thumbnail">
            
                         
-						<img alt="Bootstrap Thumbnail First" style="height:00px !important; width:300px !important" src="img/<%# DataBinder.Eval(Container.DataItem,"FOTOPROMOCION")%>.jpg"/>
+						<img alt="Bootstrap Thumbnail First" style="height:223px !important; width:350px !important" src="img/<%# DataBinder.Eval(Container.DataItem,"FOTOPROMOCION")%>.jpg"/>
 						<div class="caption">
 							<h3>
                               <%# DataBinder.Eval(Container.DataItem,"NOMBRE")%>	
@@ -127,6 +127,11 @@
 			<h3 class="text-center" style="color:#b69da8">
 			MÁS VISITADOS
 			</h3>
+             <div class="panel panel-primary">
+                       <div class="panel-heading">
+                            <div class="panel-title text-center"></div>
+
+                        </div>
                      <div class="row">
               
 				
@@ -137,7 +142,7 @@
                 
           	<div class="col-md-4">
 					<div class="thumbnail">
-                      <img alt="Bootstrap Thumbnail First" width="400" height="400" src="img/<%# DataBinder.Eval(Container.DataItem,"FOTOPROMOCION")%>.jpg" />
+                      <img alt="Bootstrap Thumbnail First" style="height:223px !important; width:350px !important" src="img/<%# DataBinder.Eval(Container.DataItem,"FOTOPROMOCION")%>.jpg" />
 						<div class="caption">
 							<h3>
                               <%# DataBinder.Eval(Container.DataItem,"NOMBRE")%>

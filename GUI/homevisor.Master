@@ -103,9 +103,9 @@
 				<!-- Brand and toggle get grouped for better mobile display -->
 				<div class="navbar-header">
 					
-					<a id="menu-toggle" href="#" class="nav-btn btn-dark btn-lg toggle" style="right: 1%; top: 2px; height: 43px">
+					<!--<a id="menu-toggle" href="#" class="nav-btn btn-dark btn-lg toggle" style="right: 1%; top: 2px; height: 43px">
 						<i class="fa fa-bars" style="color:#fff;"></i>
-					</a>
+					</a>-->
 					<a id="to-top" class="btn btn-lg btn-inverse" href="#top">
 						<span class="sr-only">Toggle to Top Navigation</span>
 						<i class="fa fa-chevron-up"></i>
@@ -126,14 +126,14 @@
                 			</li>
                              
                           <li class="dropdown">
-                          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" style="margin-right:10px;"><span class="glyphicon glyphicon-star"></span>Categorias <span class="caret"></span></a>
+                          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" style="margin-right:10px;"><span class="glyphicon glyphicon-star"></span>Categorías<span class="caret"></span></a>
                           <ul class="dropdown-menu" role="menu" style="display: none;">
                             <li><a href="frm_danza.aspx">Danza</a></li>
                             <li><a href="frm_teatroo.aspx">Teatro</a></li>                           
-                              <li><a href="frm_musica.aspx">Musica</a></li>
+                              <li><a href="frm_musica.aspx">Música</a></li>
                           </ul>
                         </li>
-                            <li><a href="frm_plus.aspx"><span class="glyphicon glyphicon-screenshot" aria-hidden="true"></span>Ubicación</a></li>
+                            <li><a href="frm_plus.aspx"><span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span>Ubicación de eventos </a></li>
                           
                 		</ul>
                         <ul class="nav navbar-nav navbar-right">
@@ -143,14 +143,13 @@
                       <%  
     if (Session["usuario"] == null && Session["id"] == null)
     {
-
                            %> 
                              <li>                             </li>
                            <li class="dropdown">
                           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" style="margin-right:80px;"><span class="glyphicon glyphicon-user"></span>Cuenta <span class="caret"></span></a>
                           <ul class="dropdown-menu" role="menu" style="display: none;">
-                            <li><a href="loggin_fuerademasterpage.aspx">Iniciar Sesion </a></li>
-                            <li><a href="registro_usuarios_fueramasterpge.aspx">Registrarme</a></li>
+                            <li><a href="loggin_fuerademasterpage.aspx">Iniciar Sesion&middot;<span class="glyphicon glyphicon-hand-up" aria-hidden="true"></span> </a></li>
+                            <li><a href="registro_usuarios_fueramasterpge.aspx">Registrarme <span class="glyphicon glyphicon-edit" aria-hidden="true"></span></a></li>
                           </ul>
  </li>
                       
@@ -165,17 +164,25 @@
                           
                            <li class="dropdown">
                                                        
-                               <a href="#" class=" dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" style="margin-right:20px;"><span class="glyphicon glyphicon-wrench"></span>editar <span class="caret"></span></a>
+                               <a href="#" class=" dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" style="margin-right:20px;"><span class="glyphicon glyphicon-tasks"></span>Opciones <span class="caret"></span></a>
                           <ul class="dropdown-menu" role="menu" style="display: none;">
-                           <li><a href="editarUsuario.aspx">Editar Datos </a></li>
-                            <li><a href="registroevento.aspx">Subir Evento</a></li>
-                           <li><a href="frm_mensajesdelorgaizador.aspx">Mensajes</a></li>
+                           <li><a href="editarUsuario.aspx">Editar Datos&middot;<span class="glyphicon glyphicon-pencil" aria-hidden="true"></span> </a></li>
+                            <li><a href="registroevento.aspx">Subir Evento&middot;<span class="glyphicon glyphicon-open" aria-hidden="true"></span></a></li>
+                           <li><a href="frm_mensajesdelorgaizador.aspx">Mensajes&middot;<span class="glyphicon glyphicon-envelope" aria-hidden="true"></span></a></li>
+                              <li><a href="GaleriaImagenesaspx.aspx">Agregar galería&middot;<span class="glyphicon glyphicon-heart-empty" aria-hidden="true"></span></a></li>
+                               <li><a href="frm_plus.aspx">Ubicación de eventos &middot;<span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span></a></li>
                               <li class="panel-info">&middot;&middot; <asp:Button ID="Button1" runat="server" CssClass="btn btn-sm btn-link" OnClick="cerrar" Text="Salir" CausesValidation="False" /></li>
                           </ul>
                       
                               <li />
-                                
-                              <asp:Label ID="txt_usuaer2" runat="server" Text="Label" style="margin-right:10px;padding-top: 10px;" ></asp:Label>
+                                <p>
+
+
+                                </p>
+                               <p>
+
+                               </p>
+                         <asp:Label ID="txt_usuaer2" runat="server" Text="Label" style="margin-right:10px;padding-top: 10px;" ></asp:Label><span class="glyphicon glyphicon-user" aria-hidden="true"></span> 
                                <!--<asp:Button ID="btn_cerrar2" runat="server" Text="cerrar secion" OnClick="cerrar" style="margin-right:15px;padding-top: 10px; "  CausesValidation="False" />-->
                           
 
@@ -184,7 +191,7 @@
                              <%} %>
                            
                             <%  if (Session["usuario"] == null && Session["id"] == null ){ %>
-                              
+                               
                              <li>                             </li>
                            <li class="dropdown" style="display:none">
                           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" style="margin-right:80px;"><span class="glyphicon glyphicon-user"></span>Cuenta <span class="caret"></span></a>
@@ -212,7 +219,9 @@
                                <li class="dropdown">                          
                                <a href="#" class=" dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" style="margin-right:20px;"><span class="glyphicon glyphicon-wrench"></span>editar <span class="caret"></span></a>
                           <ul class="dropdown-menu" role="menu" style="display: none;">
-                            <li><a href="editarUsuario.aspx">editar datos </a></li>
+                             <li><a href="editarUsuario.aspx">Editar Datos&middot;<span class="glyphicon glyphicon-pencil" aria-hidden="true"></span> </a></li>
+                               <li><a href="frm_mensajesdelorgaizador.aspx">Mensajes&middot;<span class="glyphicon glyphicon-envelope" aria-hidden="true"></span></a></li>
+                              <li><a href="frm_plus.aspx">Ubicación de eventos &middot;<span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span></a></li>
                               <li class="panel-info">&middot;&middot; <asp:Button ID="Button2" runat="server" CssClass="btn btn-sm btn-link" OnClick="cerrar" Text="Salir" CausesValidation="False" /></li>
                             
                           </ul>
@@ -232,7 +241,7 @@
                        <div class="form-inline navbar-form left  " role="search">
 
 
-<asp:TextBox ID="txt_buscar" runat="server" CssClass="form-control" Width="250px" placeholder="Nombre a buscar" ></asp:TextBox>&nbsp;
+<asp:TextBox ID="txt_buscar" runat="server" CssClass="form-control" Width="250px" placeholder="Nombre del Evento" ></asp:TextBox>&nbsp;
 <asp:LinkButton ID="LinkButton1" runat="server" CssClass="btn btn-info" Text="Buscar" OnClick="mandar"><span class="glyphicon glyphicon-search" ></span>&nbsp;Buscar</asp:LinkButton>
                      </div>
                             </li>  

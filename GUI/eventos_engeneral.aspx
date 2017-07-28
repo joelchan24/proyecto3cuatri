@@ -35,7 +35,7 @@
                 
           	<div class="col-md-4">
 					<div class="thumbnail">
-						<img alt="Bootstrap Thumbnail First" width="400" height="400" src="img/<%# Eval("FOTOPROMOCION")%>.jpg" />
+						<img alt="Bootstrap Thumbnail First" style="height:223px !important; width:350px !important" src="img/<%# Eval("FOTOPROMOCION")%>.jpg" />
 						<div class="caption">
 							<h3>
                               <%# Eval("NOMBRE")%>	

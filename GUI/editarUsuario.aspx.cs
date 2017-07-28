@@ -27,6 +27,14 @@ namespace GUI
             {
                 vista();
                 MunicipioCuenta();
+                dgvEditarUsuario.HeaderRow.Cells[2].Text = "Nombre";
+                dgvEditarUsuario.HeaderRow.Cells[3].Text = "Apellidos";
+                dgvEditarUsuario.HeaderRow.Cells[6].Text = "Correo ";
+                dgvEditarUsuario.HeaderRow.Cells[7].Text = "Usuario";
+                dgvEditarUsuario.HeaderRow.Cells[12].Text = "Colonia";
+                dgvEditarUsuario.HeaderRow.Cells[13].Text = "Código Postal";
+                dgvEditarUsuario.HeaderRow.Cells[19].Text = "Municipio";
+                dgvEditarUsuario.HeaderRow.Cells[21].Text = "Tipo de usuario ";
             }
             
 
