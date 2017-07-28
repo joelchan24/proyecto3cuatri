@@ -184,7 +184,7 @@
               
             
                     <div class="form-group">
-                       <label for="exampleinput" >aprovacion</label><br />
+                      <label for="exampleinput" >aprobacion</label><br />
                       <label class="radio-inline" >
                           <asp:RadioButton ID="rbt_aprovado" runat="server" type="radio" name="aprovado" OnCheckedChanged="rbt_aprovado_CheckedChanged"  />  Aprovado
       

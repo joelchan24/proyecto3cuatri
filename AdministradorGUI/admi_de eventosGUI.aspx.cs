@@ -279,7 +279,7 @@ namespace AdministradorGUI
                 }
                 //FileUploadFoto.Save("miimagen.jpg",ImageFormat.Jpeg);
             }
-            //se crea el reporte y se agrega la funcion de accion del boton
+               //se crea el reporte y se agrega la funcion de accion del boton
             if (btnSeleccionado.ID == "btn_nuevo") //cambiar por btnReporte
             {
                 DataSet Evento = eventado.buscar();
