@@ -137,7 +137,7 @@ namespace DAO
             cmd.Parameters.Add("@cos", SqlDbType.Money).Value = obejto.costo;
             cmd.Parameters.Add("@feaper", SqlDbType.Date).Value = obejto.FechaApertura.ToString("yyyy-MM-dd");
             cmd.Parameters.Add("@fecier", SqlDbType.Date).Value = obejto.FechaCierre.ToString("yyyy-MM-dd");
-            cmd.Parameters.Add("@foto", SqlDbType.VarChar).Value = obejto.FotoPromocion+".jgp";
+            cmd.Parameters.Add("@foto", SqlDbType.VarChar).Value = obejto.FotoPromocion;
             cmd.Parameters.Add("@ubicacion", SqlDbType.VarChar).Value = obejto.UbicacionGeografica;
             cmd.Parameters.Add("@lat", SqlDbType.VarChar).Value = obejto.latitud;
             cmd.Parameters.Add("@long", SqlDbType.VarChar).Value = obejto.longitud;
