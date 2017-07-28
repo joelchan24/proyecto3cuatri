@@ -26,6 +26,7 @@ namespace GUI
             {
                 recuperarID();
             }
+            datagriew();
         }
         public void recuperarID()
         {
@@ -33,7 +34,6 @@ namespace GUI
             ddlEventos.DataTextField = "NOMBRE";
             ddlEventos.DataValueField = "CODIGO";
             ddlEventos.DataBind();
-            datagriew();
         }
 
         protected void seleccionar(object sender, EventArgs e)
