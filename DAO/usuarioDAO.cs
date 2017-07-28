@@ -153,9 +153,9 @@ namespace DAO
         }
         public DataSet LISTARDATOS()
         {
-            SqlCommand CMD = new SqlCommand("select * from USUARIOS");
-            CMD.CommandType = CommandType.Text;
-            return obj.EjecutarSentencia(CMD);
+            SqlCommand cmd = new SqlCommand("select US.*,DI.*,MUN.CODIGO,MUN.NOMBRE,CUN.IDTIPO,TIPO.NOMBRE from USUARIOS US INNER JOIN DIRECCION DI ON US.IDDIRECCION=DI.CODIGO INNER JOIN MUNICIPIO MUN ON DI.MUNICIPIO=MUN.CODIGO INNER JOIN TIPOCUENTA_USUARIO CUN ON CUN.IDUSUARIO=US.CODIGO INNER JOIN TIPOCUENTA TIPO ON TIPO.CODIGO=CUN.IDTIPO WHERE US.CODIGO=US.CODIGO");
+            cmd.CommandType = CommandType.Text;
+            return obj.EjecutarSentencia(cmd);
         }
     }
 }

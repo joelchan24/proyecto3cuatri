@@ -25,7 +25,7 @@ namespace AdministradorGUI
             if (!IsPostBack)
             {
                 ListarPais();
-               //vista();
+               vista();
                
             }
 
