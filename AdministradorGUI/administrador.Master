@@ -154,7 +154,15 @@
          
         </li>--%>
                
-      
+       <li class="treeview">
+          <a href="frm_respaldo.aspx">
+            <i class="fa fa-book"></i> <span>Respaldo</span>
+            <span class="pull-right-container"></span>
+              </a>
+           
+            
+       
+        </li>
           <li class="treeview">
           <a href="http://localhost:50790/loggin_fuerademasterpage.aspx");">
             <i class="fa fa-edit"></i> <span>Salir </span>

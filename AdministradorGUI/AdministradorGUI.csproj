@@ -107,6 +107,7 @@
     <Content Include="Contactos.aspx" />
     <Content Include="Estado.aspx" />
     <Content Include="eventos.xml" />
+    <Content Include="frm_respaldo.aspx" />
     <Content Include="img\avatar.png" />
     <Content Include="img\ccaae9ad-e297-462c-84ad-414e7f30ab51image16.jpeg" />
     <Content Include="img\obra-cholo.jpg" />
@@ -220,6 +221,13 @@
     </Compile>
     <Compile Include="Estado.aspx.designer.cs">
       <DependentUpon>Estado.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frm_respaldo.aspx.cs">
+      <DependentUpon>frm_respaldo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frm_respaldo.aspx.designer.cs">
+      <DependentUpon>frm_respaldo.aspx</DependentUpon>
     </Compile>
     <Compile Include="Municipios.aspx.cs">
       <DependentUpon>Municipios.aspx</DependentUpon>

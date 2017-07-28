@@ -118,13 +118,6 @@
                              <li class="dropdown mega-dropdown" >
                               <a href="WebForm1.aspx" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-home"></span>Inicio</a>
                             </li>
-                            <li class="dropdown mega-dropdown">
-                			    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-user"></span> Quienes Somos</a>
-                            </li>
-                			<li class="dropdown mega-dropdown">
-                				<a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-phone"></span>Contactos </a>				
-                			</li>
-                             
                           <li class="dropdown">
                           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" style="margin-right:10px;"><span class="glyphicon glyphicon-star"></span>Categorías<span class="caret"></span></a>
                           <ul class="dropdown-menu" role="menu" style="display: none;">
