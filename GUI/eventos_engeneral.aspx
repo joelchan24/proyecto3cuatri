@@ -14,6 +14,17 @@
 				 EVENTOS AGREGADOS
 			</h3>
 		</div>
+            <div class="row">
+                <div class="col-md-12">
+                <div class="input-group text-center">
+
+
+<asp:TextBox ID="txt_buscar" runat="server" CssClass="form-control" Width="250px"  type="date"></asp:TextBox>&nbsp;
+<asp:LinkButton ID="btn" runat="server" CssClass="btn btn-info" Text="Buscar" OnClick="buscar"><span class="glyphicon glyphicon-search"></span>&nbsp;Buscar</asp:LinkButton>
+</div>
+                    </div>
+            </div>
+            <br />
 	<div class="row">
 		<div class="col-md-12">
 			<div class="row">
@@ -29,7 +40,7 @@
 							<h3>
                               <%# Eval("NOMBRE")%>	
 							</h3>
-                             <asp:Label ID="id" runat="server" Text=""><%# Eval("CODIGO")%></asp:Label>
+                          
                             <p>
 								<%# Eval("DESCRIPCION")%>	
 							<p>

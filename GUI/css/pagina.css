@@ -1020,7 +1020,7 @@ Image credits: unsplash.com
 .fade-carousel .slides .slide-1, 
 .fade-carousel .slides .slide-2,
 .fade-carousel .slides .slide-3 {
-  height: 100vh;
+  height: 150vh;
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;

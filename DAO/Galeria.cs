@@ -51,7 +51,7 @@ namespace DAO
         }
         public DataSet listarimagenes(int id)
         {
-            SqlCommand cmd = new SqlCommand("select h.*,e.NOMBRE FROM GALERIA h inner join EVENTO e on h.IDEVENTO=(select CODIGO FROM EVENTO WHERE EVENTO.USUARIO=@cod)");
+            SqlCommand cmd = new SqlCommand("  select h.*,e.NOMBRE FROM GALERIA h inner join EVENTO e on h.IDEVENTO=e.CODIGO inner join USUARIOS ON E.USUARIO=@cod");
             cmd.Parameters.Add("cod", SqlDbType.Int).Value = id;
             cmd.CommandType = CommandType.Text;
             return conex.EjecutarSentencia(cmd);

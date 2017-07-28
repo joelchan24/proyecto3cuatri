@@ -424,6 +424,17 @@ namespace DAO
         public DataSet buscar_aprovadosdelmater(EventoBO fecha)
         {
             // select * from EVENTO e inner join DIRECCION d on e.DIRECCION=d.CODIGO  
+            SqlCommand cmd = new SqlCommand("select * from EVENTO e  inner join DIRECCION d on e.DIRECCION=d.CODIGO inner join USUARIOS u on  u.CODIGO=e.USUARIO inner join CATEGORIA cat on cat.CODIGO=e.CATEGORIA where e.APROVACION='1' and e.NOMBRE LIKE '%'+ @nom +'%'  ");
+
+            cmd.Parameters.Add("@nom", SqlDbType.VarChar).Value = fecha.Nombre ;
+            cmd.CommandType = CommandType.Text;
+
+
+            return conectar.EjecutarSentencia(cmd);
+        }
+        public DataSet buscar_aprovadosdelmater1(EventoBO fecha)
+        {
+            // select * from EVENTO e inner join DIRECCION d on e.DIRECCION=d.CODIGO  
             SqlCommand cmd = new SqlCommand("select * from EVENTO e  inner join DIRECCION d on e.DIRECCION=d.CODIGO inner join USUARIOS u on  u.CODIGO=e.USUARIO inner join CATEGORIA cat on cat.CODIGO=e.CATEGORIA where e.APROVACION='1' and  @fecha between e.FECHAAPERTURA AND FECHACIERRE  order by e.CODIGO DESC ");
 
             cmd.Parameters.Add("@fecha", SqlDbType.Date).Value = fecha.FechaApertura.ToString("yyyy-MM-dd"); ;

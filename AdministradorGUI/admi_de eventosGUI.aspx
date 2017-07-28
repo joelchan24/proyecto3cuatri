@@ -3,9 +3,8 @@
     <style type="text/css">
         #form1 {
             height: 2500px;
-            width:100%
-       
-}
+            width:96%
+        }
         
 
     
@@ -17,7 +16,6 @@
     <script type="text/javascript" src='https://maps.google.com/maps/api/js?sensor=false&libraries=places&key=AIzaSyCuiUJxL3eVPwCyGdf1P6g9TUQ4KW95YtA'></script>
     <script src="js/locationpicker.jquery.js"></script>
     <form  id="form1" runat="server" >
-      
           <div class="row">
               <h1 > control</h1>
                <asp:HiddenField  ID="txtid" runat="server" />
@@ -248,14 +246,14 @@
         <div class="row"  >
            
                
-                <asp:Button ID="btn_eliminar" runat="server" Text="Eliminar" CssClass="btn btn-danger  col-sm-1 " OnClick="accion" />
+                <asp:Button ID="btn_eliminar" runat="server" Text="Eliminar" CssClass="btn btn-sm btn-danger" OnClick="accion" />
          
-        <asp:Button ID="btn_modificar" runat="server" Text="Modificar" CssClass="btn btn-success col-sm-1" OnClick="accion"   />
+        <asp:Button ID="btn_modificar" runat="server" Text="Modificar" CssClass="btn btn-sm btn-warning" OnClick="accion"   />
  
-         <asp:Button ID="btn_agregar" runat="server" Text="Agregar" CssClass=" btn btn-primary  col-sm-1 " OnClick="accion" />
+         <asp:Button ID="btn_agregar" runat="server" Text="Agregar" CssClass="btn btn-sm btn-info" OnClick="accion" />
         
-        <asp:Button ID="btn_limpiar" runat="server" Text="Limpiar" CssClass="btn btn-warning  col-sm-1 " />
-        <asp:Button ID="btn_nuevo" runat="server" Text="Reporte" CssClass="btn btn-warning  col-sm-1 " OnClick="accion"  />
+        <asp:Button ID="btn_limpiar" runat="server" Text="Limpiar" CssClass="btn btn-sm btn-success" />
+        <asp:Button ID="btn_nuevo" runat="server" Text="Reporte" CssClass="btn btn-sm btn-primary" OnClick="accion"  />
           </div>
             <div class="row">
   <div class="col-md-12">
@@ -295,7 +293,7 @@
 
 
     </script>
-         
+        
 </form>
        
 </asp:Content>

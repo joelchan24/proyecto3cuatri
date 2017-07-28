@@ -13,7 +13,11 @@
     <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
     <script type="text/javascript" src='https://maps.google.com/maps/api/js?sensor=false&libraries=places&key=AIzaSyCuiUJxL3eVPwCyGdf1P6g9TUQ4KW95YtA'></script>
     <script src="js/locationpicker.jquery.js"></script>
+        <div class="panel panel-primary">
+                       <div class="panel-heading">
+                            <div class="panel-title text-center"></div>
 
+                        </div>
           <div class="row">
 
               <h1 > control</h1>
@@ -193,7 +197,7 @@
                 
                   <div class="form-group">
                       <label for="exampleinput">Descripcion</label>
-                     <asp:TextBox id="txt_descrip" TextMode="multiline" Columns="50" Rows="5" runat="server" CssClass="form-control " width="349px" height="350px"></asp:TextBox>                 />
+                     <asp:TextBox id="txt_descrip" TextMode="multiline" Columns="50" Rows="5" runat="server" CssClass="form-control " width="349px" height="350px"></asp:TextBox>                 
                      
                   </div>
 
@@ -260,7 +264,7 @@
             <div class="row">
 		<div class="col-md-3">
               <asp:Button ID="btn_agregar" runat="server" Text="agregar" CssClass=" btn btn-primary  " OnClick="accion" style="text-align:right" /> 
-             <asp:LinkButton ID="LinkButton1" runat="server" PostBackUrl="~/GaleriaImagenesaspx.aspx" CssClass="btn btn-danger">LinkButton</asp:LinkButton>
+             <asp:LinkButton ID="LinkButton1" runat="server" PostBackUrl="~/GaleriaImagenesaspx.aspx" CssClass="btn btn-danger">Galeria</asp:LinkButton>
       
 		</div>
 		<div class="col-md-3">
@@ -294,6 +298,7 @@
       </asp:GridView>
                 </div>
                   </div>
+            </div>
         <br />
         <br />
         

@@ -89,8 +89,13 @@
     <Content Include="HorariosEventos.aspx" />
     <Content Include="img\avatar.png" />
     <Content Include="img\ccaae9ad-e297-462c-84ad-414e7f30ab51image16.jpeg" />
+    <Content Include="img\escuela-teatro-2013-06-29-181304.jpg" />
+    <Content Include="img\foto.jpg" />
+    <Content Include="img\ja %282%29.jpg" />
     <Content Include="img\obra-cholo.jpg" />
+    <Content Include="img\Orquesta-Sinfonica-Colegio-Bilbao16.jpg" />
     <Content Include="img\Progreso-malecon.jpg" />
+    <Content Include="img\tmusica.jpg" />
     <Content Include="img\vaqueria-yucateca-2.jpg" />
     <Content Include="js\app.min.js" />
     <Content Include="js\calendar.js" />

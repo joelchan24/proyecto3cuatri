@@ -13,6 +13,24 @@ namespace GUI {
     public partial class eventos_engeneral {
         
         /// <summary>
+        /// txt_buscar control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txt_buscar;
+        
+        /// <summary>
+        /// btn control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.LinkButton btn;
+        
+        /// <summary>
         /// list control.
         /// </summary>
         /// <remarks>
