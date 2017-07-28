@@ -24,7 +24,7 @@
                     <div class="item slides active">
                        <!-- <div class="slide-1"></div>-->
                          <img class="slide-1" src="img/Orquesta-Sinfonica-Colegio-Bilbao16.jpg" alt="slide-1"  />
-                              <div class="hero">
+                            <div class="hero">
                                 <hgroup>
                                     <h1>EVENTOS DE MUSICA</h1>        
                                     <h3>AQUI LOS EVENTOS DE MUSICA</h3>
@@ -37,25 +37,25 @@
                     <div class="item slides">
                        <!--    <div class="slide-2"></div>-->
                       <img class="slide-2" src="img/escuela-teatro-2013-06-29-181304.jpg" alt="slide-2"/>
-                               <div class="hero">
+                            <div class="hero">        
                                 <hgroup>
                                     <h1>EVENTOS DE TEATRO</h1>        
                                     <h3>AQUI LOS EVENTOS DE TEATRO</h3>
-                                </hgroup>
+                                </hgroup>       
                       <button class="btn btn-hero btn-lg" role="button"> <a href="frm_teatroo.aspx">IR ALOS EVENTOS</a>  </button>  
-                        </div>
+                            </div>
 
                         </div>
                         <div class="item slides">
                           <!-- <div class="slide-3"></div>-->
                             <img class="slide-3" src="img/ja (2).jpg" />
-                                <div class="hero">
-                                <hgroup>
+                                <div class="hero">        
+                                    <hgroup>
                               <h1>EVENTOS DE DANZA</h1>        
                                     <h3>AQUI LOS EVENTOS DE DANZA</h3>
-                                </hgroup>
+                                    </hgroup>
                        <button class="btn btn-hero btn-lg" role="button"> <a href="frm_danza.aspx">IR ALOS EVENTOS</a>  </button>  
-                        </div>
+                                </div>
 
                             </div>
                         </div> 
