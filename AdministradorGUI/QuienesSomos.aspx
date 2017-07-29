@@ -73,7 +73,9 @@
                <div class="form-group">
                    <asp:GridView ID="dtgQuienes" runat="server" CssClass="table-resposive table table-bordered" Width="590px" OnRowCommand="Seleccionar">
                        <Columns>
-                           <asp:ButtonField CommandName="dgvbtnSeleccionar" Text="Seleccionar" />
+                           <asp:ButtonField CommandName="dgvbtnSeleccionar" Text="Seleccionar" >
+                           <ControlStyle CssClass="btn btn-primary" />
+                           </asp:ButtonField>
                        </Columns>
                    </asp:GridView>
                </div>

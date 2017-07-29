@@ -11,7 +11,7 @@
             </div>
             <div class="col-md-4">
                 <div class="form-horizontal">
-                    <label>Hacer copia de seguuridad</label>
+                    <label>Hacer copia de seguridad</label>
                
                   <asp:Button ID="Button1" runat="server" Text="Hacer Bakup" OnClick="seleccionar" CssClass="btn btn-info" />
                 

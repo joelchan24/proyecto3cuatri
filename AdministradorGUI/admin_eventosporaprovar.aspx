@@ -35,7 +35,7 @@
 	<div class="row">
         
 		<div class="col-md-12">
-            <asp:GridView ID="dgb_porconfirmar" runat="server" CssClass="table-resposive table table-bordered" OnRowCommand="eventosporaprovar">
+            <asp:GridView ID="dgb_porconfirmar" runat="server" CssClass="table-resposive table table-bordered" OnRowCommand="eventosporaprovar" OnRowCreated="dgb_porconfirmar_RowCreated">
                 <Columns>
                     <asp:ButtonField CommandName="btn_aprovar" Text="Aprobar">
                     <ControlStyle CssClass="btn btn-success" />

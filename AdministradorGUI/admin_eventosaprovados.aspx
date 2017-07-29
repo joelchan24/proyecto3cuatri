@@ -35,7 +35,7 @@
 
 	<div class="row">
 		<div class="col-md-12">
-            <asp:gridview runat="server" ID="dgv_desaprovados" CssClass="table-resposive table table-bordered" OnRowCommand="desaprovar">
+            <asp:gridview runat="server" ID="dgv_desaprovados" CssClass="table-resposive table table-bordered" OnRowCommand="desaprovar" OnRowCreated="dgv_desaprovados_RowCreated">
                 <Columns>
                     <asp:ButtonField CommandName="btn_desaprovar" Text="Desaprovar ">
                     <ControlStyle CssClass="btn btn-danger" />

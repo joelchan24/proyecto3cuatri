@@ -70,7 +70,7 @@
               </div>
                 <div class="col-xs-4">
                     <div class="form-group">
-                       <label for="exampleinput">Categoria</label>
+                       <label for="exampleinput">Categoría</label>
                       <asp:DropDownList ID="ddl_categoria" runat="server" Width="100%"></asp:DropDownList>
                         </div>
               </div>
@@ -88,7 +88,7 @@
          <div class="row">
             <div class="col-md-4">
                 <div class="form-group">
-                    <label for="exampleinput" >Ubicacion</label>
+                    <label for="exampleinput" >Ubicación</label>
                    
                     <asp:TextBox ID="txt_ubicar" runat="server" CssClass="form-control"></asp:TextBox>
 
@@ -176,7 +176,7 @@
 
                 
                   <div class="form-group">
-                      <label for="exampleinput">Descripcion</label>
+                      <label for="exampleinput">Descripción</label>
                      <asp:TextBox id="txt_descrip" TextMode="multiline" Columns="50" Rows="5" runat="server" CssClass="form-control " width="349px" height=350px                  />
                      
                   </div>
