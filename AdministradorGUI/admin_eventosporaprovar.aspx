@@ -14,14 +14,15 @@
          </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder2" runat="server">
+      <div class="panel panel-primary" style="width:1160px !important;height:1000px;">
+         <div class="panel-heading " style="text-align:center !important; ">Eventos Por Aprovar</div>
     <form id="form5" runat="server">
     <div class="row">
 		<div class="col-md-12">
-			<div class="alert alert-warning align=text-center" role="alert">
-  <a href="#" class="alert-link">USTED TIENE EVENTOS POR APROBAR</a>
+		
 </div>
 		</div>
-	</div>
+
       
         <div class="row">
 		<div class="auto-style3">
@@ -45,6 +46,6 @@
 	</div>
         </form>
 
-
+    </div>
 
 </asp:Content>

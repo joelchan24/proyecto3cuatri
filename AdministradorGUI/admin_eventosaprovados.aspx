@@ -14,14 +14,16 @@
          </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder2" runat="server">
+     <div class="panel panel-primary" style="width:1160px !important;height:1000px;">
+         <div class="panel-heading " style="text-align:center !important; ">Eventos Aprovados</div>
     <form id="form5" runat="server">
-    <div class="row">
+   <!-- <div class="row">
 		<div class="col-md-12">
             <div class="alert alert-success" role="alert">
   <a href="#" class="alert-link">EVENTOS APROVADOS</a>
 </div>
 		</div>
-	</div>
+	</div>-->
 
         <div class="row">
 		<div class="auto-style3">
@@ -33,7 +35,7 @@
 
 	<div class="row">
 		<div class="col-md-12">
-            <asp:gridview runat="server" ID="dgv_desaprovados" CssClass="table-responsive" OnRowCommand="desaprovar">
+            <asp:gridview runat="server" ID="dgv_desaprovados" CssClass="table-resposive table table-bordered" OnRowCommand="desaprovar">
                 <Columns>
                     <asp:ButtonField CommandName="btn_desaprovar" Text="Desaprovar ">
                     <ControlStyle CssClass="btn btn-danger" />
@@ -44,4 +46,6 @@
         
 	</div>
         </form>
+         </div>
+    
 </asp:Content>

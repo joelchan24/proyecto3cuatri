@@ -2,37 +2,64 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder2" runat="server">
+     <div class="panel panel-primary" style="width:1160px !important">
+         <div class="panel-heading " style="text-align:center !important">Registro de Municipios</div>
      <form id="form1" runat="server">
-        <p>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ID Municipio&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;<asp:TextBox ID="txt_IdMunicipio" runat="server"></asp:TextBox>
-        </p>
-        <p>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Nombre Municipio&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;
-            <asp:TextBox ID="txt_NombreMunicipio" runat="server"></asp:TextBox>
-        </p>
-        <p>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Codigo Estado&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;
-            <asp:TextBox ID="txt_Estado" runat="server"></asp:TextBox>
-            <br />
-            <asp:RequiredFieldValidator id="RequiredFieldValidator1" runat="server"
-  ControlToValidate="txt_Estado"
-  ErrorMessage="No se puede dejar los campos vacios"
-  ForeColor="Red">
-</asp:RequiredFieldValidator>
-            <br />
-        </p>
-        <p>
-     <div> class="col-md-12">
-            <asp:Button ID="btn_Nuevo" runat="server" Text="Nuevo"  CssClass="btn-primary col-md-2 col-lg-offset-1" OnClick="Accion" />
+         <div class="row">
+		<div class="col-md-4">
+          <div class="form-group">
+                       <label for="exampleinput">ID Municipio</label>
+              <asp:TextBox ID="txt_IdMunicipio" runat="server" CssClass="form-control"></asp:TextBox>
+                        </div>
+		</div>
+		<div class="col-md-4">
+            <div class="form-group">
+                       <label for="exampleinput">Nombre Municipio</label>
+                <asp:TextBox ID="txt_NombreMunicipio" runat="server" CssClass="form-control" ></asp:TextBox>
+                        </div>
+		</div>
+		
+		<div class="col-md-4">
+            <div class="form-group">
+                       <label for="exampleinput">Código Estado</label>
+                   <asp:TextBox ID="txt_Estado" runat="server" CssClass="form-control" ></asp:TextBox>
+                        </div>
+		</div>
+             </div>
+		
+	
+      <div class="clearfix"></div>
+           
+      <br />
+           <br />
+           <br />
+           <br />
+        <div class="row">
+		<div class="col-md-4">
+            
+             <asp:Button ID="btn_Nuevo" runat="server" Text="Nuevo"  CssClass="btn-primary  " OnClick="Accion" />
+		</div>
+		<div class="col-md-4">
+             <asp:Button ID="btn_Modificar" runat="server" Text="Modificar"  CssClass="btn-primary  " OnClick="Accion" />
+		</div>
+		<div class="col-md-4">
+             <asp:Button ID="btn_Eliminar" runat="server" Text="Eliminar"  CssClass="btn-primary  " OnClick="Accion" />
+		</div>
+	</div>
+   
+           
 
-            <asp:Button ID="btn_Modificar" runat="server" Text="Modificar"  CssClass="btn-primary col-md-2 col-lg-offset-1" OnClick="Accion" />
+           
 
-            <asp:Button ID="btn_Eliminar" runat="server" Text="Eliminar"  CssClass="btn-primary col-md-2 col-lg-offset-1" OnClick="Accion" />
+           <div style="display:none">
 
-            <asp:Button ID="btn_Buscar" runat="server" Text="Buscar"  CssClass="btn-primary col-md-2 col-lg-offset-1" OnClick="Accion" />
-            </div>
-        </p>
-        <p>
+            <asp:Button ID="btn_Buscar" runat="server" Text="Buscar"  CssClass="btn-primary  " OnClick="Accion" />
+           
+       </div>
+           <br />
+           <br />
+           <br />
+       
             <asp:GridView ID="dgv_Estados" runat="server" OnRowCommand="Seleccionar" CssClass="table-resposive table table-bordered" OnRowCreated="ocultar" >
                 <Columns>
                     <asp:ButtonField CommandName="dgvbtnSeleccionar" Text="Seleccionar" >
@@ -40,6 +67,7 @@
                     </asp:ButtonField>
                 </Columns>
             </asp:GridView>
-        </p>
+        
     </form>
+         </div>
 </asp:Content>

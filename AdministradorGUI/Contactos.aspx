@@ -36,6 +36,8 @@
         </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder2" runat="server">
+      <div class="panel panel-primary" style="width:1160px !important;height:1000px;">
+         <div class="panel-heading " style="text-align:center !important; ">Contacto</div>
      <form id="form1" runat="server" class="auto-style1">
        <div class="row">
 		<div class="auto-style2 primary" style="left: 61px; top: 17px; width: 80%">
@@ -69,7 +71,7 @@
             <asp:Button ID="btnModificar" Text="Modificar" runat="server" CssClass="btn btn-dropbox" Width="100px" OnClick="Accion"   />
             <asp:Button ID="btnEliminar" Text="Eliminar" runat="server" CssClass="btn btn-dropbox" Width="100px" OnClick="Accion"  />
             <asp:Button ID="btnNuevo" Text="Nuevo" runat="server" CssClass="btn btn-dropbox" Width="100px" />
-            <asp:Button ID="btnBuscar" Text="Buscar" runat="server" CssClass="btn btn-dropbox" Width="100px" />
+       <div style="display:none"><asp:Button ID="btnBuscar" Text="Buscar" runat="server" CssClass="btn btn-dropbox" Width="100px" /></div>     
 
 		</div>
 	</div><br />
@@ -88,4 +90,5 @@
                </div>
     </div>
     </form>
+          </div>
 </asp:Content>

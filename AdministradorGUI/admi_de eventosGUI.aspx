@@ -15,9 +15,17 @@
     <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
     <script type="text/javascript" src='https://maps.google.com/maps/api/js?sensor=false&libraries=places&key=AIzaSyCuiUJxL3eVPwCyGdf1P6g9TUQ4KW95YtA'></script>
     <script src="js/locationpicker.jquery.js"></script>
+    <div class="panel panel-primary" style="width:1160px !important">
+         <div class="panel-heading " style="text-align:center !important">Registro de Eventos</div>
+    
     <form  id="form1" runat="server" >
+      
+      
+
+  
+            
           <div class="row">
-              <h1 > control</h1>
+           
                <asp:HiddenField  ID="txtid" runat="server" />
               <asp:HiddenField ID="txt_codir" runat="server" OnValueChanged="txt_codir_ValueChanged" />
               <asp:HiddenField ID="txt_usuariop" runat="server" OnValueChanged="HiddenField1_ValueChanged" />
@@ -213,6 +221,7 @@
                
     
 </div>
+            
 
        <br/>
         <br/>
@@ -255,9 +264,10 @@
         <asp:Button ID="btn_limpiar" runat="server" Text="Limpiar" CssClass="btn btn-sm btn-success" />
         <asp:Button ID="btn_nuevo" runat="server" Text="Reporte" CssClass="btn btn-sm btn-primary" OnClick="accion"  />
           </div>
+        
             <div class="row">
   <div class="col-md-12">
-      <asp:GridView ID="dgb_eventos" runat="server" CssClass=" table-resposive table table-bordered" OnSelectedIndexChanged="dgb_eventos_SelectedIndexChanged" OnRowCommand="mandaraltexvo" OnRowCreated="dgb_eventos_RowCreated">
+      <asp:GridView ID="dgb_eventos" runat="server" CssClass="table-resposive table table-bordered" OnSelectedIndexChanged="dgb_eventos_SelectedIndexChanged" OnRowCommand="mandaraltexvo" OnRowCreated="dgb_eventos_RowCreated">
           <Columns>
               <asp:ButtonField CommandName="btn_seleccionar" Text="Seleccionar">
               <ControlStyle CssClass="btn btn-primary" />
@@ -266,9 +276,8 @@
       </asp:GridView>
                 </div>
                   </div>
-        
-           
-        
+         
+        </div>      
  <script>
         $('#ModalMapPreview').locationpicker({
             radius: 0,
