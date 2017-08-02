@@ -90,6 +90,7 @@
     <Content Include="img\avatar.png" />
     <Content Include="img\ccaae9ad-e297-462c-84ad-414e7f30ab51image16.jpeg" />
     <Content Include="img\escuela-teatro-2013-06-29-181304.jpg" />
+    <Content Include="img\f57e4fe6f90a9648702d6184a1ceee20--mexico-vacation-mexico-city.jpg" />
     <Content Include="img\foto.jpg" />
     <Content Include="img\ja %282%29.jpg" />
     <Content Include="img\obra-cholo.jpg" />
@@ -110,6 +111,7 @@
     <Content Include="js\ie10-viewport-bug-workaround.js" />
     <Content Include="js\Jquery 2.1.0.js" />
     <Content Include="js\jquery-2.2.3.min.js" />
+    <Content Include="js\jquery.backstretch.min.js" />
     <Content Include="js\jquery.slimscroll.min.js" />
     <Content Include="js\locationpicker.jquery.js" />
     <Content Include="js\pagina.js" />

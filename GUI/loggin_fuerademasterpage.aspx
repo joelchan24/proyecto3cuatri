@@ -8,11 +8,18 @@
     <link href="css/bootstrap.min.css" rel="stylesheet" />
     <link href="css/bootstrap.css" rel="stylesheet" />
     <title></title>
+    <style>
+        body {  
+        background:url("img\f57e4fe6f90a9648702d6184a1ceee20--mexico-vacation-mexico-city.jpg") repeat 0 0;                   
+ }
+        
+    </style>
 </head>
 <body>
-    <form id="form1" runat="server">
+    <form id="form1" runat="server"  >
+        
     
-    <div class="container">    
+    <div class="container cl">    
         <div id="loginbox" style="margin-top:50px;" class="mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">                    
             <div class="panel panel-primary" >
                     <div class="panel-heading">
@@ -204,10 +211,16 @@
                
                
                 </div>
-      
+            
   
     </div>
     </div>
     </form>
+    <script  type="text/javascript" src="js/jquery.backstretch.min.js"></script>
+    <script>
+
+        $.backstretch("img/f57e4fe6f90a9648702d6184a1ceee20--mexico-vacation-mexico-city.jpg",{speed:500})
+
+    </script>
 </body>
 </html>

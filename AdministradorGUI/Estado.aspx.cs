@@ -18,14 +18,22 @@ namespace AdministradorGUI
         protected void Page_Load(object sender, EventArgs e)
         {
             actualizar();
+       
+
         }
 
         protected void Accion(object sender, EventArgs e)
         {
+            try
+            {
 
+                Button btnSelecionado = (Button)sender;
+                oCTRLEstados.Accion(btnSelecionado.ID, RecolectarDAtos());
+            }
+            catch
+            {
 
-            Button btnSelecionado = (Button)sender;
-            oCTRLEstados.Accion(btnSelecionado.ID, RecolectarDAtos());
+            }
             actualizar();
         }
         public EstadoBO RecolectarDAtos()
@@ -69,6 +77,13 @@ namespace AdministradorGUI
             adaptar.Fill(dt);
             this.dgv_Estados.DataSource = dt;
             dgv_Estados.DataBind();
+        }
+
+        protected void seleccionar(object sender, EventArgs e)
+        {
+            /*Button sele = (Button)sender;
+            oCTRLEstados.Accion(sele.ID, RecolectarDAtos());
+            actualizar();*/
         }
     }
 }

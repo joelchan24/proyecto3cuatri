@@ -13,8 +13,11 @@
                                 
                         <asp:gridview id="Gridview1" runat="server" OnRowCommand="Gridview1_RowCommand" OnRowCreated="Gridview1_RowCreated">
                                     <Columns>
-                                        <asp:ButtonField CommandName="btn_mensa" Text="Leer mensajes" />
+                                        <asp:ButtonField CommandName="btn_mensa" Text="Leer mensajes" >
+                                        <ControlStyle CssClass="btn btn-warning" />
+                                        </asp:ButtonField>
                                     </Columns>
+                            <HeaderStyle BackColor="#28a4c9" Font-Bold="True" ForeColor="White"></HeaderStyle>
                                 </asp:gridview>
 
             

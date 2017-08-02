@@ -21,7 +21,7 @@ namespace Services
         {
             switch (strAccion)
             {
-                case "btn_Nuevo":
+                case "btnAgregar":
                     oEstadosDAO.agregar(oEstadosBO);
                     break;
                 case "btn_Eliminar":

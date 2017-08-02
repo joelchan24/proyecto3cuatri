@@ -25,7 +25,7 @@ namespace GUI
           
             txt_idusuariooconectado.Value = Session["id"].ToString();
             
-
+            
 
 
 
@@ -33,7 +33,7 @@ namespace GUI
         public void refresh()
 
         {
-            dgb_mismensajes.DataSource = mensaje.buscar();
+            dgb_mismensajes.DataSource = mensaje.buscar1();
             dgb_mismensajes.DataBind();
         }
 
@@ -90,7 +90,7 @@ namespace GUI
                 int id = int.Parse(dgb_mismensajes.Rows[fila].Cells[1].Text);
 
           
-                mensaje.modificarmensajedao(id);
+                mensaje.modificarmensajedao1(id);
                 
                 refresh();
             }

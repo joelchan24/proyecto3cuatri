@@ -228,6 +228,29 @@
           </div>
           </div>
         </div>-->
+  <!--  <div class="row">
+        <div class="col-md-1"></div>
+        <div class="col-md-10">
+            <div class="panel panel-warning">
+                        <div class="panel-heading">
+                            <div class="panel-title">Comentarios</div>
+
+                        </div> 
+    <div class="media">
+  <div class="media-left media-middle">
+    <a href="#">
+      <img class="media-object" src="..." alt="..."/>
+    </a>
+  </div>
+  <div class="media-body">
+    <h4 class="media-heading">Middle aligned media</h4>
+    ...
+  </div>
+</div>
+            </div>
+            </div>
+        <div class="col-md-1"></div>
+        </div>-->
     
     <script>
 

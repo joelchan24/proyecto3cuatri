@@ -39,7 +39,7 @@ namespace DAO
         public DataSet buscar()
         {
 
-            SqlCommand coma = new SqlCommand("select  * from MENSAJES where MESTATUS=0");
+            SqlCommand coma = new SqlCommand("select  * from MENSAJES where MESTATUS=0 and DESTINATARIO='ORGANIZADOR'");
             coma.CommandType = CommandType.Text;
             return conectar.EjecutarSentencia(coma);
         }
@@ -72,13 +72,14 @@ namespace DAO
 
         }
 
-        public int modificarmensajedao(int valor)
+        public int modificarmensajedao(MensajeBO mensaje)
         {
            
             
-            SqlCommand comando = new SqlCommand("update mensajes set MESTATUS=1 where CODIGO=@id");
+            SqlCommand comando = new SqlCommand("update mensajes set MESTATUS=1 , CUERPO=@cuerpo where CODIGO=@id");
 
-            comando.Parameters.Add("@id", SqlDbType.Int).Value = valor ;
+            comando.Parameters.Add("@id", SqlDbType.Int).Value = mensaje.Codigo ;
+            comando.Parameters.Add("@cuerpo", SqlDbType.VarChar).Value = mensaje.Cuerpo;
 
             return conectar.EjecutarComando(comando);
         }
@@ -93,7 +94,13 @@ namespace DAO
             return conectar.EjecutarComando(comando);
         }
 
+        public DataSet buscar1()
+        {
 
+            SqlCommand coma = new SqlCommand("select  * from MENSAJES where MESTATUS=1");
+            coma.CommandType = CommandType.Text;
+            return conectar.EjecutarSentencia(coma);
+        }
 
 
 

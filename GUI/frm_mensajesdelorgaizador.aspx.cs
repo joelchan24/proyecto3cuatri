@@ -28,11 +28,11 @@ namespace GUI
             int id = 0; int.TryParse(txt_id.Value, out id);
             dato.Codigo = id;
             dato.Cuerpo = txt_mensaje.Text;
-            dato.CodigoEvento = Convert.ToInt32(txt_evento.Value);
-            dato.CodigoUsuario = Convert.ToInt32(txt_idusuariooconectado.Value);
+           dato.CodigoEvento = 3;
+            dato.CodigoUsuario =Convert.ToInt32( Session["id"]);
             dato.Destinatario = "USUARIO";
-            dato.Remitente = txt_usuairo.Value;
-            dato.Status = Convert.ToBoolean(0);
+            dato.Remitente = "ORGANIZADOR";
+            dato.Status = Convert.ToBoolean(1);
             return dato;
 
 
@@ -65,13 +65,14 @@ namespace GUI
         int fila;
         protected void btn_enviar_Click(object sender, EventArgs e)
         {
-            int id = int.Parse(Gridview1.Rows[fila].Cells[1].Text);
+        //    MensajeBO men = new MensajeBO();
+       //  int id = int.Parse(Gridview1.Rows[fila].Cells[1].Text);
 
+           // men.Codigo = id;
+           // men.Cuerpo = txt_mensaje.Text;
+           //  mensaje.modificarmensajedao(men);
 
-            mensaje.modificarmensajedao1(id);
-
-            refresh();
-            refresh();
+            mensaje.agregar(recuperar());
             txt_mensaje.Text = "";
             Response.Write("<script>window.alert('mensaje enviado');</script>");
         }

@@ -10,13 +10,13 @@
                         </div> 
 		<div class="row">
 		<div class="col-md-4">
-            <asp:GridView ID="dgb_mismensajes" runat="server" OnRowCommand="dgb_mismensajes_RowCommand" OnRowCreated="dgb_mismensajes_RowCreated" OnRowDataBound="dgb_mismensajes_RowDataBound">
+            <asp:GridView ID="dgb_mismensajes" runat="server" OnRowCommand="dgb_mismensajes_RowCommand" OnRowCreated="dgb_mismensajes_RowCreated" OnRowDataBound="dgb_mismensajes_RowDataBound" BorderStyle="Groove">
                 <Columns>
                     <asp:ButtonField CommandName="btn_leer" Text="Leer Mensaje">
                     <ControlStyle CssClass="btn btn-warning" />
                     </asp:ButtonField>
                 </Columns>
-
+        <HeaderStyle BackColor="#28a4c9" Font-Bold="True" ForeColor="White"></HeaderStyle>
             </asp:GridView>
                                 <asp:HiddenField ID="txt_nombre" runat="server" />
                                 <asp:HiddenField ID="txt_codigousuarioevento" runat="server" />
