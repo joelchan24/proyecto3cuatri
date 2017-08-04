@@ -33,8 +33,11 @@ namespace GUI
         public void refresh()
 
         {
-            Gridview1.DataSource = mensaje.buscarmensaje(id);
-            Gridview1.DataBind();
+            if (!IsPostBack)
+            {
+                Gridview1.DataSource = mensaje.buscarmensaje(id).Tables[0];
+                Gridview1.DataBind();
+            }
         }
         public MensajeBO recuperar()
         {
@@ -56,11 +59,11 @@ namespace GUI
         protected void Gridview1_RowCreated(object sender, GridViewRowEventArgs e)
         {
 
-       /*    e.Row.Cells[1].Visible = false;
+           e.Row.Cells[1].Visible = false;
             e.Row.Cells[2].Visible = false;
-            e.Row.Cells[7].Visible = false;
+        
             e.Row.Cells[6].Visible = false;
-            .Row.Cells[3].Visible = false;*/
+            e.Row.Cells[3].Visible = false;
         }
 
         protected void Gridview1_RowCommand(object sender, GridViewCommandEventArgs e)
@@ -71,6 +74,7 @@ namespace GUI
                 //int fila = Convert.ToInt32(e.CommandArgument.ToString());
 
                 int fila = Convert.ToInt32(e.CommandArgument);
+                txt_id.Value = Gridview1.Rows[fila].Cells[1].Text;
                 txt_resivido.Text = Gridview1.Rows[fila].Cells[5].Text;
                 DropDownList1.SelectedValue = Gridview1.Rows[fila].Cells[6].Text;
 
@@ -80,16 +84,27 @@ namespace GUI
         int fila;
         protected void btn_enviar_Click(object sender, EventArgs e)
         {
-        //    MensajeBO men = new MensajeBO();
-       //  int id = int.Parse(Gridview1.Rows[fila].Cells[1].Text);
+            //    MensajeBO men = new MensajeBO();
+            //  int id = int.Parse(Gridview1.Rows[fila].Cells[1].Text);
 
-           // men.Codigo = id;
-           // men.Cuerpo = txt_mensaje.Text;
-           //  mensaje.modificarmensajedao(men);
-
+            // men.Codigo = id;
+            // men.Cuerpo = txt_mensaje.Text;
+            //  mensaje.modificarmensajedao(men);
+          
             mensaje.agregar(recuperar());
             txt_mensaje.Text = "";
+            txt_resivido.Text = "";
             Response.Write("<script>window.alert('mensaje enviado');</script>");
+        }
+
+        protected void borra(object sender, EventArgs e)
+        {
+            txt_resivido.Text = "";
+            txt_mensaje.Text = "";
+            MensajeBO men = new MensajeBO();
+            men.Codigo = Convert.ToInt32(txt_id.Value);
+            mensaje.eliminar(men);
+         
         }
     }
 }

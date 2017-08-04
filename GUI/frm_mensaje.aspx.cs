@@ -44,8 +44,11 @@ namespace GUI
         public void refresh()
 
         {
-            dgb_mismensajes.DataSource = mensaje.buscarmensaje(id);
-            dgb_mismensajes.DataBind();
+            if (!IsPostBack)
+            {
+                dgb_mismensajes.DataSource = mensaje.buscarmensaje(id).Tables[0];
+                dgb_mismensajes.DataBind();
+            }
         }
 
         public MensajeBO recuperar()
@@ -68,7 +71,7 @@ namespace GUI
         protected void enviar(object sender, EventArgs e)
         {
             mensaje.agregar(recuperar());
-            refresh();
+            txt_resivido.Text = "";
             txt_mensaje.Text = "";
             Response.Write("<script>window.alert('mensaje enviado');</script>");
         }
@@ -80,11 +83,11 @@ namespace GUI
 
         protected void dgb_mismensajes_RowCreated(object sender, GridViewRowEventArgs e)
         {
-        /*    e.Row.Cells[1].Visible = false;
+          e.Row.Cells[1].Visible = false;
             e.Row.Cells[2].Visible = false;
-            e.Row.Cells[7].Visible = false;
+          
             e.Row.Cells[6].Visible = false;
-            e.Row.Cells[3].Visible = false;*/
+            e.Row.Cells[3].Visible = false;
 
         }
 
@@ -96,15 +99,24 @@ namespace GUI
                 //int fila = Convert.ToInt32(e.CommandArgument.ToString());
 
                 int fila = Convert.ToInt32(e.CommandArgument);
+                txt_id.Value = dgb_mismensajes.Rows[fila].Cells[1].Text;
                 txt_resivido.Text = dgb_mismensajes.Rows[fila].Cells[5].Text;
                 DropDownList1.SelectedValue= dgb_mismensajes.Rows[fila].Cells[6].Text;
-                int id = int.Parse(dgb_mismensajes.Rows[fila].Cells[1].Text);
-
-          
-                mensaje.modificarmensajedao1(id);
+              
+               
                 
-                refresh();
+               
             }
+        }
+
+        protected void borra(object sender, EventArgs e)
+        {
+            txt_resivido.Text = "";
+            txt_mensaje.Text = "";
+            MensajeBO men = new MensajeBO();
+            men.Codigo =Convert.ToInt32( txt_id.Value);
+            mensaje.eliminar(men);
+            refresh();
         }
     }
     

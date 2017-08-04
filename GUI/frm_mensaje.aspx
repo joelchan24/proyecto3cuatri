@@ -5,12 +5,12 @@
 <div class="container">
     <div class="panel panel-info">
                         <div class="panel-heading">
-                            <div class="panel-title">Mis Mis Mensajes</div>
+                            <div class="panel-title"> Mis Mensajes</div>
 
                         </div> 
 		<div class="row">
 		<div class="col-md-4">
-            <asp:GridView ID="dgb_mismensajes" runat="server" OnRowCommand="dgb_mismensajes_RowCommand" OnRowCreated="dgb_mismensajes_RowCreated" OnRowDataBound="dgb_mismensajes_RowDataBound" BorderStyle="Groove">
+            <asp:GridView ID="dgb_mismensajes" runat="server" OnRowCommand="dgb_mismensajes_RowCommand" CssClass="table-resposive table table-bordered" OnRowCreated="dgb_mismensajes_RowCreated" OnRowDataBound="dgb_mismensajes_RowDataBound" BorderStyle="Groove">
                 <Columns>
                     <asp:ButtonField CommandName="btn_leer" Text="Leer Mensaje">
                     <ControlStyle CssClass="btn btn-warning" />
@@ -32,7 +32,7 @@
                  </asp:DropDownList>
                      </div>
             <div class="form-group">           
-                     <label for="exampleinput">Mensaje recivido<br />
+                     <label for="exampleinput">Mensaje Recibido<br />
                   <asp:TextBox id="txt_resivido" TextMode="multiline" Rows="3" cols="20" style="margin: 0px; width: 702px;" runat="server" Enabled="false"> </asp:TextBox>
                 </div>
             <div class="form-group">
@@ -43,7 +43,9 @@
 
             <div class="form-group">
               
-                    <asp:Button ID="btn_enviar" runat="server" Text="enviar"  class="btn  btn-xs btn-info" OnClick="enviar"/>
+                    <asp:Button ID="btn_enviar" runat="server" Text="enviar"  class="btn  btn-xs btn-info" OnClick="enviar"/>&nbsp; &nbsp;
+                <asp:Button ID="Button1" runat="server" Text="Borrar"  class="btn  btn-xs  btn-danger" OnClick="borra" />
+
 				 
             </div>
 
@@ -53,5 +55,6 @@
 	</div>
         </div>
     </div>         
+    </label>
     </label>
 </asp:Content>
