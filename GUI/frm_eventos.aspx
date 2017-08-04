@@ -70,7 +70,7 @@
 	<div class="row">
 		<div class="col-md-6">
 			<h3>
-				DIRRECION
+				DIRRECIÓN
 			</h3>
 		
 			 <div class="form-group">
