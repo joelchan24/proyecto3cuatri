@@ -26,7 +26,13 @@
                                 <asp:HiddenField ID="txt_id" runat="server" />
 		<div class="col-md-8">
             <div class="form-group">           
-                     <label for="exampleinput">Mensaje recivido><br />
+                     <label for="exampleinput">Destinatario<br />
+                 <asp:DropDownList ID="DropDownList1" Width="400px " CssClass="btn btn-default btn-sm" runat="server" >
+    
+                 </asp:DropDownList>
+                     </div>
+            <div class="form-group">           
+                     <label for="exampleinput">Mensaje recivido<br />
                   <asp:TextBox id="txt_resivido" TextMode="multiline" Rows="3" cols="20" style="margin: 0px; width: 702px;" runat="server" Enabled="false"> </asp:TextBox>
                 </div>
             <div class="form-group">

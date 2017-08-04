@@ -18,13 +18,13 @@ namespace DAO
         public int agregar(object agregar)
         {
             MensajeBO mensa = (MensajeBO)agregar;
-            SqlCommand coma = new SqlCommand("INSERT INTO MENSAJES(MESTATUS,DESTINATARIO,REMITENTE,CUERPO,USUARIO,EVENTO)VALUES (@mensa,@des,@rem,@cuerpo,@id_usu,@id_eve)");
+            SqlCommand coma = new SqlCommand("INSERT INTO MENSAJES(MESTATUS,DESTINATARIO,REMITENTE,CUERPO,USUARIO)VALUES (@mensa,@des,@rem,@cuerpo,@id_usu)");
             coma.Parameters.Add("@mensa", SqlDbType.Bit).Value = mensa.Status;
             coma.Parameters.Add("@des", SqlDbType.VarChar).Value = mensa.Destinatario;
             coma.Parameters.Add("@rem", SqlDbType.VarChar).Value = mensa.Remitente;
             coma.Parameters.Add("@cuerpo", SqlDbType.VarChar).Value = mensa.Cuerpo;
             coma.Parameters.Add("@id_usu", SqlDbType.Int).Value = mensa.CodigoUsuario;
-            coma.Parameters.Add("@id_eve", SqlDbType.Int).Value = mensa.CodigoEvento;
+       
 
             coma.CommandType = CommandType.Text;
             return conectar.EjecutarComando(coma);
@@ -98,6 +98,22 @@ namespace DAO
         {
 
             SqlCommand coma = new SqlCommand("select  * from MENSAJES where MESTATUS=1");
+            coma.CommandType = CommandType.Text;
+            return conectar.EjecutarSentencia(coma);
+        }
+        public DataSet usuario(int val)
+        {
+
+            SqlCommand coma = new SqlCommand("    select * from usuarios where codigo!=@id ");
+            coma.CommandType = CommandType.Text;
+            coma.Parameters.Add("@id", SqlDbType.Int).Value = val;
+            return conectar.EjecutarSentencia(coma);
+        }
+        public DataSet buscarmensaje(int val)
+        {
+
+            SqlCommand coma = new SqlCommand("select * from MENSAJES where DESTINATARIO=@id");
+            coma.Parameters.Add("@id", SqlDbType.Int).Value = val;
             coma.CommandType = CommandType.Text;
             return conectar.EjecutarSentencia(coma);
         }

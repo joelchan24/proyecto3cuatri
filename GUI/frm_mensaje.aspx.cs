@@ -14,16 +14,27 @@ namespace GUI
     public partial class frm_mensaje : System.Web.UI.Page
     {
         mensajeDAO mensaje = new mensajeDAO();
-      
+        public int id;
 
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            refresh();
-            txt_evento.Value = Session["evento"].ToString();
-            txt_usuairo.Value = Session["usuario"].ToString();
+            if (!IsPostBack)
+            {
+
+                id = Convert.ToInt32(Session["id"]);
+                DropDownList1.DataSource = mensaje.usuario(id).Tables[0];
+                DropDownList1.DataTextField = "USUARIO";
+                DropDownList1.DataValueField = "CODIGO";
+                DropDownList1.DataBind();
+                refresh();
+
+            }
+           
+           
+         //   txt_usuairo.Value = Session["usuario"].ToString();
           
-            txt_idusuariooconectado.Value = Session["id"].ToString();
+         //   txt_idusuariooconectado.Value = Session["id"].ToString();
             
             
 
@@ -33,21 +44,20 @@ namespace GUI
         public void refresh()
 
         {
-            dgb_mismensajes.DataSource = mensaje.buscar1();
+            dgb_mismensajes.DataSource = mensaje.buscarmensaje(id);
             dgb_mismensajes.DataBind();
         }
 
         public MensajeBO recuperar()
         {
             MensajeBO dato = new MensajeBO();
-            int id = 0;int.TryParse(txt_id.Value, out id);
+            int id = 0; int.TryParse(txt_id.Value, out id);
             dato.Codigo = id;
-            dato.Cuerpo=txt_mensaje.Text;
-            dato.CodigoEvento = Convert.ToInt32(txt_evento.Value);
-            dato.CodigoUsuario = Convert.ToInt32(txt_idusuariooconectado.Value);
-            dato.Destinatario ="ORGANIZADOR";
-            dato.Remitente = txt_usuairo.Value;
-            dato.Status =Convert.ToBoolean( 0);
+            dato.Cuerpo = txt_mensaje.Text;
+            dato.CodigoUsuario = Convert.ToInt32(Session["id"]);
+            dato.Destinatario = DropDownList1.SelectedValue;
+            dato.Remitente = Session["usuario"].ToString();
+            dato.Status = Convert.ToBoolean(1);
             return dato;
 
 
@@ -70,11 +80,11 @@ namespace GUI
 
         protected void dgb_mismensajes_RowCreated(object sender, GridViewRowEventArgs e)
         {
-            e.Row.Cells[1].Visible = false;
+        /*    e.Row.Cells[1].Visible = false;
             e.Row.Cells[2].Visible = false;
             e.Row.Cells[7].Visible = false;
             e.Row.Cells[6].Visible = false;
-            e.Row.Cells[3].Visible = false;
+            e.Row.Cells[3].Visible = false;*/
 
         }
 
@@ -87,6 +97,7 @@ namespace GUI
 
                 int fila = Convert.ToInt32(e.CommandArgument);
                 txt_resivido.Text = dgb_mismensajes.Rows[fila].Cells[5].Text;
+                DropDownList1.SelectedValue= dgb_mismensajes.Rows[fila].Cells[6].Text;
                 int id = int.Parse(dgb_mismensajes.Rows[fila].Cells[1].Text);
 
           
