@@ -31,7 +31,7 @@
               <asp:HiddenField ID="txt_usuariop" runat="server" OnValueChanged="HiddenField1_ValueChanged" />
               <div class="col-xs-4" >
                   <div class="form-group">
-                      <label for="exampleinput">nombre</label>
+                      <label for="exampleinput">Nombre</label>
                       <asp:TextBox ID="txt_nombre" runat="server" CssClass="form-control"></asp:TextBox>
                      
                   </div>
@@ -190,7 +190,7 @@
               
             
                     <div class="form-group">
-                      <label for="exampleinput" >aprobacion</label><br />
+                      <label for="exampleinput" >Aprobación</label><br />
                       <label class="radio-inline" >
                           <asp:RadioButton ID="rbt_aprovado" runat="server" type="radio" name="aprovado" OnCheckedChanged="rbt_aprovado_CheckedChanged"  />  Aprovado
       

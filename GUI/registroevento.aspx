@@ -19,7 +19,7 @@
               <asp:HiddenField ID="txt_codir" runat="server"  />
               <div class="col-xs-4" >
                   <div class="form-group">
-                      <label for="exampleinput">nombre</label>
+                      <label for="exampleinput">Nombre</label>
                       <asp:TextBox ID="txt_nombre" runat="server" CssClass="form-control" OnTextChanged="txt_nombre_TextChanged"></asp:TextBox>
                       <asp:RequiredFieldValidator id="RequiredFieldValidator1" runat="server"
   ControlToValidate="txt_nombre"
@@ -63,7 +63,7 @@
               </div>
                 <div class="col-xs-4">
                     <div class="form-group">
-                       <label for="exampleinput">Categoria</label><br />
+                       <label for="exampleinput">Categoría</label><br />
                       <asp:DropDownList ID="ddl_categoria" runat="server" Width="100%"></asp:DropDownList>
                         </div>
               </div>
@@ -81,7 +81,7 @@
          <div class="row">
             <div class="col-md-4">
                 <div class="form-group">
-                    <label for="exampleinput">Ubicacion</label>
+                    <label for="exampleinput">Ubicación</label>
                    
                     <asp:TextBox ID="txt_ubicar" runat="server" CssClass="form-control"></asp:TextBox>
 
@@ -189,7 +189,7 @@
 
                 
                   <div class="form-group">
-                      <label for="exampleinput">Descripcion</label>
+                      <label for="exampleinput">Descripción</label>
                      <asp:TextBox id="txt_descrip" TextMode="multiline" Columns="50" Rows="5" runat="server" CssClass="form-control " width="349px" height="350px"></asp:TextBox>                 
                      
                   </div>

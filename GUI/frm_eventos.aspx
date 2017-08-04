@@ -70,7 +70,7 @@
 	<div class="row">
 		<div class="col-md-6">
 			<h3>
-				DIRRECION
+				DIRRECIÓN
 			</h3>
 		
 			 <div class="form-group">
@@ -152,7 +152,7 @@
 		</div>
         <div class="row">
 		<div class="col-md-6">
-            <p class="text-right"><strong>Para Más Infromación Del Evento </strong></p>
+            <p class="text-right"><strong>Para Más Información Del Evento </strong></p>
 		</div>
 		<div class="col-md-6">
   
