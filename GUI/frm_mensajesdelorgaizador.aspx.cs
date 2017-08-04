@@ -74,8 +74,8 @@ namespace GUI
                 //int fila = Convert.ToInt32(e.CommandArgument.ToString());
 
                 int fila = Convert.ToInt32(e.CommandArgument);
-                txt_id.Value = Gridview1.Rows[fila].Cells[1].Text;
-                txt_resivido.Text = Gridview1.Rows[fila].Cells[5].Text;
+                txt_id.Value = Page.Server.HtmlDecode(Gridview1.Rows[fila].Cells[1].Text);
+                txt_resivido.Text = Page.Server.HtmlDecode(Gridview1.Rows[fila].Cells[5].Text);
                 DropDownList1.SelectedValue = Gridview1.Rows[fila].Cells[6].Text;
 
 

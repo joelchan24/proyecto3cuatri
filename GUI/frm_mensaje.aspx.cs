@@ -99,8 +99,8 @@ namespace GUI
                 //int fila = Convert.ToInt32(e.CommandArgument.ToString());
 
                 int fila = Convert.ToInt32(e.CommandArgument);
-                txt_id.Value = dgb_mismensajes.Rows[fila].Cells[1].Text;
-                txt_resivido.Text = dgb_mismensajes.Rows[fila].Cells[5].Text;
+                txt_id.Value = Page.Server.HtmlDecode (dgb_mismensajes.Rows[fila].Cells[1].Text);
+                txt_resivido.Text = Page.Server.HtmlDecode(dgb_mismensajes.Rows[fila].Cells[5].Text);
                 DropDownList1.SelectedValue= dgb_mismensajes.Rows[fila].Cells[6].Text;
               
                

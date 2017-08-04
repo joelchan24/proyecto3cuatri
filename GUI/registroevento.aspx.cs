@@ -29,7 +29,7 @@ namespace GUI
         {
             try
             {
-
+               
 
 
                 txt_usuario.Text = Session["id"].ToString();//jale el id usuario
@@ -240,7 +240,7 @@ namespace GUI
                     txt_descrip.Text = dgb_todos.Rows[fila].Cells[2].Text;
                     DateTime ida = Convert.ToDateTime(dgb_todos.Rows[fila].Cells[6].Text);
                     txt_fecha_cierre.Text = ida.ToString("yyyy-MM-dd");
-                    txt_nombre.Text = dgb_todos.Rows[fila].Cells[3].Text;
+                    txt_nombre.Text = Page.Server.HtmlDecode(dgb_todos.Rows[fila].Cells[3].Text);
                     txt_numexter.Text = dgb_todos.Rows[fila].Cells[21].Text;
                     txt_numint.Text = dgb_todos.Rows[fila].Cells[20].Text;
                     txt_postal.Text = dgb_todos.Rows[fila].Cells[18].Text;
