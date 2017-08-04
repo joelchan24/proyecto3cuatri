@@ -229,7 +229,7 @@
     </div>
     </div>
     </form>
-    <video id="video1" src="img/Turismo%20de%20Aventura-%20Yucatán.mp4" loop="loop" autoplay="autoplay" preload="auto" muted="muted"></video>
+    <video id="video1" src="img/Capital%20Americana%20de%20la%20Cultura%202017.mp4" loop="loop" autoplay="autoplay" preload="auto" muted="muted"></video>
     <script  type="text/javascript" src="js/jquery.backstretch.min.js"></script>
     <script>
 
