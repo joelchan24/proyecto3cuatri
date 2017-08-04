@@ -250,20 +250,16 @@
                         </div> <asp:Repeater ID="rptComentario" runat="server">
                             <ItemTemplate>
                 <div class="col-md-10">
-                     <div class="panel panel-footer">
-                        <div class="panel-heading">
-                            <div class="panel-title">Comentarios</div>
-
-                        </div><br />
-    <div class="media" style="background-color:goldenrod">
+                     <br />
+    <div class="alert alert-info" role="alert">
   <div class="media-left media-middle">
-      <img class="media-object" style="height:50px !important; width:50px !important" src="img/<%# DataBinder.Eval(Container.DataItem,"FOTO")%>.jpg"/><h4 class="media-heading"><%# DataBinder.Eval(Container.DataItem,"USUARIO") %></h4>
+      <img class="img-circle" style="height:70px !important; width:70px !important" src="img/<%# DataBinder.Eval(Container.DataItem,"FOTO")%>.jpg"/><h4 class="media-heading"><%# DataBinder.Eval(Container.DataItem,"USUARIO") %></h4>
   </div>
   <div class="media-body">
       <h6><%# DataBinder.Eval(Container.DataItem,"COMENTARIO") %></h6>
   </div>
 </div>
-                         </div>
+                         
                     </div>
                                 </ItemTemplate>
                             </asp:Repeater>
