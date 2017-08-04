@@ -58,5 +58,12 @@ namespace DAO
             cmd.CommandType = CommandType.Text;
             return conectar.EjecutarComando(cmd);
         }
+        public DataSet listarcomentario(int id)
+        {
+            SqlCommand cmd = new SqlCommand("select U.FOTOGRAFIA as FOTO,U.USUARIO AS USUARIO,C.COMENTARIO AS COMENTARIO FROM USUARIOS U INNER JOIN COMENTARIO C ON U.CODIGO=C.USUARIO INNER JOIN EVENTO ON  EVENTO.CODIGO=@ID");
+            cmd.Parameters.Add("@ID", SqlDbType.Int).Value = id;
+            cmd.CommandType = CommandType.Text;
+            return conectar.EjecutarSentencia(cmd);
+        }
     }
 }

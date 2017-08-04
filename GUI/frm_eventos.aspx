@@ -228,29 +228,49 @@
           </div>
           </div>
         </div>-->
-  <!--  <div class="row">
+    <br />
+    <div class="container">
+                    <div class="panel panel-warning">
+                        <div class="panel-heading">
+                            <div class="panel-title">Comentarios</div>
+
+                        </div> 
+        <div class="col-md-12"><br />
+            <asp:TextBox ID="txtComentario" TextMode="multiline" Rows="3" cols="20" style="margin: 0px; width: 1000px;" runat="server"></asp:TextBox> <asp:Button ID="btnAgregar" CssClass="btn btn-sm  btn-success" runat="server" Text="Comentar" OnClick="seleccionar" />
+        </div>
+    </div>
+        </div><br />
+    <div class="row">
         <div class="col-md-1"></div>
         <div class="col-md-10">
             <div class="panel panel-warning">
                         <div class="panel-heading">
                             <div class="panel-title">Comentarios</div>
 
-                        </div> 
-    <div class="media">
+                        </div> <asp:Repeater ID="rptComentario" runat="server">
+                            <ItemTemplate>
+                <div class="col-md-10">
+                     <br />
+    <div class="alert alert-info" role="alert">
   <div class="media-left media-middle">
-    <a href="#">
-      <img class="media-object" src="..." alt="..."/>
-    </a>
+      <img class="img-circle" style="height:70px !important; width:70px !important" src="img/<%# DataBinder.Eval(Container.DataItem,"FOTO")%>.jpg"/><h4 class="media-heading"><%# DataBinder.Eval(Container.DataItem,"USUARIO") %></h4>
   </div>
   <div class="media-body">
-    <h4 class="media-heading">Middle aligned media</h4>
-    ...
+      <h6><%# DataBinder.Eval(Container.DataItem,"COMENTARIO") %></h6>
   </div>
 </div>
+                         
+                    </div>
+                                </ItemTemplate>
+                            </asp:Repeater>
             </div>
             </div>
-        <div class="col-md-1"></div>
-        </div>-->
+        <div class="col-md-1">
+            <asp:HiddenField ID="txtEvento" runat="server" />
+            <asp:HiddenField ID="txtusuario" runat="server" />
+            <asp:HiddenField ID="txtIDCmentario" runat="server" />
+        </div>
+        </div>
     
     <script>
 

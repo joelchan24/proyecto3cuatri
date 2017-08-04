@@ -40,6 +40,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CTRLComentario.cs" />
     <Compile Include="CTRLGaleria.cs" />
     <Compile Include="CTRL_Categoria.cs" />
     <Compile Include="CTRL_comentario.cs" />
