@@ -12,6 +12,19 @@
         body {  
         background:url("img\f57e4fe6f90a9648702d6184a1ceee20--mexico-vacation-mexico-city.jpg") repeat 0 0;                   
  }
+        #video1 
+        {
+            position:fixed;
+            left:0;
+            top:0;
+            min-height:100%;
+            min-width:100%;
+            width:auto;
+            height:auto;
+            z-index:-10;
+            visibility:visible;
+
+        }
         
     </style>
 </head>
@@ -21,7 +34,7 @@
     
     <div class="container cl">    
         <div id="loginbox" style="margin-top:50px;" class="mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">                    
-            <div class="panel panel-primary" >
+            <div class="panel panel-primary"  style="background-color:transparent;">
                     <div class="panel-heading">
                         <div class="panel-title">Inicio de sesión</div>
                     </div>     
@@ -48,7 +61,7 @@
                             <div class="input-group col-lg-offset-2">
                                       <div class="checkbox">
                                         <label>
-                                          <input id="login-remember" type="checkbox" name="remember" value="1"> Recordar Contraseña
+                                          <input id="login-remember" type="checkbox" name="remember" value="1" > Recordar Contraseña
                                         </label>
                                       </div>
                                     </div>
@@ -216,6 +229,7 @@
     </div>
     </div>
     </form>
+    <video id="video1" src="img/Turismo%20de%20Aventura-%20Yucatán.mp4" loop="loop" autoplay="autoplay" preload="auto" muted="muted"></video>
     <script  type="text/javascript" src="js/jquery.backstretch.min.js"></script>
     <script>
 
