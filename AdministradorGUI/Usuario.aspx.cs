@@ -103,6 +103,7 @@ namespace AdministradorGUI
                     rpFac.SetDataSource(dt);
 
                     Session["llena"] = rpFac;
+                    Session["Tipo"] = "Usuario";
 
                     abreVentana("Reporte.aspx");
                 }

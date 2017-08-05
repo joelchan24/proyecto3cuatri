@@ -289,6 +289,7 @@ namespace AdministradorGUI
                 rpFac.SetDataSource(dt);
 
                 Session["llena"] = rpFac;
+                Session["Tipo"] = "Evento";
 
                 abreVentana("Reporte.aspx");
             }

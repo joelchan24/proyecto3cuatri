@@ -106,6 +106,7 @@
     <Content Include="categoria.xml" />
     <Content Include="Contactos.aspx" />
     <Content Include="Estado.aspx" />
+    <Content Include="Estado.xml" />
     <Content Include="eventos.xml" />
     <Content Include="frm_respaldo.aspx" />
     <Content Include="img\avatar.png" />
@@ -118,6 +119,7 @@
     <Content Include="js\img\obra-cholo.jpg" />
     <Content Include="js\img\Progreso-malecon.jpg" />
     <Content Include="js\img\vaqueria-yucateca-2.jpg" />
+    <Content Include="Municipio.xml" />
     <Content Include="Municipios.aspx" />
     <Content Include="packages.config" />
     <Content Include="ApplicationInsights.config">
@@ -164,6 +166,7 @@
     <Content Include="js\npm.js" />
     <Content Include="js\pagina.js" />
     <Content Include="Pais.aspx" />
+    <Content Include="Pais.xml" />
     <Content Include="QuienesSomos.aspx" />
     <Content Include="Reporte.aspx" />
     <Content Include="Usuario.aspx" />
@@ -264,10 +267,28 @@
       <DependentUpon>ReporteCategoria.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Reportes\ReporteEstados.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ReporteEstados.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Reportes\ReporteEVentos.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>ReporteEVentos.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reportes\ReporteMunicipios.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ReporteMunicipios.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reportes\ReportePaises.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ReportePaises.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Reportes\ReporteUsuarios.cs">
@@ -307,9 +328,21 @@
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>ReporteCategoria.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\ReporteEstados.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ReporteEstados.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="Reportes\ReporteEVentos.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>ReporteEVentos.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\ReporteMunicipios.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ReporteMunicipios.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\ReportePaises.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ReportePaises.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Reportes\ReporteUsuarios.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>

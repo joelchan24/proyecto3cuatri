@@ -157,5 +157,21 @@ namespace DAO
             cmd.CommandType = CommandType.Text;
             return obj.EjecutarSentencia(cmd);
         }
+        public DataSet Filtar(string Parametro1, DateTime Fecha)
+        {
+            String Query = "";
+
+            if (String.IsNullOrEmpty(Parametro1))
+            {
+                Query = "US.FECHANACIMIENTO >= '" + Fecha.ToString("yyyy-MM-dd") + "'";
+            }
+            else
+            {
+                Query = "US.NOMBRE LIKE '%" + Parametro1 + "%' OR US.APELLIDOS LIKE'%" + Parametro1 + "%' OR US.USUARIO LIKE'%" + Parametro1 + "%'";
+            }
+            SqlCommand cmd=new SqlCommand("select US.*,DI.*,MUN.CODIGO,MUN.NOMBRE,CUN.IDTIPO,TIPO.NOMBRE from USUARIOS US INNER JOIN DIRECCION DI ON US.IDDIRECCION=DI.CODIGO INNER JOIN MUNICIPIO MUN ON DI.MUNICIPIO=MUN.CODIGO INNER JOIN TIPOCUENTA_USUARIO CUN ON CUN.IDUSUARIO=US.CODIGO INNER JOIN TIPOCUENTA TIPO ON TIPO.CODIGO=CUN.IDTIPO WHERE "+Query);
+            cmd.CommandType = CommandType.Text;
+            return obj.EjecutarSentencia(cmd);
+        }
     }
 }

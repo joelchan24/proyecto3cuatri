@@ -53,5 +53,13 @@ namespace DAO
             cmd.CommandType = CommandType.Text;
             return obj.EjecutarComando(cmd);
         }
+
+        public DataSet FILTRAR6(string PARAMETRO6)
+        {
+            SqlCommand cmd = new SqlCommand("select * from PAIS WHERE NOMBRE LIKE '%"+PARAMETRO6+"%'");
+            cmd.CommandType = CommandType.Text;
+            return obj.EjecutarSentencia(cmd);
+
+        }
     }
 }

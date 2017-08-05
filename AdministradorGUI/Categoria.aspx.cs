@@ -34,7 +34,9 @@ namespace AdministradorGUI
                 Reportes.ReporteCategoria rpFac = new Reportes.ReporteCategoria();
                 rpFac.SetDataSource(dt);
 
+
                 Session["llena"] = rpFac;
+                Session["Tipo"] = "Categoria";
 
                 abreVentana("Reporte.aspx");
             }

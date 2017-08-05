@@ -13,6 +13,19 @@
 </head>
 <body>
     <form id="form1" runat="server">
+        <div>
+            <asp:TextBox ID="txtbuscar" runat="server"></asp:TextBox>
+            
+            <% 
+                String tipo = (String)Session["Tipo"];
+            %>
+            
+            <% if (tipo == "Evento" || tipo == "Usuario")
+                { %>
+             <asp:TextBox ID="txtfecha" runat="server" CssClass="form-control" type="date"  Width="300px" Height="32px"></asp:TextBox>
+            <%} %>
+            <asp:Button ID="btnbuscar" runat="server" Text="Buscar" OnClick="Accion"/>
+        </div>
     <div>
     
         <CR:CrystalReportViewer ID="CrystalReportViewer1" runat="server" AutoDataBind="true" Height="500px" Width="350px"  HasCrystalLogo="False" HasToggleGroupTreeButton="False"/>

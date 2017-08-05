@@ -6,6 +6,7 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using BO;
 using DAO;
+using System.Data;
 using Services;
 
 namespace AdministradorGUI
@@ -13,6 +14,7 @@ namespace AdministradorGUI
     public partial class Pais : System.Web.UI.Page
     {
         CTRL_Pais oCTRLPais = new CTRL_Pais();
+        PaisDAO obj = new PaisDAO();
         protected void Page_Load(object sender, EventArgs e)
         {
             actualizar();
@@ -23,6 +25,20 @@ namespace AdministradorGUI
 
 
             Button btnSelecionado = (Button)sender;
+            //GeneraXML();
+            if (btnSelecionado.ID == "btn_Buscar") //cambiar por btnReporte
+            {
+                DataSet Pais = obj.listar();
+                DataTable dt = Pais.Tables[0];
+
+                Reportes.ReportePaises rpFac = new Reportes.ReportePaises();
+                rpFac.SetDataSource(dt);
+
+                Session["llena"] = rpFac;
+                Session["Tipo"] = "Pais";
+
+                abreVentana("Reporte.aspx");
+            }
             oCTRLPais.Accion(btnSelecionado.ID, RecolectarDAtos());
             actualizar();
         }
@@ -50,6 +66,21 @@ namespace AdministradorGUI
                 txt_NombrePais.Text = dgv_Pais.Rows[indice].Cells[2].Text;
                 
             }
+        }
+        private void abreVentana(string ventana)
+        {
+            Response.Redirect(ventana, true);
+        }
+
+        public void GeneraXML()
+        {
+            //UsuarioBO usuario = new UsuarioBO();
+
+
+            DataSet Pais = obj.listar();
+            DataTable dt = Pais.Tables[0];
+
+            dt.WriteXml("Pais.xml");
         }
     }
 }

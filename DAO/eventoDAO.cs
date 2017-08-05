@@ -444,8 +444,26 @@ namespace DAO
             return conectar.EjecutarSentencia(cmd);
         }
 
+        public DataSet FILTRAR2(string Parametro2, DateTime Fecha2)
+        {
+            String Query = "";
+
+            if (String.IsNullOrEmpty(Parametro2))
+            {
+                Query = "e.FECHAAPERTURA >= '" + Fecha2.ToString("yyyy-MM-dd") + "'";
+            }
+            else
+            {
+                Query = "e.NOMBRE LIKE'%" + Parametro2 + "%' ";
+            }
+            SqlCommand cmd = new SqlCommand(" select * from EVENTO e  inner join DIRECCION d on e.DIRECCION=d.CODIGO inner join USUARIOS u on  u.CODIGO=e.USUARIO WHERE "+Query);
 
 
+            cmd.CommandType = CommandType.Text;
+
+
+            return conectar.EjecutarSentencia(cmd);
+        }
 
     }
 
