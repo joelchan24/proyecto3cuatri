@@ -6,7 +6,7 @@
 	<div class="row">
 		<div class="col-md-12">
 			<h3 class="text-center" style="color:#b69da8">
-			EVENTOS DE TEATRO
+			EVENTOS DE MÚSICA
 			</h3>
 		</div>
 	</div>
