@@ -15,6 +15,7 @@ namespace AdministradorGUI
     public partial class Estado : System.Web.UI.Page
     {
         CTRL_Estados oCTRLEstados = new CTRL_Estados();
+        EstadoDAO obj = new EstadoDAO();
         protected void Page_Load(object sender, EventArgs e)
         {
             actualizar();
@@ -28,6 +29,20 @@ namespace AdministradorGUI
             {
 
                 Button btnSelecionado = (Button)sender;
+                //GeneraXML();
+                if (btnSelecionado.ID == "btnNuevo") //cambiar por btnReporte
+                {
+                    DataSet Estado = obj.listar();
+                    DataTable dt = Estado.Tables[0];
+
+                    Reportes.ReporteEstados rpFac = new Reportes.ReporteEstados();
+                    rpFac.SetDataSource(dt);
+
+                    Session["llena"] = rpFac;
+                    Session["Tipo"] = "Estado";
+
+                    abreVentana("Reporte.aspx");
+                }
                 oCTRLEstados.Accion(btnSelecionado.ID, RecolectarDAtos());
             }
             catch
@@ -84,6 +99,21 @@ namespace AdministradorGUI
             /*Button sele = (Button)sender;
             oCTRLEstados.Accion(sele.ID, RecolectarDAtos());
             actualizar();*/
+        }
+        private void abreVentana(string ventana)
+        {
+            Response.Redirect(ventana, true);
+        }
+
+        public void GeneraXML()
+        {
+            //UsuarioBO usuario = new UsuarioBO();
+
+
+            DataSet Estado = obj.listar();
+            DataTable dt = Estado.Tables[0];
+
+            dt.WriteXml("Estado.xml");
         }
     }
 }

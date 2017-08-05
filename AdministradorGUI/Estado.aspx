@@ -63,7 +63,7 @@
 			<asp:Button ID="btnAgregar" Text="Agregar" runat="server" CssClass="btn btn-dropbox" Width="100px" OnClick="Accion" /> 
             <asp:Button ID="btnModificar" Text="Modificar" runat="server" CssClass="btn btn-dropbox" Width="100px" OnClick="Accion"  />
             <asp:Button ID="btnEliminar" Text="Eliminar" runat="server" CssClass="btn btn-dropbox" Width="100px" OnClick="Accion" />
-            <asp:Button ID="btnNuevo" Text="Nuevo" runat="server" CssClass="btn btn-dropbox" Width="100px" OnClick="Accion" />
+            <asp:Button ID="btnNuevo" Text="Reporte" runat="server" CssClass="btn btn-dropbox" Width="100px" OnClick="Accion" CausesValidation="False" />
        <div style="display:none"><asp:Button ID="btnBuscar" Text="Buscar" runat="server" CssClass="btn btn-dropbox" Width="100px" OnClick="btn_Buscar_Click" /></div>
 
 		</div>

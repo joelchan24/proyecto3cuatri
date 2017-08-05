@@ -54,5 +54,13 @@ namespace DAO
             return obj.EjecutarSentencia(cmd);
 
         }
+
+        public DataSet FILTRAR5(string PARAMETRO5)
+        {
+            SqlCommand cmd = new SqlCommand("select * from MUNICIPIO WHERE NOMBRE LIKE '%"+PARAMETRO5+"%' ");
+            cmd.CommandType = CommandType.Text;
+            return obj.EjecutarSentencia(cmd);
+
+        }
     }
 }

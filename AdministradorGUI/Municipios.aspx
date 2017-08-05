@@ -44,7 +44,12 @@
 		</div>
 		<div class="col-md-4">
              <asp:Button ID="btn_Eliminar" runat="server" Text="Eliminar"  CssClass="btn-primary  " OnClick="Accion" />
+
+
 		</div>
+                <div class="col-md-4">
+                    <asp:Button ID="btnreporte" runat="server" Text="Reporte"  CssClass="btn-primary  " OnClick="Accion" CausesValidation="False" />
+            </div>
 	</div>
    
            
@@ -53,7 +58,7 @@
 
            <div style="display:none">
 
-            <asp:Button ID="btn_Buscar" runat="server" Text="Buscar"  CssClass="btn-primary  " OnClick="Accion" />
+            <asp:Button ID="btn_Buscar" runat="server" Text="Reporte"  CssClass="btn-primary  " OnClick="Accion" />
            
        </div>
            <br />

@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.Contenedor_Usuario = new CrystalDecisions.Windows.Forms.CrystalReportViewer();
-            this.ReporteUsuarios1 = new Reportes.Reportes.ReporteUsuarios();
+            this.ReporteUsuarios1 = new Reportes.ReporteUsuarios();
             this.SuspendLayout();
             // 
             // Contenedor_Usuario
@@ -58,6 +58,6 @@
         #endregion
 
         private CrystalDecisions.Windows.Forms.CrystalReportViewer Contenedor_Usuario;
-        private Reportes.Reportes.ReporteUsuarios ReporteUsuarios1;
+        private Reportes.ReporteUsuarios ReporteUsuarios1;
     }
 }

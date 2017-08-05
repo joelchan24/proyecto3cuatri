@@ -7,12 +7,14 @@ using System.Web.UI.WebControls;
 using BO;
 using DAO;
 using Services;
+using System.Data;
 
 namespace AdministradorGUI
 {
     public partial class Municipios : System.Web.UI.Page
     {
         CTRL_Municipio oCTRLMunicipio = new CTRL_Municipio();
+        MunicipioDAO obj = new MunicipioDAO();
         protected void Page_Load(object sender, EventArgs e)
         {
             actualizar();
@@ -23,6 +25,20 @@ namespace AdministradorGUI
 
 
             Button btnSelecionado = (Button)sender;
+            //GeneraXML();
+            if (btnSelecionado.ID == "btnreporte") //cambiar por btnReporte
+            {
+                DataSet Pais = obj.listar();
+                DataTable dt = Pais.Tables[0];
+
+                Reportes.ReporteMunicipios rpFac = new Reportes.ReporteMunicipios();
+                rpFac.SetDataSource(dt);
+
+                Session["llena"] = rpFac;
+                Session["Tipo"] = "Municipio";
+
+                abreVentana("Reporte.aspx");
+            }
             oCTRLMunicipio.Accion(btnSelecionado.ID, RecolectarDAtos());
             actualizar();
         }
@@ -57,6 +73,21 @@ namespace AdministradorGUI
         protected void ocultar(object sender, GridViewRowEventArgs e)
         {
             e.Row.Cells[3].Visible = false;
+        }
+        private void abreVentana(string ventana)
+        {
+            Response.Redirect(ventana, true);
+        }
+
+        public void GeneraXML()
+        {
+            //UsuarioBO usuario = new UsuarioBO();
+
+
+            DataSet Municipio = obj.listar();
+            DataTable dt = Municipio.Tables[0];
+
+            dt.WriteXml("Municipio.xml");
         }
     }
 }

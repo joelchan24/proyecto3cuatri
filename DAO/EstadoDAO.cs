@@ -58,5 +58,13 @@ namespace DAO
             return obj.EjecutarSentencia(cmd);
 
         }
+
+        public DataSet Fitrar4(string Parametro4)
+        {
+            SqlCommand cmd = new SqlCommand("select * from ESTADO where NOMBRE LIKE '%"+Parametro4+"%' ");
+            cmd.CommandType = CommandType.Text;
+            return obj.EjecutarSentencia(cmd);
+
+        }
     }
 }

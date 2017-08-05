@@ -58,6 +58,13 @@ namespace DAO
 
         }
 
-        
+        public DataSet FILTRAR3(string Parametro3)
+        {
+            SqlCommand cmd = new SqlCommand("select * from CATEGORIA where NOMBRE LIKE '%"+Parametro3+"%'");
+            cmd.CommandType = CommandType.Text;
+            return obj.EjecutarSentencia(cmd);
+
+        }
+
     }
 }
