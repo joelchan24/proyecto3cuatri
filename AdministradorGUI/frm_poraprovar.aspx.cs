@@ -4,55 +4,71 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using System.Data;
-using BO;
 using DAO;
-using Services;
+using BO;
+
 namespace AdministradorGUI
 {
-    public partial class admin_eventosporaprovar : System.Web.UI.Page
+    public partial class frm_poraprovar : System.Web.UI.Page
     {
-        ctrol_dirrecionSERVICIOS ser_direccion = new ctrol_dirrecionSERVICIOS();
-        ctrol_eventosSERVICIO control = new ctrol_eventosSERVICIO();
         eventoDAO eventado = new eventoDAO();
-        direccionDAO obj = new direccionDAO();
+        public int val;
         protected void Page_Load(object sender, EventArgs e)
         {
-           
+            txt.Value = (Session["id"].ToString());
+            val = int.Parse(txt.Value);
             refrescar();
         }
         public void refrescar()
         {
 
-            dgb_porconfirmar.DataSource = eventado.buscar_noaprovados();
-            dgb_porconfirmar.DataBind();
+            gri.DataSource = eventado.buscar_noaprovados();
+            gri.DataBind();
 
         }
 
-        protected void eventosporaprovar(object sender, GridViewCommandEventArgs e)
+        protected void gri_RowCommand(object sender, GridViewCommandEventArgs e)
         {
             if (e.CommandName == "btn_aprovar")
             {
                 int fila = Convert.ToInt32(e.CommandArgument.ToString());
                 // int indice = Convert.ToInt32(e.CommandArgument);
-                int id = int.Parse(dgb_porconfirmar.Rows[fila].Cells[1].Text);
+                int id = int.Parse(gri.Rows[fila].Cells[1].Text);
+                int usu = int.Parse(gri.Rows[fila].Cells[14].Text);
+                
 
                 EventoBO obj = new EventoBO();
                 obj.Codigo = id;
                 eventado.modificaraprovacion(obj, Convert.ToString(1));
+                MensajesDAO o = new MensajesDAO();
+                MensajeBO obje = new MensajeBO();
+                int valoree = 0; int.TryParse(txt.Value, out valoree);
+                obje.Codigo = valoree;
+                obje.Cuerpo = "Evento  ha sido aprobado,Gracias por ser parte de nuestra Página";
+                obje.Destinatario = usu.ToString();
+                obje.Status = Convert.ToBoolean(1);
+                obje.Remitente = Session["usuario"].ToString();
+                o.agregar(obje);
+
+
+
                 refrescar();
+               
             }
         }
-
-        protected void btnBuscar_Click(object sender, EventArgs e)
+        public MensajeBO mandar(int usu)
         {
-            string valor = txtBuscar.Text;
-
-            dgb_porconfirmar.DataSource = eventado.buscar_noaprovados12(valor);
-            dgb_porconfirmar.DataBind();
+            MensajeBO obje = new MensajeBO();
+            int valoree = 0; int.TryParse(txt.Value, out valoree);
+            obje.Codigo = valoree;
+            obje.Cuerpo = "Evento  ha sido aprobado,Gracias por ser parte de nuestra Página";
+            obje.Destinatario = usu.ToString();
+            obje.Status = Convert.ToBoolean(1);
+            obje.Remitente = Session["usuario"].ToString();
+            return obje;
         }
 
-        protected void dgb_porconfirmar_RowCreated(object sender, GridViewRowEventArgs e)
+        protected void gri_RowCreated(object sender, GridViewRowEventArgs e)
         {
             e.Row.Cells[1].Visible = false;
             e.Row.Cells[4].Visible = false;
@@ -83,4 +99,5 @@ namespace AdministradorGUI
             e.Row.Cells[27].Visible = false;
         }
     }
+
 }
