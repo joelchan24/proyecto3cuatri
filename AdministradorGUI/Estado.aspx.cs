@@ -6,6 +6,7 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Data;
 using System.Data.SqlClient;
+using System.IO;
 using BO;
 using DAO;
 using Services;
@@ -18,9 +19,14 @@ namespace AdministradorGUI
         EstadoDAO obj = new EstadoDAO();
         protected void Page_Load(object sender, EventArgs e)
         {
-            actualizar();
-       
-
+            if (!IsPostBack)
+            {
+                ddl_pais.DataSource = obj.Buscar_pais().Tables[0];
+                ddl_pais.DataTextField = "NOMBRE";
+                ddl_pais.DataValueField = "CODIGO";
+                ddl_pais.DataBind();
+                actualizar();
+            }
         }
 
         protected void Accion(object sender, EventArgs e)
@@ -54,11 +60,10 @@ namespace AdministradorGUI
         public EstadoBO RecolectarDAtos()
         {
             EstadoBO oEstadosBO = new EstadoBO();
-            int ID = 0; int.TryParse(txtID.Text, out ID);
-           // int ID_Pais; int.TryParse(tx.Text, out ID_Pais);
+            int ID = 0; int.TryParse(txtID.Text, out ID);         
             oEstadosBO.id_estado = ID;
             oEstadosBO.nombre_estado = txtNombre.Text;
-           // oEstadosBO.id_pais = ID_Pais;
+            oEstadosBO.id_pais = Convert.ToInt32(ddl_pais.SelectedValue);           
             return oEstadosBO;
         }
 
@@ -75,7 +80,7 @@ namespace AdministradorGUI
                 int indice = Convert.ToInt32(e.CommandArgument);
                 txtID.Text = dgv_Estados.Rows[indice].Cells[1].Text;
                 txtNombre.Text = dgv_Estados.Rows[indice].Cells[2].Text;
-                //txt_Pais.Text = dgv_Estados.Rows[indice].Cells[3].Text;
+                ddl_pais.SelectedValue = dgv_Estados.Rows[indice].Cells[3].Text;
             }
         }
 

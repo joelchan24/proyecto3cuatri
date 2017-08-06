@@ -21,8 +21,8 @@
 		
 		<div class="col-md-4">
             <div class="form-group">
-                       <label for="exampleinput">Código Estado</label>
-                   <asp:TextBox ID="txt_Estado" runat="server" CssClass="form-control" ></asp:TextBox>
+                       <label for="exampleinput">Estado</label>
+                   <asp:DropDownList ID="ddl_estado" runat="server" Width="450px" Height="30px"></asp:DropDownList>
                         </div>
 		</div>
              </div>

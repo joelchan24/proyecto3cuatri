@@ -55,6 +55,12 @@
   ErrorMessage="No se puede dejar los campos vacios"
   ForeColor="Red">
 </asp:RequiredFieldValidator>
+                    <div class="col-xs-4">
+                    <div class="form-group">
+                       <asp:Label ID="Label3" runat="server" Text="País" CssClass="text-primary"></asp:Label><br />
+                      <asp:DropDownList ID="ddl_pais" runat="server" Width="450px" Height="30px"></asp:DropDownList>
+                        </div>
+                        </div>
 				</div>
 			</div>
 		</div>

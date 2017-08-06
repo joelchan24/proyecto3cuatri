@@ -62,5 +62,12 @@ namespace DAO
             return obj.EjecutarSentencia(cmd);
 
         }
+
+        public DataSet Buscar_municipio()
+        {
+            SqlCommand cmd = new SqlCommand("select * from ESTADO");
+            cmd.CommandType = CommandType.Text;
+            return obj.EjecutarSentencia(cmd);
+        }
     }
 }
