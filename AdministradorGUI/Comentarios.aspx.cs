@@ -73,12 +73,12 @@ namespace AdministradorGUI
         }
         public void Limpiar()
         {
-            TextBox1.Controls.Clear();
-            TextBox2.Controls.Clear();
-            txtComentario.Controls.Clear();
-            txtEventoID.Controls.Clear();
-            txtUsuarioID.Controls.Clear();
-            txtIDcomentario.Controls.Clear();
+            TextBox1.Text = null;
+            TextBox2.Text = null;
+            txtComentario.Text = null;
+            txtEventoID.Value = null;
+            txtUsuarioID.Value = null;
+            txtIDcomentario.Value = null;
         }
     }
 }
