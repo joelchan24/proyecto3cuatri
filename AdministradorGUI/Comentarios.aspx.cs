@@ -80,5 +80,20 @@ namespace AdministradorGUI
             txtUsuarioID.Value = null;
             txtIDcomentario.Value = null;
         }
+
+        protected void ocultar(object sender, GridViewRowEventArgs e)
+        {
+            try
+            {
+                e.Row.Cells[1].Visible = false;
+                e.Row.Cells[3].Visible = false;
+                e.Row.Cells[4].Visible = false;
+
+            }
+            catch
+            {
+
+            }
+        }
     }
 }
