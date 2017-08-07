@@ -15,9 +15,11 @@ namespace AdministradorGUI
         public int val;
         protected void Page_Load(object sender, EventArgs e)
         {
-            txt.Value = (Session["id"].ToString());
-            val = int.Parse(txt.Value);
-            refrescar();
+            if (!IsPostBack)
+            {
+
+                refrescar();
+            }
         }
         public void refrescar()
         {
@@ -40,7 +42,7 @@ namespace AdministradorGUI
                 EventoBO obj = new EventoBO();
                 obj.Codigo = id;
                 eventado.modificaraprovacion(obj, Convert.ToString(1));
-                MensajesDAO o = new MensajesDAO();
+              /*  MensajesDAO o = new MensajesDAO();
                 MensajeBO obje = new MensajeBO();
                 int valoree = 0; int.TryParse(txt.Value, out valoree);
                 obje.Codigo = valoree;
@@ -48,7 +50,7 @@ namespace AdministradorGUI
                 obje.Destinatario = usu.ToString();
                 obje.Status = Convert.ToBoolean(1);
                 obje.Remitente = Session["usuario"].ToString();
-                o.agregar(obje);
+                o.agregar(obje);*/
 
 
 

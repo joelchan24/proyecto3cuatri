@@ -27,7 +27,7 @@ namespace DAO
 
         public SqlConnection establecerConexion()
         {
-            string cs = "Data Source=RODRIGO\\SQLEXPRESS;Initial Catalog= CULTURA;Integrated Security=True";
+            string cs = "Data Source=DESKTOP-TT12AGM\\SQLEXPRESS; Initial catalog=CULTURA;  integrated security=true";
             coneccion = new SqlConnection(cs);
             return coneccion;
         }

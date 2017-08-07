@@ -117,11 +117,10 @@
             </span>
           </a>
           <ul class="treeview-menu menu-open" style="display: block;">
-            <li><a href="admi_de eventosGUI.aspx"><i class="fa fa-circle-o"></i> Catálogo De Eventos</a></li>
-              <li> <a href="Municipios.aspx"><i class="fa fa-circle-o"></i>Catálogo De Municipios </a></li>
-              <li> <a href="Estado.aspx"><i class="fa fa-circle-o"></i>Catálogo De Estados </a></li>
-              <li> <a href="Pais.aspx"><i class="fa fa-circle-o"></i>Catálogo De Países </a></li>
-               <li> <a href="Comentarios.aspx"><i class="fa fa-circle-o"></i>Comentarios de Usuarios</a></li>
+            <li><a href="admi_de eventosGUI.aspx"><i class="fa fa-circle-o"></i> Catalogo De Eventos</a></li>
+              <li> <a href="Municipios.aspx"><i class="fa fa-circle-o"></i>Catalogo De Municipios </a></li>
+              <li> <a href="Estado.aspx"><i class="fa fa-circle-o"></i>Catalogo De Estados </a></li>
+              <li> <a href="Pais.aspx"><i class="fa fa-circle-o"></i>Catalogo De Países </a></li>
             <li><a href="frm_poraprovar.aspx"><i class="fa fa-circle-o"></i> Pendientes Por Aprovar</a></li>
                <li><a href="admin_eventosaprovados.aspx"><i class="fa fa-circle-o"></i> Eventos Aprovados</a></li>
              
