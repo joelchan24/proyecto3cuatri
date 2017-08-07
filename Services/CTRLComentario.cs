@@ -23,8 +23,10 @@ namespace Services
                     obj.agregar(objcomentario);
                     break;
                 case "btnModificar":
+                    obj.alterar(objcomentario);
                     break;
                 case "btnEliminar":
+                    obj.eliminar(objcomentario);
                     break;
 
             }
