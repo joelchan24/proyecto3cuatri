@@ -56,7 +56,7 @@
               </div>
                
                     <div class="form-group">
-                         <label for="exampleinput">Cantegoria</label>
+                         <label for="exampleinput">Categoría</label>
                       <p><%# DataBinder.Eval(Container.DataItem,"nombrecat") %></p>
                     </div>
                 

@@ -18,10 +18,10 @@ namespace AdministradorGUI
         protected void Page_Load(object sender, EventArgs e)
         {
             actualizar();
-            ddl_estado.DataSource = obj.Buscar_municipio().Tables[0];
-            ddl_estado.DataTextField = "NOMBRE";
-            ddl_estado.DataValueField = "CODIGO";
-            ddl_estado.DataBind();
+            DropDownList1.DataSource = obj.Buscar_municipio().Tables[0];
+            DropDownList1.DataTextField = "NOMBRE";
+            DropDownList1.DataValueField = "CODIGO";
+            DropDownList1.DataBind();
         }
 
         protected void Accion(object sender, EventArgs e)
@@ -52,7 +52,7 @@ namespace AdministradorGUI
             int ID = 0; int.TryParse(txt_IdMunicipio.Text, out ID);
             oMunicipioBO.id_municipio = ID;
             oMunicipioBO.nombre_municipio = txt_NombreMunicipio.Text;
-            oMunicipioBO.id_estado = Convert.ToInt32(ddl_estado.SelectedValue);
+            oMunicipioBO.id_estado = Convert.ToInt32(DropDownList1.SelectedValue);
             return oMunicipioBO;
         }
 
@@ -69,7 +69,7 @@ namespace AdministradorGUI
                 int indice = Convert.ToInt32(e.CommandArgument);
                 txt_IdMunicipio.Text = dgv_Estados.Rows[indice].Cells[1].Text;
                 txt_NombreMunicipio.Text = dgv_Estados.Rows[indice].Cells[2].Text;
-                ddl_estado.SelectedValue = dgv_Estados.Rows[indice].Cells[3].Text;
+                DropDownList1.SelectedValue = dgv_Estados.Rows[indice].Cells[3].Text;
             }
         }
 

@@ -237,7 +237,7 @@ namespace GUI
                     txt_codir.Value = dgb_todos.Rows[fila].Cells[12].Text;
                     txt_colonia.Text = dgb_todos.Rows[fila].Cells[17].Text;
                     txt_crizamiento.Text = dgb_todos.Rows[fila].Cells[19].Text;
-                    txt_descrip.Text = dgb_todos.Rows[fila].Cells[2].Text;
+                    txt_descrip.Text = Page.Server.HtmlDecode(dgb_todos.Rows[fila].Cells[2].Text);
                     DateTime ida = Convert.ToDateTime(dgb_todos.Rows[fila].Cells[6].Text);
                     txt_fecha_cierre.Text = ida.ToString("yyyy-MM-dd");
                     txt_nombre.Text = Page.Server.HtmlDecode(dgb_todos.Rows[fila].Cells[3].Text);

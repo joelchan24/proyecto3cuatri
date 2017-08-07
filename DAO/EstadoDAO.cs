@@ -53,7 +53,7 @@ namespace DAO
 
         public DataSet listar()
         {
-            SqlCommand cmd = new SqlCommand("select * from ESTADO");
+            SqlCommand cmd = new SqlCommand("select * from ESTADO inner join pais on PAIS.CODIGO=ESTADO.ID");
             cmd.CommandType = CommandType.Text;
             return obj.EjecutarSentencia(cmd);
 

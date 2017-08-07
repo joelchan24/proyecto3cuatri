@@ -24,10 +24,10 @@ namespace Services
                 case "btnAgregar":
                     oEstadosDAO.agregar(oEstadosBO);
                     break;
-                case "btn_Eliminar":
+                case "btnEliminar":
                     oEstadosDAO.eliminar(oEstadosBO);
                     break;
-                case "btn_Modificar":
+                case "btnModificar":
                     oEstadosDAO.modificar(oEstadosBO);
                     break;
                 case "btn_Buscar":
