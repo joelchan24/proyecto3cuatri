@@ -60,7 +60,7 @@
         <div class="panel panel-success">
             <div class="panel-heading">
                 <asp:button runat="server" ID="btnModificar" text="Modificar" CssClass="btn btn-primary" OnClick="seleccionar" /> <asp:button ID="btnEliminar" runat="server" text="Eliminar" CssClass="btn btn-danger" OnClick="seleccionar" /> <asp:button ID="btnBuscar" runat="server" text="Buscar" CssClass="btn btn-success" OnClick="seleccionar" />
-                <asp:button ID="btnLimpiar" runat="server" text="Limpiar" CssClass="btn btn-dropbox" />
+                <asp:button ID="btnLimpiar" runat="server" text="Limpiar" CssClass="btn btn-dropbox" OnClick="seleccionar" />
             </div>
             </div>
             <br />

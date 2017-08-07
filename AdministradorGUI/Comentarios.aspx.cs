@@ -45,18 +45,40 @@ namespace AdministradorGUI
 
         protected void seleccionar(object sender, EventArgs e)
         {
-            Button selecionado = (Button)sender;
-            ComentarioDAO comen2 = new ComentarioDAO();
-            switch (selecionado.ID)
+            try
             {
-                case "btnBuscar":
-                    dgbDatos.DataSource = comen2.buscar(vista()).Tables[0];
-                    dgbDatos.DataBind();
-                    break;
+
+
+                Button selecionado = (Button)sender;
+                ComentarioDAO comen2 = new ComentarioDAO();
+                switch (selecionado.ID)
+                {
+                    case "btnBuscar":
+                        dgbDatos.DataSource = comen2.buscar(vista()).Tables[0];
+                        dgbDatos.DataBind();
+                        break;
+                    case "btnLimpiar":
+                        Limpiar();
+                        break;
+                }
+                Button sele = (Button)sender;
+                CTRLComentario comen = new CTRLComentario();
+                comen.Comentario(vista(), sele.ID);
+                Limpiar();
             }
-            Button sele = (Button)sender;
-            CTRLComentario comen = new CTRLComentario();
-            comen.Comentario(vista(), sele.ID);
+            catch
+            {
+
+            }
+        }
+        public void Limpiar()
+        {
+            TextBox1.Controls.Clear();
+            TextBox2.Controls.Clear();
+            txtComentario.Controls.Clear();
+            txtEventoID.Controls.Clear();
+            txtUsuarioID.Controls.Clear();
+            txtIDcomentario.Controls.Clear();
         }
     }
 }
