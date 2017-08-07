@@ -58,10 +58,34 @@ namespace DAO
             cmd.CommandType = CommandType.Text;
             return conectar.EjecutarComando(cmd);
         }
+        public int alterar(object al)
+        {
+            ComentarioBO obejto = (ComentarioBO)al;
+            SqlCommand cmd = new SqlCommand("update  COMENTARIO set COMENTARIO=@com where CODIGO=@cod");
+            cmd.Parameters.Add("@cod", SqlDbType.Int).Value = obejto.Codigo;
+            cmd.Parameters.Add("@com", SqlDbType.VarChar).Value = obejto.Comentario;
+            cmd.CommandType = CommandType.Text;
+            return conectar.EjecutarComando(cmd);
+
+        }
         public DataSet listarcomentario(int id)
         {
-            SqlCommand cmd = new SqlCommand("select U.FOTOGRAFIA as FOTO,U.USUARIO AS USUARIO,C.COMENTARIO AS COMENTARIO FROM USUARIOS U INNER JOIN COMENTARIO C ON U.CODIGO=C.USUARIO INNER JOIN EVENTO ON  EVENTO.CODIGO=@ID");
+            SqlCommand cmd = new SqlCommand("select U.FOTOGRAFIA as FOTO,U.USUARIO AS USUARIO,C.COMENTARIO AS COMENTARIO FROM USUARIOS U INNER JOIN COMENTARIO C ON U.CODIGO=C.USUARIO where  C.EVENTO=@ID");
             cmd.Parameters.Add("@ID", SqlDbType.Int).Value = id;
+            cmd.CommandType = CommandType.Text;
+            return conectar.EjecutarSentencia(cmd);
+        }
+        public DataSet vista()
+        {
+            SqlCommand cmd = new SqlCommand("select c.*,u.USUARIO,e.NOMBRE from COMENTARIO c inner join USUARIOS u on c.USUARIO=u.CODIGO inner join EVENTO e on c.EVENTO=e.CODIGO");
+            cmd.CommandType = CommandType.Text;
+            return conectar.EjecutarSentencia(cmd);
+        }
+        public DataSet buscar(object o)
+        {
+            ComentarioBO comen = (ComentarioBO)o;
+            SqlCommand cmd = new SqlCommand(" select c.*,u.USUARIO,e.NOMBRE from COMENTARIO c inner join USUARIOS u on c.USUARIO=u.CODIGO inner join EVENTO e on c.EVENTO=e.CODIGO where c.COMENTARIO LIKE '%'+@comen+'%'");
+            cmd.Parameters.Add("@comen", SqlDbType.VarChar).Value = comen.Comentario;
             cmd.CommandType = CommandType.Text;
             return conectar.EjecutarSentencia(cmd);
         }

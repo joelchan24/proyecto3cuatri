@@ -38,8 +38,7 @@ namespace GUI
             }
             if (!IsPostBack)
             {
-                rptComentario.DataSource = comentario.listarcomentario(id).Tables[0];
-                rptComentario.DataBind();
+                listarcomentario();
             }
 
         }
@@ -71,20 +70,25 @@ namespace GUI
             try
             {
 
-
-
                 Button sele = (Button)sender;
                 CTRLComentario objcomentario = new CTRLComentario();
                 txtusuario.Value = Session["id"].ToString();
                 objcomentario.Comentario(listar(), sele.ID);
                 Response.Write("<script>window.alert('usted a hecho un comentario');</script>");
                 txtComentario.Text = null;
+                listarcomentario();
+
             }
             catch
             {
                 Response.Write("<script>window.alert('es necesario registrarse para poder hacer un comentario');</script>");
             }
 
+        }
+        public void listarcomentario()
+        {
+            rptComentario.DataSource = comentario.listarcomentario(id).Tables[0];
+            rptComentario.DataBind();
         }
         public ComentarioBO listar()
         {
