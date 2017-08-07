@@ -65,7 +65,7 @@
             </div>
             <br />
             <div class="panel panel-danger">
-                <asp:gridview runat="server" ID="dgbDatos" CssClass="table table-responsive table-bordered" OnRowCommand="selecionar">
+                <asp:gridview runat="server" ID="dgbDatos" CssClass="table table-responsive table-bordered" OnRowCommand="selecionar" OnRowCreated="ocultar">
                     <Columns>
                         <asp:ButtonField CommandName="btnSeleccionar" Text="Seleccionar" />
                     </Columns>

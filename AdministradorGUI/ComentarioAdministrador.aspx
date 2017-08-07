@@ -49,7 +49,7 @@
             <div class="auto-style1">
         <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
         <br />
-        <asp:DropDownList ID="DropDownList1" runat="server" Height="41px" Width="139px">
+        <asp:DropDownList ID="DropDownList1" runat="server" Height="39px" Width="339px">
         </asp:DropDownList>
             </div>
             <div class="auto-style2">
@@ -58,5 +58,16 @@
          <asp:TextBox ID="txtComentario" TextMode="multiline" Rows="3" cols="20" style="margin: 0px; " CssClass="auto-style3" runat="server" Height="91px" Width="535px"></asp:TextBox>
             </div>
             </div>
+        <div class="panel panel-success">
+        <div class="panel-heading">
+            <asp:Button ID="Button1" CssClass="btn btn-primary" runat="server" Text="Agregar" />
+            <asp:Button ID="Button2" runat="server" CssClass="btn btn-success" Text="Modificar" />
+            <asp:Button ID="Button3" runat="server" CssClass="btn btn-danger" Text="Eliminar" />
+            <asp:Button ID="Button4" runat="server" Text="Limpiar" CssClass="btn btn-dropbox" />
+        </div>
+            </div>
+        <div class="panel panel-danger">
+            <asp:GridView ID="GridView1" CssClass="table table-responsive table-bordered" runat="server"></asp:GridView>
+        </div>
     </form>
 </asp:Content>
