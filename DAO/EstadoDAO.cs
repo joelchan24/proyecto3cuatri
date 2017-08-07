@@ -66,5 +66,12 @@ namespace DAO
             return obj.EjecutarSentencia(cmd);
 
         }
+
+        public DataSet Buscar_pais()
+        {
+            SqlCommand cmd = new SqlCommand("select * from PAIS");
+            cmd.CommandType = CommandType.Text;
+            return obj.EjecutarSentencia(cmd);
+        }
     }
 }
