@@ -335,7 +335,7 @@ namespace DAO
         public DataSet buscar_aprovados_teatro()
         {
             // select * from EVENTO e inner join DIRECCION d on e.DIRECCION=d.CODIGO   2
-            SqlCommand cmd = new SqlCommand("  select * from EVENTO e  inner join DIRECCION d on e.DIRECCION=d.CODIGO inner join USUARIOS u on  u.CODIGO=e.USUARIO where e.APROVACION='1' and e.CATEGORIA=2 order by e.CODIGO DESC  ");
+            SqlCommand cmd = new SqlCommand("  select * from EVENTO e  inner join DIRECCION d on e.DIRECCION=d.CODIGO inner join USUARIOS u on  u.CODIGO=e.USUARIO where e.APROVACION='1' and e.CATEGORIA=3 order by e.CODIGO DESC  ");
 
             
 
@@ -348,7 +348,7 @@ namespace DAO
         public DataSet buscar_aprovados_musica()
         {
             // select * from EVENTO e inner join DIRECCION d on e.DIRECCION=d.CODIGO  3
-            SqlCommand cmd = new SqlCommand("  select * from EVENTO e  inner join DIRECCION d on e.DIRECCION=d.CODIGO inner join USUARIOS u on  u.CODIGO=e.USUARIO where e.APROVACION='1' and e.CATEGORIA=3 order by e.CODIGO DESC ");
+            SqlCommand cmd = new SqlCommand("  select * from EVENTO e  inner join DIRECCION d on e.DIRECCION=d.CODIGO inner join USUARIOS u on  u.CODIGO=e.USUARIO where e.APROVACION='1' and e.CATEGORIA=2 order by e.CODIGO DESC ");
 
          
             cmd.CommandType = CommandType.Text;

@@ -108,10 +108,13 @@
     <Content Include="Estado.aspx" />
     <Content Include="Estado.xml" />
     <Content Include="eventos.xml" />
+    <Content Include="frm_pendientes.aspx" />
     <Content Include="frm_poraprovar.aspx" />
     <Content Include="frm_respaldo.aspx" />
     <Content Include="img\avatar.png" />
     <Content Include="img\ccaae9ad-e297-462c-84ad-414e7f30ab51image16.jpeg" />
+    <Content Include="img\des.png" />
+    <Content Include="img\images.jpg" />
     <Content Include="img\obra-cholo.jpg" />
     <Content Include="img\Progreso-malecon.jpg" />
     <Content Include="img\vaqueria-yucateca-2.jpg" />
@@ -225,6 +228,13 @@
     </Compile>
     <Compile Include="Estado.aspx.designer.cs">
       <DependentUpon>Estado.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frm_pendientes.aspx.cs">
+      <DependentUpon>frm_pendientes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frm_pendientes.aspx.designer.cs">
+      <DependentUpon>frm_pendientes.aspx</DependentUpon>
     </Compile>
     <Compile Include="frm_poraprovar.aspx.cs">
       <DependentUpon>frm_poraprovar.aspx</DependentUpon>

@@ -41,35 +41,35 @@
   
     <form id="form1" runat="server" class="auto-style1">
        <div class="row">
-		<div class="auto-style2 primary" style="left: 61px; top: 17px; width: 80%">
-			<div role="form" class="form-inline" >
+
+			<div role="form" class="form-group" >
+                		<div class="row" >
+                 <div class="col-md-6">
+                    <div class="form-group">
+                       <asp:Label ID="Label3" runat="server" Text="País" CssClass="text-primary"></asp:Label><br />
+                      <asp:DropDownList ID="ddl_pais" runat="server" Width="300px" Height="30px"></asp:DropDownList>
+                        </div>
+                        </div>
+				 <div class="col-md-6">
 				<div class="form-group">
+					 <asp:Label ID="Label2" runat="server" Text="Nombre del Estado" CssClass="text-primary"></asp:Label><br />
+                    <asp:TextBox ID="txtNombre" runat="server" Width="305px" Height="30px"></asp:TextBox>
+                   </div>
+                   
+				</div>
+                            </div>
+                <div class="form-group" style="display:none">
 					<asp:Label ID="Label1" runat="server" Text="ID" CssClass="text-primary"  ></asp:Label><br />
                     <asp:TextBox ID="txtID" runat="server" Width="505px" Height="30px" Enabled="False"></asp:TextBox>
 				</div><br />
-				<div class="form-group">
-					 <asp:Label ID="Label2" runat="server" Text="Nombre del Estado" CssClass="text-primary"></asp:Label><br />
-                    <asp:TextBox ID="txtNombre" runat="server" Width="505px" Height="30px"></asp:TextBox>
-                    <asp:RequiredFieldValidator id="RequiredFieldValidator1" runat="server"
-  ControlToValidate="txtNombre"
-  ErrorMessage="No se puede dejar los campos vacios"
-  ForeColor="Red">
-</asp:RequiredFieldValidator>
-                    <div class="col-xs-4">
-                    <div class="form-group">
-                       <asp:Label ID="Label3" runat="server" Text="País" CssClass="text-primary"></asp:Label><br />
-                      <asp:DropDownList ID="ddl_pais" runat="server" Width="450px" Height="30px"></asp:DropDownList>
-                        </div>
-                        </div>
-				</div>
 			</div>
-		</div>
+		
 	<div class="row">
-		<div class="auto-style3">
-			<asp:Button ID="btnAgregar" Text="Agregar" runat="server" CssClass="btn btn-dropbox" Width="100px" OnClick="Accion" /> 
-            <asp:Button ID="btnModificar" Text="Modificar" runat="server" CssClass="btn btn-dropbox" Width="100px" OnClick="Accion"  />
-            <asp:Button ID="btnEliminar" Text="Eliminar" runat="server" CssClass="btn btn-dropbox" Width="100px" OnClick="Accion" />
-            <asp:Button ID="btnNuevo" Text="Reporte" runat="server" CssClass="btn btn-dropbox" Width="100px" OnClick="Accion" CausesValidation="False" />
+		<div class="col-lg-12">
+			<asp:Button ID="btnAgregar" Text="Agregar" runat="server" CssClass="btn btn-dropbox"  OnClick="Accion" /> 
+            <asp:Button ID="btnModificar" Text="Modificar" runat="server" CssClass="btn btn-dropbox"  OnClick="Accion"  />
+            <asp:Button ID="btnEliminar" Text="Eliminar" runat="server" CssClass="btn btn-dropbox"  OnClick="Accion" />
+            <asp:Button ID="btnNuevo" Text="Reporte" runat="server" CssClass="btn btn-dropbox"  OnClick="Accion" CausesValidation="False" />
        <div style="display:none"><asp:Button ID="btnBuscar" Text="Buscar" runat="server" CssClass="btn btn-dropbox" Width="100px" OnClick="btn_Buscar_Click" /></div>
 
 		</div>
