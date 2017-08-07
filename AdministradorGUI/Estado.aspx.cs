@@ -25,7 +25,10 @@ namespace AdministradorGUI
                 ddl_pais.DataTextField = "NOMBRE";
                 ddl_pais.DataValueField = "CODIGO";
                 ddl_pais.DataBind();
+              
                 actualizar();
+               
+                
             }
         }
 
@@ -71,6 +74,7 @@ namespace AdministradorGUI
         {
             dgv_Estados.DataSource = oCTRLEstados.listar().Tables[0];
             dgv_Estados.DataBind();
+            dgv_Estados.HeaderRow.Cells[5].Text = "País";
         }
 
         protected void Seleccionar(object sender, GridViewCommandEventArgs e)
@@ -126,7 +130,8 @@ namespace AdministradorGUI
           
             
             e.Row.Cells[4].Visible = false;
-            e.Row.Cells[5].Visible = false;
+            e.Row.Cells[3].Visible = false;
+            e.Row.Cells[1].Visible = false;
         }
     }
 }

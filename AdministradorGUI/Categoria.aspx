@@ -72,7 +72,7 @@
            <div class="row">
            <div class="auto-style5">
                <div class="form-group">
-                   <asp:GridView ID="dtgCategoria" runat="server" CssClass="table-resposive table table-bordered" Width="590px" OnRowCommand="Seleccionar">
+                   <asp:GridView ID="dtgCategoria" runat="server" CssClass="table-resposive table table-bordered" Width="590px" OnRowCommand="Seleccionar" OnRowCreated="ssss">
                        <Columns>
                            <asp:ButtonField CommandName="dgvbtnSeleccionar" Text="Seleccionar" >
 

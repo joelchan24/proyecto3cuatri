@@ -76,6 +76,7 @@ namespace AdministradorGUI
         protected void ocultar(object sender, GridViewRowEventArgs e)
         {
             e.Row.Cells[3].Visible = false;
+            e.Row.Cells[1].Visible = false;
         }
         private void abreVentana(string ventana)
         {

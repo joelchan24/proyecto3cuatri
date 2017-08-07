@@ -51,7 +51,7 @@
             <br />
             <br />
             <br />
-        <asp:GridView ID="dgv_Pais" runat="server" OnRowCommand="Seleccionar" CssClass="table-resposive table table-bordered" >
+        <asp:GridView ID="dgv_Pais" runat="server" OnRowCommand="Seleccionar" CssClass="table-resposive table table-bordered" OnRowCreated="dgv_Pais_RowCreated" >
                 <Columns>
                     <asp:ButtonField CommandName="dgvbtnSeleccionar" Text="Seleccionar" >
                     <ControlStyle CssClass="btn btn-primary" />

@@ -82,5 +82,10 @@ namespace AdministradorGUI
 
             dt.WriteXml("Pais.xml");
         }
+
+        protected void dgv_Pais_RowCreated(object sender, GridViewRowEventArgs e)
+        {
+            e.Row.Cells[1].Visible = false;
+        }
     }
 }

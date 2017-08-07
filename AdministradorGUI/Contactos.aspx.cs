@@ -68,5 +68,10 @@ namespace AdministradorGUI
 
             }
         }
+
+        protected void dtgContactos_RowCreated(object sender, GridViewRowEventArgs e)
+        {
+            e.Row.Cells[1].Visible = false;
+        }
     }
 }

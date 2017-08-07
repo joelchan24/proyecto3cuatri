@@ -117,7 +117,7 @@
             </span>
           </a>
           <ul class="treeview-menu menu-open" style="display: block;">
-            <li><a href="admi_de eventosGUI.aspx"><i class="fa fa-circle-o"></i> Catalogo De Eventos</a></li>
+            <li><a href="admi_de eventosGUI.aspx"><i class="fa fa-circle-o"></i> Catálogo De Eventos</a></li>
               <li> <a href="Municipios.aspx"><i class="fa fa-circle-o"></i>Catálogo De Municipios </a></li>
               <li> <a href="Estado.aspx"><i class="fa fa-circle-o"></i>Catálogo De Estados </a></li>
               <li> <a href="Pais.aspx"><i class="fa fa-circle-o"></i>Catálogo De Países </a></li>
