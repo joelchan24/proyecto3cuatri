@@ -48,12 +48,12 @@
                                 
                             <div style="margin-bottom: 25px " class="input-group col-lg-offset-2 ">
                                         <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-        <asp:TextBox ID="txt_usuario" runat="server" type="text" CssClass="form-control " name="username" value="" placeholder="username or email"></asp:TextBox>
+        <asp:TextBox ID="txt_usuario" runat="server" type="text" CssClass="form-control " name="username" value="" placeholder="Username or Email"></asp:TextBox>
                                         </div>
                                 
                             <div style="margin-bottom: 25px" class="input-group col-lg-offset-2 ">
                                         <span class="input-group-addon "><i class="glyphicon glyphicon-lock " ></i></span>
-        <asp:TextBox ID="txt_contraseña" runat="server" CssClass="form-group form-control" type="password" class="form-control " name="password" placeholder="password"></asp:TextBox>
+        <asp:TextBox ID="txt_contraseña" runat="server" CssClass="form-group form-control" type="password" class="form-control " name="password" placeholder="Password"></asp:TextBox>
                                               </div>
                                     
 
