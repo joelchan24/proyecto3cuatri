@@ -27,9 +27,9 @@ namespace AdministradorGUI
         protected void selecionar(object sender, GridViewCommandEventArgs e)
         {
             int sele = Convert.ToInt32(e.CommandArgument.ToString());
-            TextBox1.Text = dgbDatos.Rows[sele].Cells[5].Text;
-            TextBox2.Text = dgbDatos.Rows[sele].Cells[6].Text;
-            txtComentario.Text = dgbDatos.Rows[sele].Cells[2].Text;
+            TextBox1.Text = Page.Server.HtmlDecode( dgbDatos.Rows[sele].Cells[5].Text);
+            TextBox2.Text = Page.Server.HtmlDecode(dgbDatos.Rows[sele].Cells[6].Text);
+            txtComentario.Text = Page.Server.HtmlDecode(dgbDatos.Rows[sele].Cells[2].Text);
             txtIDcomentario.Value = dgbDatos.Rows[sele].Cells[1].Text;
             txtUsuarioID.Value = dgbDatos.Rows[sele].Cells[3].Text;
             txtEventoID.Value = dgbDatos.Rows[sele].Cells[4].Text;
