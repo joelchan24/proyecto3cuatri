@@ -120,5 +120,13 @@ namespace AdministradorGUI
 
             dt.WriteXml("Estado.xml");
         }
+
+        protected void dgv_Estados_RowCreated(object sender, GridViewRowEventArgs e)
+        {
+          
+            
+            e.Row.Cells[4].Visible = false;
+            e.Row.Cells[5].Visible = false;
+        }
     }
 }

@@ -77,7 +77,7 @@
            <div class="row">
            <div class="auto-style5">
                <div class="form-group">
-                   <asp:GridView ID="dgv_Estados" runat="server" CssClass="table-resposive table table-bordered" Width="590px" OnRowCommand="Seleccionar">
+                   <asp:GridView ID="dgv_Estados" runat="server" CssClass="table-resposive table table-bordered" Width="590px" OnRowCommand="Seleccionar" OnRowCreated="dgv_Estados_RowCreated">
                        <Columns>
                            <asp:ButtonField CommandName="dgvbtnSeleccionar" Text="Seleccionar" >
 
