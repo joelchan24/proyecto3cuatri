@@ -104,6 +104,7 @@
     <Content Include="admi_de eventosGUI.aspx" />
     <Content Include="Categoria.aspx" />
     <Content Include="categoria.xml" />
+    <Content Include="ComentarioAdministrador.aspx" />
     <Content Include="Comentarios.aspx" />
     <Content Include="Contactos.aspx" />
     <Content Include="Estado.aspx" />
@@ -212,6 +213,13 @@
     </Compile>
     <Compile Include="Categoria.aspx.designer.cs">
       <DependentUpon>Categoria.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ComentarioAdministrador.aspx.cs">
+      <DependentUpon>ComentarioAdministrador.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ComentarioAdministrador.aspx.designer.cs">
+      <DependentUpon>ComentarioAdministrador.aspx</DependentUpon>
     </Compile>
     <Compile Include="Comentarios.aspx.cs">
       <DependentUpon>Comentarios.aspx</DependentUpon>

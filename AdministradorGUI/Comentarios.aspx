@@ -45,11 +45,11 @@
                 <div class="auto-style2">
         <asp:Label ID="Label1" runat="server" Text="Usuario:"></asp:Label>
         <br />
-        <asp:TextBox ID="TextBox1" CssClass=" form-control" runat="server" Width="305px"></asp:TextBox>
+        <asp:TextBox ID="TextBox1" CssClass=" form-control" runat="server" Width="305px" Enabled="False"></asp:TextBox>
         <br />
         <asp:Label ID="Label2" runat="server" Text="Evento:"></asp:Label>
         <br />
-        <asp:TextBox ID="TextBox2" CssClass="form-control" runat="server" Width="305px"></asp:TextBox>
+        <asp:TextBox ID="TextBox2" CssClass="form-control" runat="server" Width="305px" Enabled="False"></asp:TextBox>
                     </div>
                 <div class="auto-style3">
                     <asp:label runat="server" text="Comentario:"></asp:label><br />
